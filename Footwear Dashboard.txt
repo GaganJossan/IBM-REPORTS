@@ -1,0 +1,376 @@
+<report xmlns="http://developer.cognos.com/schemas/report/8.0/" useStyleVersion="10" expressionLocale="en-us">
+				<drillBehavior modelBasedDrillThru="true"/>
+				<layouts>
+					<layout>
+						<reportPages>
+							<page name="Page1">
+								<style>
+									<defaultStyles>
+										<defaultStyle refStyle="pg"/>
+									</defaultStyles>
+									<CSS value="border-collapse: collapse;"/>
+								</style>
+								<pageHeader>
+									<style>
+										<defaultStyles>
+											<defaultStyle refStyle="ph"/>
+										</defaultStyles>
+										<CSS value="padding-bottom:10px;"/>
+									</style>
+									<contents>
+										<block name="RTTitleBlock"><style><defaultStyles><defaultStyle refStyle="ta"/></defaultStyles><CSS value="font-size:22pt;text-align:left"/></style>
+											<contents>
+												
+											<table><style><defaultStyles><defaultStyle refStyle="tb"/></defaultStyles><CSS value="border-collapse:collapse;width:100%"/></style><tableRows><tableRow><tableCells><tableCell><contents><table><style><defaultStyles><defaultStyle refStyle="tb"/></defaultStyles><CSS value="border-collapse:collapse;width:100%"/></style><tableRows><tableRow><tableCells><tableCell><contents><textItem name="RTTitle2"><style><defaultStyles><defaultStyle refStyle="tt"/></defaultStyles><CSS value="font-weight:bold;font-size:20pt;color:#C00720"/></style>
+													<dataSource>
+														
+													<staticValue>Footwear_Dashboard</staticValue></dataSource>
+												</textItem></contents></tableCell></tableCells></tableRow><tableRow><tableCells><tableCell><contents/></tableCell></tableCells></tableRow></tableRows></table></contents></tableCell><tableCell><contents><table><style><defaultStyles><defaultStyle refStyle="tb"/></defaultStyles><CSS value="border-collapse:collapse;width:100%;border:1pt solid black"/></style><tableRows><tableRow><tableCells><tableCell><contents><textItem><dataSource><staticValue>Facility</staticValue></dataSource></textItem></contents></tableCell><tableCell><contents><singleton refQuery="Facilitity" name="Singleton2">
+			<contents><textItem><dataSource><dataItemValue refDataItem="Facility_Name"/></dataSource></textItem></contents>
+		</singleton></contents></tableCell></tableCells></tableRow><tableRow><tableCells><tableCell><contents><textItem><dataSource><staticValue>Owner</staticValue></dataSource></textItem></contents></tableCell><tableCell><contents><textItem><dataSource><staticValue>ENGINEERING</staticValue></dataSource></textItem></contents></tableCell></tableCells></tableRow><tableRow><tableCells><tableCell><contents><textItem><dataSource><staticValue>User ID</staticValue></dataSource></textItem></contents></tableCell><tableCell><contents><singleton name="Singleton1" refQuery="User">
+			<contents><textItem><dataSource><dataItemValue refDataItem="User"/></dataSource></textItem></contents>
+		</singleton></contents></tableCell></tableCells></tableRow></tableRows></table></contents></tableCell><tableCell><contents><image>
+			<dataSource>
+				<staticValue>https://1000logos.net/wp-content/uploads/2017/08/Lululemon-Logo.png</staticValue>
+			</dataSource>
+		<style><CSS value="height:80px"/></style></image></contents><style><CSS value="text-align:right"/></style></tableCell></tableCells></tableRow></tableRows></table></contents>
+										</block>
+										
+										
+									<table><style><defaultStyles><defaultStyle refStyle="tb"/></defaultStyles><CSS value="border-collapse:collapse;width:100%"/></style><tableRows><tableRow><tableCells><tableCell><contents><textItem><dataSource><staticValue>This reports shows the pending Lpns that have been inducted and not picked</staticValue></dataSource></textItem></contents></tableCell><tableCell><contents/><style><CSS value="width:240px"/></style></tableCell></tableCells></tableRow></tableRows></table></contents>
+								</pageHeader>
+								<pageBody><style><defaultStyles><defaultStyle refStyle="pb"/></defaultStyles><CSS value="padding-top:50px"/></style>
+									<contents><table><style><defaultStyles><defaultStyle refStyle="tb"/></defaultStyles><CSS value="border-collapse:collapse;width:100%"/></style><tableRows><tableRow><tableCells><tableCell><contents><textItem><dataSource><staticValue>Inducted</staticValue></dataSource><style><CSS value="font-weight:bold;padding-left:75px;font-size:11pt"/></style></textItem><list horizontalPagination="true" refQuery="SUMMARY" name="List2">
+			
+			
+			
+			<noDataHandler>
+				<contents>
+					<block>
+						<contents>
+							<textItem>
+								<dataSource>
+									<staticValue>No Data Available</staticValue>
+								</dataSource>
+								<style>
+									<CSS value="padding:10px 18px;"/>
+								</style>
+							</textItem>
+						</contents>
+					</block>
+				</contents>
+			</noDataHandler>
+			<style>
+				<CSS value="border-collapse:collapse;font-size:12pt;margin-bottom:20px"/>
+				<defaultStyles>
+					<defaultStyle refStyle="ls"/>
+				</defaultStyles>
+			</style>
+		<listColumns><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles><CSS value="background-color:#33CC00;font-weight:bold;color:white;font-size:11pt"/></style><contents><textItem><dataSource><dataItemLabel refDataItem="INVENTORY"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles><CSS value="font-size:11pt;font-weight:bold;text-align:center"/></style><contents><textItem><dataSource><dataItemValue refDataItem="INVENTORY"/></dataSource></textItem></contents></listColumnBody></listColumn><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles><CSS value="background-color:#33CC00;font-weight:bold;color:white;font-size:11pt"/></style><contents><textItem><dataSource><dataItemLabel refDataItem="TOTAL QTY"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles><CSS value="font-size:11pt;text-align:center"/></style><contents><textItem><dataSource><dataItemValue refDataItem="TOTAL QTY"/></dataSource></textItem></contents></listColumnBody></listColumn></listColumns></list></contents></tableCell><tableCell><contents><textItem><dataSource><staticValue>Not_Inducted</staticValue></dataSource><style><CSS value="font-weight:bold;padding-left:70px;font-size:11pt"/></style></textItem><list horizontalPagination="true" refQuery="summary2" name="List3">
+			
+			
+			
+			<noDataHandler>
+				<contents>
+					<block>
+						<contents>
+							<textItem>
+								<dataSource>
+									<staticValue>No Data Available</staticValue>
+								</dataSource>
+								<style>
+									<CSS value="padding:10px 18px;"/>
+								</style>
+							</textItem>
+						</contents>
+					</block>
+				</contents>
+			</noDataHandler>
+			<style>
+				<CSS value="border-collapse:collapse;margin-right:50px;margin-bottom:20px;font-size:11pt;text-align:center"/>
+				<defaultStyles>
+					<defaultStyle refStyle="ls"/>
+				</defaultStyles>
+			</style>
+		<listColumns><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles><CSS value="background-color:#33CC00;font-weight:bold;color:white;text-align:center"/></style><contents><textItem><dataSource><dataItemLabel refDataItem="INVENTORY"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles><CSS value="font-weight:bold;text-align:center"/></style><contents><textItem><dataSource><dataItemValue refDataItem="INVENTORY"/></dataSource></textItem></contents></listColumnBody></listColumn><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles><CSS value="background-color:#33CC00;font-weight:bold;color:white;text-align:center"/></style><contents><textItem><dataSource><dataItemLabel refDataItem="TOTAL QTY"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles><CSS value="text-align:center"/></style><contents><textItem><dataSource><dataItemValue refDataItem="TOTAL QTY"/></dataSource><style><defaultStyles><defaultStyle refStyle="hy"/></defaultStyles></style><reportDrills><reportDrill name="Drill-Through Definition1"><drillLabel><dataSource><staticValue/></dataSource></drillLabel><drillTarget method="execute" showInNewWindow="true"><reportPath path="/content/folder[@name='lululemon reports']/folder[@name='Production Control']/folder[@name='Carton Start']/report[@name='Carton Start V1.1']"><XMLAttributes><XMLAttribute name="ReportName" value="Carton Start V1.1" output="no"/><XMLAttribute name="class" value="report" output="no"/></XMLAttributes></reportPath><drillLinks><drillLink><drillTargetContext><parameterContext parameter="Wavetype"/></drillTargetContext><drillSourceContext><dataItemContext refDataItem="ZONE"/></drillSourceContext></drillLink></drillLinks></drillTarget></reportDrill></reportDrills></textItem></contents></listColumnBody></listColumn></listColumns></list></contents></tableCell><tableCell><contents/></tableCell><tableCell><contents/></tableCell><tableCell><contents/></tableCell></tableCells></tableRow><tableRow><tableCells><tableCell><contents/></tableCell><tableCell><contents/></tableCell><tableCell><contents/></tableCell><tableCell><contents/></tableCell><tableCell><contents/></tableCell></tableCells></tableRow><tableRow><tableCells><tableCell><contents/></tableCell><tableCell><contents/></tableCell><tableCell><contents/></tableCell><tableCell><contents/></tableCell><tableCell><contents/></tableCell></tableCells></tableRow></tableRows></table><list horizontalPagination="true" refQuery="main" name="List1" rowsPerPage="999">
+			
+			
+			
+			<noDataHandler>
+				<contents>
+					<block>
+						<contents>
+							<textItem>
+								<dataSource>
+									<staticValue>No Data Available</staticValue>
+								</dataSource>
+								<style>
+									<CSS value="padding:10px 18px;"/>
+								</style>
+							</textItem>
+						</contents>
+					</block>
+				</contents>
+			</noDataHandler>
+			<style>
+				<CSS value="border-collapse:collapse;text-align:center"/>
+				<defaultStyles>
+					<defaultStyle refStyle="ls"/>
+				</defaultStyles>
+			</style>
+		<listColumns><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles><CSS value="background-color:#6666FF;color:white;font-weight:bold;font-size:11pt"/></style><contents><textItem><dataSource><dataItemLabel refDataItem="TC_REFERENCE_LPN_ID"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles><CSS value="text-align:center;border:1pt solid black"/></style><contents><textItem><dataSource><dataItemValue refDataItem="TC_REFERENCE_LPN_ID"/></dataSource></textItem></contents></listColumnBody></listColumn><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles><CSS value="background-color:#6666FF;color:white;font-weight:bold;font-size:11pt"/></style><contents><textItem><dataSource><dataItemLabel refDataItem="TC_LPN_ID"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles><CSS value="text-align:center;border:1pt solid black"/></style><contents><textItem><dataSource><dataItemValue refDataItem="TC_LPN_ID"/></dataSource></textItem></contents></listColumnBody></listColumn><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles><CSS value="background-color:#6666FF;color:white;font-weight:bold;font-size:11pt"/></style><contents><textItem><dataSource><dataItemLabel refDataItem="TC_ORDER_ID"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles><CSS value="text-align:center;border:1pt solid black"/></style><contents><textItem><dataSource><dataItemValue refDataItem="TC_ORDER_ID"/></dataSource></textItem></contents></listColumnBody></listColumn><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles><CSS value="background-color:#6666FF;color:white;font-weight:bold;font-size:11pt"/></style><contents><textItem><dataSource><dataItemLabel refDataItem="ORDER_TYPE"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles><CSS value="text-align:center;border:1pt solid black"/></style><contents><textItem><dataSource><dataItemValue refDataItem="ORDER_TYPE"/></dataSource></textItem></contents></listColumnBody></listColumn><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles><CSS value="background-color:#6666FF;color:white;font-weight:bold;font-size:11pt"/></style><contents><textItem><dataSource><dataItemLabel refDataItem="TOTAL_LPN_QTY"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles><CSS value="text-align:center;border:1pt solid black"/></style><contents><textItem><dataSource><dataItemValue refDataItem="TOTAL_LPN_QTY"/></dataSource></textItem></contents></listColumnBody></listColumn></listColumns><sortList><sortItem refDataItem="TOTAL_LPN_QTY" sortOrder="descending"/></sortList></list></contents>
+								</pageBody>
+								<pageFooter>
+									<contents>
+										<table>
+											<tableRows>
+												<tableRow>
+													<tableCells>
+														<tableCell>
+															<contents>
+																<date>
+																	<style>
+																		<dataFormat>
+																			<dateFormat/>
+																		</dataFormat>
+																	</style>
+																</date>
+															</contents>
+															<style>
+																<CSS value="vertical-align:top;text-align:left;width:25%;"/>
+															</style>
+														</tableCell>
+														<tableCell>
+															<contents>
+																<pageNumber/>
+															</contents>
+															<style>
+																<CSS value="vertical-align:top;text-align:center;width:50%;"/>
+															</style>
+														</tableCell>
+														<tableCell>
+															<contents>
+																<time>
+																	<style>
+																		<dataFormat>
+																			<timeFormat/>
+																		</dataFormat>
+																	</style>
+																</time>
+															</contents>
+															<style>
+																<CSS value="vertical-align:top;text-align:right;width:25%;"/>
+															</style>
+														</tableCell>
+													</tableCells>
+												</tableRow>
+											</tableRows>
+											<style>
+												<defaultStyles>
+													<defaultStyle refStyle="tb"/>
+												</defaultStyles>
+												<CSS value="border-collapse:collapse;width:100%;"/>
+											</style>
+										</table>
+									<table><style><defaultStyles><defaultStyle refStyle="tb"/></defaultStyles><CSS value="border-collapse:collapse;width:100%"/></style><tableRows><tableRow><tableCells><tableCell><contents/></tableCell></tableCells></tableRow></tableRows></table></contents>
+									<style>
+										<defaultStyles>
+											<defaultStyle refStyle="pf"/>
+										</defaultStyles>
+										<CSS value="padding-top:10px;"/>
+									</style>
+								</pageFooter>
+							</page>
+						</reportPages>
+					<pageSetup orientation="landscape"/><promptPages><page name="Prompt Page1">
+			<pageHeader>
+				<contents>
+					<block>
+						<contents>
+							<textItem>
+								<dataSource>
+									<staticValue>Footwear_Dashboard</staticValue>
+								</dataSource>
+								<style>
+									<defaultStyles>
+										<defaultStyle refStyle="tt"/>
+									</defaultStyles>
+								<CSS value="font-weight:bold;color:purple;font-size:26pt"/></style>
+							</textItem>
+						</contents>
+						<style>
+							<defaultStyles>
+								<defaultStyle refStyle="ta"/>
+							</defaultStyles>
+						</style>
+					</block>
+				</contents>
+				<style>
+					<defaultStyles>
+						<defaultStyle refStyle="hp"/>
+					</defaultStyles>
+				</style>
+			</pageHeader>
+			<pageBody>
+				<contents><selectValue parameter="pTote" refQuery="facility2" multiSelect="true" range="false" required="true" selectValueUI="checkboxGroup"><useItem refDataItem="FACILITY"><displayItem refDataItem="FACILITY"/></useItem><style><CSS value="color:black"/></style></selectValue></contents>
+				<style>
+					<defaultStyles>
+						<defaultStyle refStyle="py"/>
+					</defaultStyles>
+				<CSS value="padding-top:50px"/></style>
+			</pageBody>
+			<pageFooter>
+				<contents>
+					<promptButton type="cancel">
+						<contents/>
+						<style>
+							<defaultStyles>
+								<defaultStyle refStyle="bp"/>
+							</defaultStyles>
+						</style>
+					</promptButton>
+					<promptButton type="back">
+						<contents/>
+						<style>
+							<defaultStyles>
+								<defaultStyle refStyle="bp"/>
+							</defaultStyles>
+						</style>
+					</promptButton>
+					<promptButton type="next">
+						<contents/>
+						<style>
+							<defaultStyles>
+								<defaultStyle refStyle="bp"/>
+							</defaultStyles>
+						</style>
+					</promptButton>
+					<promptButton type="finish">
+						<contents/>
+						<style>
+							<defaultStyles>
+								<defaultStyle refStyle="bp"/>
+							</defaultStyles>
+						</style>
+					</promptButton>
+				</contents>
+				<style>
+					<defaultStyles>
+						<defaultStyle refStyle="fp"/>
+					</defaultStyles>
+				</style>
+			</pageFooter>
+			<style>
+				<defaultStyles>
+					<defaultStyle refStyle="pp"/>
+				</defaultStyles>
+			</style>
+		</page></promptPages></layout>
+				</layouts>
+			<XMLAttributes><XMLAttribute name="RS_CreateExtendedDataItems" value="true" output="no"/><XMLAttribute name="RS_modelModificationTime" value="2015-01-29T21:59:28.244Z" output="no"/><XMLAttribute name="listSeparator" value="," output="no"/></XMLAttributes><reportName>FTW_PENDING_PICK</reportName><modelPath>/content/folder[@name='lululemon packages']/package[@name='WMOS']/model[@name='2015-01-29T21:59:28.146Z']</modelPath><queries><query name="User"><source><model/></source><selection><dataItem name="User"><expression>#sq($account.defaultName)#</expression></dataItem></selection></query><query name="Facilitity">
+			<source>
+				
+			<sqlQuery name="SQL15" dataSource="WMOS">
+			<sqlText>--Facility ID Query
+Select
+CASE WHEN "Facility_Name" = 'COL' THEN 'Columbus DC'
+WHEN "Facility_Name" = 'SUM' THEN 'Sumner DC'
+WHEN "Facility_Name" = 'DEL' THEN 'Delta DC'
+WHEN "Facility_Name" = 'TOR' THEN 'Toronto DC'
+WHEN "Facility_Name" = 'AUS' THEN 'Australia DC'
+ELSE "Facility_Name" END as "Facility_Name"
+FROM(SELECT distinct upper(substr(o_facility_name,1,3)) as "Facility_Name" from wm.orders where rownum =1)
+</sqlText>
+		<mdProjectedItems><mdProjectedItem name="Facility_Name"/></mdProjectedItems></sqlQuery></source>
+			<selection><dataItem name="Facility_Name"><expression>[SQL15].[Facility_Name]</expression></dataItem></selection>
+		</query><query name="facility2">
+			<source>
+				
+			<sqlQuery name="SQL1" dataSource="WMOS">
+			<sqlText>select case when rownum = 1 then 'REPLEN'
+when rownum = 2 then 'ALLOC'
+when rownum = 3 then 'SPECIAL'
+when rownum = 4 then 'ECOMM'
+	end FACILITY
+from dual connect by rownum &lt;= 4</sqlText>
+		<mdProjectedItems><mdProjectedItem name="FACILITY"/></mdProjectedItems></sqlQuery></source>
+			<selection><dataItem name="FACILITY"><expression>[SQL1].[FACILITY]</expression></dataItem></selection>
+		</query><query name="main">
+			<source>
+				
+			<sqlQuery name="SQL2" dataSource="WMOS">
+			<sqlText>SELECT 
+TC_REFERENCE_LPN_ID,
+TC_LPN_ID,
+WM.LPN.TC_ORDER_ID,
+WM.ORDERS.ORDER_TYPE,
+TOTAL_LPN_QTY
+FROM WM.LPN
+JOIN WM.orders ON WM.LPN.tc_order_id = WM.orders.tc_order_id
+WHERE tc_reference_lpn_id IS NOT NULL 
+AND WM.LPN.LPN_FACILITY_STATUS IN ('10', '15')
+ AND WM.ORDERS.ORDER_TYPE IN (#Promptmany('pTote')#)
+  AND WM.LPN.FIRST_ZONE = '41'</sqlText>
+		<mdProjectedItems><mdProjectedItem name="TC_REFERENCE_LPN_ID"/><mdProjectedItem name="TC_LPN_ID"/><mdProjectedItem name="TC_ORDER_ID"/><mdProjectedItem name="ORDER_TYPE"/><mdProjectedItem name="TOTAL_LPN_QTY"/></mdProjectedItems></sqlQuery></source>
+			<selection><dataItem name="TC_REFERENCE_LPN_ID"><expression>[SQL2].[TC_REFERENCE_LPN_ID]</expression></dataItem><dataItem name="TC_LPN_ID"><expression>[SQL2].[TC_LPN_ID]</expression></dataItem><dataItem name="TC_ORDER_ID"><expression>[SQL2].[TC_ORDER_ID]</expression></dataItem><dataItem name="ORDER_TYPE"><expression>[SQL2].[ORDER_TYPE]</expression></dataItem><dataItem name="TOTAL_LPN_QTY"><expression>[SQL2].[TOTAL_LPN_QTY]</expression></dataItem></selection>
+		</query><query name="SUMMARY">
+			<source>
+				
+			<sqlQuery name="SUMMARYSQL" dataSource="WMOS">
+			<sqlText>SELECT 
+    'RETAIL' AS INVENTORY,
+    COALESCE(SUM(TOTAL_LPN_QTY), 0) AS "TOTAL QTY"
+FROM WM.LPN
+JOIN WM.orders ON WM.LPN.tc_order_id = WM.orders.tc_order_id
+WHERE tc_reference_lpn_id IS NOT NULL 
+    AND WM.LPN.LPN_FACILITY_STATUS IN ('10', '15')
+    AND WM.ORDERS.ORDER_TYPE IN ('REPLEN', 'ALLOC', 'SPECIAL')
+    AND WM.LPN.FIRST_ZONE = '41'
+
+UNION ALL
+
+SELECT 
+    'ECOMM' AS INVENTORY,
+    COALESCE(SUM(TOTAL_LPN_QTY), 0) AS "TOTAL QTY"
+FROM WM.LPN
+JOIN WM.orders ON WM.LPN.tc_order_id = WM.orders.tc_order_id
+WHERE tc_reference_lpn_id IS NOT NULL 
+    AND WM.LPN.LPN_FACILITY_STATUS IN ('10', '15')
+    AND WM.ORDERS.ORDER_TYPE = 'ECOMM'
+    AND WM.LPN.FIRST_ZONE = '41'</sqlText>
+		<mdProjectedItems><mdProjectedItem name="INVENTORY"/><mdProjectedItem name="TOTAL QTY"/></mdProjectedItems></sqlQuery></source>
+			<selection><dataItem name="INVENTORY"><expression>[SUMMARYSQL].[INVENTORY]</expression></dataItem><dataItem name="TOTAL QTY"><expression>[SUMMARYSQL].[TOTAL QTY]</expression></dataItem></selection>
+		</query><query name="summary2">
+			<source>
+				
+			<sqlQuery name="SQL3" dataSource="WMOS">
+			<sqlText>SELECT 
+    'RETAIL' AS INVENTORY,
+    COALESCE(SUM(TOTAL_LPN_QTY), 0) AS "TOTAL QTY",
+    CASE
+    WHEN 1=1 THEN 'MIL | MA3'
+    END AS Zone
+FROM WM.LPN
+JOIN WM.orders ON WM.LPN.tc_order_id = WM.orders.tc_order_id
+WHERE tc_reference_lpn_id IS NULL 
+    AND WM.LPN.LPN_FACILITY_STATUS IN ('10', '15')
+    AND WM.ORDERS.ORDER_TYPE IN ('REPLEN', 'ALLOC', 'SPECIAL')
+    AND WM.LPN.FIRST_ZONE = '41'
+
+UNION ALL
+
+SELECT 
+    'ECOMM' AS INVENTORY,
+    COALESCE(SUM(TOTAL_LPN_QTY), 0) AS "TOTAL QTY",
+    CASE
+    WHEN 1=1 THEN 'MIL | MA3'
+    END AS Zone
+FROM WM.LPN
+JOIN WM.orders ON WM.LPN.tc_order_id = WM.orders.tc_order_id
+WHERE tc_reference_lpn_id IS NULL 
+    AND WM.LPN.LPN_FACILITY_STATUS IN ('10', '15')
+    AND WM.ORDERS.ORDER_TYPE = 'ECOMM'
+    AND WM.LPN.FIRST_ZONE = '41'</sqlText>
+		<mdProjectedItems><mdProjectedItem name="INVENTORY"/><mdProjectedItem name="TOTAL QTY"/><mdProjectedItem name="ZONE"/></mdProjectedItems></sqlQuery></source>
+			<selection><dataItem name="INVENTORY"><expression>[SQL3].[INVENTORY]</expression></dataItem><dataItem name="TOTAL QTY"><expression>[SQL3].[TOTAL QTY]</expression></dataItem><dataItem name="ZONE"><expression>[SQL3].[ZONE]</expression></dataItem></selection>
+		</query></queries><classStyles><classStyle name="cls1" label="Section Header"><CSS value="background-color:#333333;color:white;font-size:12pt;font-weight:bold;font-family:Arial;text-align:center"/></classStyle><classStyle name="cls2" label="General Header"><CSS value="font-weight:bold"/></classStyle></classStyles></report>

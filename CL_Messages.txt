@@ -1,0 +1,73 @@
+<report xmlns="http://developer.cognos.com/schemas/report/8.0/" useStyleVersion="10" expressionLocale="en-us">
+				<modelPath>/content/folder[@name='lululemon packages']/package[@name='WMOS']/model[@name='2015-01-29T21:59:28.146Z']</modelPath>
+				<drillBehavior modelBasedDrillThru="true"/>
+				<layouts>
+					<layout>
+						<reportPages>
+							<page name="Page1">
+								<style>
+									<defaultStyles>
+										<defaultStyle refStyle="pg"/>
+									</defaultStyles>
+								</style>
+								<pageBody>
+									<style>
+										<defaultStyles>
+											<defaultStyle refStyle="pb"/>
+										</defaultStyles>
+									</style>
+									<contents><table><style><defaultStyles><defaultStyle refStyle="tb"/></defaultStyles><CSS value="border-collapse:collapse;width:100%"/></style><tableRows><tableRow><tableCells><tableCell><contents/></tableCell><tableCell><contents/></tableCell><tableCell><contents/></tableCell></tableCells></tableRow><tableRow><tableCells><tableCell><contents/></tableCell><tableCell><contents/></tableCell><tableCell><contents/></tableCell></tableCells></tableRow><tableRow><tableCells><tableCell><contents/></tableCell><tableCell><contents/></tableCell><tableCell><contents/></tableCell></tableCells></tableRow><tableRow><tableCells><tableCell><contents/></tableCell><tableCell><contents/></tableCell><tableCell><contents/></tableCell></tableCells></tableRow><tableRow><tableCells><tableCell><contents><list horizontalPagination="true" refQuery="Query1" name="List1">
+			
+			
+			
+			<noDataHandler>
+				<contents>
+					<block>
+						<contents>
+							<textItem>
+								<dataSource>
+									<staticValue>No Data Available</staticValue>
+								</dataSource>
+								<style>
+									<CSS value="padding:10px 18px;"/>
+								</style>
+							</textItem>
+						</contents>
+					</block>
+				</contents>
+			</noDataHandler>
+			<style>
+				<CSS value="border-collapse:collapse"/>
+				<defaultStyles>
+					<defaultStyle refStyle="ls"/>
+				</defaultStyles>
+			</style>
+		<listColumns><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles><CSS value="background-color:purple;color:white"/></style><contents><textItem><dataSource><dataItemLabel refDataItem="MSG_ID"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles></style><contents><textItem><dataSource><dataItemValue refDataItem="MSG_ID"/></dataSource></textItem></contents></listColumnBody></listColumn><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles><CSS value="background-color:purple;color:white"/></style><contents><textItem><dataSource><dataItemLabel refDataItem="EVENT_ID"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles></style><contents><textItem><dataSource><dataItemValue refDataItem="EVENT_ID"/></dataSource></textItem></contents></listColumnBody></listColumn><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles><CSS value="background-color:purple;color:white"/></style><contents><textItem><dataSource><dataItemLabel refDataItem="SOURCE_ID"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles></style><contents><textItem><dataSource><dataItemValue refDataItem="SOURCE_ID"/></dataSource></textItem></contents></listColumnBody></listColumn><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles><CSS value="background-color:purple;color:white"/></style><contents><textItem><dataSource><dataItemLabel refDataItem="STATUS"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles></style><contents><textItem><dataSource><dataItemValue refDataItem="STATUS"/></dataSource></textItem></contents></listColumnBody></listColumn><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles><CSS value="background-color:purple;color:white"/></style><contents><textItem><dataSource><dataItemLabel refDataItem="STATUS_NAME"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles></style><contents><textItem><dataSource><dataItemValue refDataItem="STATUS_NAME"/></dataSource><conditionalStyleRefs><conditionalStyleRef refConditionalStyle="Conditional Style 2"/></conditionalStyleRefs></textItem></contents></listColumnBody></listColumn><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles><CSS value="background-color:purple;color:white"/></style><contents><textItem><dataSource><dataItemLabel refDataItem="WHEN_CREATED"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles></style><contents><textItem><dataSource><dataItemValue refDataItem="WHEN_CREATED"/></dataSource></textItem></contents></listColumnBody></listColumn><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles><CSS value="background-color:purple;color:white"/></style><contents><textItem><dataSource><dataItemLabel refDataItem="DATA"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles></style><contents><textItem><dataSource><dataItemValue refDataItem="DATA"/></dataSource></textItem></contents></listColumnBody></listColumn></listColumns><sortList><sortItem refDataItem="WHEN_CREATED" sortOrder="descending"/></sortList></list></contents></tableCell><tableCell><contents/></tableCell><tableCell><contents/></tableCell></tableCells></tableRow></tableRows></table></contents>
+								</pageBody>
+							</page>
+						</reportPages>
+					</layout>
+				</layouts>
+			<XMLAttributes><XMLAttribute name="RS_CreateExtendedDataItems" value="true" output="no"/><XMLAttribute name="listSeparator" value="," output="no"/><XMLAttribute name="RS_modelModificationTime" value="2015-01-29T21:59:28.244Z" output="no"/></XMLAttributes><reportName>CL_MESSAGES</reportName><queries><query name="Query1">
+			<source>
+				
+			<sqlQuery name="SQL1" dataSource="WMOS">
+			<sqlText>SELECT REPLACE(TO_CHAR(a.msg_id), ',', '') AS msg_id, 
+       a.event_id, 
+       a.source_id, 
+       b.status, 
+       c.status_name, 
+       a.when_created, 
+       DBMS_LOB.SUBSTR(a.data, 4000, 1) AS data -- Convert CLOB to VARCHAR2
+FROM wm.cl_message a 
+JOIN wm.cl_endpoint_queue b 
+    ON a.msg_id = b.msg_id
+JOIN wm.cl_message_status c 
+    ON b.status = c.status_id
+WHERE DBMS_LOB.SUBSTR(a.data, 4000, 1) LIKE '%' || #Prompt('pTote')# || '%'
+AND a.event_id IN ('9991')
+ORDER BY a.when_created DESC
+</sqlText>
+		<mdProjectedItems><mdProjectedItem name="MSG_ID"/><mdProjectedItem name="EVENT_ID"/><mdProjectedItem name="SOURCE_ID"/><mdProjectedItem name="STATUS"/><mdProjectedItem name="STATUS_NAME"/><mdProjectedItem name="WHEN_CREATED"/><mdProjectedItem name="DATA"/></mdProjectedItems></sqlQuery></source>
+			<selection><dataItem name="MSG_ID"><expression>[SQL1].[MSG_ID]</expression></dataItem><dataItem name="EVENT_ID"><expression>[SQL1].[EVENT_ID]</expression></dataItem><dataItem name="SOURCE_ID"><expression>[SQL1].[SOURCE_ID]</expression></dataItem><dataItem name="STATUS"><expression>[SQL1].[STATUS]</expression></dataItem><dataItem name="STATUS_NAME"><expression>[SQL1].[STATUS_NAME]</expression></dataItem><dataItem name="WHEN_CREATED"><expression>[SQL1].[WHEN_CREATED]</expression></dataItem><dataItem name="DATA"><expression>[SQL1].[DATA]</expression></dataItem></selection>
+		</query></queries><namedConditionalStyles><stringsConditionalStyle name="Conditional Style 2"><conditionalDataItem refQuery="Query1" refDataItem="STATUS_NAME"/><stringConditions><stringValueList selectedValues="false"><style><defaultStyles><defaultStyle refStyle="pd_1"/></defaultStyles></style><styleValues><styleValue>Succeeded</styleValue></styleValues></stringValueList></stringConditions><styleDefault/></stringsConditionalStyle></namedConditionalStyles></report>

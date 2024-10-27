@@ -1,0 +1,337 @@
+<report xmlns="http://developer.cognos.com/schemas/report/8.0/" useStyleVersion="10" expressionLocale="en-us">
+	<drillBehavior modelBasedDrillThru="true"/>
+	<layouts>
+		<layout>
+			<reportPages>
+				<page name="Page1">
+					<style>
+						<defaultStyles>
+							<defaultStyle refStyle="pg"/>
+						</defaultStyles>
+						<CSS value="border-collapse: collapse;"/>
+					</style>
+					<pageHeader>
+						<style>
+							<defaultStyles>
+								<defaultStyle refStyle="ph"/>
+							</defaultStyles>
+							<CSS value="padding-bottom:15px"/>
+						</style>
+						<contents>
+							<block name="RTTitleBlock"><style><defaultStyles><defaultStyle refStyle="ta"/></defaultStyles><CSS value="font-size:22pt;text-align:left"/></style>
+								<contents>
+									<table><style><defaultStyles><defaultStyle refStyle="tb"/></defaultStyles><CSS value="border-collapse:collapse;width:100%"/></style><tableRows><tableRow><tableCells><tableCell><contents><table><style><defaultStyles><defaultStyle refStyle="tb"/></defaultStyles><CSS value="border-collapse:collapse"/></style><tableRows><tableRow><tableCells><tableCell><contents><textItem name="RTTitle2"><style><defaultStyles><defaultStyle refStyle="tt"/></defaultStyles><CSS value="font-weight:bold;font-size:20pt;color:#C00720"/></style>
+																						<dataSource>
+																							<reportExpression>reportname()</reportExpression></dataSource>
+																					</textItem></contents></tableCell></tableCells></tableRow><tableRow><tableCells><tableCell><contents><textItem name="RTTitle1"><style><defaultStyles><defaultStyle refStyle="tt"/></defaultStyles><CSS value="font-size:8pt"/></style>
+														<dataSource>
+															<reportExpression>substring(ReportPath (),
+   position('=''', ReportPath ())+2,
+   position(''']', ReportPath ()) -  position('=''', ReportPath ())-2)
+ 
++ '\' +
+ 
+substring(substring(ReportPath (), position(''']', ReportPath ())+2 ,-1),
+   position('=''', substring(ReportPath (), position(''']', ReportPath ()) ,-1)),
+   position(''']', substring(ReportPath (), position(''']', ReportPath ()) +2,-1)) -  position('=''', substring(ReportPath (), position(''']', ReportPath ()) ,-1)))
+ 
+
+ 
+</reportExpression></dataSource>
+													</textItem></contents><style><CSS value="color:gray"/></style></tableCell></tableCells></tableRow></tableRows></table></contents></tableCell><tableCell><contents><table><style><defaultStyles><defaultStyle refStyle="tb"/></defaultStyles><CSS value="border-collapse:collapse;width:100%"/></style><tableRows><tableRow><tableCells><tableCell><contents><textItem><dataSource><staticValue>This report displays all of wave that have not been completely carton started. Oldest waves on top.</staticValue></dataSource></textItem></contents><style><CSS value="text-align:center;font-size:12pt"/></style></tableCell></tableCells></tableRow><tableRow><tableCells><tableCell><contents/><style><CSS value="padding-top:3px;padding-bottom:3px;height:6px"/></style></tableCell></tableCells></tableRow><tableRow><tableCells><tableCell><contents><HTMLItem>
+			<dataSource>
+				<staticValue>&lt;a href = "https://forms.office.com/r/eB19K1VVTY"&gt;Feedback&lt;/a&gt;</staticValue>
+			</dataSource>
+		</HTMLItem></contents><style><CSS value="text-align:center"/></style></tableCell></tableCells></tableRow></tableRows></table></contents></tableCell><tableCell><contents><table><style><defaultStyles><defaultStyle refStyle="tb"/></defaultStyles><CSS value="border-collapse:collapse"/></style><tableRows><tableRow><tableCells><tableCell><contents><table><style><defaultStyles><defaultStyle refStyle="tb"/></defaultStyles><CSS value="border-collapse:collapse;width:100%;border:1pt solid black"/></style><tableRows><tableRow><tableCells><tableCell><contents><textItem><dataSource><staticValue>Facility</staticValue></dataSource></textItem></contents><style><CSS value="padding:1px 4px 1px 4px;background-color:#EEEEEE;border-right:1pt dotted gray"/></style></tableCell><tableCell><contents><singleton refQuery="Facilitity" name="Singleton2">
+																				<contents><textItem><dataSource><dataItemValue refDataItem="Facility_Name"/></dataSource></textItem></contents>
+																			</singleton></contents><style><CSS value="padding:1px 4px 1px 4px"/></style></tableCell></tableCells></tableRow><tableRow><tableCells><tableCell><contents><textItem><dataSource><staticValue>Owner</staticValue></dataSource></textItem></contents><style><CSS value="padding:1px 4px 1px 4px;background-color:#EEEEEE;border-top:1pt dotted gray;border-bottom:1pt dotted gray"/></style></tableCell><tableCell><contents><textItem><dataSource><staticValue>ENGINEERING</staticValue></dataSource></textItem></contents><style><CSS value="padding:1px 4px 1px 4px;border-top:1pt dotted gray;border-bottom:1pt dotted gray;border-left:1pt dotted gray"/></style></tableCell></tableCells></tableRow><tableRow><tableCells><tableCell><contents><textItem><dataSource><staticValue>User ID</staticValue></dataSource></textItem></contents><style><CSS value="padding:1px 4px 1px 4px;background-color:#EEEEEE;border-bottom:1pt dotted gray"/></style></tableCell><tableCell><contents><singleton name="Singleton1" refQuery="User">
+																				<contents><textItem><dataSource><dataItemValue refDataItem="User"/></dataSource></textItem></contents>
+																			</singleton></contents><style><CSS value="padding:1px 4px 1px 4px;border-bottom:1pt dotted gray;border-left:1pt dotted gray"/></style></tableCell></tableCells></tableRow><tableRow><tableCells><tableCell><contents><textItem><dataSource><staticValue>Date</staticValue></dataSource></textItem></contents><style><CSS value="padding:1px 4px 1px 4px;background-color:#EEEEEE;border-right:1pt dotted gray"/></style></tableCell><tableCell><contents><date>
+			
+		<style><dataFormat><dateFormat pattern="MM/dd/yyyy"/></dataFormat></style></date></contents><style><CSS value="padding:1px 4px 1px 4px"/></style></tableCell></tableCells></tableRow></tableRows></table></contents><style><CSS value="text-align:center;vertical-align:middle;padding-right:25px;width:210px"/></style></tableCell><tableCell><contents><image>
+																<dataSource>
+																	<staticValue>https://1000logos.net/wp-content/uploads/2017/08/Lululemon-Logo.png</staticValue>
+																</dataSource>
+																<style><CSS value="height:80px"/></style></image></contents></tableCell></tableCells></tableRow></tableRows></table></contents><style><CSS value="text-align:right"/></style></tableCell></tableCells></tableRow></tableRows></table></contents>
+							</block>
+							<table><style><defaultStyles><defaultStyle refStyle="tb"/></defaultStyles><CSS value="border-collapse:collapse;width:100%"/></style><tableRows><tableRow><tableCells><tableCell><contents><table><style><defaultStyles><defaultStyle refStyle="tb"/></defaultStyles><CSS value="border-collapse:collapse"/></style><tableRows><tableRow><tableCells><tableCell><contents><table><style><defaultStyles><defaultStyle refStyle="tb"/></defaultStyles><CSS value="border-collapse:collapse"/></style><tableRows><tableRow><tableCells><tableCell><contents><textItem><dataSource><staticValue>Select zone:</staticValue></dataSource></textItem></contents></tableCell></tableCells></tableRow><tableRow><tableCells><tableCell><contents><selectValue parameter="Wavetype" multiSelect="true" range="false" required="false" refQuery="WaveSelect" selectValueUI="checkboxGroup"><useItem refDataItem="WAVE_TYPE"><displayItem refDataItem="WAVE_TYPE"/></useItem><headerText><defaultText/></headerText><sortList><sortItem refDataItem="WAVE_TYPE"/></sortList></selectValue><promptButton type="finish">
+			<contents/>
+			<style>
+				<defaultStyles>
+					<defaultStyle refStyle="bp"/>
+				</defaultStyles>
+			</style>
+		</promptButton></contents><style><CSS value="vertical-align:top"/></style></tableCell></tableCells></tableRow></tableRows></table><selectValue multiSelect="true" range="false" required="false" selectValueUI="checkboxGroup" refQuery="PT_Select" parameter="TandEFilter"><useItem refDataItem="PT_TYPE"><displayItem refDataItem="PT_TYPE"/></useItem></selectValue></contents><style><CSS value="text-align:left;vertical-align:top"/></style></tableCell><tableCell><contents><table><style><defaultStyles><defaultStyle refStyle="tb"/></defaultStyles><CSS value="border-collapse:collapse;width:100%;border:1pt solid black"/></style><tableRows><tableRow><tableCells><tableCell><contents><textItem><dataSource><staticValue>Status</staticValue></dataSource></textItem></contents><style><CSS value="font-size:12pt;text-align:center;font-weight:bold;border:1pt solid black"/></style></tableCell><tableCell><contents><textItem><dataSource><staticValue>Definition</staticValue></dataSource><style><CSS value="font-weight:bold"/></style></textItem></contents><style><CSS value="font-size:12pt;text-align:center;border:1pt solid black"/></style></tableCell></tableCells></tableRow><tableRow><tableCells><tableCell><contents><textItem><dataSource><staticValue>05- Pending_FA</staticValue></dataSource></textItem></contents><style><CSS value="text-align:center;font-size:12pt;border:1pt solid black"/></style></tableCell><tableCell><contents><textItem><dataSource><staticValue>Not enough inventory in active, waiting on fill active to be completed</staticValue></dataSource></textItem></contents><style><CSS value="font-size:12pt;text-align:center;border:1pt solid black"/></style></tableCell></tableCells></tableRow><tableRow><tableCells><tableCell><contents><textItem><dataSource><staticValue>06 - Investigate_before_inducting</staticValue></dataSource></textItem></contents><style><CSS value="padding-top:3px;padding-bottom:3px;height:6px;font-size:12pt;text-align:center;border:1pt solid black"/></style></tableCell><tableCell><contents><textItem><dataSource><staticValue>Fill active has been completed, but the task is still locked. Investigate further.</staticValue></dataSource></textItem></contents><style><CSS value="font-size:12pt;text-align:center;border:1pt solid black"/></style></tableCell></tableCells></tableRow><tableRow><tableCells><tableCell><contents><textItem><dataSource><staticValue>10 - Ready_to_Induct</staticValue></dataSource></textItem></contents><style><CSS value="text-align:center;font-size:12pt;border:1pt solid black"/></style></tableCell><tableCell><contents><textItem><dataSource><staticValue>Task released and ready to be inducted</staticValue></dataSource></textItem></contents><style><CSS value="font-size:12pt;text-align:center;border:1pt solid black"/></style></tableCell></tableCells></tableRow></tableRows></table></contents><style><CSS value="vertical-align:top;text-align:center"/></style></tableCell></tableCells></tableRow></tableRows></table></contents></tableCell><tableCell><contents/><style><CSS value="width:240px"/></style></tableCell></tableCells></tableRow></tableRows></table></contents>
+					</pageHeader>
+					<pageBody><style><defaultStyles><defaultStyle refStyle="pb"/></defaultStyles><CSS value="text-align:center;vertical-align:top"/></style>
+						<contents><crosstab horizontalPagination="true" name="Crosstab1" refQuery="Query1" rowsPerPage="500">
+			<crosstabCorner>
+				<contents><textItem><dataSource><dataItemLabel refDataItem="TOTES"/></dataSource></textItem></contents>
+				<style>
+					<defaultStyles>
+						<defaultStyle refStyle="xm"/>
+					</defaultStyles>
+				</style>
+			</crosstabCorner>
+			
+			
+			<noDataHandler>
+				<contents>
+					<block>
+						<contents>
+							<textItem>
+								<dataSource>
+									<staticValue>No Data Available</staticValue>
+								</dataSource>
+								<style>
+									<CSS value="padding:10px 18px;"/>
+								</style>
+							</textItem>
+						</contents>
+					</block>
+				</contents>
+			</noDataHandler>
+			<style>
+				<CSS value="border-collapse:collapse;font-size:12pt"/>
+				<defaultStyles>
+					<defaultStyle refStyle="xt"/>
+				</defaultStyles>
+			</style>
+		<crosstabFactCell><contents><textItem><dataSource><cellValue/></dataSource></textItem></contents><style><defaultStyles><defaultStyle refStyle="mv"/></defaultStyles></style></crosstabFactCell><crosstabRows><crosstabNode><crosstabNestedNodes><crosstabNode><crosstabNestedNodes><crosstabNode><crosstabNestedNodes><crosstabNode><crosstabNestedNodes><crosstabNode><crosstabNodeMembers><crosstabNodeMember refDataItem="WAVE_DESC" edgeLocation="e3"><style><defaultStyles><defaultStyle refStyle="ml"/></defaultStyles></style><contents><textItem><dataSource><memberCaption/></dataSource></textItem></contents></crosstabNodeMember></crosstabNodeMembers></crosstabNode></crosstabNestedNodes><crosstabNodeMembers><crosstabNodeMember refDataItem="WAVE_TYPE_DESC" edgeLocation="e7"><style><defaultStyles><defaultStyle refStyle="ml"/></defaultStyles></style><contents><textItem><dataSource><memberCaption/></dataSource></textItem></contents></crosstabNodeMember></crosstabNodeMembers></crosstabNode></crosstabNestedNodes><crosstabNodeMembers><crosstabNodeMember refDataItem="WAVE_AREA" edgeLocation="e5"><style><defaultStyles><defaultStyle refStyle="ml"/></defaultStyles></style><contents><textItem><dataSource><memberCaption/></dataSource></textItem></contents></crosstabNodeMember></crosstabNodeMembers></crosstabNode></crosstabNestedNodes><crosstabNodeMembers><crosstabNodeMember refDataItem="WAVE_NBR" edgeLocation="e2"><style><defaultStyles><defaultStyle refStyle="ml"/></defaultStyles></style><contents><textItem><dataSource><memberCaption/></dataSource><style><defaultStyles><defaultStyle refStyle="hy"/></defaultStyles></style><reportDrills><reportDrill name="Drill-Through Definition1"><drillLabel><dataSource><staticValue/></dataSource></drillLabel><drillTarget method="execute"><reportPath path="/content/folder[@name='lululemon reports']/folder[@name='Production Control']/folder[@name='Carton Start']/report[@name='Carton Start - Pending Letdown Tasks']"><XMLAttributes><XMLAttribute name="ReportName" value="Carton Start - Pending Letdown Tasks" output="no"/><XMLAttribute name="class" value="report" output="no"/></XMLAttributes></reportPath><drillLinks><drillLink><drillTargetContext><parameterContext parameter="pWave"/></drillTargetContext><drillSourceContext><dataItemContext refDataItem="WAVE_NBR"/></drillSourceContext></drillLink></drillLinks></drillTarget></reportDrill></reportDrills></textItem></contents><sortList><sortItem refDataItem="WAVE_NBR"/><sortItem refDataItem="USER_ASSIGNED" sortOrder="descending"/></sortList></crosstabNodeMember></crosstabNodeMembers></crosstabNode></crosstabNestedNodes><crosstabNodeMembers><crosstabNodeMember refDataItem="USER_ASSIGNED" edgeLocation="e1"><style><defaultStyles><defaultStyle refStyle="ml"/></defaultStyles></style><contents><textItem><dataSource><memberCaption/></dataSource></textItem></contents><sortList><sortItem refDataItem="USER_ASSIGNED"/></sortList></crosstabNodeMember></crosstabNodeMembers></crosstabNode></crosstabRows><crosstabColumns><crosstabNode><crosstabNodeMembers><crosstabNodeMember refDataItem="PT_STATUS" edgeLocation="e4"><style><defaultStyles><defaultStyle refStyle="ml"/></defaultStyles></style><contents><textItem><dataSource><memberCaption/></dataSource></textItem></contents><sortList><sortItem refDataItem="PT_STATUS" sortOrder="ascending"/></sortList><conditionalStyleRefs><conditionalStyleRef refConditionalStyle="ready_to_induct"/></conditionalStyleRefs></crosstabNodeMember></crosstabNodeMembers></crosstabNode></crosstabColumns><defaultMeasure refDataItem="TOTES"/><crosstabIntersections><crosstabIntersection row="e3" column="e4"><conditionalStyleRefs><conditionalStyleRef refConditionalStyle="ready_to_induct"/></conditionalStyleRefs></crosstabIntersection></crosstabIntersections></crosstab></contents>
+					</pageBody>
+					
+				</page>
+			</reportPages>
+			<pageSetup orientation="landscape"/></layout>
+	</layouts>
+	<XMLAttributes><XMLAttribute name="RS_CreateExtendedDataItems" value="true" output="no"/><XMLAttribute name="RS_modelModificationTime" value="2015-01-29T21:59:28.244Z" output="no"/><XMLAttribute name="listSeparator" value="," output="no"/></XMLAttributes><reportName>Cartoon Start V 2.0</reportName><modelPath>/content/folder[@name='lululemon packages']/package[@name='WMOS']/model[@name='2015-01-29T21:59:28.146Z']</modelPath><queries><query name="User"><source><model/></source><selection><dataItem name="User"><expression>#sq($account.defaultName)#</expression></dataItem></selection></query><query name="Facilitity">
+			<source>
+				<sqlQuery name="SQL15" dataSource="WMOS">
+					<sqlText>--Facility ID Query
+Select
+CASE WHEN "Facility_Name" = 'COL' THEN 'Columbus DC'
+WHEN "Facility_Name" = 'SUM' THEN 'Sumner DC'
+WHEN "Facility_Name" = 'DEL' THEN 'Delta DC'
+WHEN "Facility_Name" = 'TOR' THEN 'Toronto DC'
+WHEN "Facility_Name" = 'AUS' THEN 'Australia DC'
+ELSE "Facility_Name" END as "Facility_Name"
+FROM(SELECT distinct upper(substr(o_facility_name,1,3)) as "Facility_Name" from wm.orders where rownum =1)
+</sqlText>
+					<mdProjectedItems><mdProjectedItem name="Facility_Name"/></mdProjectedItems></sqlQuery></source>
+			<selection><dataItem name="Facility_Name"><expression>[SQL15].[Facility_Name]</expression></dataItem></selection>
+		</query><query name="Query1">
+			<source>
+				
+			<sqlQuery name="SQL1" dataSource="WMOS">
+			<sqlText>select
+    user_assigned
+    , wave_nbr
+    , wave_type_desc
+    , wave_desc
+    --, container_type
+    --, container_size
+    , to_char(max_stat_code,'00')
+    ||' - '||
+    CASE 
+         WHEN max_stat_code in ('5','05') THEN 'Pending_FA'
+        WHEN max_stat_code in ('06','6') THEN 'Investigate_before_inducting'
+        WHEN max_stat_code = '10' THEN 'Ready_to_Induct'
+        WHEN max_stat_code = '20' THEN 'Carton_Started'
+        WHEN max_stat_code = '50' THEN 'Seen_by_PT'
+        ELSE 'Other'
+        END as pt_status
+    , count(distinct tote_counter) as totes
+    , sum(qty_alloc) as qty_alloc
+    , sum(qty_picked) as qty_picked
+    , WAVE_TYPE,
+CASE
+    WHEN wave_type_desc like '%Footwear%' 
+         AND WAVE_TYPE like '%MA3%' 
+         -- This replicates your condition that TandEFilter would have had 'Other'
+         AND (
+              wave_type_desc not like 'E-Com%' 
+              AND wave_desc not like '%PT%' 
+              AND wave_type_desc not like '%Transfers%' 
+              AND wave_desc not like 'MIL 1-INV%' 
+              AND wave_desc not like 'MIL 1- INV%' 
+              AND wave_desc not like 'MIL E%' 
+              AND wave_desc not like 'PP%'
+         ) 
+    THEN 'Footwear Retail'
+    WHEN wave_type_desc like 'E-Com%' THEN 'Ecom PT'
+    WHEN wave_desc like '%PT%' THEN 'Ecom PT'
+    WHEN wave_type_desc like '%Transfers%' THEN 'Transfers'
+    WHEN wave_desc like 'MIL 1-INV%' THEN 'ECOMM MIL'
+    WHEN wave_desc like 'MIL 1- INV%' THEN 'ECOMM MIL'    
+    WHEN wave_desc like 'MIL E%' THEN 'ECOMM MIL'
+    WHEN wave_desc like 'PP%' THEN 
+        CASE 
+            WHEN WAVE_TYPE like ('%MIL%') THEN 'ECOMM MIL'
+            ELSE 'Ecom PT'
+        END
+    ELSE 'RETAIL'
+END as TandEFilter
+
+
+from (
+    select
+        user_assigned
+        , WAVE_TYPE
+        , wave_nbr
+        , wave_type_desc
+        , wave_desc
+        , task_id
+        , carton_nbr
+        , zone
+        , nvl(task_id, carton_nbr) as tote_counter
+        , inducted_tote
+        , min(pt_stat_code) as min_stat_code
+        , CASE WHEN max(th_stat) in ('5','05') and max(pt_stat_code) = '10' THEN 6 ELSE max(pt_stat_code) END as max_stat_code
+        , sum(qty_alloc) as qty_alloc
+        , sum(qty_pulld) as qty_picked
+        
+    from (
+        select nvl(lh.area||lh.zone, '00'),
+            pl.user_id as user_assigned
+            , wp.pick_locn_assign_type
+            , l.wave_nbr
+            , wp.wave_desc
+            , c.code_desc as wave_type_desc
+            , l.container_type
+            , l.container_size
+            , td.task_id
+            , case when td.task_id is null then aid.carton_nbr else null end as carton_nbr
+            , l.tc_order_id
+            , aid.stat_code
+            , aid.misc_alpha_field_2 as inducted_tote
+            , td.task_type
+            , aid.pikr_nbr as zone
+            , aid.qty_alloc
+            , aid.qty_pulld
+            , lh.dsp_locn
+            , l.tc_lpn_id
+            , l.ship_via
+            , td.stat_code as td_stat
+            , nvl(th.stat_code,50) as th_stat
+            , nvl(to_number(l.misc_instr_code_3),0) as pt_stat_code    
+            -- TESTING
+            , nvl(aid.task_type,'00') AID_TASK_TYPE
+            , nvl(td.task_type, '00') TD_TASK_TYPE
+            , wp.day_of_week
+            , wp.shift_nbr
+            , swp.wave_desc sw_wave_desc
+ 
+, CASE 
+    WHEN nvl(lh.area||lh.zone, '00') in ('AS1', 'AS2', 'AS3', 'PA1', 'PA2', 'PA3') THEN 'MIS | AS1, AS2, AS3'
+    WHEN nvl(lh.area||lh.zone, '00') in ('MA4') THEN 'MIL | MA4'
+    WHEN nvl(lh.area||lh.zone, '00') in ('MA3') THEN 'MIL | MA3'
+    WHEN nvl(lh.area||lh.zone, '00') in ('MH1') THEN 'MIL | MA1'
+    WHEN nvl(lh.area||lh.zone, '00') in ('MA1', 'MN1') 
+        THEN CASE 
+            WHEN wp.wave_desc like 'MIL 1-INV Mats%' THEN 'MIL | MA4'
+            ELSE 'MIL | MA1'
+        END
+    ELSE nvl(lh.area||lh.zone, '00') 
+END as WAVE_TYPE
+        from wm.lpn l
+        inner join wm.alloc_invn_dtl aid on l.tc_lpn_id = aid.carton_nbr
+        left outer join wm.locn_hdr lh on aid.pull_locn_id = lh.locn_id
+        left outer join wm.task_dtl td on l.tc_lpn_id = td.carton_nbr and td.task_genrtn_ref_code not in ('15')
+        left outer join wm.task_hdr th on td.task_id = th.task_id
+        left outer join wm.wave_parm wp on l.wave_nbr = wp.wave_nbr
+        -- ADDED TO USE ship_wave_parm.wave_desc TO FILTER OUT Gr800 WAVES
+        left outer join wm.ship_wave_parm swp on l.wave_nbr = swp.ship_wave_nbr
+        left outer join (
+            select code_id, code_desc 
+            from wm.sys_code 
+            where code_type = '325' 
+            ) c on wp.alloc_type = c.code_id -- alloc type desc
+        left outer join (select substr(proc_key,0,12) as proc_key, user_id from wm.proc_lock ) pl on l.wave_nbr = pl.proc_key
+        -- JOINING IN TO FILTER OUT BAGS/MATS
+        left outer join wm.item_cbo ic on td.item_id = ic.item_id
+        left outer join wm.product_class pc on ic.product_class_id = pc.product_class_id
+ 
+        where
+            --l.wave_nbr in ('202012110061','202012140064','202012110044')
+            --and l.tc_lpn_id = '00000999990162187228'
+            l.inbound_outbound_indicator = 'O'   
+            --KP (7/21/21): adding AS4 and PA1 as area||zones are in MIS and will be used for Carton Start
+            -- CP (9/21/21): Added MA1 for 1 invn / Milton picks
+            and nvl(lh.area||lh.zone, '00') in ('AS1','AS2','AS3','AS4','PA1','MA1','MN1','MA3','MA4','PA2','PA3','MH0','MH1') 
+            and l.wave_nbr &gt; '202107220007' --KP: (7/22/21): added to exclude waves before 7/22/22 carton start go-live (last ecom wave before go-live is '2021072200007')
+            and l.misc_instr_code_3 in ('5','05','10')
+            and l.lpn_facility_status &lt; '90'
+            and nvl(th.stat_code,50) &lt; '60'
+            --and upper(c.code_desc) like 'MIL%' --OR and upper(c.code_desc) like 'PP%' --KP: (3/2/22)
+            -- 7 = AS4/PA1, 5 = AS1/AS2 pick tower, 6 = Milton
+            and wp.day_of_week in ('5','6','7', '1')
+            --and nvl(td.task_type,'00') not in ('32', '4E', '4F', '4N', '5A', '5B', '5D', '5G', '5J', '5N', 'E8', 'AP', 'FC', 'FF', 'FG', 'FR', 'FS', 'FX'
+                -- COL
+                --,'GC','GT','ST','EF','IS','IG','26'
+                -- TOR after PT 
+                --, 'FR','IT','1C','FT','RT','AP','4D','4B','4C','4M','4O','4H'
+                --)
+
+        order by aid.task_genrtn_ref_nbr desc
+        )
+    group by
+        user_assigned
+        , wave_nbr
+        , wave_type_desc
+        , wave_desc
+        --, container_type
+        --, container_size
+        , task_id
+        , carton_nbr
+        , zone
+        , inducted_tote
+        , WAVE_TYPE
+    )
+group by
+    user_assigned
+    , wave_nbr
+    , wave_type_desc
+    , wave_desc
+    --, container_type
+    --, container_size
+    , max_stat_code
+    , WAVE_TYPE
+order by 
+    wave_nbr</sqlText>
+		<mdProjectedItems><mdProjectedItem name="USER_ASSIGNED"/><mdProjectedItem name="WAVE_NBR"/><mdProjectedItem name="WAVE_TYPE_DESC"/><mdProjectedItem name="WAVE_DESC"/><mdProjectedItem name="PT_STATUS"/><mdProjectedItem name="TOTES"/><mdProjectedItem name="QTY_ALLOC"/><mdProjectedItem name="QTY_PICKED"/><mdProjectedItem name="WAVE_TYPE"/><mdProjectedItem name="TANDEFILTER"/></mdProjectedItems></sqlQuery></source>
+			<selection><dataItem name="USER_ASSIGNED"><expression>[SQL1].[USER_ASSIGNED]</expression></dataItem><dataItem name="WAVE_NBR"><expression>[SQL1].[WAVE_NBR]</expression></dataItem><dataItem name="WAVE_TYPE_DESC"><expression>[SQL1].[WAVE_TYPE_DESC]</expression></dataItem><dataItem name="WAVE_DESC"><expression>[SQL1].[WAVE_DESC]</expression></dataItem><dataItem name="PT_STATUS"><expression>[SQL1].[PT_STATUS]</expression></dataItem><dataItem name="TOTES" aggregate="total"><expression>[SQL1].[TOTES]</expression></dataItem><dataItem name="WAVE_AREA"><expression>[SQL1].[WAVE_TYPE]</expression></dataItem><dataItem name="TANDEFILTER"><expression>[SQL1].[TANDEFILTER]</expression></dataItem></selection>
+		<queryHints><localCache value="false"/></queryHints><detailFilters><detailFilter use="optional" postAutoAggregation="false"><filterExpression>[SQL1].[WAVE_TYPE] in ?Wavetype?</filterExpression></detailFilter><detailFilter use="optional"><filterExpression>[SQL1].[TANDEFILTER] in ?TandEFilter?</filterExpression></detailFilter></detailFilters></query><query name="WaveSelect">
+			<source>
+				
+			<sqlQuery name="SQL2" dataSource="WMOS">
+			<sqlText>select
+	case when rownum = 1 then 'MIS | AS1, AS2, AS3'
+                when rownum = 2 then 'MIL | MA1'
+               -- when rownum = 3 then 'MIS | AS4' (KP: 3/3/2022 - removing AS4 because no longer using this pick area)
+	when rownum = 3 then 'MIL | MA3'
+	when rownum = 4 then 'MIL | MA4' 
+	end as WAVE_TYPE
+from dual connect by rownum &lt;= 4
+order by rownum</sqlText>
+		<mdProjectedItems><mdProjectedItem name="WAVE_TYPE"/></mdProjectedItems></sqlQuery></source>
+			<selection><dataItem name="WAVE_TYPE"><expression>[SQL2].[WAVE_TYPE]</expression></dataItem></selection>
+		<queryHints><localCache value="false"/></queryHints></query><query name="PT_Select">
+			<source>
+				
+			<sqlQuery name="SQL3" dataSource="WMOS">
+			<sqlText>select
+	case when rownum = 1 then 'Ecom PT'              
+when rownum = 2 then 'Transfers'
+when rownum = 3 then 'ECOMM MIL'
+when rownum = 4 then 'Footwear Retail'
+when rownum = 5 then 'RETAIL'
+	end as PT_Type
+from dual connect by rownum &lt;= 5</sqlText>
+		<mdProjectedItems><mdProjectedItem name="PT_TYPE"/></mdProjectedItems></sqlQuery></source>
+			<selection><dataItem name="PT_TYPE"><expression>[SQL3].[PT_TYPE]</expression></dataItem></selection>
+		</query></queries><classStyles><classStyle name="cls1" label="Section Header"><CSS value="padding:4px 6px 4px 6px;background-color:#333333;color:white;font-size:12pt;font-weight:bold;font-family:Arial;text-align:center"/></classStyle><classStyle name="cls2" label="General Header"><CSS value="font-weight:bold"/></classStyle></classStyles><reportVariables><reportVariable type="boolean" name="ready_to_induct">
+			<reportExpression/>
+			<variableValues>
+				<variableValue value="1"/>
+			</variableValues>
+		</reportVariable></reportVariables><namedConditionalStyles><stringsConditionalStyle name="ready_to_induct"><conditionalDataItem refQuery="Query1" refDataItem="PT_STATUS"/><stringConditions><stringValueList selectedValues="true"><style><CSS value="font-weight:bold;color:green"/></style><styleValues><styleValue> 10 - Ready_to_Induct</styleValue></styleValues></stringValueList></stringConditions><styleDefault/></stringsConditionalStyle></namedConditionalStyles></report>

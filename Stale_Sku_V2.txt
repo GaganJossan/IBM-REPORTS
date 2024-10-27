@@ -1,0 +1,304 @@
+<report xmlns="http://developer.cognos.com/schemas/report/8.0/" useStyleVersion="10" expressionLocale="en-us">
+				<modelPath>/content/folder[@name='lululemon packages']/package[@name='WMOS']/model[@name='2015-01-29T21:59:28.146Z']</modelPath>
+				<drillBehavior modelBasedDrillThru="true"/>
+				<layouts>
+					<layout>
+						<reportPages>
+							<page name="Page1">
+								<style>
+									<defaultStyles>
+										<defaultStyle refStyle="pg"/>
+									</defaultStyles>
+								</style>
+								<pageBody>
+									<style>
+										<defaultStyles>
+											<defaultStyle refStyle="pb"/>
+										</defaultStyles>
+									</style>
+									<contents><table><style><defaultStyles><defaultStyle refStyle="tb"/></defaultStyles><CSS value="border-collapse:collapse;width:100%"/></style><tableRows><tableRow><tableCells><tableCell><contents><list horizontalPagination="true" refQuery="SUMMARY" name="List2">
+			
+			
+			
+			<noDataHandler>
+				<contents>
+					<block>
+						<contents>
+							<textItem>
+								<dataSource>
+									<staticValue>No Data Available</staticValue>
+								</dataSource>
+								<style>
+									<CSS value="padding:10px 18px;"/>
+								</style>
+							</textItem>
+						</contents>
+					</block>
+				</contents>
+			</noDataHandler>
+			<style>
+				<CSS value="border-collapse:collapse;margin-bottom:50px;margin-left:650px;margin-top:50px"/>
+				<defaultStyles>
+					<defaultStyle refStyle="ls"/>
+				</defaultStyles>
+			</style>
+		<listColumns><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles><CSS value="font-weight:bold;font-size:10pt;background-color:#6699FF;color:black"/></style><contents><textItem><dataSource><dataItemLabel refDataItem="AREA_ZONE"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles><CSS value="font-weight:bold;color:red;font-size:10pt"/></style><contents><textItem><dataSource><dataItemValue refDataItem="AREA_ZONE"/></dataSource></textItem></contents></listColumnBody></listColumn><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles><CSS value="font-weight:bold;font-size:10pt;background-color:#6699FF;color:black"/></style><contents><textItem><dataSource><dataItemLabel refDataItem="TOTAL_COUNT"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles><CSS value="font-weight:bold;font-size:10pt"/></style><contents><textItem><dataSource><dataItemValue refDataItem="TOTAL_COUNT"/></dataSource></textItem></contents></listColumnBody></listColumn></listColumns><sortList><sortItem refDataItem="AREA_ZONE" sortOrder="ascending"/></sortList></list></contents></tableCell><tableCell><contents/></tableCell><tableCell><contents/></tableCell><tableCell><contents/></tableCell><tableCell><contents/></tableCell></tableCells></tableRow><tableRow><tableCells><tableCell><contents/></tableCell><tableCell><contents/></tableCell><tableCell><contents/></tableCell><tableCell><contents/></tableCell><tableCell><contents/></tableCell></tableCells></tableRow><tableRow><tableCells><tableCell><contents><list horizontalPagination="true" refQuery="Query1" name="List1" rowsPerPage="1000">
+			
+			
+			
+			<noDataHandler>
+				<contents>
+					<block>
+						<contents>
+							<textItem>
+								<dataSource>
+									<staticValue>No Data Available</staticValue>
+								</dataSource>
+								<style>
+									<CSS value="padding:10px 18px;"/>
+								</style>
+							</textItem>
+						</contents>
+					</block>
+				</contents>
+			</noDataHandler>
+			<style>
+				<CSS value="border-collapse:collapse;font-size:10pt"/>
+				<defaultStyles>
+					<defaultStyle refStyle="ls"/>
+				</defaultStyles>
+			</style>
+		<listColumns><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles><CSS value="background-color:green;color:white;font-weight:bold"/></style><contents><textItem><dataSource><dataItemLabel refDataItem="DSP_LOCN"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles></style><contents><textItem><dataSource><dataItemValue refDataItem="DSP_LOCN"/></dataSource></textItem></contents></listColumnBody></listColumn><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles><CSS value="background-color:green;color:white;font-weight:bold"/></style><contents><textItem><dataSource><dataItemLabel refDataItem="ITEM_NAME"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles></style><contents><textItem><dataSource><dataItemValue refDataItem="ITEM_NAME"/></dataSource></textItem></contents></listColumnBody></listColumn><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles><CSS value="background-color:green;color:white;font-weight:bold"/></style><contents><textItem><dataSource><dataItemLabel refDataItem="DESCRIPTION"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles></style><contents><textItem><dataSource><dataItemValue refDataItem="DESCRIPTION"/></dataSource></textItem></contents></listColumnBody></listColumn><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles><CSS value="background-color:green;color:white;font-weight:bold"/></style><contents><textItem><dataSource><dataItemLabel refDataItem="ON_HAND_QTY"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles></style><contents><textItem><dataSource><dataItemValue refDataItem="ON_HAND_QTY"/></dataSource></textItem></contents></listColumnBody></listColumn><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles><CSS value="background-color:green;color:white;font-weight:bold"/></style><contents><textItem><dataSource><dataItemLabel refDataItem="WM_ALLOCATED_QTY"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles></style><contents><textItem><dataSource><dataItemValue refDataItem="WM_ALLOCATED_QTY"/></dataSource></textItem></contents></listColumnBody></listColumn><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles><CSS value="background-color:green;color:white;font-weight:bold"/></style><contents><textItem><dataSource><dataItemLabel refDataItem="TO_BE_FILLED_QTY"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles></style><contents><textItem><dataSource><dataItemValue refDataItem="TO_BE_FILLED_QTY"/></dataSource></textItem></contents></listColumnBody></listColumn><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles><CSS value="background-color:green;color:white;font-weight:bold"/></style><contents><textItem><dataSource><dataItemLabel refDataItem="LOCN_LAST_ALLOCATED"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles></style><contents><textItem><dataSource><dataItemValue refDataItem="LOCN_LAST_ALLOCATED"/></dataSource></textItem></contents></listColumnBody></listColumn><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles><CSS value="background-color:green;color:white;font-weight:bold"/></style><contents><textItem><dataSource><dataItemLabel refDataItem="AREA_ZONE"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles></style><contents><textItem><dataSource><dataItemValue refDataItem="AREA_ZONE"/></dataSource></textItem></contents></listColumnBody></listColumn><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles><CSS value="background-color:green;color:white;font-weight:bold"/></style><contents><textItem><dataSource><dataItemLabel refDataItem="Inventory Type"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles></style><contents><textItem><dataSource><dataItemValue refDataItem="Inventory Type"/></dataSource></textItem></contents></listColumnBody></listColumn><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles><CSS value="background-color:green;color:white;font-weight:bold"/></style><contents><textItem><dataSource><dataItemLabel refDataItem="MMS DC Nbr"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles></style><contents><textItem><dataSource><dataItemValue refDataItem="MMS DC Nbr"/></dataSource></textItem></contents></listColumnBody></listColumn><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles><CSS value="background-color:green;color:white;font-weight:bold"/></style><contents><textItem><dataSource><dataItemLabel refDataItem="SKU_LAST_ALLOCATED"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles></style><contents><textItem><dataSource><dataItemValue refDataItem="SKU_LAST_ALLOCATED"/></dataSource></textItem></contents></listColumnBody></listColumn><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles><CSS value="background-color:green;color:white;font-weight:bold"/></style><contents><textItem><dataSource><dataItemLabel refDataItem="AGE"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles></style><contents><textItem><dataSource><dataItemValue refDataItem="AGE"/></dataSource></textItem></contents></listColumnBody></listColumn></listColumns><sortList><sortItem refDataItem="DSP_LOCN" sortOrder="ascending"/></sortList></list></contents></tableCell><tableCell><contents/></tableCell><tableCell><contents/></tableCell><tableCell><contents/></tableCell><tableCell><contents/></tableCell></tableCells></tableRow></tableRows></table></contents>
+								</pageBody>
+							<pageHeader><contents><textItem><dataSource><staticValue>STALE_SKU V2</staticValue></dataSource><style><CSS value="font-size:36pt"/></style></textItem></contents><style><CSS value="text-align:center;font-weight:bold;font-size:20pt;color:red"/></style></pageHeader></page>
+						</reportPages>
+					<promptPages><page name="Prompt Page1">
+			<pageHeader>
+				<contents>
+					<block>
+						<contents>
+							<textItem>
+								<dataSource>
+									<staticValue>STALE SKU REPORT</staticValue>
+								</dataSource>
+								<style>
+									<defaultStyles>
+										<defaultStyle refStyle="tt"/>
+									</defaultStyles>
+								<CSS value="font-weight:bold;font-size:18pt;color:red"/></style>
+							</textItem>
+						</contents>
+						<style>
+							<defaultStyles>
+								<defaultStyle refStyle="ta"/>
+							</defaultStyles>
+						</style>
+					</block>
+				</contents>
+				<style>
+					<defaultStyles>
+						<defaultStyle refStyle="hp"/>
+					</defaultStyles>
+				</style>
+			</pageHeader>
+			<pageBody>
+				<contents><selectValue parameter="pTote" refQuery="ZONE" multiSelect="true" range="false" required="true" selectValueUI="checkboxGroup"><useItem refDataItem="ZONE"><displayItem refDataItem="ZONE"/></useItem></selectValue></contents>
+				<style>
+					<defaultStyles>
+						<defaultStyle refStyle="py"/>
+					</defaultStyles>
+				</style>
+			</pageBody>
+			<pageFooter>
+				<contents>
+					<promptButton type="cancel">
+						<contents/>
+						<style>
+							<defaultStyles>
+								<defaultStyle refStyle="bp"/>
+							</defaultStyles>
+						</style>
+					</promptButton>
+					<promptButton type="back">
+						<contents/>
+						<style>
+							<defaultStyles>
+								<defaultStyle refStyle="bp"/>
+							</defaultStyles>
+						</style>
+					</promptButton>
+					<promptButton type="next">
+						<contents/>
+						<style>
+							<defaultStyles>
+								<defaultStyle refStyle="bp"/>
+							</defaultStyles>
+						</style>
+					</promptButton>
+					<promptButton type="finish">
+						<contents/>
+						<style>
+							<defaultStyles>
+								<defaultStyle refStyle="bp"/>
+							</defaultStyles>
+						</style>
+					</promptButton>
+				</contents>
+				<style>
+					<defaultStyles>
+						<defaultStyle refStyle="fp"/>
+					</defaultStyles>
+				</style>
+			</pageFooter>
+			<style>
+				<defaultStyles>
+					<defaultStyle refStyle="pp"/>
+				</defaultStyles>
+			</style>
+		</page></promptPages></layout>
+				</layouts>
+			<XMLAttributes><XMLAttribute name="RS_CreateExtendedDataItems" value="true" output="no"/><XMLAttribute name="listSeparator" value="," output="no"/><XMLAttribute name="RS_modelModificationTime" value="2015-01-29T21:59:28.244Z" output="no"/></XMLAttributes><queries><query name="Query1">
+			<source>
+				
+			<sqlQuery name="SQL1" dataSource="WMOS">
+			<sqlText>WITH alloc_invn_dtl_ranked AS (
+  SELECT 
+    ai.item_id, 
+    ai.mod_date_time,
+    ROW_NUMBER() OVER (PARTITION BY ai.item_id ORDER BY ai.mod_date_time DESC) AS rn
+  FROM wm.alloc_invn_dtl ai
+)
+SELECT  
+  lh.DSP_LOCN,
+  ic.item_name, 
+  ic.description, 
+  wi.on_hand_qty, 
+  wi.wm_allocated_qty, 
+  wi.to_be_filled_qty, 
+  TO_CHAR(MAX(ptt.begin_date), 'DD-MON-YY') AS Locn_Last_allocated, 
+  lh.area || lh.zone AS area_zone, 
+  DECODE(wi.inventory_type, wi.inventory_type, 
+    (SELECT code_desc FROM sys_code 
+     WHERE rec_type = 'B' 
+     AND code_type = '064' 
+     AND code_id = wi.inventory_type)) AS "Inventory Type", 
+  CASE 
+    WHEN wi.inventory_type = 'R' THEN '10096'
+    WHEN wi.inventory_type = 'E' THEN '10056'
+    WHEN wi.inventory_type = 'S' THEN '10046'
+    WHEN wi.inventory_type = 'B' THEN '10066'
+    WHEN wi.inventory_type = 'C' THEN '10078'
+    WHEN wi.inventory_type = 'I' THEN '10077'
+    WHEN wi.inventory_type = 'V' THEN '10097'
+    WHEN wi.inventory_type = 'K' THEN '10087'
+    WHEN wi.inventory_type = 'P' THEN '10079'
+    ELSE 'err' 
+  END AS "MMS DC Nbr",
+  TO_CHAR(ai.mod_date_time, 'DD-Mon-YYYY HH24:MI:SS') AS Sku_last_allocated,
+  ROUND(TRUNC(SYSDATE) - TRUNC(ai.mod_date_time), 0) AS Age -- Calculate age in days
+FROM 
+  locn_hdr lh
+  JOIN wm_inventory wi ON wi.location_id = lh.locn_id
+  JOIN item_cbo ic ON wi.item_id = ic.item_id
+  JOIN prod_trkg_tran ptt ON ptt.from_locn = wi.location_id AND ptt.tran_type = '500'
+  LEFT JOIN alloc_invn_dtl_ranked ai ON ai.item_id = ic.item_id AND ai.rn = 1 
+WHERE 
+  lh.area || lh.zone in (#Promptmany('pTote')#)
+  AND ptt.tran_type = '500' 
+GROUP BY 
+  lh.DSP_LOCN,
+  ic.item_name, 
+  ic.description, 
+  wi.on_hand_qty, 
+  wi.wm_allocated_qty, 
+  wi.to_be_filled_qty, 
+  lh.area || lh.zone, 
+  wi.inventory_type,
+  ai.mod_date_time
+HAVING 
+  MAX(ptt.begin_date) &lt; SYSDATE - 30
+  AND ai.mod_date_time &lt; SYSDATE - 30</sqlText>
+		<mdProjectedItems><mdProjectedItem name="DSP_LOCN"/><mdProjectedItem name="ITEM_NAME"/><mdProjectedItem name="DESCRIPTION"/><mdProjectedItem name="ON_HAND_QTY"/><mdProjectedItem name="WM_ALLOCATED_QTY"/><mdProjectedItem name="TO_BE_FILLED_QTY"/><mdProjectedItem name="LOCN_LAST_ALLOCATED"/><mdProjectedItem name="AREA_ZONE"/><mdProjectedItem name="Inventory Type"/><mdProjectedItem name="MMS DC Nbr"/><mdProjectedItem name="SKU_LAST_ALLOCATED"/><mdProjectedItem name="AGE"/></mdProjectedItems></sqlQuery></source>
+			<selection><dataItem name="DSP_LOCN"><expression>[SQL1].[DSP_LOCN]</expression></dataItem><dataItem name="ITEM_NAME"><expression>[SQL1].[ITEM_NAME]</expression></dataItem><dataItem name="DESCRIPTION"><expression>[SQL1].[DESCRIPTION]</expression></dataItem><dataItem name="ON_HAND_QTY"><expression>[SQL1].[ON_HAND_QTY]</expression></dataItem><dataItem name="WM_ALLOCATED_QTY"><expression>[SQL1].[WM_ALLOCATED_QTY]</expression></dataItem><dataItem name="TO_BE_FILLED_QTY"><expression>[SQL1].[TO_BE_FILLED_QTY]</expression></dataItem><dataItem name="LOCN_LAST_ALLOCATED"><expression>[SQL1].[LOCN_LAST_ALLOCATED]</expression></dataItem><dataItem name="AREA_ZONE"><expression>[SQL1].[AREA_ZONE]</expression></dataItem><dataItem name="Inventory Type"><expression>[SQL1].[Inventory Type]</expression></dataItem><dataItem name="MMS DC Nbr"><expression>[SQL1].[MMS DC Nbr]</expression></dataItem><dataItem name="SKU_LAST_ALLOCATED"><expression>[SQL1].[SKU_LAST_ALLOCATED]</expression></dataItem><dataItem name="AGE"><expression>[SQL1].[AGE]</expression></dataItem></selection>
+		</query><query name="ZONE">
+			<source>
+				
+			<sqlQuery name="SQL2" dataSource="WMOS">
+			<sqlText>select case when rownum = 1 then 'AS1'
+when rownum = 2 then 'AS2'
+when rownum = 3 then 'AS3'
+	end ZONE
+from dual connect by rownum &lt;= 3</sqlText>
+		<mdProjectedItems><mdProjectedItem name="ZONE"/></mdProjectedItems></sqlQuery></source>
+			<selection><dataItem name="ZONE"><expression>[SQL2].[ZONE]</expression></dataItem></selection>
+		</query><query name="SUMMARY">
+			<source>
+				
+			<sqlQuery name="SQL3" dataSource="WMOS">
+			<sqlText>WITH alloc_invn_dtl_ranked AS (
+  SELECT 
+    ai.item_id, 
+    ai.mod_date_time,
+    ROW_NUMBER() OVER (PARTITION BY ai.item_id ORDER BY ai.mod_date_time DESC) AS rn
+  FROM wm.alloc_invn_dtl ai
+)
+-- Original query wrapped in a subquery
+SELECT 
+  area_zone, 
+  COUNT(*) AS total_count
+FROM (
+  SELECT  
+    lh.DSP_LOCN,
+    ic.item_name, 
+    ic.description, 
+    wi.on_hand_qty, 
+    wi.wm_allocated_qty, 
+    wi.to_be_filled_qty, 
+    TO_CHAR(MAX(ptt.begin_date), 'DD-MON-YY') AS Locn_Last_allocated, 
+    lh.area || lh.zone AS area_zone, 
+    DECODE(wi.inventory_type, wi.inventory_type, 
+      (SELECT code_desc FROM sys_code 
+       WHERE rec_type = 'B' 
+       AND code_type = '064' 
+       AND code_id = wi.inventory_type)) AS "Inventory Type", 
+    CASE 
+      WHEN wi.inventory_type = 'R' THEN '10096'
+      WHEN wi.inventory_type = 'E' THEN '10056'
+      WHEN wi.inventory_type = 'S' THEN '10046'
+      WHEN wi.inventory_type = 'B' THEN '10066'
+      WHEN wi.inventory_type = 'C' THEN '10078'
+      WHEN wi.inventory_type = 'I' THEN '10077'
+      WHEN wi.inventory_type = 'V' THEN '10097'
+      WHEN wi.inventory_type = 'K' THEN '10087'
+      WHEN wi.inventory_type = 'P' THEN '10079'
+      ELSE 'err' 
+    END AS "MMS DC Nbr",
+    TO_CHAR(ai.mod_date_time, 'DD-Mon-YYYY HH24:MI:SS') AS Sku_last_allocated,
+    ROUND(TRUNC(SYSDATE) - TRUNC(ai.mod_date_time), 0) AS Age -- Calculate age in days
+  FROM 
+    locn_hdr lh
+    JOIN wm_inventory wi ON wi.location_id = lh.locn_id
+    JOIN item_cbo ic ON wi.item_id = ic.item_id
+    JOIN prod_trkg_tran ptt ON ptt.from_locn = wi.location_id AND ptt.tran_type = '500'
+    LEFT JOIN alloc_invn_dtl_ranked ai ON ai.item_id = ic.item_id AND ai.rn = 1 
+  WHERE 
+    ptt.tran_type = '500' 
+  GROUP BY 
+    lh.DSP_LOCN,
+    ic.item_name, 
+    ic.description, 
+    wi.on_hand_qty, 
+    wi.wm_allocated_qty, 
+    wi.to_be_filled_qty, 
+    lh.area || lh.zone, 
+    wi.inventory_type,
+    ai.mod_date_time
+  HAVING 
+    MAX(ptt.begin_date) &lt; SYSDATE - 30
+    AND ai.mod_date_time &lt; SYSDATE - 30
+) 
+GROUP BY area_zone
+ORDER BY total_count DESC</sqlText>
+		<mdProjectedItems><mdProjectedItem name="AREA_ZONE"/><mdProjectedItem name="TOTAL_COUNT"/></mdProjectedItems></sqlQuery></source>
+			<selection><dataItem name="AREA_ZONE"><expression>[SQL3].[AREA_ZONE]</expression></dataItem><dataItem name="TOTAL_COUNT"><expression>[SQL3].[TOTAL_COUNT]</expression></dataItem></selection>
+		</query></queries><reportName>stale sku report V2</reportName></report>
