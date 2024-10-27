@@ -1,0 +1,308 @@
+<report xmlns="http://developer.cognos.com/schemas/report/8.0/" useStyleVersion="10" expressionLocale="en-us">
+				<drillBehavior modelBasedDrillThru="true"/>
+				<layouts>
+					<layout>
+						<reportPages>
+							<page name="Page1">
+								<style>
+									<defaultStyles>
+										<defaultStyle refStyle="pg"/>
+									</defaultStyles>
+									<CSS value="border-collapse: collapse;"/>
+								</style>
+								<pageHeader>
+									<style>
+										<defaultStyles>
+											<defaultStyle refStyle="ph"/>
+										</defaultStyles>
+										<CSS value="padding-bottom:10px;"/>
+									</style>
+									<contents>
+										<block name="RTTitleBlock"><style><defaultStyles><defaultStyle refStyle="ta"/></defaultStyles><CSS value="font-size:22pt;text-align:left"/></style>
+											<contents>
+												
+											<table><style><defaultStyles><defaultStyle refStyle="tb"/></defaultStyles><CSS value="border-collapse:collapse;width:100%"/></style><tableRows><tableRow><tableCells><tableCell><contents><table><style><defaultStyles><defaultStyle refStyle="tb"/></defaultStyles><CSS value="border-collapse:collapse;width:100%"/></style><tableRows><tableRow><tableCells><tableCell><contents><textItem><dataSource><staticValue>TASK_GROUPS</staticValue></dataSource><style><CSS value="font-weight:bold;font-size:18pt;color:red"/></style></textItem></contents><style><CSS value="text-align:center"/></style></tableCell></tableCells></tableRow><tableRow><tableCells><tableCell><contents/></tableCell></tableCells></tableRow></tableRows></table></contents></tableCell><tableCell><contents><table><style><defaultStyles><defaultStyle refStyle="tb"/></defaultStyles><CSS value="border-collapse:collapse;width:100%;border:1pt solid black"/></style><tableRows><tableRow><tableCells><tableCell><contents><textItem><dataSource><staticValue>Facility</staticValue></dataSource></textItem></contents></tableCell><tableCell><contents><singleton refQuery="Facilitity" name="Singleton2">
+			<contents><textItem><dataSource><dataItemValue refDataItem="Facility_Name"/></dataSource></textItem></contents>
+		</singleton></contents></tableCell></tableCells></tableRow><tableRow><tableCells><tableCell><contents><textItem><dataSource><staticValue>Owner</staticValue></dataSource></textItem></contents></tableCell><tableCell><contents><textItem><dataSource><staticValue>ENGINEERING</staticValue></dataSource></textItem></contents></tableCell></tableCells></tableRow><tableRow><tableCells><tableCell><contents><textItem><dataSource><staticValue>User ID</staticValue></dataSource></textItem></contents></tableCell><tableCell><contents><singleton name="Singleton1" refQuery="User">
+			<contents><textItem><dataSource><dataItemValue refDataItem="User"/></dataSource></textItem></contents>
+		</singleton></contents></tableCell></tableCells></tableRow></tableRows></table></contents></tableCell><tableCell><contents><image>
+			<dataSource>
+				<staticValue>https://upload.wikimedia.org/wikipedia/en/thumb/2/22/Lululemon_Athletica_logo.svg/240px-Lululemon_Athletica_logo.svg.png</staticValue>
+			</dataSource>
+		<style><CSS value="height:80px"/></style></image></contents><style><CSS value="text-align:right"/></style></tableCell></tableCells></tableRow></tableRows></table></contents>
+										</block>
+										
+										
+									<table><style><defaultStyles><defaultStyle refStyle="tb"/></defaultStyles><CSS value="border-collapse:collapse;width:100%"/></style><tableRows><tableRow><tableCells><tableCell><contents><textItem><dataSource><staticValue>This Report Shows the Task group and Task_Type</staticValue></dataSource></textItem></contents></tableCell><tableCell><contents/><style><CSS value="width:240px"/></style></tableCell></tableCells></tableRow></tableRows></table></contents>
+								</pageHeader>
+								<pageBody><style><defaultStyles><defaultStyle refStyle="pb"/></defaultStyles></style>
+									<contents><table><style><defaultStyles><defaultStyle refStyle="tb"/></defaultStyles><CSS value="border-collapse:collapse;width:100%"/></style><tableRows><tableRow><tableCells><tableCell><contents><list horizontalPagination="true" refQuery="Query1" name="List1" rowsPerPage="999">
+			
+			
+			
+			<noDataHandler>
+				<contents>
+					<block>
+						<contents>
+							<textItem>
+								<dataSource>
+									<staticValue>No Data Available</staticValue>
+								</dataSource>
+								<style>
+									<CSS value="padding:10px 18px;"/>
+								</style>
+							</textItem>
+						</contents>
+					</block>
+				</contents>
+			</noDataHandler>
+			<style>
+				<CSS value="border-collapse:collapse;border:1pt solid black"/>
+				<defaultStyles>
+					<defaultStyle refStyle="ls"/>
+				</defaultStyles>
+			</style>
+		<listColumns><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles><CSS value="text-align:center;background-color:purple;color:white;font-weight:bold;font-size:11pt;border:1pt solid black"/></style><contents><textItem><dataSource><dataItemLabel refDataItem="TASK_GRP_CODE"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles><CSS value="text-align:center;font-size:11pt;border:1pt solid black"/></style><contents><textItem><dataSource><dataItemValue refDataItem="TASK_GRP_CODE"/></dataSource></textItem></contents></listColumnBody></listColumn><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles><CSS value="text-align:center;background-color:purple;color:white;font-weight:bold;font-size:11pt;border:1pt solid black"/></style><contents><textItem><dataSource><dataItemLabel refDataItem="TASK_GROUP_DESCRIPTION"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles><CSS value="text-align:center;font-size:11pt;border:1pt solid black"/></style><contents><textItem><dataSource><dataItemValue refDataItem="TASK_GROUP_DESCRIPTION"/></dataSource></textItem></contents></listColumnBody></listColumn><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles><CSS value="text-align:center;background-color:purple;color:white;font-weight:bold;font-size:11pt;border:1pt solid black"/></style><contents><textItem><dataSource><dataItemLabel refDataItem="TASK_TYPE_CODE"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles><CSS value="text-align:center;font-size:11pt;border:1pt solid black"/></style><contents><textItem><dataSource><dataItemValue refDataItem="TASK_TYPE_CODE"/></dataSource></textItem></contents></listColumnBody></listColumn><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles><CSS value="text-align:center;background-color:purple;color:white;font-weight:bold;font-size:11pt;border:1pt solid black"/></style><contents><textItem><dataSource><dataItemLabel refDataItem="TASK_TYPE_DESCRIPTION"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles><CSS value="text-align:center;font-size:11pt;border:1pt solid black"/></style><contents><textItem><dataSource><dataItemValue refDataItem="TASK_TYPE_DESCRIPTION"/></dataSource></textItem></contents></listColumnBody></listColumn><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles><CSS value="text-align:center;background-color:purple;color:white;font-weight:bold;font-size:11pt;border:1pt solid black"/></style><contents><textItem><dataSource><dataItemLabel refDataItem="INVENTORY_NEED_TYPE"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles><CSS value="text-align:center;font-size:11pt;border:1pt solid black"/></style><contents><textItem><dataSource><dataItemValue refDataItem="INVENTORY_NEED_TYPE"/></dataSource></textItem></contents></listColumnBody></listColumn></listColumns></list></contents></tableCell><tableCell><contents/></tableCell><tableCell><contents/></tableCell><tableCell><contents/></tableCell><tableCell><contents/></tableCell></tableCells></tableRow><tableRow><tableCells><tableCell><contents/></tableCell><tableCell><contents/></tableCell><tableCell><contents/></tableCell><tableCell><contents/></tableCell><tableCell><contents/></tableCell></tableCells></tableRow><tableRow><tableCells><tableCell><contents/></tableCell><tableCell><contents/></tableCell><tableCell><contents/></tableCell><tableCell><contents/></tableCell><tableCell><contents/></tableCell></tableCells></tableRow></tableRows></table></contents>
+								</pageBody>
+								<pageFooter>
+									<contents>
+										<table>
+											<tableRows>
+												<tableRow>
+													<tableCells>
+														<tableCell>
+															<contents>
+																<date>
+																	<style>
+																		<dataFormat>
+																			<dateFormat/>
+																		</dataFormat>
+																	</style>
+																</date>
+															</contents>
+															<style>
+																<CSS value="vertical-align:top;text-align:left;width:25%;"/>
+															</style>
+														</tableCell>
+														<tableCell>
+															<contents>
+																<pageNumber/>
+															</contents>
+															<style>
+																<CSS value="vertical-align:top;text-align:center;width:50%;"/>
+															</style>
+														</tableCell>
+														<tableCell>
+															<contents>
+																<time>
+																	<style>
+																		<dataFormat>
+																			<timeFormat/>
+																		</dataFormat>
+																	</style>
+																</time>
+															</contents>
+															<style>
+																<CSS value="vertical-align:top;text-align:right;width:25%;"/>
+															</style>
+														</tableCell>
+													</tableCells>
+												</tableRow>
+											</tableRows>
+											<style>
+												<defaultStyles>
+													<defaultStyle refStyle="tb"/>
+												</defaultStyles>
+												<CSS value="border-collapse:collapse;width:100%;"/>
+											</style>
+										</table>
+									<table><style><defaultStyles><defaultStyle refStyle="tb"/></defaultStyles><CSS value="border-collapse:collapse;width:100%"/></style><tableRows><tableRow><tableCells><tableCell><contents><textItem name="RTTitle1"><style><defaultStyles><defaultStyle refStyle="tt"/></defaultStyles></style>
+													<dataSource>
+														
+													<reportExpression>substring(ReportPath (),
+   position('=''', ReportPath ())+2,
+   position(''']', ReportPath ()) -  position('=''', ReportPath ())-2)
+ 
++ '\' +
+ 
+substring(substring(ReportPath (), position(''']', ReportPath ())+2 ,-1),
+   position('=''', substring(ReportPath (), position(''']', ReportPath ()) ,-1)),
+   position(''']', substring(ReportPath (), position(''']', ReportPath ()) +2,-1)) -  position('=''', substring(ReportPath (), position(''']', ReportPath ()) ,-1)))
+ 
++ '\' +
+ 
+substring(substring(substring(ReportPath (), position(''']', ReportPath ())+2 ,-1), position(''']', substring(ReportPath (), position(''']', ReportPath ())+2 ,-1))+2,-1),
+   position('=''',substring(substring(ReportPath (), position(''']', ReportPath ())+2 ,-1), position(''']', substring(ReportPath (), position(''']', ReportPath ())+2 ,-1)),-1)),
+   position(''']',substring(substring(ReportPath (), position(''']', ReportPath ())+2 ,-1), position(''']', substring(ReportPath (), position(''']', ReportPath ())+2 ,-1))+2,-1)) - position('=''',substring(substring(ReportPath (), position(''']', ReportPath ())+2 ,-1), position(''']', substring(ReportPath (), position(''']', ReportPath ())+2 ,-1)),-1)))
+ 
++'\'+ReportName ()
+</reportExpression></dataSource>
+												</textItem></contents></tableCell></tableCells></tableRow></tableRows></table></contents>
+									<style>
+										<defaultStyles>
+											<defaultStyle refStyle="pf"/>
+										</defaultStyles>
+										<CSS value="padding-top:10px;"/>
+									</style>
+								</pageFooter>
+							</page>
+						</reportPages>
+					<pageSetup orientation="landscape"/><promptPages><page name="Prompt Page1">
+			<pageHeader>
+				<contents>
+					<block>
+						<contents>
+							<textItem>
+								<dataSource>
+									<staticValue>TASK_GROUPS</staticValue>
+								</dataSource>
+								<style>
+									<defaultStyles>
+										<defaultStyle refStyle="tt"/>
+									</defaultStyles>
+								<CSS value="font-weight:bold;font-size:18pt;color:red"/></style>
+							</textItem>
+						</contents>
+						<style>
+							<defaultStyles>
+								<defaultStyle refStyle="ta"/>
+							</defaultStyles>
+						</style>
+					</block>
+				</contents>
+				<style>
+					<defaultStyles>
+						<defaultStyle refStyle="hp"/>
+					</defaultStyles>
+				</style>
+			</pageHeader>
+			<pageBody>
+				<contents><table><style><defaultStyles><defaultStyle refStyle="tb"/></defaultStyles><CSS value="border-collapse:collapse;width:100%"/></style><tableRows><tableRow><tableCells><tableCell><contents/></tableCell><tableCell><contents/></tableCell><tableCell><contents/></tableCell><tableCell><contents/></tableCell><tableCell><contents/></tableCell></tableCells></tableRow><tableRow><tableCells><tableCell><contents/></tableCell><tableCell><contents/></tableCell><tableCell><contents/></tableCell><tableCell><contents/></tableCell><tableCell><contents/></tableCell></tableCells></tableRow><tableRow><tableCells><tableCell><contents><textItem><dataSource><staticValue>TASK_GRP</staticValue></dataSource><style><CSS value="font-weight:bold;font-size:12pt"/></style></textItem><textBox parameter="pTaskGrp" numbersOnly="false" multiSelect="true" range="false" required="true" multiLine="false"><style><CSS value="font-weight:bold"/></style></textBox></contents></tableCell><tableCell><contents><textItem><dataSource><staticValue>TASK_TYPE</staticValue></dataSource><style><CSS value="font-weight:bold;font-size:12pt"/></style></textItem><textBox parameter="pTaskType" numbersOnly="false" multiSelect="true" range="false" required="true"/></contents></tableCell><tableCell><contents><textItem><dataSource><staticValue>TASK_DESC</staticValue></dataSource><style><CSS value="font-weight:bold;font-size:12pt"/></style></textItem><selectValue parameter="pTaskGrpType" refQuery="Query1" selectValueUI="listBox" multiSelect="true" range="false" required="false"><useItem refDataItem="TASK_TYPE_DESCRIPTION"><displayItem refDataItem="TASK_TYPE_DESCRIPTION"/></useItem></selectValue></contents></tableCell><tableCell><contents/></tableCell><tableCell><contents/></tableCell></tableCells></tableRow></tableRows></table></contents>
+				<style>
+					<defaultStyles>
+						<defaultStyle refStyle="py"/>
+					</defaultStyles>
+				</style>
+			</pageBody>
+			<pageFooter>
+				<contents>
+					<promptButton type="cancel">
+						<contents/>
+						<style>
+							<defaultStyles>
+								<defaultStyle refStyle="bp"/>
+							</defaultStyles>
+						</style>
+					</promptButton>
+					<promptButton type="back">
+						<contents/>
+						<style>
+							<defaultStyles>
+								<defaultStyle refStyle="bp"/>
+							</defaultStyles>
+						</style>
+					</promptButton>
+					<promptButton type="next">
+						<contents/>
+						<style>
+							<defaultStyles>
+								<defaultStyle refStyle="bp"/>
+							</defaultStyles>
+						</style>
+					</promptButton>
+					<promptButton type="finish">
+						<contents/>
+						<style>
+							<defaultStyles>
+								<defaultStyle refStyle="bp"/>
+							</defaultStyles>
+						</style>
+					</promptButton>
+				</contents>
+				<style>
+					<defaultStyles>
+						<defaultStyle refStyle="fp"/>
+					</defaultStyles>
+				</style>
+			</pageFooter>
+			<style>
+				<defaultStyles>
+					<defaultStyle refStyle="pp"/>
+				</defaultStyles>
+			</style>
+		</page></promptPages></layout>
+				</layouts>
+			<XMLAttributes><XMLAttribute name="RS_CreateExtendedDataItems" value="true" output="no"/><XMLAttribute name="RS_modelModificationTime" value="2015-01-29T21:59:28.244Z" output="no"/><XMLAttribute name="listSeparator" value="," output="no"/></XMLAttributes><reportName>TASK_GROUPS</reportName><modelPath>/content/folder[@name='lululemon packages']/package[@name='WMOS']/model[@name='2015-01-29T21:59:28.146Z']</modelPath><queries><query name="User"><source><model/></source><selection><dataItem name="User"><expression>#sq($account.defaultName)#</expression></dataItem></selection></query><query name="Facilitity">
+			<source>
+				
+			<sqlQuery name="SQL15" dataSource="WMOS">
+			<sqlText>--Facility ID Query
+Select
+CASE WHEN "Facility_Name" = 'COL' THEN 'Columbus DC'
+WHEN "Facility_Name" = 'SUM' THEN 'Sumner DC'
+WHEN "Facility_Name" = 'DEL' THEN 'Delta DC'
+WHEN "Facility_Name" = 'TOR' THEN 'Toronto DC'
+WHEN "Facility_Name" = 'AUS' THEN 'Australia DC'
+ELSE "Facility_Name" END as "Facility_Name"
+FROM(SELECT distinct upper(substr(o_facility_name,1,3)) as "Facility_Name" from wm.orders where rownum =1)
+</sqlText>
+		<mdProjectedItems><mdProjectedItem name="Facility_Name"/></mdProjectedItems></sqlQuery></source>
+			<selection><dataItem name="Facility_Name"><expression>[SQL15].[Facility_Name]</expression></dataItem></selection>
+		</query><query name="Query1">
+			<source>
+				
+			<sqlQuery name="SQL1" dataSource="WMOS">
+			<sqlText>
+
+
+
+SELECT * 
+FROM (
+    WITH TASK_GRP_GROUPING AS (
+        SELECT DISTINCT 
+            A.task_type AS task_type_code,
+            A.task_grp AS task_grp_code,
+            B.CODE_DESC AS TASK_GROUP_DESCRIPTION,
+            A.INVN_NEED_TYPE AS INVENTORY_NEED_TYPE
+        FROM 
+            wm.TASK_GRP_ELGBLTY A, 
+            wm.SYS_CODE B 
+        WHERE 
+            B.code_type = '337' 
+            AND A.task_grp = B.CODE_ID 
+            AND A.task_type &lt;&gt; '*'
+        ORDER BY 
+            A.INVN_NEED_TYPE, A.TASK_TYPE
+    ),
+    TASK_TYPE_GROUPING AS (
+        SELECT DISTINCT 
+            A.TASK_TYPE AS TASK_TYPE_CODE,
+            B.CODE_DESC AS task_type_description
+        FROM 
+            wm.TASK_GRP_ELGBLTY A, 
+            wm.sys_code B 
+        WHERE 
+            B.code_type = '590' 
+            AND A.TASK_TYPE = B.CODE_ID
+        ORDER BY 
+            A.task_type
+    )
+    SELECT 
+        C.task_grp_code,
+        C.TASK_GROUP_DESCRIPTION,
+        D.TASK_TYPE_CODE,
+        D.task_type_description,
+        C.INVENTORY_NEED_TYPE
+    FROM 
+        wm.TASK_GRP_GROUPING C, 
+        wm.TASK_TYPE_GROUPING D 
+    WHERE 
+        C.task_type_code = D.TASK_TYPE_CODE
+)
+--WHERE TASK_TYPE_CODE = 'E5'
+ORDER BY 
+    INVENTORY_NEED_TYPE, task_grp_code
+</sqlText>
+		<mdProjectedItems><mdProjectedItem name="TASK_GRP_CODE"/><mdProjectedItem name="TASK_GROUP_DESCRIPTION"/><mdProjectedItem name="TASK_TYPE_CODE"/><mdProjectedItem name="TASK_TYPE_DESCRIPTION"/><mdProjectedItem name="INVENTORY_NEED_TYPE"/></mdProjectedItems></sqlQuery></source>
+			<selection><dataItem name="TASK_GRP_CODE"><expression>[SQL1].[TASK_GRP_CODE]</expression></dataItem><dataItem name="TASK_GROUP_DESCRIPTION"><expression>[SQL1].[TASK_GROUP_DESCRIPTION]</expression></dataItem><dataItem name="TASK_TYPE_CODE"><expression>[SQL1].[TASK_TYPE_CODE]</expression></dataItem><dataItem name="TASK_TYPE_DESCRIPTION"><expression>[SQL1].[TASK_TYPE_DESCRIPTION]</expression></dataItem><dataItem name="INVENTORY_NEED_TYPE"><expression>[SQL1].[INVENTORY_NEED_TYPE]</expression></dataItem></selection>
+		<detailFilters><detailFilter use="optional"><filterExpression>[TASK_GRP_CODE] in (?pTaskGrp?)</filterExpression></detailFilter><detailFilter use="optional"><filterExpression>[TASK_TYPE_CODE] in (?pTaskType?)</filterExpression></detailFilter><detailFilter use="optional"><filterExpression>[TASK_TYPE_DESCRIPTION] in (?pTaskGrpType?)</filterExpression></detailFilter></detailFilters></query><query name="Query2"><source><model/></source><selection/></query></queries><classStyles><classStyle name="cls1" label="Section Header"><CSS value="background-color:#333333;color:white;font-size:12pt;font-weight:bold;font-family:Arial;text-align:center"/></classStyle><classStyle name="cls2" label="General Header"><CSS value="font-weight:bold"/></classStyle></classStyles></report>
