@@ -1,0 +1,218 @@
+<report xmlns="http://developer.cognos.com/schemas/report/8.0/" useStyleVersion="10" expressionLocale="en-us">
+				<modelPath>/content/folder[@name='lululemon packages']/package[@name='WMOS']/model[@name='2015-01-29T21:59:28.146Z']</modelPath>
+				<drillBehavior modelBasedDrillThru="true"/>
+				<layouts>
+					<layout>
+						<reportPages>
+							<page name="Page1">
+								<style>
+									<defaultStyles>
+										<defaultStyle refStyle="pg"/>
+									</defaultStyles>
+								</style>
+								<pageBody>
+									<style>
+										<defaultStyles>
+											<defaultStyle refStyle="pb"/>
+										</defaultStyles>
+									</style>
+									<contents><list horizontalPagination="true" refQuery="Query1" name="List1" rowsPerPage="100">
+			
+			
+			
+			<noDataHandler>
+				<contents>
+					<block>
+						<contents>
+							<textItem>
+								<dataSource>
+									<staticValue>No Data Available</staticValue>
+								</dataSource>
+								<style>
+									<CSS value="padding:10px 18px;"/>
+								</style>
+							</textItem>
+						</contents>
+					</block>
+				</contents>
+			</noDataHandler>
+			<style>
+				<CSS value="border-collapse:collapse;margin-top:80px;text-align:center"/>
+				<defaultStyles>
+					<defaultStyle refStyle="ls"/>
+				</defaultStyles>
+			</style>
+		<listColumns><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles><CSS value="text-align:center;font-weight:bold;background-color:#0099CC;font-size:9pt"/></style><contents><textItem><dataSource><dataItemLabel refDataItem="AREA/ZONE"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles><CSS value="text-align:center"/></style><contents><textItem><dataSource><dataItemValue refDataItem="AREA/ZONE"/></dataSource></textItem></contents></listColumnBody></listColumn><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles><CSS value="text-align:center;font-weight:bold;background-color:#0099CC;font-size:9pt"/></style><contents><textItem><dataSource><dataItemLabel refDataItem="TASK_ID"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles><CSS value="text-align:center"/></style><contents><textItem><dataSource><dataItemValue refDataItem="TASK_ID"/></dataSource></textItem></contents></listColumnBody></listColumn><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles><CSS value="text-align:center;font-weight:bold;background-color:#0099CC;font-size:9pt"/></style><contents><textItem><dataSource><dataItemLabel refDataItem="CART NBR"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles><CSS value="text-align:center"/></style><contents><textItem><dataSource><dataItemValue refDataItem="CART NBR"/></dataSource><reportDrills><reportDrill name="Drill-Through Definition1"><drillLabel><dataSource><staticValue/></dataSource></drillLabel><drillTarget method="execute" showInNewWindow="true"><reportPath path="/content/folder[@name='lululemon reports']/folder[@name='Outbound']/report[@name='Putwall - Cart Research']"><XMLAttributes><XMLAttribute name="ReportName" value="Putwall - Cart Research" output="no"/><XMLAttribute name="class" value="report" output="no"/></XMLAttributes></reportPath><drillLinks><drillLink><drillTargetContext><parameterContext parameter="pCart"/></drillTargetContext><drillSourceContext><dataItemContext refDataItem="CART NBR"/></drillSourceContext></drillLink></drillLinks></drillTarget></reportDrill></reportDrills><style><defaultStyles><defaultStyle refStyle="hy"/></defaultStyles></style></textItem></contents></listColumnBody></listColumn><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles><CSS value="text-align:center;font-weight:bold;background-color:#0099CC;font-size:9pt"/></style><contents><textItem><dataSource><dataItemLabel refDataItem="Task_Status"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles><CSS value="text-align:center"/></style><contents><textItem><dataSource><dataItemValue refDataItem="Task_Status"/></dataSource></textItem></contents></listColumnBody></listColumn><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles><CSS value="text-align:center;font-weight:bold;background-color:#0099CC;font-size:9pt"/></style><contents><textItem><dataSource><dataItemLabel refDataItem="USER ID"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles><CSS value="text-align:center"/></style><contents><textItem><dataSource><dataItemValue refDataItem="USER ID"/></dataSource></textItem></contents></listColumnBody></listColumn><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles><CSS value="text-align:center;font-weight:bold;background-color:#0099CC;font-size:9pt"/></style><contents><textItem><dataSource><dataItemLabel refDataItem="# TOTES"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles><CSS value="text-align:center"/></style><contents><textItem><dataSource><dataItemValue refDataItem="# TOTES"/></dataSource></textItem></contents></listColumnBody></listColumn><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles><CSS value="text-align:center;font-weight:bold;background-color:#0099CC;font-size:9pt"/></style><contents><textItem><dataSource><dataItemLabel refDataItem="QTY OPEN"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles><CSS value="text-align:center"/></style><contents><textItem><dataSource><dataItemValue refDataItem="QTY OPEN"/></dataSource></textItem></contents></listColumnBody></listColumn><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles><CSS value="text-align:center;font-weight:bold;background-color:#0099CC;font-size:9pt"/></style><contents><textItem><dataSource><dataItemLabel refDataItem="LAST UPDATED DATE TIME"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles><CSS value="text-align:center"/></style><contents><textItem><dataSource><dataItemValue refDataItem="LAST UPDATED DATE TIME"/></dataSource></textItem></contents></listColumnBody></listColumn><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles><CSS value="text-align:center;font-weight:bold;background-color:#0099CC;font-size:9pt"/></style><contents><textItem><dataSource><dataItemLabel refDataItem="FACILITY"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles><CSS value="text-align:center"/></style><contents><textItem><dataSource><dataItemValue refDataItem="FACILITY"/></dataSource></textItem></contents></listColumnBody></listColumn><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles><CSS value="text-align:center;font-weight:bold;background-color:#0099CC;font-size:9pt"/></style><contents><textItem><dataSource><dataItemLabel refDataItem="Footwear_Indicator"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles><CSS value="text-align:center"/></style><contents><textItem><dataSource><dataItemValue refDataItem="Footwear_Indicator"/></dataSource></textItem></contents></listColumnBody></listColumn></listColumns></list></contents>
+								</pageBody>
+							<pageHeader><contents><textItem><dataSource><staticValue>CART_RESEARCH V2.0</staticValue></dataSource></textItem></contents><style><CSS value="text-align:center;font-weight:bold;color:red;font-size:18pt"/></style></pageHeader></page>
+						</reportPages>
+					<promptPages><page name="Prompt Page1">
+			<pageHeader>
+				<contents>
+					<block>
+						<contents>
+							<textItem>
+								<dataSource>
+									<staticValue>CART_RESEARCH V2.0</staticValue>
+								</dataSource>
+								<style>
+									<defaultStyles>
+										<defaultStyle refStyle="tt"/>
+									</defaultStyles>
+								<CSS value="font-weight:bold;color:red"/></style>
+							</textItem>
+						</contents>
+						<style>
+							<defaultStyles>
+								<defaultStyle refStyle="ta"/>
+							</defaultStyles>
+						</style>
+					</block>
+				</contents>
+				<style>
+					<defaultStyles>
+						<defaultStyle refStyle="hp"/>
+					</defaultStyles>
+				</style>
+			</pageHeader>
+			<pageBody>
+				<contents><table><style><defaultStyles><defaultStyle refStyle="tb"/></defaultStyles><CSS value="border-collapse:collapse;width:100%"/></style><tableRows><tableRow><tableCells><tableCell><contents/></tableCell><tableCell><contents/></tableCell><tableCell><contents/></tableCell><tableCell><contents/></tableCell><tableCell><contents/></tableCell></tableCells></tableRow><tableRow><tableCells><tableCell><contents><textItem><dataSource><staticValue>Facility</staticValue></dataSource><style><CSS value="font-weight:bold;font-size:12pt"/></style></textItem><selectValue parameter="pChooseFacility" refQuery="Query1" multiSelect="true" range="false" required="true" selectValueUI="checkboxGroup"><useItem refDataItem="FACILITY"><displayItem refDataItem="FACILITY"/></useItem></selectValue></contents><style><CSS value="padding-top:50px"/></style></tableCell><tableCell><contents><textItem><dataSource><staticValue>CART No.</staticValue></dataSource><style><CSS value="font-weight:bold;font-size:12pt"/></style></textItem><textBox parameter="pChooseCart" numbersOnly="false" multiSelect="true" range="false" required="true" multiLine="false"/></contents><style><CSS value="padding-top:50px"/></style></tableCell><tableCell><contents/></tableCell><tableCell><contents/></tableCell><tableCell><contents/></tableCell></tableCells></tableRow><tableRow><tableCells><tableCell><contents/></tableCell><tableCell><contents/></tableCell><tableCell><contents/></tableCell><tableCell><contents/></tableCell><tableCell><contents/></tableCell></tableCells></tableRow></tableRows></table></contents>
+				<style>
+					<defaultStyles>
+						<defaultStyle refStyle="py"/>
+					</defaultStyles>
+				</style>
+			</pageBody>
+			<pageFooter>
+				<contents>
+					<promptButton type="cancel">
+						<contents/>
+						<style>
+							<defaultStyles>
+								<defaultStyle refStyle="bp"/>
+							</defaultStyles>
+						</style>
+					</promptButton>
+					<promptButton type="back">
+						<contents/>
+						<style>
+							<defaultStyles>
+								<defaultStyle refStyle="bp"/>
+							</defaultStyles>
+						</style>
+					</promptButton>
+					<promptButton type="next">
+						<contents/>
+						<style>
+							<defaultStyles>
+								<defaultStyle refStyle="bp"/>
+							</defaultStyles>
+						</style>
+					</promptButton>
+					<promptButton type="finish">
+						<contents/>
+						<style>
+							<defaultStyles>
+								<defaultStyle refStyle="bp"/>
+							</defaultStyles>
+						</style>
+					</promptButton>
+				</contents>
+				<style>
+					<defaultStyles>
+						<defaultStyle refStyle="fp"/>
+					</defaultStyles>
+				</style>
+			</pageFooter>
+			<style>
+				<defaultStyles>
+					<defaultStyle refStyle="pp"/>
+				</defaultStyles>
+			</style>
+		</page></promptPages></layout>
+				</layouts>
+			<XMLAttributes><XMLAttribute name="RS_CreateExtendedDataItems" value="true" output="no"/><XMLAttribute name="listSeparator" value="," output="no"/><XMLAttribute name="RS_modelModificationTime" value="2015-01-29T21:59:28.244Z" output="no"/></XMLAttributes><queries><query name="Query1">
+			<source>
+				
+			<sqlQuery name="SQL1" dataSource="WMOS">
+			<sqlText>SELECT 
+    th.begin_area || th.begin_zone || '-' || td.pikr_nbr AS "AREA/ZONE",
+    TO_CHAR(th.task_id, '9999999999') AS "TASK_ID",  -- Removes any commas from the TASK_ID
+    td.task_genrtn_ref_nbr AS "CART NBR",
+    CASE 
+        WHEN th.stat_code = '10' THEN 'Released'
+        WHEN th.stat_code = '5' THEN 'Locked/Disabled'
+        WHEN th.stat_code = '13' THEN 'Partially Assembled'
+        WHEN th.stat_code = '30' THEN 'Assigned'
+        WHEN th.stat_code = '40' THEN 'In Progress'
+        WHEN th.stat_code = '90' THEN 'Complete'
+        WHEN th.stat_code = '99' THEN 'Canceled'
+        ELSE 'Other'
+    END AS "Task_Status",
+    td.user_id AS "USER ID",
+    COUNT(DISTINCT td.tote_nbr) AS "# TOTES",
+    SUM(td.qty_alloc) AS "QTY OPEN",
+    MAX(tH.mod_date_time + 3/24) AS "LAST UPDATED DATE TIME",
+    CASE 
+        WHEN SUBSTR(o.o_facility_alias_id, 1, 3) = 'TOR' THEN
+            CASE 
+                WHEN th.begin_area || th.begin_zone IN ('MN1','MA1','MA4','MH0','MH1','MA3') AND td.invn_type = 'E' THEN 'Milton'
+                WHEN td.invn_type = 'R' AND th.begin_area || th.begin_zone IN ('MN1','MA1','MA4','MH0','MH1','MA3') THEN 'Milton'
+                WHEN td.invn_type = 'E' AND th.begin_area || th.begin_zone IN ('AS1','AS2','AS3','PA1','PA2','PA3') THEN 'Mississauga'
+            END
+        ELSE SUBSTR(o.o_facility_alias_id, 1, 3)
+    END AS "FACILITY",
+    CASE 
+        WHEN pc.product_class IN ('118', '441', '442', '820', '821', '836', '834', '835', '837') THEN 'Footwear'
+        ELSE 'Non-Footwear'
+    END AS "Footwear_Indicator"
+    
+FROM 
+    wm.task_dtl td
+INNER JOIN 
+    wm.task_hdr th ON th.task_id = td.task_id
+INNER JOIN 
+    wm.item_cbo ic ON td.item_id = ic.item_id
+INNER JOIN 
+    wm.product_class pc ON ic.product_class_id = pc.product_class_id
+INNER JOIN 
+    wm.orders o ON o.tc_order_id = td.tc_order_id
+
+WHERE 
+    td.stat_code = 0
+    AND td.task_genrtn_ref_code = '15'
+    -- AND o.order_type = 'ECOMM'
+
+GROUP BY
+    th.begin_area || th.begin_zone || '-' || td.pikr_nbr,
+    th.task_id,
+    th.stat_code,
+    td.task_genrtn_ref_nbr,
+    td.user_id,
+    CASE 
+        WHEN SUBSTR(o.o_facility_alias_id, 1, 3) = 'TOR' THEN
+            CASE 
+                WHEN th.begin_area || th.begin_zone IN ('MN1','MA1','MA4','MH0','MH1','MA3') AND td.invn_type = 'E' THEN 'Milton'
+                WHEN td.invn_type = 'R' AND th.begin_area || th.begin_zone IN ('MN1','MA1','MA4','MH0','MH1','MA3') THEN 'Milton'
+                WHEN td.invn_type = 'E' AND th.begin_area || th.begin_zone IN ('AS1','AS2','AS3','PA1','PA2','PA3') THEN 'Mississauga'
+            END
+        ELSE SUBSTR(o.o_facility_alias_id, 1, 3)
+    END,
+    CASE 
+        WHEN pc.product_class IN ('118', '441', '442', '820', '821', '836', '834', '835', '837') THEN 'Footwear'
+        ELSE 'Non-Footwear'
+    END
+
+ORDER BY 
+    8 ASC
+</sqlText>
+		<mdProjectedItems><mdProjectedItem name="AREA/ZONE"/><mdProjectedItem name="TASK_ID"/><mdProjectedItem name="CART NBR"/><mdProjectedItem name="Task_Status"/><mdProjectedItem name="USER ID"/><mdProjectedItem name="# TOTES"/><mdProjectedItem name="QTY OPEN"/><mdProjectedItem name="LAST UPDATED DATE TIME"/><mdProjectedItem name="FACILITY"/><mdProjectedItem name="Footwear_Indicator"/></mdProjectedItems></sqlQuery></source>
+			<selection><dataItem name="AREA/ZONE"><expression>[SQL1].[AREA/ZONE]</expression></dataItem><dataItem name="TASK_ID"><expression>[SQL1].[TASK_ID]</expression></dataItem><dataItem name="CART NBR"><expression>[SQL1].[CART NBR]</expression></dataItem><dataItem name="Task_Status"><expression>[SQL1].[Task_Status]</expression></dataItem><dataItem name="USER ID"><expression>[SQL1].[USER ID]</expression></dataItem><dataItem name="# TOTES"><expression>[SQL1].[# TOTES]</expression></dataItem><dataItem name="QTY OPEN"><expression>[SQL1].[QTY OPEN]</expression></dataItem><dataItem name="LAST UPDATED DATE TIME"><expression>[SQL1].[LAST UPDATED DATE TIME]</expression></dataItem><dataItem name="FACILITY"><expression>[SQL1].[FACILITY]</expression></dataItem><dataItem name="Footwear_Indicator"><expression>[SQL1].[Footwear_Indicator]</expression></dataItem></selection>
+		<detailFilters><detailFilter use="optional"><filterExpression>[FACILITY] in (?pChooseFacility?)</filterExpression></detailFilter><detailFilter use="optional"><filterExpression>[CART NBR] in (?pChooseCart?)</filterExpression></detailFilter></detailFilters></query><query name="FACILITY">
+			<source>
+				
+			<sqlQuery name="SQL2" dataSource="WMOS">
+			<sqlText/>
+		</sqlQuery></source>
+			<selection/>
+		</query><query name="Query2"><source><model/></source><selection/></query></queries><reportName>CART_RESEARCH V2.0</reportName></report>
