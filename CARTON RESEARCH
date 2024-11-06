@@ -1,0 +1,171 @@
+<report xmlns="http://developer.cognos.com/schemas/report/8.0/" useStyleVersion="10" expressionLocale="en-us">
+				<modelPath>/content/folder[@name='lululemon packages']/package[@name='WMOS']/model[@name='2015-01-29T21:59:28.146Z']</modelPath>
+				<drillBehavior modelBasedDrillThru="true"/>
+				<layouts>
+					<layout>
+						<reportPages>
+							<page name="Page1">
+								<style>
+									<defaultStyles>
+										<defaultStyle refStyle="pg"/>
+									</defaultStyles>
+								</style>
+								<pageBody>
+									<style>
+										<defaultStyles>
+											<defaultStyle refStyle="pb"/>
+										</defaultStyles>
+									</style>
+									<contents><table><style><defaultStyles><defaultStyle refStyle="tb"/></defaultStyles><CSS value="border-collapse:collapse;width:100%"/></style><tableRows><tableRow><tableCells><tableCell><contents/></tableCell><tableCell><contents/></tableCell><tableCell><contents/></tableCell><tableCell><contents/></tableCell><tableCell><contents/></tableCell></tableCells></tableRow><tableRow><tableCells><tableCell><contents/></tableCell><tableCell><contents/></tableCell><tableCell><contents/></tableCell><tableCell><contents/></tableCell><tableCell><contents/></tableCell></tableCells></tableRow><tableRow><tableCells><tableCell><contents><list horizontalPagination="true" refQuery="Query1" name="List1" rowsPerPage="900">
+			
+			
+			
+			<noDataHandler>
+				<contents>
+					<block>
+						<contents>
+							<textItem>
+								<dataSource>
+									<staticValue>No Data Available</staticValue>
+								</dataSource>
+								<style>
+									<CSS value="padding:10px 18px;"/>
+								</style>
+							</textItem>
+						</contents>
+					</block>
+				</contents>
+			</noDataHandler>
+			<style>
+				<CSS value="border-collapse:collapse;font-weight:bold;text-align:center;font-size:12pt"/>
+				<defaultStyles>
+					<defaultStyle refStyle="ls"/>
+				</defaultStyles>
+			</style>
+		<listColumns><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles><CSS value="font-weight:bold;background-color:green;color:white"/></style><contents><textItem><dataSource><dataItemLabel refDataItem="WAVE_NBR"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles><CSS value="font-weight:normal;border:1pt solid black"/></style><contents><textItem><dataSource><dataItemValue refDataItem="WAVE_NBR"/></dataSource></textItem></contents></listColumnBody></listColumn><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles><CSS value="font-weight:bold;background-color:green;color:white"/></style><contents><textItem><dataSource><dataItemLabel refDataItem="WAVE_DESC"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles><CSS value="font-weight:normal;border:1pt solid black"/></style><contents><textItem><dataSource><dataItemValue refDataItem="WAVE_DESC"/></dataSource></textItem></contents></listColumnBody></listColumn><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles><CSS value="font-weight:bold;background-color:green;color:white"/></style><contents><textItem><dataSource><dataItemLabel refDataItem="TOTE"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles><CSS value="font-weight:normal;border:1pt solid black"/></style><contents><textItem><dataSource><dataItemValue refDataItem="TOTE"/></dataSource></textItem></contents></listColumnBody></listColumn><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles><CSS value="font-weight:bold;background-color:green;color:white"/></style><contents><textItem><dataSource><dataItemLabel refDataItem="TASK_ID"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles><CSS value="font-weight:normal;border:1pt solid black"/></style><contents><textItem><dataSource><dataItemValue refDataItem="TASK_ID"/></dataSource></textItem></contents></listColumnBody></listColumn><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles><CSS value="font-weight:bold;background-color:green;color:white"/></style><contents><textItem><dataSource><dataItemLabel refDataItem="INDUCTION_TIME"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles><CSS value="font-weight:normal;border:1pt solid black"/></style><contents><textItem><dataSource><dataItemValue refDataItem="INDUCTION_TIME"/></dataSource></textItem></contents></listColumnBody></listColumn><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles><CSS value="font-weight:bold;background-color:green;color:white"/></style><contents><textItem><dataSource><dataItemLabel refDataItem="USER_ID"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles><CSS value="font-weight:normal;border:1pt solid black"/></style><contents><textItem><dataSource><dataItemValue refDataItem="USER_ID"/></dataSource></textItem></contents></listColumnBody></listColumn><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles><CSS value="font-weight:bold;background-color:green;color:white"/></style><contents><textItem><dataSource><dataItemLabel refDataItem="FACILITY"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles><CSS value="font-weight:normal;border:1pt solid black"/></style><contents><textItem><dataSource><dataItemValue refDataItem="FACILITY"/></dataSource></textItem></contents></listColumnBody></listColumn></listColumns><sortList><sortItem refDataItem="INDUCTION_TIME" sortOrder="descending"/></sortList></list></contents></tableCell><tableCell><contents/></tableCell><tableCell><contents/></tableCell><tableCell><contents/></tableCell><tableCell><contents/></tableCell></tableCells></tableRow></tableRows></table></contents>
+								</pageBody>
+							<pageHeader><contents><textItem><dataSource><staticValue>CARTON RESEARCH</staticValue></dataSource></textItem></contents><style><CSS value="text-align:center;font-weight:bold;font-size:20pt;color:red"/></style></pageHeader></page>
+						</reportPages>
+					<promptPages><page name="Prompt Page1">
+			<pageHeader>
+				<contents>
+					<block>
+						<contents>
+							<textItem>
+								<dataSource>
+									<staticValue>Carton Research</staticValue>
+								</dataSource>
+								<style>
+									<defaultStyles>
+										<defaultStyle refStyle="tt"/>
+									</defaultStyles>
+								<CSS value="font-weight:bold;font-size:26pt;color:red"/></style>
+							</textItem>
+						</contents>
+						<style>
+							<defaultStyles>
+								<defaultStyle refStyle="ta"/>
+							</defaultStyles>
+						<CSS value="margin-bottom:50px"/></style>
+					</block>
+				</contents>
+				<style>
+					<defaultStyles>
+						<defaultStyle refStyle="hp"/>
+					</defaultStyles>
+				</style>
+			</pageHeader>
+			<pageBody>
+				<contents><table><style><defaultStyles><defaultStyle refStyle="tb"/></defaultStyles><CSS value="border-collapse:collapse;width:100%"/></style><tableRows><tableRow><tableCells><tableCell><contents/></tableCell><tableCell><contents/></tableCell><tableCell><contents/></tableCell><tableCell><contents/></tableCell><tableCell><contents/></tableCell></tableCells></tableRow><tableRow><tableCells><tableCell><contents><textItem><dataSource><staticValue>Tote_Nbr</staticValue></dataSource><style><CSS value="font-weight:bold;font-size:12pt"/></style></textItem></contents><style><CSS value="text-align:left"/></style></tableCell><tableCell><contents><textItem><dataSource><staticValue>Wave_Nbr</staticValue></dataSource><style><CSS value="font-weight:bold;font-size:12pt"/></style></textItem></contents></tableCell><tableCell><contents><textItem><dataSource><staticValue>User</staticValue></dataSource><style><CSS value="font-weight:bold;font-size:12pt"/></style></textItem></contents></tableCell><tableCell><contents><textItem><dataSource><staticValue>Facility</staticValue></dataSource><style><CSS value="font-weight:bold;font-size:12pt"/></style></textItem></contents></tableCell><tableCell><contents/></tableCell></tableCells></tableRow><tableRow><tableCells><tableCell><contents><textBox parameter="pTote" numbersOnly="false" multiSelect="true" range="false" required="true"/></contents></tableCell><tableCell><contents><textBox parameter="pWave" numbersOnly="false" multiSelect="true" range="false" required="true"/></contents></tableCell><tableCell><contents><textBox parameter="pUser" numbersOnly="false" multiSelect="true" range="false" required="true"/></contents></tableCell><tableCell><contents><selectValue parameter="pFacility" multiSelect="true" range="false" required="false" selectValueUI="checkboxGroup" refQuery="Query1"><useItem refDataItem="FACILITY"><displayItem refDataItem="FACILITY"/></useItem></selectValue></contents></tableCell><tableCell><contents/></tableCell></tableCells></tableRow></tableRows></table></contents>
+				<style>
+					<defaultStyles>
+						<defaultStyle refStyle="py"/>
+					</defaultStyles>
+				</style>
+			</pageBody>
+			<pageFooter>
+				<contents>
+					<promptButton type="cancel">
+						<contents/>
+						<style>
+							<defaultStyles>
+								<defaultStyle refStyle="bp"/>
+							</defaultStyles>
+						</style>
+					</promptButton>
+					<promptButton type="back">
+						<contents/>
+						<style>
+							<defaultStyles>
+								<defaultStyle refStyle="bp"/>
+							</defaultStyles>
+						</style>
+					</promptButton>
+					<promptButton type="next">
+						<contents/>
+						<style>
+							<defaultStyles>
+								<defaultStyle refStyle="bp"/>
+							</defaultStyles>
+						</style>
+					</promptButton>
+					<promptButton type="finish">
+						<contents/>
+						<style>
+							<defaultStyles>
+								<defaultStyle refStyle="bp"/>
+							</defaultStyles>
+						</style>
+					</promptButton>
+				</contents>
+				<style>
+					<defaultStyles>
+						<defaultStyle refStyle="fp"/>
+					</defaultStyles>
+				</style>
+			</pageFooter>
+			<style>
+				<defaultStyles>
+					<defaultStyle refStyle="pp"/>
+				</defaultStyles>
+			</style>
+		</page></promptPages></layout>
+				</layouts>
+			<XMLAttributes><XMLAttribute name="RS_CreateExtendedDataItems" value="true" output="no"/><XMLAttribute name="listSeparator" value="," output="no"/><XMLAttribute name="RS_modelModificationTime" value="2015-01-29T21:59:28.244Z" output="no"/></XMLAttributes><queries><query name="Query1">
+			<source>
+				
+			<sqlQuery name="SQL1" dataSource="WMOS">
+			<sqlText>WITH base_query AS (
+    SELECT *
+    FROM WM.EVENT_MESSAGE
+    WHERE WM.EVENT_MESSAGE.EK_TASK_ID IS NOT NULL
+),
+ranked_results AS (
+    SELECT DISTINCT
+        wm.task_dtl.TASK_GENRTN_REF_NBR AS WAVE_NBR,
+        WM.WAVE_PARM.WAVE_DESC,
+        base_query.EK_ILPN_NBR AS TOTE,
+        base_query.EK_TASK_ID AS TASK_ID,
+        TO_CHAR(base_query.CREATE_DATE_TIME + INTERVAL '3' HOUR, 'DD-Mon-YYYY HH:MI:SS AM') AS INDUCTION_TIME, -- Adjusting the time and formatting
+        base_query.USER_ID,
+        ROW_NUMBER() OVER (PARTITION BY base_query.EK_TASK_ID ORDER BY base_query.CREATE_DATE_TIME DESC) AS rn,
+        CASE 
+            WHEN WM.WAVE_PARM.WAVE_DESC LIKE 'MIL E%' THEN 'MILTON'
+            WHEN WM.WAVE_PARM.WAVE_DESC LIKE 'PP%' THEN 'MIL AND MISS'
+            ELSE 'MISS'
+        END AS FACILITY
+    FROM base_query
+    LEFT JOIN WM.CL_EVENT_MASTER 
+        ON base_query.EVENT_ID = WM.CL_EVENT_MASTER.EVENT_ID
+    JOIN WM.TASK_DTL 
+        ON base_query.EK_TASK_ID = WM.TASK_DTL.task_id
+    JOIN WM.WAVE_PARM
+        ON WM.WAVE_PARM.WAVE_NBR = wm.task_dtl.TASK_GENRTN_REF_NBR
+)
+SELECT WAVE_NBR, WAVE_DESC, TOTE, TASK_ID, INDUCTION_TIME, USER_ID, FACILITY
+FROM ranked_results
+WHERE rn = 1
+ORDER BY TO_DATE(INDUCTION_TIME, 'DD-Mon-YYYY HH:MI:SS AM') DESC</sqlText>
+		<mdProjectedItems><mdProjectedItem name="WAVE_NBR"/><mdProjectedItem name="WAVE_DESC"/><mdProjectedItem name="TOTE"/><mdProjectedItem name="TASK_ID"/><mdProjectedItem name="INDUCTION_TIME"/><mdProjectedItem name="USER_ID"/><mdProjectedItem name="FACILITY"/></mdProjectedItems></sqlQuery></source>
+			<selection><dataItem name="WAVE_NBR"><expression>[SQL1].[WAVE_NBR]</expression></dataItem><dataItem name="WAVE_DESC"><expression>[SQL1].[WAVE_DESC]</expression></dataItem><dataItem name="TOTE"><expression>[SQL1].[TOTE]</expression></dataItem><dataItem name="TASK_ID"><expression>[SQL1].[TASK_ID]</expression></dataItem><dataItem name="INDUCTION_TIME"><expression>[SQL1].[INDUCTION_TIME]</expression></dataItem><dataItem name="USER_ID"><expression>[SQL1].[USER_ID]</expression></dataItem><dataItem name="FACILITY"><expression>[SQL1].[FACILITY]</expression></dataItem></selection>
+		<detailFilters><detailFilter use="optional"><filterExpression>[WAVE_NBR] in  ?pWave?</filterExpression></detailFilter><detailFilter use="optional"><filterExpression>[TOTE] in ?pTote?</filterExpression></detailFilter><detailFilter use="optional"><filterExpression>[USER_ID] in ?pUser?</filterExpression></detailFilter><detailFilter use="optional"><filterExpression>[FACILITY] in ?pFacility?</filterExpression></detailFilter></detailFilters></query></queries><reportName>Carton_Research</reportName></report>
