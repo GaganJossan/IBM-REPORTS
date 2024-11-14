@@ -303,4 +303,36 @@ WHERE ptt.MENU_OPTN_NAME IN ('Recv iLPN ASN', 'Recv iLPN ASN mixed', 'Recv Item 
 from dual connect by rownum &lt;= 2</sqlText>
 		<mdProjectedItems><mdProjectedItem name="FACILITY"/></mdProjectedItems></sqlQuery></source>
 			<selection><dataItem name="FACILITY"><expression>[SQL4].[FACILITY]</expression></dataItem></selection>
+		</query><query name="SORT">
+			<source>
+				
+			<sqlQuery name="SQL5" dataSource="WMOS">
+			<sqlText>SELECT DISTINCT
+    ptt.user_id AS "User ID",
+    TO_CHAR(ptt.END_DATE + INTERVAL '3' HOUR) AS "date and time",
+    TO_CHAR(ptt.END_DATE + INTERVAL '3' HOUR, 'DD-MON-YYYY') AS "Date",
+    TO_CHAR(ptt.END_DATE + INTERVAL '3' HOUR, 'HH24:MI:SS') AS "Time",
+    ptt.cntr_nbr AS "LPN",
+    lh.dsp_locn AS "To Locn",
+    CASE 
+        WHEN lh.zone = 'Z1' THEN 'Mississauga'
+        WHEN lh.zone = 'Z2' THEN 'Milton'
+        ELSE 'Other'
+    END AS Facility
+FROM PROD_TRKG_TRAN ptt
+LEFT JOIN locn_hdr lh ON ptt.TO_LOCN = lh.locn_id
+LEFT JOIN locn_hdr lhh ON ptt.FROM_Locn = lhh.locn_id
+WHERE ptt.MENU_OPTN_NAME IN ('Sort iLPN', 'Sort iLPN Rtn', 'Sort iLPN RtnC', 'Sort iLPN RtnE', 'Sort iLPN mix')
+  AND TRAN_TYPE = '200'
+  AND (lh.dsp_locn LIKE 'PZ2%' OR lh.dsp_locn LIKE 'PZ1%')
+  AND CAST(ptt.END_DATE + INTERVAL '3' HOUR AS timestamp) &gt;= CAST(TO_DATE(SUBSTR(#Prompt('pStartDateTime')#, 0, 19), 'YYYY-MM-DD"T"HH24:mi:ss') AS timestamp)
+  AND CAST(ptt.END_DATE + INTERVAL '3' HOUR AS timestamp) &lt;= CAST(TO_DATE(SUBSTR(#Prompt('pEndDateTime')#, 0, 19), 'YYYY-MM-DD"T"HH24:mi:ss') AS timestamp)
+  AND CASE 
+          WHEN lh.zone = 'Z1' THEN 'Mississauga'
+          WHEN lh.zone = 'Z2' THEN 'Milton'
+          ELSE 'Other'
+      END IN (#Promptmany('pTote', 'string')#)
+</sqlText>
+		<mdProjectedItems><mdProjectedItem name="User ID"/><mdProjectedItem name="date and time"/><mdProjectedItem name="Date"/><mdProjectedItem name="Time"/><mdProjectedItem name="LPN"/><mdProjectedItem name="To Locn"/><mdProjectedItem name="FACILITY"/></mdProjectedItems></sqlQuery></source>
+			<selection><dataItem name="User ID"><expression>[SQL5].[User ID]</expression></dataItem><dataItem name="date and time"><expression>[SQL5].[date and time]</expression></dataItem><dataItem name="Date"><expression>[SQL5].[Date]</expression></dataItem><dataItem name="Time"><expression>[SQL5].[Time]</expression></dataItem><dataItem name="LPN"><expression>[SQL5].[LPN]</expression></dataItem><dataItem name="To Locn"><expression>[SQL5].[To Locn]</expression></dataItem><dataItem name="FACILITY"><expression>[SQL5].[FACILITY]</expression></dataItem></selection>
 		</query></queries></report>
