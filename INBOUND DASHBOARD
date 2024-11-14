@@ -1,0 +1,143 @@
+<report xmlns="http://developer.cognos.com/schemas/report/8.0/" useStyleVersion="10" expressionLocale="en-us">
+				<modelPath>/content/folder[@name='lululemon packages']/package[@name='WMOS']/model[@name='2015-01-29T21:59:28.146Z']</modelPath>
+				<drillBehavior modelBasedDrillThru="true"/>
+				<layouts>
+					<layout>
+						<reportPages>
+							<page name="Page1">
+								<style>
+									<defaultStyles>
+										<defaultStyle refStyle="pg"/>
+									</defaultStyles>
+								</style>
+								<pageBody>
+									<style>
+										<defaultStyles>
+											<defaultStyle refStyle="pb"/>
+										</defaultStyles>
+									</style>
+									<contents/>
+								</pageBody>
+							</page>
+						</reportPages>
+					</layout>
+				</layouts>
+			<XMLAttributes><XMLAttribute name="RS_CreateExtendedDataItems" value="true" output="no"/><XMLAttribute name="listSeparator" value="," output="no"/><XMLAttribute name="RS_modelModificationTime" value="2015-01-29T21:59:28.244Z" output="no"/></XMLAttributes><queries><query name="Letdown">
+			<source>
+				
+			<sqlQuery name="SQL1" dataSource="WMOS">
+			<sqlText>SELECT DISTINCT
+    ptt.user_id AS "User ID",
+    TO_CHAR(ptt.END_DATE + INTERVAL '3' HOUR) AS "date and time",
+    TO_CHAR(ptt.END_DATE + INTERVAL '3' HOUR, 'DD-MON-YYYY') AS "Date",
+    TO_CHAR(ptt.END_DATE + INTERVAL '3' HOUR, 'HH24:MI:SS') AS "Time",
+    ptt.cntr_nbr AS "LPN",
+    lh.dsp_locn AS "To Locn",
+    lhh.dsp_locn AS "From Locn", 
+    DECODE(task_type, task_type, (SELECT code_desc FROM sys_code WHERE rec_type = 'S' AND code_type = '590' AND code_id = task_type)) AS "Task Type",
+    CASE 
+        WHEN LOWER((SELECT code_desc FROM sys_code WHERE rec_type = 'S' AND code_type = '590' AND code_id = task_type)) LIKE '%letdown%' THEN 'Letdown'
+        ELSE 'Recall'
+    END AS "Task",
+    CASE 
+        WHEN lh.work_grp IN ('SHLF','CRAK','DROP','MRCV') THEN 'Mississauga'
+        WHEN lh.work_grp IN ('MFLW', 'MRPH', 'MACT', 'MRAK','MDRP') THEN 'Milton'
+        WHEN lhh.dsp_locn LIKE('MC%') THEN 'Milton'
+        WHEN lhh.dsp_locn LIKE('CR%') THEN 'Mississauga'
+        ELSE lh.work_grp
+    END AS Facility
+FROM PROD_TRKG_TRAN ptt
+INNER JOIN task_hdr th ON ptt.task_id = th.task_id
+INNER JOIN locn_hdr lh ON ptt.TO_LOCN = lh.locn_id
+INNER JOIN locn_hdr lhh ON ptt.FROM_Locn = lhh.locn_id
+WHERE ptt.MENU_OPTN_NAME IN ('Pull iLPN List', 'Pull iLPN List Pick Tower')
+AND CAST(ptt.END_DATE + INTERVAL '3' HOUR AS timestamp) &gt;= CAST(TO_DATE(SUBSTR(#Prompt('pStartDateTime')#, 0, 19), 'YYYY-MM-DD"T"HH24:mi:ss') AS timestamp)
+AND CAST(ptt.END_DATE + INTERVAL '3' HOUR AS timestamp) &lt;= CAST(TO_DATE(SUBSTR(#Prompt('pEndDateTime')#, 0, 19), 'YYYY-MM-DD"T"HH24:mi:ss') AS timestamp)
+AND CASE 
+        WHEN lh.work_grp IN ('SHLF','CRAK','DROP','MRCV') THEN 'Mississauga'
+        WHEN lh.work_grp IN ('MFLW', 'MRPH', 'MACT', 'MRAK','MDRP') THEN 'Milton'
+        WHEN lhh.dsp_locn LIKE('MC%') THEN 'Milton'
+        WHEN lhh.dsp_locn LIKE('CR%') THEN 'Mississauga'
+        ELSE lh.work_grp
+    END IN (#Promptmany('pTote', 'string', '''Milton'', ''Mississauga''')#)
+</sqlText>
+		<mdProjectedItems><mdProjectedItem name="User ID"/><mdProjectedItem name="date and time"/><mdProjectedItem name="Date"/><mdProjectedItem name="Time"/><mdProjectedItem name="LPN"/><mdProjectedItem name="To Locn"/><mdProjectedItem name="From Locn"/><mdProjectedItem name="Task Type"/><mdProjectedItem name="Task"/><mdProjectedItem name="FACILITY"/></mdProjectedItems></sqlQuery></source>
+			<selection><dataItem name="User ID"><expression>[SQL1].[User ID]</expression></dataItem><dataItem name="date and time"><expression>[SQL1].[date and time]</expression></dataItem><dataItem name="Date"><expression>[SQL1].[Date]</expression></dataItem><dataItem name="Time"><expression>[SQL1].[Time]</expression></dataItem><dataItem name="LPN"><expression>[SQL1].[LPN]</expression></dataItem><dataItem name="To Locn"><expression>[SQL1].[To Locn]</expression></dataItem><dataItem name="From Locn"><expression>[SQL1].[From Locn]</expression></dataItem><dataItem name="Task Type"><expression>[SQL1].[Task Type]</expression></dataItem><dataItem name="Task"><expression>[SQL1].[Task]</expression></dataItem><dataItem name="FACILITY"><expression>[SQL1].[FACILITY]</expression></dataItem></selection>
+		</query><query name="Fill Actv">
+			<source>
+				
+			<sqlQuery name="SQL2" dataSource="WMOS">
+			<sqlText>SELECT DISTINCT
+    ptt.user_id AS "User ID",
+    TO_CHAR(ptt.END_DATE + INTERVAL '3' HOUR) AS "date and time",
+    TO_CHAR(ptt.END_DATE + INTERVAL '3' HOUR, 'DD-MON-YYYY') AS "Date",
+    TO_CHAR(ptt.END_DATE + INTERVAL '3' HOUR, 'HH24:MI:SS') AS "Time",
+    ptt.cntr_nbr AS "LPN",
+    lh.dsp_locn AS "To Locn",
+    lhh.dsp_locn AS "From Locn", 
+    DECODE(task_type, task_type, (SELECT code_desc FROM sys_code WHERE rec_type = 'S' AND code_type = '590' AND code_id = task_type)) AS "Task Type",
+    CASE 
+        WHEN lh.work_grp IN ('SHLF','CRAK','DROP','MRCV') THEN 'Mississauga'
+        WHEN lh.work_grp IN ('MFLW', 'MRPH', 'MACT', 'MRAK','MDRP') THEN 'Milton'
+        WHEN lhh.dsp_locn LIKE 'MC%' THEN 'Milton'
+        WHEN lhh.dsp_locn LIKE 'CR%' THEN 'Mississauga'
+        ELSE lh.work_grp
+    END AS Facility
+FROM PROD_TRKG_TRAN ptt
+INNER JOIN task_hdr th ON ptt.task_id = th.task_id
+INNER JOIN locn_hdr lh ON ptt.TO_LOCN = lh.locn_id
+INNER JOIN locn_hdr lhh ON ptt.FROM_Locn = lhh.locn_id
+WHERE ptt.MENU_OPTN_NAME IN ('Fill Actv User Dir', 'Fill Actv - Truck')
+  AND CAST(ptt.END_DATE + INTERVAL '3' HOUR AS timestamp) &gt;= CAST(TO_DATE(SUBSTR(#Prompt('pStartDateTime')#, 0, 19), 'YYYY-MM-DD"T"HH24:mi:ss') AS timestamp)
+  AND CAST(ptt.END_DATE + INTERVAL '3' HOUR AS timestamp) &lt;= CAST(TO_DATE(SUBSTR(#Prompt('pEndDateTime')#, 0, 19), 'YYYY-MM-DD"T"HH24:mi:ss') AS timestamp)
+  AND CASE 
+          WHEN lh.work_grp IN ('SHLF','CRAK','DROP','MRCV') THEN 'Mississauga'
+          WHEN lh.work_grp IN ('MFLW', 'MRPH', 'MACT', 'MRAK','MDRP') THEN 'Milton'
+          WHEN lhh.dsp_locn LIKE 'MC%' THEN 'Milton'
+          WHEN lhh.dsp_locn LIKE 'CR%' THEN 'Mississauga'
+          ELSE lh.work_grp
+  END IN (#Promptmany('pTote', 'string', '''Milton'', ''Mississauga''')#)
+</sqlText>
+		<mdProjectedItems><mdProjectedItem name="User ID"/><mdProjectedItem name="date and time"/><mdProjectedItem name="Date"/><mdProjectedItem name="Time"/><mdProjectedItem name="LPN"/><mdProjectedItem name="To Locn"/><mdProjectedItem name="From Locn"/><mdProjectedItem name="Task Type"/><mdProjectedItem name="FACILITY"/></mdProjectedItems></sqlQuery></source>
+			<selection><dataItem name="User ID"><expression>[SQL2].[User ID]</expression></dataItem><dataItem name="date and time"><expression>[SQL2].[date and time]</expression></dataItem><dataItem name="Date"><expression>[SQL2].[Date]</expression></dataItem><dataItem name="Time"><expression>[SQL2].[Time]</expression></dataItem><dataItem name="LPN"><expression>[SQL2].[LPN]</expression></dataItem><dataItem name="To Locn"><expression>[SQL2].[To Locn]</expression></dataItem><dataItem name="From Locn"><expression>[SQL2].[From Locn]</expression></dataItem><dataItem name="Task Type"><expression>[SQL2].[Task Type]</expression></dataItem><dataItem name="FACILITY"><expression>[SQL2].[FACILITY]</expression></dataItem></selection>
+		</query><query name="Recv">
+			<source>
+				
+			<sqlQuery name="SQL3" dataSource="WMOS">
+			<sqlText>SELECT DISTINCT
+    ptt.user_id AS "User ID",
+    TO_CHAR(ptt.END_DATE + INTERVAL '3' HOUR) AS "date and time",
+    TO_CHAR(ptt.END_DATE + INTERVAL '3' HOUR, 'DD-MON-YYYY') AS "Date",
+    TO_CHAR(ptt.END_DATE + INTERVAL '3' HOUR, 'HH24:MI:SS') AS "Time",
+    ptt.cntr_nbr AS "LPN",
+    lh.dsp_locn AS "To Locn",
+    CASE 
+        WHEN lh.dsp_locn in ('STA-GE-DK-001') THEN 'Milton'
+        WHEN lh.dsp_locn in ('STA-GE-00-001') THEN 'Mississauga'
+        ELSE lh.work_grp
+    END AS Facility
+FROM PROD_TRKG_TRAN ptt
+LEFT JOIN locn_hdr lh ON ptt.TO_LOCN = lh.locn_id
+LEFT JOIN locn_hdr lhh ON ptt.FROM_Locn = lhh.locn_id
+WHERE ptt.MENU_OPTN_NAME IN ('Recv iLPN ASN', 'Recv iLPN ASN mixed', 'Recv Item Lvl')
+    AND TRAN_TYPE = '200'
+    AND CAST(ptt.END_DATE + INTERVAL '3' HOUR AS timestamp) &gt;= CAST(TO_DATE(SUBSTR(#Prompt('pStartDateTime')#, 0, 19), 'YYYY-MM-DD"T"HH24:mi:ss') AS timestamp)
+    AND CAST(ptt.END_DATE + INTERVAL '3' HOUR AS timestamp) &lt;= CAST(TO_DATE(SUBSTR(#Prompt('pEndDateTime')#, 0, 19), 'YYYY-MM-DD"T"HH24:mi:ss') AS timestamp)
+    AND CASE 
+            WHEN lh.dsp_locn IN ('STA-GE-DK-001') THEN 'Milton'
+            WHEN lh.dsp_locn IN ('STA-GE-00-001') THEN 'Mississauga'
+            ELSE lh.work_grp
+        END IN (#Promptmany('pTote', 'string', '''Milton'', ''Mississauga''')#)</sqlText>
+		<mdProjectedItems><mdProjectedItem name="User ID"/><mdProjectedItem name="date and time"/><mdProjectedItem name="Date"/><mdProjectedItem name="Time"/><mdProjectedItem name="LPN"/><mdProjectedItem name="To Locn"/><mdProjectedItem name="FACILITY"/></mdProjectedItems></sqlQuery></source>
+			<selection><dataItem name="User ID"><expression>[SQL3].[User ID]</expression></dataItem><dataItem name="date and time"><expression>[SQL3].[date and time]</expression></dataItem><dataItem name="Date"><expression>[SQL3].[Date]</expression></dataItem><dataItem name="Time"><expression>[SQL3].[Time]</expression></dataItem><dataItem name="LPN"><expression>[SQL3].[LPN]</expression></dataItem><dataItem name="To Locn"><expression>[SQL3].[To Locn]</expression></dataItem><dataItem name="FACILITY"><expression>[SQL3].[FACILITY]</expression></dataItem></selection>
+		</query><query name="Facility">
+			<source>
+				
+			<sqlQuery name="SQL4" dataSource="WMOS">
+			<sqlText>select case when rownum = 1 then 'Milton'
+	when rownum = 2 then 'Mississauga'
+	end FACILITY
+from dual connect by rownum &lt;= 2</sqlText>
+		<mdProjectedItems><mdProjectedItem name="FACILITY"/></mdProjectedItems></sqlQuery></source>
+			<selection><dataItem name="FACILITY"><expression>[SQL4].[FACILITY]</expression></dataItem></selection>
+		</query></queries></report>
