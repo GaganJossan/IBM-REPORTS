@@ -97,14 +97,165 @@
 				</contents>
 			</noDataHandler>
 			<style>
-				<CSS value="border-collapse:collapse;width:300px;height:150px"/>
+				<CSS value="border-collapse:collapse;width:300px;height:150px;text-align:center"/>
 				<defaultStyles>
 					<defaultStyle refStyle="xt"/>
 				</defaultStyles>
 			</style>
-		<crosstabFactCell><contents><textItem><dataSource><cellValue/></dataSource></textItem></contents><style><defaultStyles><defaultStyle refStyle="mv"/></defaultStyles></style></crosstabFactCell><crosstabRows><crosstabNode><crosstabNodeMembers><crosstabNodeMember refDataItem="User ID" edgeLocation="e1"><style><defaultStyles><defaultStyle refStyle="ml"/></defaultStyles><CSS value="text-align:center"/></style><contents><textItem><dataSource><memberCaption/></dataSource></textItem></contents></crosstabNodeMember></crosstabNodeMembers></crosstabNode><crosstabNode><crosstabNodeMembers><crosstabNodeMember refDataItem="Total(User ID)" edgeLocation="e3"><style><defaultStyles><defaultStyle refStyle="ol"/></defaultStyles></style><contents><textItem><dataSource><dataItemLabel refDataItem="Total(User ID)"/></dataSource></textItem></contents><factCell><style><defaultStyles><defaultStyle refStyle="ov"/></defaultStyles></style></factCell></crosstabNodeMember></crosstabNodeMembers></crosstabNode></crosstabRows><crosstabColumns><crosstabNode><crosstabNodeMembers><crosstabNodeMember refDataItem="LPN" edgeLocation="e2"><style><defaultStyles><defaultStyle refStyle="ml"/></defaultStyles><CSS value="text-align:center"/></style><contents><textItem><dataSource><memberCaption/></dataSource></textItem></contents></crosstabNodeMember></crosstabNodeMembers></crosstabNode></crosstabColumns><crosstabIntersections><crosstabIntersection row="e1" column="e2"><style><CSS value="width:100px;text-align:center"/></style></crosstabIntersection><crosstabIntersection row="e3" column="e2"><style><CSS value="text-align:center"/></style></crosstabIntersection></crosstabIntersections><crosstabCorner><contents><textItem><dataSource><dataItemLabel refDataItem="LPN"/></dataSource></textItem></contents><style><defaultStyles><defaultStyle refStyle="xm"/></defaultStyles></style></crosstabCorner><defaultMeasure refDataItem="LPN"/></crosstab></contents><style><CSS value="padding-top:80px;padding-right:400px"/></style></tableCell></tableCells></tableRow></tableRows></table><block>
+		<crosstabFactCell><contents><textItem><dataSource><cellValue/></dataSource></textItem></contents><style><defaultStyles><defaultStyle refStyle="mv"/></defaultStyles></style></crosstabFactCell><crosstabCorner><contents><textItem><dataSource><dataItemLabel refDataItem="LPN"/></dataSource></textItem></contents><style><defaultStyles><defaultStyle refStyle="xm"/></defaultStyles></style></crosstabCorner><crosstabRows><crosstabNode><crosstabNodeMembers><crosstabNodeMember refDataItem="User ID" edgeLocation="e1"><style><defaultStyles><defaultStyle refStyle="ml"/></defaultStyles></style><contents><textItem><dataSource><memberCaption/></dataSource></textItem></contents></crosstabNodeMember></crosstabNodeMembers></crosstabNode><crosstabNode><crosstabNodeMembers><crosstabNodeMember refDataItem="Total(User ID)" edgeLocation="e3"><style><defaultStyles><defaultStyle refStyle="ol"/></defaultStyles></style><contents><textItem><dataSource><dataItemLabel refDataItem="Total(User ID)"/></dataSource></textItem></contents><factCell><style><defaultStyles><defaultStyle refStyle="ov"/></defaultStyles></style></factCell></crosstabNodeMember></crosstabNodeMembers></crosstabNode></crosstabRows><defaultMeasure refDataItem="LPN"/><crosstabColumns><crosstabNode><crosstabNestedNodes><crosstabNode><crosstabNodeMembers><crosstabNodeMember refDataItem="LPN" edgeLocation="e2"><style><defaultStyles><defaultStyle refStyle="ml"/></defaultStyles></style><contents><textItem><dataSource><memberCaption/></dataSource></textItem></contents></crosstabNodeMember></crosstabNodeMembers></crosstabNode></crosstabNestedNodes><crosstabNodeMembers><crosstabNodeMember refDataItem="Facility" edgeLocation="e4"><style><defaultStyles><defaultStyle refStyle="ml"/></defaultStyles></style><contents><textItem><dataSource><memberCaption/></dataSource></textItem></contents></crosstabNodeMember></crosstabNodeMembers></crosstabNode></crosstabColumns></crosstab></contents><style><CSS value="padding-top:80px;padding-right:400px"/></style></tableCell></tableCells></tableRow></tableRows></table><block>
 			<contents><textItem><dataSource><staticValue>FILL ACTV</staticValue></dataSource></textItem></contents>
-		<style><CSS value="background-color:black;text-align:center;color:white;font-weight:bold;font-size:16pt;margin-top:40px"/><defaultStyles><defaultStyle refStyle="sh"/></defaultStyles></style></block><table><style><defaultStyles><defaultStyle refStyle="tb"/></defaultStyles><CSS value="border-collapse:collapse;width:100%"/></style><tableRows><tableRow><tableCells><tableCell><contents/></tableCell><tableCell><contents><crosstab horizontalPagination="true" name="Crosstab2" refQuery="Fill Actv" rowsPerPage="999">
+		<style><CSS value="background-color:black;text-align:center;color:white;font-weight:bold;font-size:16pt;margin-top:40px"/><defaultStyles><defaultStyle refStyle="sh"/></defaultStyles></style></block><table><style><defaultStyles><defaultStyle refStyle="tb"/></defaultStyles><CSS value="border-collapse:collapse;width:100%"/></style><tableRows><tableRow><tableCells><tableCell><contents><combinationChart showTooltips="true" maxHotspots="10000" refQuery="Fill Actv" name="Combination Chart2">
+														<legend>
+															<legendPosition>
+																<relativePosition/>
+															</legendPosition>
+															<legendTitle refQuery="Fill Actv">
+																<style>
+																	<defaultStyles>
+																		<defaultStyle refStyle="lx"/>
+																	</defaultStyles>
+																</style>
+															</legendTitle>
+															<style>
+																<defaultStyles>
+																	<defaultStyle refStyle="lg"/>
+																</defaultStyles>
+															</style>
+														</legend>
+														<ordinalAxis>
+															<axisTitle refQuery="Fill Actv">
+																<style>
+																	<defaultStyles>
+																		<defaultStyle refStyle="at"/>
+																	</defaultStyles>
+																</style>
+															</axisTitle>
+															<axisLine color="black"/>
+															<style>
+																<defaultStyles>
+																	<defaultStyle refStyle="al"/>
+																</defaultStyles>
+															</style>
+														</ordinalAxis>
+														<numericalAxisY1>
+															<axisTitle refQuery="Fill Actv">
+																<style>
+																	<defaultStyles>
+																		<defaultStyle refStyle="at"/>
+																	</defaultStyles>
+																</style>
+															</axisTitle>
+															<gridlines color="#cccccc"/>
+															<axisLine color="black"/>
+															<style>
+																<defaultStyles>
+																	<defaultStyle refStyle="al"/>
+																</defaultStyles>
+															</style>
+														</numericalAxisY1>
+														<combinationChartTypes>
+															<bar valueType="stacked"><chartNodes><chartNode><chartNodeMembers><chartNodeMember refDataItem="LPN"><chartContents><chartTextItem><dataSource><memberCaption/></dataSource></chartTextItem></chartContents></chartNodeMember></chartNodeMembers></chartNode></chartNodes></bar>
+														</combinationChartTypes>
+														<style>
+															<defaultStyles>
+																<defaultStyle refStyle="ch"/>
+															</defaultStyles>
+															<CSS value="width:1600px;height:700px"/></style>
+														<commonClusters><chartNodes><chartNode><chartNodeMembers><chartNodeMember refDataItem="User ID"><chartContents><chartTextItem><dataSource><memberCaption/></dataSource></chartTextItem></chartContents></chartNodeMember></chartNodeMembers></chartNode></chartNodes></commonClusters></combinationChart>
+												</contents></tableCell><tableCell><contents><crosstab horizontalPagination="true" name="Crosstab2" refQuery="Fill Actv" rowsPerPage="999">
+			<crosstabCorner>
+				<contents><textItem><dataSource><dataItemLabel refDataItem="LPN"/></dataSource></textItem></contents>
+				<style>
+					<defaultStyles>
+						<defaultStyle refStyle="xm"/>
+					</defaultStyles>
+				<CSS value="text-align:center"/></style>
+			</crosstabCorner>
+			
+			
+			<noDataHandler>
+				<contents>
+					<block>
+						<contents>
+							<textItem>
+								<dataSource>
+									<staticValue>No Data Available</staticValue>
+								</dataSource>
+								<style>
+									<CSS value="padding:10px 18px;"/>
+								</style>
+							</textItem>
+						</contents>
+					</block>
+				</contents>
+			</noDataHandler>
+			<style>
+				<CSS value="border-collapse:collapse;width:300px;height:150px;text-align:center"/>
+				<defaultStyles>
+					<defaultStyle refStyle="xt"/>
+				</defaultStyles>
+			</style>
+		<crosstabFactCell><contents><textItem><dataSource><cellValue/></dataSource></textItem></contents><style><defaultStyles><defaultStyle refStyle="mv"/></defaultStyles></style></crosstabFactCell><crosstabRows><crosstabNode><crosstabNodeMembers><crosstabNodeMember refDataItem="User ID" edgeLocation="e1"><style><defaultStyles><defaultStyle refStyle="ml"/></defaultStyles></style><contents><textItem><dataSource><memberCaption/></dataSource></textItem></contents></crosstabNodeMember></crosstabNodeMembers></crosstabNode><crosstabNode><crosstabNodeMembers><crosstabNodeMember refDataItem="Total(User ID)" edgeLocation="e4"><style><defaultStyles><defaultStyle refStyle="ol"/></defaultStyles></style><contents><textItem><dataSource><dataItemLabel refDataItem="Total(User ID)"/></dataSource></textItem></contents><factCell><style><defaultStyles><defaultStyle refStyle="ov"/></defaultStyles></style></factCell></crosstabNodeMember></crosstabNodeMembers></crosstabNode></crosstabRows><crosstabColumns><crosstabNode><crosstabNestedNodes><crosstabNode><crosstabNodeMembers><crosstabNodeMember refDataItem="LPN" edgeLocation="e2"><style><defaultStyles><defaultStyle refStyle="ml"/></defaultStyles></style><contents><textItem><dataSource><memberCaption/></dataSource></textItem></contents></crosstabNodeMember></crosstabNodeMembers></crosstabNode></crosstabNestedNodes><crosstabNodeMembers><crosstabNodeMember refDataItem="FACILITY" edgeLocation="e3"><style><defaultStyles><defaultStyle refStyle="ml"/></defaultStyles></style><contents><textItem><dataSource><memberCaption/></dataSource></textItem></contents></crosstabNodeMember></crosstabNodeMembers></crosstabNode></crosstabColumns><crosstabIntersections><crosstabIntersection row="e1" column="e2"><style><CSS value="text-align:center"/></style></crosstabIntersection><crosstabIntersection row="e4" column="e2"><style><CSS value="text-align:center"/></style></crosstabIntersection></crosstabIntersections><defaultMeasure refDataItem="LPN"/></crosstab></contents><style><CSS value="padding-right:400px"/></style></tableCell></tableCells></tableRow></tableRows></table><block>
+			<contents><textItem><dataSource><staticValue>PUTAWAY</staticValue></dataSource><style><CSS value="color:white;font-weight:bold;font-size:16pt"/></style></textItem></contents>
+		<style><defaultStyles><defaultStyle refStyle="sh"/></defaultStyles><CSS value="background-color:black;text-align:center;margin-top:40px"/></style></block><table><style><defaultStyles><defaultStyle refStyle="tb"/></defaultStyles><CSS value="border-collapse:collapse;width:100%"/></style><tableRows><tableRow><tableCells><tableCell><contents><combinationChart showTooltips="true" maxHotspots="10000" refQuery="pUTAWAY" name="Combination Chart3">
+														<legend>
+															<legendPosition>
+																<relativePosition/>
+															</legendPosition>
+															<legendTitle refQuery="pUTAWAY">
+																<style>
+																	<defaultStyles>
+																		<defaultStyle refStyle="lx"/>
+																	</defaultStyles>
+																</style>
+															</legendTitle>
+															<style>
+																<defaultStyles>
+																	<defaultStyle refStyle="lg"/>
+																</defaultStyles>
+															</style>
+														</legend>
+														<ordinalAxis>
+															<axisTitle refQuery="pUTAWAY">
+																<style>
+																	<defaultStyles>
+																		<defaultStyle refStyle="at"/>
+																	</defaultStyles>
+																</style>
+															</axisTitle>
+															<axisLine color="black"/>
+															<style>
+																<defaultStyles>
+																	<defaultStyle refStyle="al"/>
+																</defaultStyles>
+															</style>
+														</ordinalAxis>
+														<numericalAxisY1>
+															<axisTitle refQuery="pUTAWAY">
+																<style>
+																	<defaultStyles>
+																		<defaultStyle refStyle="at"/>
+																	</defaultStyles>
+																</style>
+															</axisTitle>
+															<gridlines color="#cccccc"/>
+															<axisLine color="black"/>
+															<style>
+																<defaultStyles>
+																	<defaultStyle refStyle="al"/>
+																</defaultStyles>
+															</style>
+														</numericalAxisY1>
+														<combinationChartTypes>
+															<bar valueType="stacked"><chartNodes><chartNode><chartNodeMembers><chartNodeMember refDataItem="LPN"><chartContents><chartTextItem><dataSource><memberCaption/></dataSource></chartTextItem></chartContents><sortList><sortItem refDataItem="LPN" sortOrder="descending"/></sortList></chartNodeMember></chartNodeMembers></chartNode></chartNodes></bar>
+														</combinationChartTypes>
+														<style>
+															<defaultStyles>
+																<defaultStyle refStyle="ch"/>
+															</defaultStyles>
+														<CSS value="width:1600px;height:700px"/></style>
+														<commonClusters><chartNodes><chartNode><chartNodeMembers><chartNodeMember refDataItem="User ID"><chartContents><chartTextItem><dataSource><memberCaption/></dataSource></chartTextItem></chartContents></chartNodeMember></chartNodeMembers></chartNode></chartNodes></commonClusters></combinationChart>
+												</contents><style><CSS value="padding-top:80px"/></style></tableCell><tableCell><contents><crosstab horizontalPagination="true" name="Crosstab3" refQuery="pUTAWAY" rowsPerPage="999">
 			<crosstabCorner>
 				<contents><textItem><dataSource><dataItemLabel refDataItem="LPN"/></dataSource></textItem></contents>
 				<style>
@@ -132,12 +283,198 @@
 				</contents>
 			</noDataHandler>
 			<style>
-				<CSS value="border-collapse:collapse"/>
+				<CSS value="border-collapse:collapse;width:300px;height:150px"/>
 				<defaultStyles>
 					<defaultStyle refStyle="xt"/>
 				</defaultStyles>
 			</style>
-		<crosstabFactCell><contents><textItem><dataSource><cellValue/></dataSource></textItem></contents><style><defaultStyles><defaultStyle refStyle="mv"/></defaultStyles></style></crosstabFactCell><crosstabRows><crosstabNode><crosstabNodeMembers><crosstabNodeMember refDataItem="User ID" edgeLocation="e1"><style><defaultStyles><defaultStyle refStyle="ml"/></defaultStyles></style><contents><textItem><dataSource><memberCaption/></dataSource></textItem></contents></crosstabNodeMember></crosstabNodeMembers></crosstabNode><crosstabNode><crosstabNodeMembers><crosstabNodeMember refDataItem="Total(User ID)" edgeLocation="e3"><style><defaultStyles><defaultStyle refStyle="ol"/></defaultStyles></style><contents><textItem><dataSource><dataItemLabel refDataItem="Total(User ID)"/></dataSource></textItem></contents><factCell><style><defaultStyles><defaultStyle refStyle="ov"/></defaultStyles></style></factCell></crosstabNodeMember></crosstabNodeMembers></crosstabNode></crosstabRows><crosstabColumns><crosstabNode><crosstabNodeMembers><crosstabNodeMember refDataItem="LPN" edgeLocation="e2"><style><defaultStyles><defaultStyle refStyle="ml"/></defaultStyles></style><contents><textItem><dataSource><memberCaption/></dataSource></textItem></contents></crosstabNodeMember></crosstabNodeMembers></crosstabNode></crosstabColumns><defaultMeasure refDataItem="LPN"/></crosstab></contents></tableCell></tableCells></tableRow></tableRows></table></contents>
+		<crosstabFactCell><contents><textItem><dataSource><cellValue/></dataSource></textItem></contents><style><defaultStyles><defaultStyle refStyle="mv"/></defaultStyles></style></crosstabFactCell><crosstabRows><crosstabNode><crosstabNodeMembers><crosstabNodeMember refDataItem="User ID" edgeLocation="e1"><style><defaultStyles><defaultStyle refStyle="ml"/></defaultStyles><CSS value="text-align:center"/></style><contents><textItem><dataSource><memberCaption/></dataSource></textItem></contents></crosstabNodeMember></crosstabNodeMembers></crosstabNode><crosstabNode><crosstabNodeMembers><crosstabNodeMember refDataItem="Total(User ID)" edgeLocation="e3"><style><defaultStyles><defaultStyle refStyle="ol"/></defaultStyles><CSS value="text-align:center"/></style><contents><textItem><dataSource><dataItemLabel refDataItem="Total(User ID)"/></dataSource></textItem></contents><factCell><style><defaultStyles><defaultStyle refStyle="ov"/></defaultStyles></style></factCell></crosstabNodeMember></crosstabNodeMembers></crosstabNode></crosstabRows><crosstabColumns><crosstabNode><crosstabNestedNodes><crosstabNode><crosstabNodeMembers><crosstabNodeMember refDataItem="LPN" edgeLocation="e2"><style><defaultStyles><defaultStyle refStyle="ml"/></defaultStyles><CSS value="text-align:center"/></style><contents><textItem><dataSource><memberCaption/></dataSource></textItem></contents></crosstabNodeMember></crosstabNodeMembers></crosstabNode></crosstabNestedNodes><crosstabNodeMembers><crosstabNodeMember refDataItem="FACILITY" edgeLocation="e4"><style><defaultStyles><defaultStyle refStyle="ml"/></defaultStyles></style><contents><textItem><dataSource><memberCaption/></dataSource></textItem></contents></crosstabNodeMember></crosstabNodeMembers></crosstabNode></crosstabColumns><crosstabIntersections><crosstabIntersection row="e1" column="e2"><style><CSS value="text-align:center"/></style></crosstabIntersection><crosstabIntersection row="e3" column="e2"><style><CSS value="text-align:center"/></style></crosstabIntersection></crosstabIntersections><defaultMeasure refDataItem="LPN"/></crosstab></contents><style><CSS value="padding-right:400px"/></style></tableCell></tableCells></tableRow></tableRows></table><block>
+			<contents><textItem><dataSource><staticValue>RECEIVING</staticValue></dataSource><style><CSS value="font-size:16pt"/></style></textItem></contents>
+		<style><CSS value="text-align:center;color:white;font-weight:bold;background-color:black"/><defaultStyles><defaultStyle refStyle="sh"/></defaultStyles></style></block><table><style><defaultStyles><defaultStyle refStyle="tb"/></defaultStyles><CSS value="border-collapse:collapse;width:100%"/></style><tableRows><tableRow><tableCells><tableCell><contents><combinationChart showTooltips="true" maxHotspots="10000" refQuery="Recv" name="Combination Chart4">
+														<legend>
+															<legendPosition>
+																<relativePosition/>
+															</legendPosition>
+															<legendTitle refQuery="Recv">
+																<style>
+																	<defaultStyles>
+																		<defaultStyle refStyle="lx"/>
+																	</defaultStyles>
+																</style>
+															</legendTitle>
+															<style>
+																<defaultStyles>
+																	<defaultStyle refStyle="lg"/>
+																</defaultStyles>
+															</style>
+														</legend>
+														<ordinalAxis>
+															<axisTitle refQuery="Recv">
+																<style>
+																	<defaultStyles>
+																		<defaultStyle refStyle="at"/>
+																	</defaultStyles>
+																</style>
+															</axisTitle>
+															<axisLine color="black"/>
+															<style>
+																<defaultStyles>
+																	<defaultStyle refStyle="al"/>
+																</defaultStyles>
+															</style>
+														</ordinalAxis>
+														<numericalAxisY1>
+															<axisTitle refQuery="Recv">
+																<style>
+																	<defaultStyles>
+																		<defaultStyle refStyle="at"/>
+																	</defaultStyles>
+																</style>
+															</axisTitle>
+															<gridlines color="#cccccc"/>
+															<axisLine color="black"/>
+															<style>
+																<defaultStyles>
+																	<defaultStyle refStyle="al"/>
+																</defaultStyles>
+															</style>
+														</numericalAxisY1>
+														<combinationChartTypes>
+															<bar valueType="stacked"><chartNodes><chartNode><chartNodeMembers><chartNodeMember refDataItem="LPN"><chartContents><chartTextItem><dataSource><memberCaption/></dataSource></chartTextItem></chartContents></chartNodeMember></chartNodeMembers></chartNode></chartNodes></bar>
+														</combinationChartTypes>
+														<style>
+															<defaultStyles>
+																<defaultStyle refStyle="ch"/>
+															</defaultStyles>
+															<CSS value="width:1600px;height:700px"/></style>
+														<commonClusters><chartNodes><chartNode><chartNodeMembers><chartNodeMember refDataItem="User ID"><chartContents><chartTextItem><dataSource><memberCaption/></dataSource></chartTextItem></chartContents></chartNodeMember></chartNodeMembers></chartNode></chartNodes></commonClusters></combinationChart>
+												</contents><style><CSS value="padding-top:80px"/></style></tableCell><tableCell><contents><crosstab horizontalPagination="true" name="Crosstab4" refQuery="Recv">
+			<crosstabCorner>
+				<contents><textItem><dataSource><dataItemLabel refDataItem="LPN"/></dataSource></textItem></contents>
+				<style>
+					<defaultStyles>
+						<defaultStyle refStyle="xm"/>
+					</defaultStyles>
+				</style>
+			</crosstabCorner>
+			
+			
+			<noDataHandler>
+				<contents>
+					<block>
+						<contents>
+							<textItem>
+								<dataSource>
+									<staticValue>No Data Available</staticValue>
+								</dataSource>
+								<style>
+									<CSS value="padding:10px 18px;"/>
+								</style>
+							</textItem>
+						</contents>
+					</block>
+				</contents>
+			</noDataHandler>
+			<style>
+				<CSS value="border-collapse:collapse;width:300px;height:150px;text-align:center"/>
+				<defaultStyles>
+					<defaultStyle refStyle="xt"/>
+				</defaultStyles>
+			</style>
+		<crosstabFactCell><contents><textItem><dataSource><cellValue/></dataSource></textItem></contents><style><defaultStyles><defaultStyle refStyle="mv"/></defaultStyles></style></crosstabFactCell><crosstabRows><crosstabNode><crosstabNodeMembers><crosstabNodeMember refDataItem="User ID" edgeLocation="e1"><style><defaultStyles><defaultStyle refStyle="ml"/></defaultStyles></style><contents><textItem><dataSource><memberCaption/></dataSource></textItem></contents></crosstabNodeMember></crosstabNodeMembers></crosstabNode><crosstabNode><crosstabNodeMembers><crosstabNodeMember refDataItem="Total(User ID)" edgeLocation="e4"><style><defaultStyles><defaultStyle refStyle="ol"/></defaultStyles></style><contents><textItem><dataSource><dataItemLabel refDataItem="Total(User ID)"/></dataSource></textItem></contents><factCell><style><defaultStyles><defaultStyle refStyle="ov"/></defaultStyles></style></factCell></crosstabNodeMember></crosstabNodeMembers></crosstabNode></crosstabRows><crosstabColumns><crosstabNode><crosstabNestedNodes><crosstabNode><crosstabNodeMembers><crosstabNodeMember refDataItem="LPN" edgeLocation="e2"><style><defaultStyles><defaultStyle refStyle="ml"/></defaultStyles></style><contents><textItem><dataSource><memberCaption/></dataSource></textItem></contents></crosstabNodeMember></crosstabNodeMembers></crosstabNode></crosstabNestedNodes><crosstabNodeMembers><crosstabNodeMember refDataItem="FACILITY" edgeLocation="e3"><style><defaultStyles><defaultStyle refStyle="ml"/></defaultStyles></style><contents><textItem><dataSource><memberCaption/></dataSource></textItem></contents></crosstabNodeMember></crosstabNodeMembers></crosstabNode></crosstabColumns><crosstabIntersections><crosstabIntersection row="e1" column="e2"><style><CSS value="text-align:center"/></style></crosstabIntersection><crosstabIntersection row="e4" column="e2"><style><CSS value="text-align:center"/></style></crosstabIntersection></crosstabIntersections><defaultMeasure refDataItem="LPN"/></crosstab></contents><style><CSS value="padding-right:400px"/></style></tableCell></tableCells></tableRow></tableRows></table><block>
+			<contents><textItem><dataSource><staticValue>SORTING</staticValue></dataSource></textItem></contents>
+		<style><CSS value="text-align:center;font-weight:bold;color:white;font-size:16pt;background-color:black"/><defaultStyles><defaultStyle refStyle="sh"/></defaultStyles></style></block><table><style><defaultStyles><defaultStyle refStyle="tb"/></defaultStyles><CSS value="border-collapse:collapse;width:100%"/></style><tableRows><tableRow><tableCells><tableCell><contents><combinationChart showTooltips="true" maxHotspots="10000" refQuery="SORT" name="Combination Chart5">
+														<legend>
+															<legendPosition>
+																<relativePosition/>
+															</legendPosition>
+															<legendTitle refQuery="SORT">
+																<style>
+																	<defaultStyles>
+																		<defaultStyle refStyle="lx"/>
+																	</defaultStyles>
+																</style>
+															</legendTitle>
+															<style>
+																<defaultStyles>
+																	<defaultStyle refStyle="lg"/>
+																</defaultStyles>
+															</style>
+														</legend>
+														<ordinalAxis>
+															<axisTitle refQuery="SORT">
+																<style>
+																	<defaultStyles>
+																		<defaultStyle refStyle="at"/>
+																	</defaultStyles>
+																</style>
+															</axisTitle>
+															<axisLine color="black"/>
+															<style>
+																<defaultStyles>
+																	<defaultStyle refStyle="al"/>
+																</defaultStyles>
+															</style>
+														</ordinalAxis>
+														<numericalAxisY1>
+															<axisTitle refQuery="SORT">
+																<style>
+																	<defaultStyles>
+																		<defaultStyle refStyle="at"/>
+																	</defaultStyles>
+																</style>
+															</axisTitle>
+															<gridlines color="#cccccc"/>
+															<axisLine color="black"/>
+															<style>
+																<defaultStyles>
+																	<defaultStyle refStyle="al"/>
+																</defaultStyles>
+															</style>
+														</numericalAxisY1>
+														<combinationChartTypes>
+															<bar valueType="stacked"><chartNodes><chartNode><chartNodeMembers><chartNodeMember refDataItem="LPN"><chartContents><chartTextItem><dataSource><memberCaption/></dataSource></chartTextItem></chartContents></chartNodeMember></chartNodeMembers></chartNode></chartNodes></bar>
+														</combinationChartTypes>
+														<style>
+															<defaultStyles>
+																<defaultStyle refStyle="ch"/>
+															</defaultStyles>
+															<CSS value="width:1600px;height:700px"/></style>
+														<commonClusters><chartNodes><chartNode><chartNodeMembers><chartNodeMember refDataItem="User ID"><chartContents><chartTextItem><dataSource><memberCaption/></dataSource></chartTextItem></chartContents></chartNodeMember></chartNodeMembers></chartNode></chartNodes></commonClusters></combinationChart>
+												</contents><style><CSS value="padding-top:80px"/></style></tableCell><tableCell><contents><crosstab horizontalPagination="true" name="Crosstab5" refQuery="SORT">
+			<crosstabCorner>
+				<contents><textItem><dataSource><dataItemLabel refDataItem="LPN"/></dataSource></textItem></contents>
+				<style>
+					<defaultStyles>
+						<defaultStyle refStyle="xm"/>
+					</defaultStyles>
+				</style>
+			</crosstabCorner>
+			
+			
+			<noDataHandler>
+				<contents>
+					<block>
+						<contents>
+							<textItem>
+								<dataSource>
+									<staticValue>No Data Available</staticValue>
+								</dataSource>
+								<style>
+									<CSS value="padding:10px 18px;"/>
+								</style>
+							</textItem>
+						</contents>
+					</block>
+				</contents>
+			</noDataHandler>
+			<style>
+				<CSS value="border-collapse:collapse;width:300px;height:150px;text-align:center"/>
+				<defaultStyles>
+					<defaultStyle refStyle="xt"/>
+				</defaultStyles>
+			</style>
+		<crosstabFactCell><contents><textItem><dataSource><cellValue/></dataSource></textItem></contents><style><defaultStyles><defaultStyle refStyle="mv"/></defaultStyles></style></crosstabFactCell><crosstabRows><crosstabNode><crosstabNodeMembers><crosstabNodeMember refDataItem="User ID" edgeLocation="e1"><style><defaultStyles><defaultStyle refStyle="ml"/></defaultStyles></style><contents><textItem><dataSource><memberCaption/></dataSource></textItem></contents></crosstabNodeMember></crosstabNodeMembers></crosstabNode><crosstabNode><crosstabNodeMembers><crosstabNodeMember refDataItem="Total(User ID)" edgeLocation="e4"><style><defaultStyles><defaultStyle refStyle="ol"/></defaultStyles></style><contents><textItem><dataSource><dataItemLabel refDataItem="Total(User ID)"/></dataSource></textItem></contents><factCell><style><defaultStyles><defaultStyle refStyle="ov"/></defaultStyles></style></factCell></crosstabNodeMember></crosstabNodeMembers></crosstabNode></crosstabRows><crosstabColumns><crosstabNode><crosstabNestedNodes><crosstabNode><crosstabNodeMembers><crosstabNodeMember refDataItem="LPN" edgeLocation="e2"><style><defaultStyles><defaultStyle refStyle="ml"/></defaultStyles></style><contents><textItem><dataSource><memberCaption/></dataSource></textItem></contents></crosstabNodeMember></crosstabNodeMembers></crosstabNode></crosstabNestedNodes><crosstabNodeMembers><crosstabNodeMember refDataItem="FACILITY" edgeLocation="e3"><style><defaultStyles><defaultStyle refStyle="ml"/></defaultStyles></style><contents><textItem><dataSource><memberCaption/></dataSource></textItem></contents></crosstabNodeMember></crosstabNodeMembers></crosstabNode></crosstabColumns><crosstabIntersections><crosstabIntersection row="e1" column="e2"><style><CSS value="text-align:center"/></style></crosstabIntersection><crosstabIntersection row="e4" column="e2"><style><CSS value="text-align:center"/></style></crosstabIntersection></crosstabIntersections><defaultMeasure refDataItem="LPN"/></crosstab></contents><style><CSS value="padding-right:400px"/></style></tableCell></tableCells></tableRow></tableRows></table></contents>
 								</pageBody>
 							<pageHeader><contents><textItem><dataSource><staticValue>INBOUND USER DASHBOARD</staticValue></dataSource></textItem></contents><style><CSS value="text-align:center;font-weight:bold;color:red;font-size:20pt;text-decoration:underline"/></style></pageHeader></page>
 						</reportPages>
@@ -230,85 +567,76 @@
 			<source>
 				
 			<sqlQuery name="SQL1" dataSource="WMOS">
-			<sqlText>SELECT DISTINCT
-    ptt.user_id AS "User ID",
-    TO_CHAR(ptt.END_DATE + INTERVAL '3' HOUR) AS "date and time",
-    TO_CHAR(ptt.END_DATE + INTERVAL '3' HOUR, 'DD-MON-YYYY') AS "Date",
-    TO_CHAR(ptt.END_DATE + INTERVAL '3' HOUR, 'HH24:MI:SS') AS "Time",
-    ptt.cntr_nbr AS "LPN",
-    lh.dsp_locn AS "To Locn",
-    lhh.dsp_locn AS "From Locn", 
-    DECODE(task_type, task_type, (SELECT code_desc FROM sys_code WHERE rec_type = 'S' AND code_type = '590' AND code_id = task_type)) AS "Task Type",
+			<sqlText>SELECT 
+    wm.PROD_TRKG_TRAN.user_id AS "User ID",
+    TO_CHAR(wm.PROD_TRKG_TRAN.END_DATE + INTERVAL '3' HOUR) AS "Date and Time",
+    TO_CHAR(wm.PROD_TRKG_TRAN.END_DATE + INTERVAL '3' HOUR, 'DD-MON-YYYY') AS "Date",
+    TO_CHAR(wm.PROD_TRKG_TRAN.END_DATE + INTERVAL '3' HOUR, 'HH24:MI:SS') AS "Time",
+    wm.PROD_TRKG_TRAN.cntr_nbr AS "LPN",
+    locn_hdr.dsp_locn AS "From Locn", 
     CASE 
-        WHEN LOWER((SELECT code_desc FROM sys_code WHERE rec_type = 'S' AND code_type = '590' AND code_id = task_type)) LIKE '%letdown%' THEN 'Letdown'
-        ELSE 'Recall'
-    END AS "Task",
-    CASE 
-        WHEN lh.work_grp IN ('SHLF','CRAK','DROP','MRCV') THEN 'Mississauga'
-        WHEN lh.work_grp IN ('MFLW', 'MRPH', 'MACT', 'MRAK','MDRP') THEN 'Milton'
-        WHEN lhh.dsp_locn LIKE('MC%') THEN 'Milton'
-        WHEN lhh.dsp_locn LIKE('CR%') THEN 'Mississauga'
-        ELSE lh.work_grp
-    END AS Facility
-FROM PROD_TRKG_TRAN ptt
-INNER JOIN task_hdr th ON ptt.task_id = th.task_id
-INNER JOIN locn_hdr lh ON ptt.TO_LOCN = lh.locn_id
-INNER JOIN locn_hdr lhh ON ptt.FROM_Locn = lhh.locn_id
-WHERE ptt.MENU_OPTN_NAME IN ('Pull iLPN List', 'Pull iLPN List Pick Tower')
-AND CAST(ptt.END_DATE + INTERVAL '3' HOUR AS timestamp) &gt;= CAST(TO_DATE(SUBSTR(#Prompt('pStartDateTime')#, 0, 19), 'YYYY-MM-DD"T"HH24:mi:ss') AS timestamp)
-AND CAST(ptt.END_DATE + INTERVAL '3' HOUR AS timestamp) &lt;= CAST(TO_DATE(SUBSTR(#Prompt('pEndDateTime')#, 0, 19), 'YYYY-MM-DD"T"HH24:mi:ss') AS timestamp)
-AND CASE 
-        WHEN lh.work_grp IN ('SHLF','CRAK','DROP','MRCV') THEN 'Mississauga'
-        WHEN lh.work_grp IN ('MFLW', 'MRPH', 'MACT', 'MRAK','MDRP') THEN 'Milton'
-        WHEN lhh.dsp_locn LIKE('MC%') THEN 'Milton'
-        WHEN lhh.dsp_locn LIKE('CR%') THEN 'Mississauga'
-        ELSE lh.work_grp
-    END IN (#Promptmany('pTote', 'string', '''Milton'', ''Mississauga''')#)
-</sqlText>
-		<mdProjectedItems><mdProjectedItem name="User ID"/><mdProjectedItem name="date and time"/><mdProjectedItem name="Date"/><mdProjectedItem name="Time"/><mdProjectedItem name="LPN"/><mdProjectedItem name="To Locn"/><mdProjectedItem name="From Locn"/><mdProjectedItem name="Task Type"/><mdProjectedItem name="Task"/><mdProjectedItem name="FACILITY"/></mdProjectedItems></sqlQuery></source>
-			<selection><dataItem name="User ID"><expression>[SQL1].[User ID]</expression></dataItem><dataItem name="date and time"><expression>[SQL1].[date and time]</expression></dataItem><dataItem name="Date"><expression>[SQL1].[Date]</expression></dataItem><dataItem name="Time"><expression>[SQL1].[Time]</expression></dataItem><dataItem name="LPN" aggregate="countDistinct"><expression>[SQL1].[LPN]</expression></dataItem><dataItem name="To Locn"><expression>[SQL1].[To Locn]</expression></dataItem><dataItem name="From Locn"><expression>[SQL1].[From Locn]</expression></dataItem><dataItem name="Task Type"><expression>[SQL1].[Task Type]</expression></dataItem><dataItem name="Task"><expression>[SQL1].[Task]</expression></dataItem><dataItem name="FACILITY"><expression>[SQL1].[FACILITY]</expression></dataItem><dataItemEdgeSummary solveOrder="1" refDataItem="User ID" aggregateMethod="count" name="Count(User ID)" label="Count"/><dataItemEdgeSummary solveOrder="1" refDataItem="LPN" aggregateMethod="count" name="Count(LPN)" label="Count" useSetAggregation="true"/><dataItemEdgeSummary solveOrder="1" refDataItem="User ID" aggregateMethod="total" name="Total(User ID)" label="Total"/></selection>
+        WHEN locn_hdr.dsp_locn LIKE 'MC%' OR locn_hdr.dsp_locn LIKE 'MP%' THEN 'Milton'
+        WHEN locn_hdr.dsp_locn LIKE 'CR%' OR locn_hdr.dsp_locn LIKE 'DP%' THEN 'Mississauga'
+        ELSE locn_hdr.work_grp
+    END AS "Facility"
+FROM 
+    wm.PROD_TRKG_TRAN
+JOIN 
+    locn_hdr ON wm.PROD_TRKG_TRAN.FROM_Locn = locn_hdr.locn_id
+WHERE 
+    wm.PROD_TRKG_TRAN.TRAN_TYPE = '300'
+    AND wm.PROD_TRKG_TRAN.TRAN_CODE = '006'
+    AND CAST(wm.PROD_TRKG_TRAN.END_DATE + INTERVAL '3' HOUR AS TIMESTAMP) &gt;= 
+        CAST(TO_DATE(SUBSTR(#Prompt('pStartDateTime')#, 0, 19), 'YYYY-MM-DD"T"HH24:mi:ss') AS TIMESTAMP)
+    AND CAST(wm.PROD_TRKG_TRAN.END_DATE + INTERVAL '3' HOUR AS TIMESTAMP) &lt;= 
+        CAST(TO_DATE(SUBSTR(#Prompt('pEndDateTime')#, 0, 19), 'YYYY-MM-DD"T"HH24:mi:ss') AS TIMESTAMP)
+    AND (
+        CASE 
+            WHEN locn_hdr.dsp_locn LIKE 'MC%' OR locn_hdr.dsp_locn LIKE 'MP%' THEN 'Milton'
+            WHEN locn_hdr.dsp_locn LIKE 'CR%' OR locn_hdr.dsp_locn LIKE 'DP%' THEN 'Mississauga'
+            ELSE locn_hdr.work_grp
+        END IN (#Promptmany('pTote', 'string', '''Milton'', ''Mississauga''')#)
+    )</sqlText>
+		<mdProjectedItems><mdProjectedItem name="User ID"/><mdProjectedItem name="Date and Time"/><mdProjectedItem name="Date"/><mdProjectedItem name="Time"/><mdProjectedItem name="LPN"/><mdProjectedItem name="From Locn"/><mdProjectedItem name="Facility"/></mdProjectedItems></sqlQuery></source>
+			<selection><dataItem name="User ID"><expression>[SQL1].[User ID]</expression></dataItem><dataItem name="Date and Time"><expression>[SQL1].[Date and Time]</expression></dataItem><dataItem name="Date"><expression>[SQL1].[Date]</expression></dataItem><dataItem name="Time"><expression>[SQL1].[Time]</expression></dataItem><dataItem name="LPN" aggregate="countDistinct" sort="descending"><expression>[SQL1].[LPN]</expression></dataItem><dataItem name="From Locn"><expression>[SQL1].[From Locn]</expression></dataItem><dataItem name="Facility"><expression>[SQL1].[Facility]</expression></dataItem><dataItemEdgeSummary solveOrder="1" refDataItem="User ID" aggregateMethod="total" name="Total(User ID)" label="Total"/></selection>
 		</query><query name="Fill Actv">
 			<source>
 				
 			<sqlQuery name="SQL2" dataSource="WMOS">
-			<sqlText>SELECT DISTINCT
+			<sqlText>SELECT 
     ptt.user_id AS "User ID",
     TO_CHAR(ptt.END_DATE + INTERVAL '3' HOUR) AS "date and time",
     TO_CHAR(ptt.END_DATE + INTERVAL '3' HOUR, 'DD-MON-YYYY') AS "Date",
     TO_CHAR(ptt.END_DATE + INTERVAL '3' HOUR, 'HH24:MI:SS') AS "Time",
     ptt.cntr_nbr AS "LPN",
     lh.dsp_locn AS "To Locn",
-    lhh.dsp_locn AS "From Locn", 
-    DECODE(task_type, task_type, (SELECT code_desc FROM sys_code WHERE rec_type = 'S' AND code_type = '590' AND code_id = task_type)) AS "Task Type",
     CASE 
-        WHEN lh.work_grp IN ('SHLF','CRAK','DROP','MRCV') THEN 'Mississauga'
-        WHEN lh.work_grp IN ('MFLW', 'MRPH', 'MACT', 'MRAK','MDRP') THEN 'Milton'
-        WHEN lhh.dsp_locn LIKE 'MC%' THEN 'Milton'
-        WHEN lhh.dsp_locn LIKE 'CR%' THEN 'Mississauga'
+        WHEN lh.dsp_locn LIKE 'M%' THEN 'Milton'
+        WHEN lh.dsp_locn LIKE 'AS%' OR lh.dsp_locn LIKE 'PA%' THEN 'Mississauga'
         ELSE lh.work_grp
     END AS Facility
 FROM PROD_TRKG_TRAN ptt
-INNER JOIN task_hdr th ON ptt.task_id = th.task_id
-INNER JOIN locn_hdr lh ON ptt.TO_LOCN = lh.locn_id
-INNER JOIN locn_hdr lhh ON ptt.FROM_Locn = lhh.locn_id
-WHERE ptt.MENU_OPTN_NAME IN ('Fill Actv User Dir', 'Fill Actv - Truck')
-  AND CAST(ptt.END_DATE + INTERVAL '3' HOUR AS timestamp) &gt;= CAST(TO_DATE(SUBSTR(#Prompt('pStartDateTime')#, 0, 19), 'YYYY-MM-DD"T"HH24:mi:ss') AS timestamp)
-  AND CAST(ptt.END_DATE + INTERVAL '3' HOUR AS timestamp) &lt;= CAST(TO_DATE(SUBSTR(#Prompt('pEndDateTime')#, 0, 19), 'YYYY-MM-DD"T"HH24:mi:ss') AS timestamp)
-  AND CASE 
-          WHEN lh.work_grp IN ('SHLF','CRAK','DROP','MRCV') THEN 'Mississauga'
-          WHEN lh.work_grp IN ('MFLW', 'MRPH', 'MACT', 'MRAK','MDRP') THEN 'Milton'
-          WHEN lhh.dsp_locn LIKE 'MC%' THEN 'Milton'
-          WHEN lhh.dsp_locn LIKE 'CR%' THEN 'Mississauga'
-          ELSE lh.work_grp
-  END IN (#Promptmany('pTote', 'string', '''Milton'', ''Mississauga''')#)
-</sqlText>
-		<mdProjectedItems><mdProjectedItem name="User ID"/><mdProjectedItem name="date and time"/><mdProjectedItem name="Date"/><mdProjectedItem name="Time"/><mdProjectedItem name="LPN"/><mdProjectedItem name="To Locn"/><mdProjectedItem name="From Locn"/><mdProjectedItem name="Task Type"/><mdProjectedItem name="FACILITY"/></mdProjectedItems></sqlQuery></source>
-			<selection><dataItem name="User ID"><expression>[SQL2].[User ID]</expression></dataItem><dataItem name="date and time"><expression>[SQL2].[date and time]</expression></dataItem><dataItem name="Date"><expression>[SQL2].[Date]</expression></dataItem><dataItem name="Time"><expression>[SQL2].[Time]</expression></dataItem><dataItem name="LPN" aggregate="countDistinct"><expression>[SQL2].[LPN]</expression></dataItem><dataItem name="To Locn"><expression>[SQL2].[To Locn]</expression></dataItem><dataItem name="From Locn"><expression>[SQL2].[From Locn]</expression></dataItem><dataItem name="Task Type"><expression>[SQL2].[Task Type]</expression></dataItem><dataItem name="FACILITY"><expression>[SQL2].[FACILITY]</expression></dataItem><dataItemEdgeSummary solveOrder="1" refDataItem="User ID" aggregateMethod="total" name="Total(User ID)" label="Total"/></selection>
+left JOIN locn_hdr lh ON ptt.TO_LOCN = lh.locn_id
+WHERE TRAN_TYPE = '300'
+  AND TRAN_CODE = '005'
+    AND CAST(ptt.END_DATE + INTERVAL '3' HOUR AS TIMESTAMP) &gt;= 
+        CAST(TO_DATE(SUBSTR(#Prompt('pStartDateTime')#, 0, 19), 'YYYY-MM-DD"T"HH24:mi:ss') AS TIMESTAMP)
+    AND CAST(ptt.END_DATE + INTERVAL '3' HOUR AS TIMESTAMP) &lt;= 
+        CAST(TO_DATE(SUBSTR(#Prompt('pEndDateTime')#, 0, 19), 'YYYY-MM-DD"T"HH24:mi:ss') AS TIMESTAMP)
+    AND (
+         CASE 
+        WHEN lh.dsp_locn LIKE 'M%' THEN 'Milton'
+        WHEN lh.dsp_locn LIKE 'AS%' OR lh.dsp_locn LIKE 'PA%' THEN 'Mississauga'
+        ELSE lh.work_grp
+        END IN (#Promptmany('pTote', 'string', '''Milton'', ''Mississauga''')#)
+    )</sqlText>
+		<mdProjectedItems><mdProjectedItem name="User ID"/><mdProjectedItem name="date and time"/><mdProjectedItem name="Date"/><mdProjectedItem name="Time"/><mdProjectedItem name="LPN"/><mdProjectedItem name="To Locn"/><mdProjectedItem name="FACILITY"/></mdProjectedItems></sqlQuery></source>
+			<selection><dataItem name="User ID"><expression>[SQL2].[User ID]</expression></dataItem><dataItem name="date and time"><expression>[SQL2].[date and time]</expression></dataItem><dataItem name="Date"><expression>[SQL2].[Date]</expression></dataItem><dataItem name="Time"><expression>[SQL2].[Time]</expression></dataItem><dataItem name="LPN" aggregate="countDistinct" sort="descending"><expression>[SQL2].[LPN]</expression></dataItem><dataItem name="To Locn"><expression>[SQL2].[To Locn]</expression></dataItem><dataItem name="FACILITY"><expression>[SQL2].[FACILITY]</expression></dataItem><dataItemEdgeSummary solveOrder="1" refDataItem="User ID" aggregateMethod="total" name="Total(User ID)" label="Total"/><dataItemEdgeSummary solveOrder="1" refDataItem="FACILITY" aggregateMethod="total" name="Total(FACILITY)" label="Total"/></selection>
 		</query><query name="Recv">
 			<source>
 				
 			<sqlQuery name="SQL3" dataSource="WMOS">
-			<sqlText>SELECT DISTINCT
+			<sqlText>SELECT 
     ptt.user_id AS "User ID",
     TO_CHAR(ptt.END_DATE + INTERVAL '3' HOUR) AS "date and time",
     TO_CHAR(ptt.END_DATE + INTERVAL '3' HOUR, 'DD-MON-YYYY') AS "Date",
@@ -325,6 +653,7 @@ LEFT JOIN locn_hdr lh ON ptt.TO_LOCN = lh.locn_id
 LEFT JOIN locn_hdr lhh ON ptt.FROM_Locn = lhh.locn_id
 WHERE ptt.MENU_OPTN_NAME IN ('Recv iLPN ASN', 'Recv iLPN ASN mixed', 'Recv Item Lvl')
     AND TRAN_TYPE = '200'
+    and tran_code = '001'
     AND CAST(ptt.END_DATE + INTERVAL '3' HOUR AS timestamp) &gt;= CAST(TO_DATE(SUBSTR(#Prompt('pStartDateTime')#, 0, 19), 'YYYY-MM-DD"T"HH24:mi:ss') AS timestamp)
     AND CAST(ptt.END_DATE + INTERVAL '3' HOUR AS timestamp) &lt;= CAST(TO_DATE(SUBSTR(#Prompt('pEndDateTime')#, 0, 19), 'YYYY-MM-DD"T"HH24:mi:ss') AS timestamp)
     AND CASE 
@@ -333,7 +662,7 @@ WHERE ptt.MENU_OPTN_NAME IN ('Recv iLPN ASN', 'Recv iLPN ASN mixed', 'Recv Item 
             ELSE lh.work_grp
         END IN (#Promptmany('pTote', 'string', '''Milton'', ''Mississauga''')#)</sqlText>
 		<mdProjectedItems><mdProjectedItem name="User ID"/><mdProjectedItem name="date and time"/><mdProjectedItem name="Date"/><mdProjectedItem name="Time"/><mdProjectedItem name="LPN"/><mdProjectedItem name="To Locn"/><mdProjectedItem name="FACILITY"/></mdProjectedItems></sqlQuery></source>
-			<selection><dataItem name="User ID"><expression>[SQL3].[User ID]</expression></dataItem><dataItem name="date and time"><expression>[SQL3].[date and time]</expression></dataItem><dataItem name="Date"><expression>[SQL3].[Date]</expression></dataItem><dataItem name="Time"><expression>[SQL3].[Time]</expression></dataItem><dataItem name="LPN"><expression>[SQL3].[LPN]</expression></dataItem><dataItem name="To Locn"><expression>[SQL3].[To Locn]</expression></dataItem><dataItem name="FACILITY"><expression>[SQL3].[FACILITY]</expression></dataItem></selection>
+			<selection><dataItem name="User ID"><expression>[SQL3].[User ID]</expression></dataItem><dataItem name="date and time"><expression>[SQL3].[date and time]</expression></dataItem><dataItem name="Date"><expression>[SQL3].[Date]</expression></dataItem><dataItem name="Time"><expression>[SQL3].[Time]</expression></dataItem><dataItem name="LPN" aggregate="countDistinct" sort="descending"><expression>[SQL3].[LPN]</expression></dataItem><dataItem name="To Locn"><expression>[SQL3].[To Locn]</expression></dataItem><dataItem name="FACILITY"><expression>[SQL3].[FACILITY]</expression></dataItem><dataItemEdgeSummary solveOrder="1" refDataItem="User ID" aggregateMethod="total" name="Total(User ID)" label="Total"/><dataItemEdgeSummary solveOrder="1" refDataItem="FACILITY" aggregateMethod="total" name="Total(FACILITY)" label="Total"/></selection>
 		</query><query name="Facility">
 			<source>
 				
@@ -375,12 +704,12 @@ WHERE ptt.MENU_OPTN_NAME IN ('Sort iLPN', 'Sort iLPN Rtn', 'Sort iLPN RtnC', 'So
     END IN (#Promptmany('pTote', 'string', '''Milton'', ''Mississauga''')#)
 </sqlText>
 		<mdProjectedItems><mdProjectedItem name="User ID"/><mdProjectedItem name="date and time"/><mdProjectedItem name="Date"/><mdProjectedItem name="Time"/><mdProjectedItem name="LPN"/><mdProjectedItem name="To Locn"/><mdProjectedItem name="FACILITY"/></mdProjectedItems></sqlQuery></source>
-			<selection><dataItem name="User ID"><expression>[SQL5].[User ID]</expression></dataItem><dataItem name="date and time"><expression>[SQL5].[date and time]</expression></dataItem><dataItem name="Date"><expression>[SQL5].[Date]</expression></dataItem><dataItem name="Time"><expression>[SQL5].[Time]</expression></dataItem><dataItem name="LPN"><expression>[SQL5].[LPN]</expression></dataItem><dataItem name="To Locn"><expression>[SQL5].[To Locn]</expression></dataItem><dataItem name="FACILITY"><expression>[SQL5].[FACILITY]</expression></dataItem></selection>
+			<selection><dataItem name="User ID"><expression>[SQL5].[User ID]</expression></dataItem><dataItem name="date and time"><expression>[SQL5].[date and time]</expression></dataItem><dataItem name="Date"><expression>[SQL5].[Date]</expression></dataItem><dataItem name="Time"><expression>[SQL5].[Time]</expression></dataItem><dataItem name="LPN" sort="descending" aggregate="countDistinct"><expression>[SQL5].[LPN]</expression></dataItem><dataItem name="To Locn"><expression>[SQL5].[To Locn]</expression></dataItem><dataItem name="FACILITY"><expression>[SQL5].[FACILITY]</expression></dataItem><dataItemEdgeSummary solveOrder="1" refDataItem="User ID" aggregateMethod="total" name="Total(User ID)" label="Total"/><dataItemEdgeSummary solveOrder="1" refDataItem="FACILITY" aggregateMethod="total" name="Total(FACILITY)" label="Total"/></selection>
 		</query><query name="pUTAWAY">
 			<source>
 				
 			<sqlQuery name="SQL6" dataSource="WMOS">
-			<sqlText>SELECT DISTINCT
+			<sqlText>SELECT 
     ptt.user_id AS "User ID",
     TO_CHAR(ptt.END_DATE + INTERVAL '3' HOUR) AS "date and time",
     TO_CHAR(ptt.END_DATE + INTERVAL '3' HOUR, 'DD-MON-YYYY') AS "Date",
@@ -396,8 +725,8 @@ WHERE ptt.MENU_OPTN_NAME IN ('Sort iLPN', 'Sort iLPN Rtn', 'Sort iLPN RtnC', 'So
 FROM PROD_TRKG_TRAN ptt
 INNER JOIN locn_hdr lh ON ptt.TO_LOCN = lh.locn_id
 INNER JOIN locn_hdr lhh ON ptt.FROM_Locn = lhh.locn_id
-WHERE ptt.MENU_OPTN_NAME IN ('Locate iLPN')
-  AND TRAN_TYPE = '200'
+  where TRAN_TYPE = '200'
+  and TRAN_CODE = '001'
   AND (lhh.dsp_locn IN ('PUT-LA-NE-002') OR lhh.dsp_locn IN ('PUT-LA-NE-005'))
   AND lh.work_grp IN ('MRAK','CRAK','PRAK','MPDK')
   AND lh.dsp_locn NOT LIKE 'PUT%'
@@ -407,8 +736,7 @@ WHERE ptt.MENU_OPTN_NAME IN ('Locate iLPN')
           WHEN lhh.dsp_locn = 'PUT-LA-NE-002' THEN 'Mississauga'
           WHEN lhh.dsp_locn = 'PUT-LA-NE-005' THEN 'Milton'
           ELSE 'Other'
-    END IN (#Promptmany('pTote', 'string', '''Milton'', ''Mississauga''')#)
-</sqlText>
+    END IN (#Promptmany('pTote', 'string', '''Milton'', ''Mississauga''')#)</sqlText>
 		<mdProjectedItems><mdProjectedItem name="User ID"/><mdProjectedItem name="date and time"/><mdProjectedItem name="Date"/><mdProjectedItem name="Time"/><mdProjectedItem name="LPN"/><mdProjectedItem name="From Locn"/><mdProjectedItem name="To Locn"/><mdProjectedItem name="FACILITY"/></mdProjectedItems></sqlQuery></source>
-			<selection><dataItem name="User ID"><expression>[SQL6].[User ID]</expression></dataItem><dataItem name="date and time"><expression>[SQL6].[date and time]</expression></dataItem><dataItem name="Date"><expression>[SQL6].[Date]</expression></dataItem><dataItem name="Time"><expression>[SQL6].[Time]</expression></dataItem><dataItem name="LPN"><expression>[SQL6].[LPN]</expression></dataItem><dataItem name="From Locn"><expression>[SQL6].[From Locn]</expression></dataItem><dataItem name="To Locn"><expression>[SQL6].[To Locn]</expression></dataItem><dataItem name="FACILITY"><expression>[SQL6].[FACILITY]</expression></dataItem></selection>
-		</query></queries></report>
+			<selection><dataItem name="User ID"><expression>[SQL6].[User ID]</expression></dataItem><dataItem name="date and time"><expression>[SQL6].[date and time]</expression></dataItem><dataItem name="Date"><expression>[SQL6].[Date]</expression></dataItem><dataItem name="Time"><expression>[SQL6].[Time]</expression></dataItem><dataItem name="LPN" aggregate="countDistinct" sort="descending"><expression>[SQL6].[LPN]</expression></dataItem><dataItem name="From Locn"><expression>[SQL6].[From Locn]</expression></dataItem><dataItem name="To Locn"><expression>[SQL6].[To Locn]</expression></dataItem><dataItem name="FACILITY"><expression>[SQL6].[FACILITY]</expression></dataItem><dataItemEdgeSummary solveOrder="1" refDataItem="User ID" aggregateMethod="total" name="Total(User ID)" label="Total"/></selection>
+		</query></queries><reportName>INBOUND USER DASHBOARD</reportName></report>
