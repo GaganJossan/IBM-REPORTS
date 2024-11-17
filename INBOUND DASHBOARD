@@ -18,7 +18,7 @@
 									</style>
 									<contents><block>
 			<contents><textItem><dataSource><staticValue>LETDOWN</staticValue></dataSource></textItem></contents>
-		<style><defaultStyles><defaultStyle refStyle="sh"/></defaultStyles><CSS value="font-weight:bold;background-color:black;color:white;text-align:center;font-size:16pt;margin-top:100px"/></style></block><table><style><defaultStyles><defaultStyle refStyle="tb"/></defaultStyles><CSS value="border-collapse:collapse;width:100%"/></style><tableRows><tableRow><tableCells><tableCell><contents><combinationChart showTooltips="true" maxHotspots="10000" refQuery="Letdown" name="Combination Chart1">
+		<style><defaultStyles><defaultStyle refStyle="sh"/></defaultStyles><CSS value="font-weight:bold;background-color:black;color:white;text-align:center;font-size:16pt;margin-top:50px"/></style></block><table><style><defaultStyles><defaultStyle refStyle="tb"/></defaultStyles><CSS value="border-collapse:collapse;width:100%"/></style><tableRows><tableRow><tableCells><tableCell><contents><combinationChart showTooltips="true" maxHotspots="10000" refQuery="Letdown" name="Combination Chart1">
 														<legend>
 															<legendPosition>
 																<relativePosition/>
@@ -75,7 +75,23 @@
 																<defaultStyle refStyle="ch"/>
 															</defaultStyles>
 															<CSS value="width:1600px;height:700px"/></style>
-														<commonClusters><chartNodes><chartNode><chartNodeMembers><chartNodeMember refDataItem="User ID"><chartContents><chartTextItem><dataSource><memberCaption/></dataSource></chartTextItem></chartContents></chartNodeMember></chartNodeMembers></chartNode></chartNodes></commonClusters></combinationChart>
+														<commonClusters><chartNodes><chartNode><chartNodeMembers><chartNodeMember refDataItem="User ID"><chartContents><chartTextItem><dataSource><memberCaption/></dataSource></chartTextItem></chartContents></chartNodeMember></chartNodeMembers></chartNode></chartNodes></commonClusters><chartPalette>
+															<chartGradient direction="down" fromColor="#134bea" toColor="#0b2982"/>
+															<chartGradient direction="down" fromColor="#50cb1c" toColor="#42982f"/>
+															<chartGradient direction="down" fromColor="#f2cd00" toColor="#f9be09"/>
+															<chartGradient direction="down" fromColor="#ff8a00" toColor="#de4f01"/>
+															<chartGradient direction="down" fromColor="#e01b1b" toColor="#ab0909"/>
+															<chartGradient direction="down" fromColor="#3d3d3d" toColor="#0a0a0a"/>
+															<chartGradient direction="down" fromColor="#bf38e1" toColor="#8a1dde"/>
+															<chartGradient direction="down" fromColor="#8514c7" toColor="#2e0072"/>
+															<chartGradient direction="down" fromColor="#0f8b03" toColor="#044a01"/>
+															<chartGradient direction="down" fromColor="#95bf14" toColor="#828c0b"/>
+															<chartGradient direction="down" fromColor="#4791da" toColor="#2060b7"/>
+															<chartGradient direction="down" fromColor="#76dde6" toColor="#2cb6c7"/>
+															<chartGradient direction="down" fromColor="#060d95" toColor="#06034f"/>
+															<chartGradient direction="down" fromColor="#c3550b" toColor="#a33a00"/>
+														</chartPalette>
+													</combinationChart>
 												</contents><style><CSS value="padding-top:80px"/></style></tableCell><tableCell><contents><crosstab horizontalPagination="true" name="Crosstab1" refQuery="Letdown" rowsPerPage="999">
 			
 			
@@ -161,7 +177,17 @@
 																<defaultStyle refStyle="ch"/>
 															</defaultStyles>
 															<CSS value="width:1600px;height:700px"/></style>
-														<commonClusters><chartNodes><chartNode><chartNodeMembers><chartNodeMember refDataItem="User ID"><chartContents><chartTextItem><dataSource><memberCaption/></dataSource></chartTextItem></chartContents></chartNodeMember></chartNodeMembers></chartNode></chartNodes></commonClusters></combinationChart>
+														<commonClusters><chartNodes><chartNode><chartNodeMembers><chartNodeMember refDataItem="User ID"><chartContents><chartTextItem><dataSource><memberCaption/></dataSource></chartTextItem></chartContents></chartNodeMember></chartNodeMembers></chartNode></chartNodes></commonClusters><chartPalette>
+															<chartGradient direction="left" fromColor="#F00000" toColor="#780000"/>
+															<chartGradient direction="left" fromColor="#F5F4E5" toColor="#D2CD90"/>
+															<chartGradient direction="left" fromColor="#4A4E54" toColor="#121314"/>
+															<chartGradient direction="left" fromColor="#B6D6D2" toColor="#69ABA2"/>
+															<chartGradient direction="left" fromColor="#B3A995" toColor="#796E57"/>
+															<chartGradient direction="left" fromColor="#83878D" toColor="#52555A"/>
+															<chartGradient direction="left" fromColor="#F9F9F9" toColor="#DBDBDB"/>
+															<chartGradient direction="left" fromColor="#748CB3" toColor="#9BADC9"/>
+														</chartPalette>
+													</combinationChart>
 												</contents></tableCell><tableCell><contents><crosstab horizontalPagination="true" name="Crosstab2" refQuery="Fill Actv" rowsPerPage="999">
 			<crosstabCorner>
 				<contents><textItem><dataSource><dataItemLabel refDataItem="LPN"/></dataSource></textItem></contents>
@@ -254,7 +280,19 @@
 																<defaultStyle refStyle="ch"/>
 															</defaultStyles>
 														<CSS value="width:1600px;height:700px"/></style>
-														<commonClusters><chartNodes><chartNode><chartNodeMembers><chartNodeMember refDataItem="User ID"><chartContents><chartTextItem><dataSource><memberCaption/></dataSource></chartTextItem></chartContents></chartNodeMember></chartNodeMembers></chartNode></chartNodes></commonClusters></combinationChart>
+														<commonClusters><chartNodes><chartNode><chartNodeMembers><chartNodeMember refDataItem="User ID"><chartContents><chartTextItem><dataSource><memberCaption/></dataSource></chartTextItem></chartContents></chartNodeMember></chartNodeMembers></chartNode></chartNodes></commonClusters><chartPalette>
+															<chartColor value="#666699"/>
+															<chartColor value="#CCCC33"/>
+															<chartColor value="#134679"/>
+															<chartColor value="#E8E897"/>
+															<chartColor value="#9999be"/>
+															<chartColor value="#FFFFCC"/>
+															<chartColor value="#CCCCE3"/>
+															<chartColor value="#6B6B00"/>
+															<chartColor value="#E0E0E4"/>
+															<chartColor value="#999900"/>
+														</chartPalette>
+													</combinationChart>
 												</contents><style><CSS value="padding-top:80px"/></style></tableCell><tableCell><contents><crosstab horizontalPagination="true" name="Crosstab3" refQuery="pUTAWAY" rowsPerPage="999">
 			<crosstabCorner>
 				<contents><textItem><dataSource><dataItemLabel refDataItem="LPN"/></dataSource></textItem></contents>
@@ -347,7 +385,19 @@
 																<defaultStyle refStyle="ch"/>
 															</defaultStyles>
 															<CSS value="width:1600px;height:700px"/></style>
-														<commonClusters><chartNodes><chartNode><chartNodeMembers><chartNodeMember refDataItem="User ID"><chartContents><chartTextItem><dataSource><memberCaption/></dataSource></chartTextItem></chartContents></chartNodeMember></chartNodeMembers></chartNode></chartNodes></commonClusters></combinationChart>
+														<commonClusters><chartNodes><chartNode><chartNodeMembers><chartNodeMember refDataItem="User ID"><chartContents><chartTextItem><dataSource><memberCaption/></dataSource></chartTextItem></chartContents></chartNodeMember></chartNodeMembers></chartNode></chartNodes></commonClusters><chartPalette>
+															<chartColor value="#000066"/>
+															<chartColor value="#FFCC00"/>
+															<chartColor value="#336699"/>
+															<chartColor value="#FFE16A"/>
+															<chartColor value="#99AACC"/>
+															<chartColor value="#FFFFCC"/>
+															<chartColor value="#BEC8DC"/>
+															<chartColor value="#CC9900"/>
+															<chartColor value="#E3E9F3"/>
+															<chartColor value="#FFEA96"/>
+														</chartPalette>
+													</combinationChart>
 												</contents><style><CSS value="padding-top:80px"/></style></tableCell><tableCell><contents><crosstab horizontalPagination="true" name="Crosstab4" refQuery="Recv">
 			<crosstabCorner>
 				<contents><textItem><dataSource><dataItemLabel refDataItem="LPN"/></dataSource></textItem></contents>
@@ -440,7 +490,7 @@
 																<defaultStyle refStyle="ch"/>
 															</defaultStyles>
 															<CSS value="width:1600px;height:700px"/></style>
-														<commonClusters><chartNodes><chartNode><chartNodeMembers><chartNodeMember refDataItem="User ID"><chartContents><chartTextItem><dataSource><memberCaption/></dataSource></chartTextItem></chartContents></chartNodeMember></chartNodeMembers></chartNode></chartNodes></commonClusters></combinationChart>
+														<commonClusters><chartNodes><chartNode><chartNodeMembers><chartNodeMember refDataItem="User ID"><chartContents><chartTextItem><dataSource><memberCaption/></dataSource></chartTextItem></chartContents></chartNodeMember></chartNodeMembers></chartNode></chartNodes></commonClusters><chartPalette><chartGradient direction="left" fromColor="#F00000" toColor="#780000"/><chartGradient direction="left" fromColor="#F5F4E5" toColor="#D2CD90"/><chartGradient direction="left" fromColor="#4A4E54" toColor="#121314"/><chartGradient direction="left" fromColor="#B6D6D2" toColor="#69ABA2"/><chartGradient direction="left" fromColor="#B3A995" toColor="#796E57"/><chartGradient direction="left" fromColor="#83878D" toColor="#52555A"/><chartGradient direction="left" fromColor="#F9F9F9" toColor="#DBDBDB"/><chartGradient direction="left" fromColor="#748CB3" toColor="#9BADC9"/><chartColor value="black"/><chartGradient direction="left" fromColor="black" toColor="white"/><chartPattern patternType="horizontal" foregroundColor="black" backgroundColor="white"/><chartColor value="purple"/><chartGradient direction="right" fromColor="purple" toColor="white"/></chartPalette></combinationChart>
 												</contents><style><CSS value="padding-top:80px"/></style></tableCell><tableCell><contents><crosstab horizontalPagination="true" name="Crosstab5" refQuery="SORT">
 			<crosstabCorner>
 				<contents><textItem><dataSource><dataItemLabel refDataItem="LPN"/></dataSource></textItem></contents>
@@ -476,7 +526,13 @@
 			</style>
 		<crosstabFactCell><contents><textItem><dataSource><cellValue/></dataSource></textItem></contents><style><defaultStyles><defaultStyle refStyle="mv"/></defaultStyles></style></crosstabFactCell><crosstabRows><crosstabNode><crosstabNodeMembers><crosstabNodeMember refDataItem="User ID" edgeLocation="e1"><style><defaultStyles><defaultStyle refStyle="ml"/></defaultStyles></style><contents><textItem><dataSource><memberCaption/></dataSource></textItem></contents></crosstabNodeMember></crosstabNodeMembers></crosstabNode><crosstabNode><crosstabNodeMembers><crosstabNodeMember refDataItem="Total(User ID)" edgeLocation="e4"><style><defaultStyles><defaultStyle refStyle="ol"/></defaultStyles></style><contents><textItem><dataSource><dataItemLabel refDataItem="Total(User ID)"/></dataSource></textItem></contents><factCell><style><defaultStyles><defaultStyle refStyle="ov"/></defaultStyles></style></factCell></crosstabNodeMember></crosstabNodeMembers></crosstabNode></crosstabRows><crosstabColumns><crosstabNode><crosstabNestedNodes><crosstabNode><crosstabNodeMembers><crosstabNodeMember refDataItem="LPN" edgeLocation="e2"><style><defaultStyles><defaultStyle refStyle="ml"/></defaultStyles></style><contents><textItem><dataSource><memberCaption/></dataSource></textItem></contents></crosstabNodeMember></crosstabNodeMembers></crosstabNode></crosstabNestedNodes><crosstabNodeMembers><crosstabNodeMember refDataItem="FACILITY" edgeLocation="e3"><style><defaultStyles><defaultStyle refStyle="ml"/></defaultStyles></style><contents><textItem><dataSource><memberCaption/></dataSource></textItem></contents></crosstabNodeMember></crosstabNodeMembers></crosstabNode></crosstabColumns><crosstabIntersections><crosstabIntersection row="e1" column="e2"><style><CSS value="text-align:center"/></style></crosstabIntersection><crosstabIntersection row="e4" column="e2"><style><CSS value="text-align:center"/></style></crosstabIntersection></crosstabIntersections><defaultMeasure refDataItem="LPN"/></crosstab></contents><style><CSS value="padding-right:400px"/></style></tableCell></tableCells></tableRow></tableRows></table></contents>
 								</pageBody>
-							<pageHeader><contents><textItem><dataSource><staticValue>INBOUND USER DASHBOARD</staticValue></dataSource></textItem></contents><style><CSS value="text-align:center;font-weight:bold;color:red;font-size:20pt;text-decoration:underline"/></style></pageHeader></page>
+							<pageHeader><contents><textItem><dataSource><staticValue>INBOUND USER DASHBOARD</staticValue></dataSource></textItem><block>
+			<contents><image>
+			<dataSource>
+				<staticValue>https://1000logos.net/wp-content/uploads/2017/08/Lululemon-Logo.png</staticValue>
+			</dataSource>
+		<style><CSS value="height:80px"/></style></image></contents>
+		<style><CSS value="text-align:right"/></style></block></contents><style><CSS value="text-align:center;font-weight:bold;color:red;font-size:20pt;text-decoration:underline"/></style></pageHeader></page>
 						</reportPages>
 					<promptPages><page name="Prompt Page1">
 			<pageHeader>
@@ -485,20 +541,20 @@
 						<contents>
 							<textItem>
 								<dataSource>
-									<staticValue/>
+									<staticValue>INBOUND_USER_DASHBOARD</staticValue>
 								</dataSource>
 								<style>
 									<defaultStyles>
 										<defaultStyle refStyle="tt"/>
 									</defaultStyles>
-								</style>
+								<CSS value="color:red;font-weight:bold;font-size:18pt"/></style>
 							</textItem>
 						</contents>
 						<style>
 							<defaultStyles>
 								<defaultStyle refStyle="ta"/>
 							</defaultStyles>
-						</style>
+						<CSS value="margin-bottom:80px"/></style>
 					</block>
 				</contents>
 				<style>
@@ -508,7 +564,7 @@
 				</style>
 			</pageHeader>
 			<pageBody>
-				<contents><selectDateTime parameter="pStartDateTime" multiSelect="false" range="false" required="true"/><selectDateTime parameter="pEndDateTime" multiSelect="false" range="false" required="true"/><selectValue parameter="pTote" multiSelect="true" range="false" required="false" refQuery="Facility" selectValueUI="checkboxGroup"><useItem refDataItem="FACILITY"><displayItem refDataItem="FACILITY"/></useItem></selectValue></contents>
+				<contents><table><style><defaultStyles><defaultStyle refStyle="tb"/></defaultStyles><CSS value="border-collapse:collapse;width:100%"/></style><tableRows><tableRow><tableCells><tableCell><contents><textItem><dataSource><staticValue>Start_Date</staticValue></dataSource></textItem><selectDateTime parameter="pStartDateTime" multiSelect="false" range="false" required="true"/></contents></tableCell><tableCell><contents><textItem><dataSource><staticValue>End_Date</staticValue></dataSource></textItem><selectDateTime parameter="pEndDateTime" multiSelect="false" range="false" required="true"/></contents><style><CSS value="padding-right:100px"/></style></tableCell><tableCell><contents><textItem><dataSource><staticValue>Facility</staticValue></dataSource></textItem><selectValue parameter="pTote" multiSelect="true" range="false" required="false" refQuery="Facility" selectValueUI="checkboxGroup"><useItem refDataItem="FACILITY"><displayItem refDataItem="FACILITY"/></useItem></selectValue></contents><style><CSS value="padding-right:100px"/></style></tableCell><tableCell><contents><textItem><dataSource><staticValue>Shift</staticValue></dataSource></textItem><selectValue parameter="pShift" multiSelect="true" range="false" required="true" refQuery="shift" selectValueUI="checkboxGroup"><useItem refDataItem="FACILITY"><displayItem refDataItem="FACILITY"/></useItem></selectValue></contents></tableCell></tableCells></tableRow></tableRows></table></contents>
 				<style>
 					<defaultStyles>
 						<defaultStyle refStyle="py"/>
@@ -567,8 +623,9 @@
 			<source>
 				
 			<sqlQuery name="SQL1" dataSource="WMOS">
-			<sqlText>SELECT 
+			<sqlText> SELECT 
     wm.PROD_TRKG_TRAN.user_id AS "User ID",
+        s.SHIFT_CODE,
     TO_CHAR(wm.PROD_TRKG_TRAN.END_DATE + INTERVAL '3' HOUR) AS "Date and Time",
     TO_CHAR(wm.PROD_TRKG_TRAN.END_DATE + INTERVAL '3' HOUR, 'DD-MON-YYYY') AS "Date",
     TO_CHAR(wm.PROD_TRKG_TRAN.END_DATE + INTERVAL '3' HOUR, 'HH24:MI:SS') AS "Time",
@@ -583,9 +640,26 @@ FROM
     wm.PROD_TRKG_TRAN
 JOIN 
     locn_hdr ON wm.PROD_TRKG_TRAN.FROM_Locn = locn_hdr.locn_id
+    LEFT OUTER JOIN (
+    SELECT 
+        uu.user_name, 
+        ed.emp_id, 
+        s.shift_code, 
+        ed.shift_id, 
+        SUBSTR(s.shift_code, 0, 1) AS Shift 
+    FROM 
+        (SELECT emp_id, shift_id, RANK() OVER (PARTITION BY emp_id ORDER BY MAX(eff_date_time) DESC) AS rnk 
+         FROM wm.e_emp_dtl 
+         WHERE eff_date_time &lt;= TRUNC(SYSDATE) 
+         GROUP BY emp_id, shift_id) ed
+    INNER JOIN wm.ucl_user uu ON ed.emp_id = uu.ucl_user_id
+    INNER JOIN wm.e_shift s ON ed.shift_id = s.shift_id
+    WHERE rnk = 1
+) s ON wm.PROD_TRKG_TRAN.user_id = s.user_name
 WHERE 
     wm.PROD_TRKG_TRAN.TRAN_TYPE = '300'
     AND wm.PROD_TRKG_TRAN.TRAN_CODE = '006'
+      and s.SHIFT_CODE in (#Promptmany('pShift')#)
     AND CAST(wm.PROD_TRKG_TRAN.END_DATE + INTERVAL '3' HOUR AS TIMESTAMP) &gt;= 
         CAST(TO_DATE(SUBSTR(#Prompt('pStartDateTime')#, 0, 19), 'YYYY-MM-DD"T"HH24:mi:ss') AS TIMESTAMP)
     AND CAST(wm.PROD_TRKG_TRAN.END_DATE + INTERVAL '3' HOUR AS TIMESTAMP) &lt;= 
@@ -597,14 +671,15 @@ WHERE
             ELSE locn_hdr.work_grp
         END IN (#Promptmany('pTote', 'string', '''Milton'', ''Mississauga''')#)
     )</sqlText>
-		<mdProjectedItems><mdProjectedItem name="User ID"/><mdProjectedItem name="Date and Time"/><mdProjectedItem name="Date"/><mdProjectedItem name="Time"/><mdProjectedItem name="LPN"/><mdProjectedItem name="From Locn"/><mdProjectedItem name="Facility"/></mdProjectedItems></sqlQuery></source>
-			<selection><dataItem name="User ID"><expression>[SQL1].[User ID]</expression></dataItem><dataItem name="Date and Time"><expression>[SQL1].[Date and Time]</expression></dataItem><dataItem name="Date"><expression>[SQL1].[Date]</expression></dataItem><dataItem name="Time"><expression>[SQL1].[Time]</expression></dataItem><dataItem name="LPN" aggregate="countDistinct" sort="descending"><expression>[SQL1].[LPN]</expression></dataItem><dataItem name="From Locn"><expression>[SQL1].[From Locn]</expression></dataItem><dataItem name="Facility"><expression>[SQL1].[Facility]</expression></dataItem><dataItemEdgeSummary solveOrder="1" refDataItem="User ID" aggregateMethod="total" name="Total(User ID)" label="Total"/></selection>
+		<mdProjectedItems><mdProjectedItem name="User ID"/><mdProjectedItem name="SHIFT_CODE"/><mdProjectedItem name="Date and Time"/><mdProjectedItem name="Date"/><mdProjectedItem name="Time"/><mdProjectedItem name="LPN"/><mdProjectedItem name="From Locn"/><mdProjectedItem name="Facility"/></mdProjectedItems></sqlQuery></source>
+			<selection><dataItem name="User ID"><expression>[SQL1].[User ID]</expression></dataItem><dataItem name="SHIFT_CODE"><expression>[SQL1].[SHIFT_CODE]</expression></dataItem><dataItem name="Date and Time"><expression>[SQL1].[Date and Time]</expression></dataItem><dataItem name="Date"><expression>[SQL1].[Date]</expression></dataItem><dataItem name="Time"><expression>[SQL1].[Time]</expression></dataItem><dataItem name="LPN" aggregate="countDistinct" sort="descending"><expression>[SQL1].[LPN]</expression></dataItem><dataItem name="From Locn"><expression>[SQL1].[From Locn]</expression></dataItem><dataItem name="Facility"><expression>[SQL1].[Facility]</expression></dataItem><dataItemEdgeSummary solveOrder="1" refDataItem="User ID" aggregateMethod="total" name="Total(User ID)" label="Total"/></selection>
 		</query><query name="Fill Actv">
 			<source>
 				
 			<sqlQuery name="SQL2" dataSource="WMOS">
-			<sqlText>SELECT 
+			<sqlText>        SELECT 
     ptt.user_id AS "User ID",
+        s.SHIFT_CODE,
     TO_CHAR(ptt.END_DATE + INTERVAL '3' HOUR) AS "date and time",
     TO_CHAR(ptt.END_DATE + INTERVAL '3' HOUR, 'DD-MON-YYYY') AS "Date",
     TO_CHAR(ptt.END_DATE + INTERVAL '3' HOUR, 'HH24:MI:SS') AS "Time",
@@ -617,8 +692,25 @@ WHERE
     END AS Facility
 FROM PROD_TRKG_TRAN ptt
 left JOIN locn_hdr lh ON ptt.TO_LOCN = lh.locn_id
+LEFT OUTER JOIN (
+    SELECT 
+        uu.user_name, 
+        ed.emp_id, 
+        s.shift_code, 
+        ed.shift_id, 
+        SUBSTR(s.shift_code, 0, 1) AS Shift 
+    FROM 
+        (SELECT emp_id, shift_id, RANK() OVER (PARTITION BY emp_id ORDER BY MAX(eff_date_time) DESC) AS rnk 
+         FROM wm.e_emp_dtl 
+         WHERE eff_date_time &lt;= TRUNC(SYSDATE) 
+         GROUP BY emp_id, shift_id) ed
+    INNER JOIN wm.ucl_user uu ON ed.emp_id = uu.ucl_user_id
+    INNER JOIN wm.e_shift s ON ed.shift_id = s.shift_id
+    WHERE rnk = 1
+) s ON ptt.user_id = s.user_name
 WHERE TRAN_TYPE = '300'
   AND TRAN_CODE = '005'
+    and s.SHIFT_CODE in (#Promptmany('pShift')#)
     AND CAST(ptt.END_DATE + INTERVAL '3' HOUR AS TIMESTAMP) &gt;= 
         CAST(TO_DATE(SUBSTR(#Prompt('pStartDateTime')#, 0, 19), 'YYYY-MM-DD"T"HH24:mi:ss') AS TIMESTAMP)
     AND CAST(ptt.END_DATE + INTERVAL '3' HOUR AS TIMESTAMP) &lt;= 
@@ -630,39 +722,56 @@ WHERE TRAN_TYPE = '300'
         ELSE lh.work_grp
         END IN (#Promptmany('pTote', 'string', '''Milton'', ''Mississauga''')#)
     )</sqlText>
-		<mdProjectedItems><mdProjectedItem name="User ID"/><mdProjectedItem name="date and time"/><mdProjectedItem name="Date"/><mdProjectedItem name="Time"/><mdProjectedItem name="LPN"/><mdProjectedItem name="To Locn"/><mdProjectedItem name="FACILITY"/></mdProjectedItems></sqlQuery></source>
-			<selection><dataItem name="User ID"><expression>[SQL2].[User ID]</expression></dataItem><dataItem name="date and time"><expression>[SQL2].[date and time]</expression></dataItem><dataItem name="Date"><expression>[SQL2].[Date]</expression></dataItem><dataItem name="Time"><expression>[SQL2].[Time]</expression></dataItem><dataItem name="LPN" aggregate="countDistinct" sort="descending"><expression>[SQL2].[LPN]</expression></dataItem><dataItem name="To Locn"><expression>[SQL2].[To Locn]</expression></dataItem><dataItem name="FACILITY"><expression>[SQL2].[FACILITY]</expression></dataItem><dataItemEdgeSummary solveOrder="1" refDataItem="User ID" aggregateMethod="total" name="Total(User ID)" label="Total"/><dataItemEdgeSummary solveOrder="1" refDataItem="FACILITY" aggregateMethod="total" name="Total(FACILITY)" label="Total"/></selection>
+		<mdProjectedItems><mdProjectedItem name="User ID"/><mdProjectedItem name="SHIFT_CODE"/><mdProjectedItem name="date and time"/><mdProjectedItem name="Date"/><mdProjectedItem name="Time"/><mdProjectedItem name="LPN"/><mdProjectedItem name="To Locn"/><mdProjectedItem name="FACILITY"/></mdProjectedItems></sqlQuery></source>
+			<selection><dataItem name="User ID"><expression>[SQL2].[User ID]</expression></dataItem><dataItem name="SHIFT_CODE"><expression>[SQL2].[SHIFT_CODE]</expression></dataItem><dataItem name="date and time"><expression>[SQL2].[date and time]</expression></dataItem><dataItem name="Date"><expression>[SQL2].[Date]</expression></dataItem><dataItem name="Time"><expression>[SQL2].[Time]</expression></dataItem><dataItem name="LPN" aggregate="countDistinct" sort="descending"><expression>[SQL2].[LPN]</expression></dataItem><dataItem name="To Locn"><expression>[SQL2].[To Locn]</expression></dataItem><dataItem name="FACILITY"><expression>[SQL2].[FACILITY]</expression></dataItem><dataItemEdgeSummary solveOrder="1" refDataItem="User ID" aggregateMethod="total" name="Total(User ID)" label="Total"/><dataItemEdgeSummary solveOrder="1" refDataItem="FACILITY" aggregateMethod="total" name="Total(FACILITY)" label="Total"/></selection>
 		</query><query name="Recv">
 			<source>
 				
 			<sqlQuery name="SQL3" dataSource="WMOS">
 			<sqlText>SELECT 
     ptt.user_id AS "User ID",
+    s.SHIFT_CODE,
     TO_CHAR(ptt.END_DATE + INTERVAL '3' HOUR) AS "date and time",
     TO_CHAR(ptt.END_DATE + INTERVAL '3' HOUR, 'DD-MON-YYYY') AS "Date",
     TO_CHAR(ptt.END_DATE + INTERVAL '3' HOUR, 'HH24:MI:SS') AS "Time",
     ptt.cntr_nbr AS "LPN",
     lh.dsp_locn AS "To Locn",
     CASE 
-        WHEN lh.dsp_locn in ('STA-GE-DK-001') THEN 'Milton'
-        WHEN lh.dsp_locn in ('STA-GE-00-001') THEN 'Mississauga'
+        WHEN lh.dsp_locn = 'STA-GE-DK-001' THEN 'Milton'
+        WHEN lh.dsp_locn = 'STA-GE-00-001' THEN 'Mississauga'
         ELSE lh.work_grp
     END AS Facility
 FROM PROD_TRKG_TRAN ptt
 LEFT JOIN locn_hdr lh ON ptt.TO_LOCN = lh.locn_id
-LEFT JOIN locn_hdr lhh ON ptt.FROM_Locn = lhh.locn_id
+LEFT OUTER JOIN (
+    SELECT 
+        uu.user_name, 
+        ed.emp_id, 
+        s.shift_code, 
+        ed.shift_id, 
+        SUBSTR(s.shift_code, 0, 1) AS Shift 
+    FROM 
+        (SELECT emp_id, shift_id, RANK() OVER (PARTITION BY emp_id ORDER BY MAX(eff_date_time) DESC) AS rnk 
+         FROM wm.e_emp_dtl 
+         WHERE eff_date_time &lt;= TRUNC(SYSDATE) 
+         GROUP BY emp_id, shift_id) ed
+    INNER JOIN wm.ucl_user uu ON ed.emp_id = uu.ucl_user_id
+    INNER JOIN wm.e_shift s ON ed.shift_id = s.shift_id
+    WHERE rnk = 1
+) s ON ptt.user_id = s.user_name
 WHERE ptt.MENU_OPTN_NAME IN ('Recv iLPN ASN', 'Recv iLPN ASN mixed', 'Recv Item Lvl')
-    AND TRAN_TYPE = '200'
-    and tran_code = '001'
-    AND CAST(ptt.END_DATE + INTERVAL '3' HOUR AS timestamp) &gt;= CAST(TO_DATE(SUBSTR(#Prompt('pStartDateTime')#, 0, 19), 'YYYY-MM-DD"T"HH24:mi:ss') AS timestamp)
+  AND TRAN_TYPE = '200'
+  AND TRAN_CODE = '001'
+  and s.SHIFT_CODE in (#Promptmany('pShift')#)
+     AND CAST(ptt.END_DATE + INTERVAL '3' HOUR AS timestamp) &gt;= CAST(TO_DATE(SUBSTR(#Prompt('pStartDateTime')#, 0, 19), 'YYYY-MM-DD"T"HH24:mi:ss') AS timestamp)
     AND CAST(ptt.END_DATE + INTERVAL '3' HOUR AS timestamp) &lt;= CAST(TO_DATE(SUBSTR(#Prompt('pEndDateTime')#, 0, 19), 'YYYY-MM-DD"T"HH24:mi:ss') AS timestamp)
     AND CASE 
             WHEN lh.dsp_locn IN ('STA-GE-DK-001') THEN 'Milton'
             WHEN lh.dsp_locn IN ('STA-GE-00-001') THEN 'Mississauga'
             ELSE lh.work_grp
         END IN (#Promptmany('pTote', 'string', '''Milton'', ''Mississauga''')#)</sqlText>
-		<mdProjectedItems><mdProjectedItem name="User ID"/><mdProjectedItem name="date and time"/><mdProjectedItem name="Date"/><mdProjectedItem name="Time"/><mdProjectedItem name="LPN"/><mdProjectedItem name="To Locn"/><mdProjectedItem name="FACILITY"/></mdProjectedItems></sqlQuery></source>
-			<selection><dataItem name="User ID"><expression>[SQL3].[User ID]</expression></dataItem><dataItem name="date and time"><expression>[SQL3].[date and time]</expression></dataItem><dataItem name="Date"><expression>[SQL3].[Date]</expression></dataItem><dataItem name="Time"><expression>[SQL3].[Time]</expression></dataItem><dataItem name="LPN" aggregate="countDistinct" sort="descending"><expression>[SQL3].[LPN]</expression></dataItem><dataItem name="To Locn"><expression>[SQL3].[To Locn]</expression></dataItem><dataItem name="FACILITY"><expression>[SQL3].[FACILITY]</expression></dataItem><dataItemEdgeSummary solveOrder="1" refDataItem="User ID" aggregateMethod="total" name="Total(User ID)" label="Total"/><dataItemEdgeSummary solveOrder="1" refDataItem="FACILITY" aggregateMethod="total" name="Total(FACILITY)" label="Total"/></selection>
+		<mdProjectedItems><mdProjectedItem name="User ID"/><mdProjectedItem name="SHIFT_CODE"/><mdProjectedItem name="date and time"/><mdProjectedItem name="Date"/><mdProjectedItem name="Time"/><mdProjectedItem name="LPN"/><mdProjectedItem name="To Locn"/><mdProjectedItem name="FACILITY"/></mdProjectedItems></sqlQuery></source>
+			<selection><dataItem name="User ID"><expression>[SQL3].[User ID]</expression></dataItem><dataItem name="SHIFT_CODE"><expression>[SQL3].[SHIFT_CODE]</expression></dataItem><dataItem name="date and time"><expression>[SQL3].[date and time]</expression></dataItem><dataItem name="Date"><expression>[SQL3].[Date]</expression></dataItem><dataItem name="Time"><expression>[SQL3].[Time]</expression></dataItem><dataItem name="LPN" aggregate="countDistinct" sort="descending"><expression>[SQL3].[LPN]</expression></dataItem><dataItem name="To Locn"><expression>[SQL3].[To Locn]</expression></dataItem><dataItem name="FACILITY"><expression>[SQL3].[FACILITY]</expression></dataItem><dataItemEdgeSummary solveOrder="1" refDataItem="User ID" aggregateMethod="total" name="Total(User ID)" label="Total"/><dataItemEdgeSummary solveOrder="1" refDataItem="FACILITY" aggregateMethod="total" name="Total(FACILITY)" label="Total"/></selection>
 		</query><query name="Facility">
 			<source>
 				
@@ -679,6 +788,7 @@ from dual connect by rownum &lt;= 2</sqlText>
 			<sqlQuery name="SQL5" dataSource="WMOS">
 			<sqlText>SELECT DISTINCT
     ptt.user_id AS "User ID",
+        s.SHIFT_CODE,
     TO_CHAR(ptt.END_DATE + INTERVAL '3' HOUR) AS "date and time",
     TO_CHAR(ptt.END_DATE + INTERVAL '3' HOUR, 'DD-MON-YYYY') AS "Date",
     TO_CHAR(ptt.END_DATE + INTERVAL '3' HOUR, 'HH24:MI:SS') AS "Time",
@@ -692,25 +802,42 @@ from dual connect by rownum &lt;= 2</sqlText>
 FROM PROD_TRKG_TRAN ptt
 LEFT JOIN locn_hdr lh ON ptt.TO_LOCN = lh.locn_id
 LEFT JOIN locn_hdr lhh ON ptt.FROM_Locn = lhh.locn_id
+LEFT OUTER JOIN (
+    SELECT 
+        uu.user_name, 
+        ed.emp_id, 
+        s.shift_code, 
+        ed.shift_id, 
+        SUBSTR(s.shift_code, 0, 1) AS Shift 
+    FROM 
+        (SELECT emp_id, shift_id, RANK() OVER (PARTITION BY emp_id ORDER BY MAX(eff_date_time) DESC) AS rnk 
+         FROM wm.e_emp_dtl 
+         WHERE eff_date_time &lt;= TRUNC(SYSDATE) 
+         GROUP BY emp_id, shift_id) ed
+    INNER JOIN wm.ucl_user uu ON ed.emp_id = uu.ucl_user_id
+    INNER JOIN wm.e_shift s ON ed.shift_id = s.shift_id
+    WHERE rnk = 1
+) s ON ptt.user_id = s.user_name
 WHERE ptt.MENU_OPTN_NAME IN ('Sort iLPN', 'Sort iLPN Rtn', 'Sort iLPN RtnC', 'Sort iLPN RtnE', 'Sort iLPN mix')
   AND TRAN_TYPE = '200'
   AND (lh.dsp_locn LIKE 'PZ2%' OR lh.dsp_locn LIKE 'PZ1%')
-  AND CAST(ptt.END_DATE + INTERVAL '3' HOUR AS timestamp) &gt;= CAST(TO_DATE(SUBSTR(#Prompt('pStartDateTime')#, 0, 19), 'YYYY-MM-DD"T"HH24:mi:ss') AS timestamp)
+    and s.SHIFT_CODE in (#Promptmany('pShift')#)
+AND CAST(ptt.END_DATE + INTERVAL '3' HOUR AS timestamp) &gt;= CAST(TO_DATE(SUBSTR(#Prompt('pStartDateTime')#, 0, 19), 'YYYY-MM-DD"T"HH24:mi:ss') AS timestamp)
   AND CAST(ptt.END_DATE + INTERVAL '3' HOUR AS timestamp) &lt;= CAST(TO_DATE(SUBSTR(#Prompt('pEndDateTime')#, 0, 19), 'YYYY-MM-DD"T"HH24:mi:ss') AS timestamp)
   AND CASE 
           WHEN lh.zone = 'Z1' THEN 'Mississauga'
           WHEN lh.zone = 'Z2' THEN 'Milton'
           ELSE 'Other'
-    END IN (#Promptmany('pTote', 'string', '''Milton'', ''Mississauga''')#)
-</sqlText>
-		<mdProjectedItems><mdProjectedItem name="User ID"/><mdProjectedItem name="date and time"/><mdProjectedItem name="Date"/><mdProjectedItem name="Time"/><mdProjectedItem name="LPN"/><mdProjectedItem name="To Locn"/><mdProjectedItem name="FACILITY"/></mdProjectedItems></sqlQuery></source>
-			<selection><dataItem name="User ID"><expression>[SQL5].[User ID]</expression></dataItem><dataItem name="date and time"><expression>[SQL5].[date and time]</expression></dataItem><dataItem name="Date"><expression>[SQL5].[Date]</expression></dataItem><dataItem name="Time"><expression>[SQL5].[Time]</expression></dataItem><dataItem name="LPN" sort="descending" aggregate="countDistinct"><expression>[SQL5].[LPN]</expression></dataItem><dataItem name="To Locn"><expression>[SQL5].[To Locn]</expression></dataItem><dataItem name="FACILITY"><expression>[SQL5].[FACILITY]</expression></dataItem><dataItemEdgeSummary solveOrder="1" refDataItem="User ID" aggregateMethod="total" name="Total(User ID)" label="Total"/><dataItemEdgeSummary solveOrder="1" refDataItem="FACILITY" aggregateMethod="total" name="Total(FACILITY)" label="Total"/></selection>
+    END IN (#Promptmany('pTote', 'string', '''Milton'', ''Mississauga''')#)</sqlText>
+		<mdProjectedItems><mdProjectedItem name="User ID"/><mdProjectedItem name="SHIFT_CODE"/><mdProjectedItem name="date and time"/><mdProjectedItem name="Date"/><mdProjectedItem name="Time"/><mdProjectedItem name="LPN"/><mdProjectedItem name="To Locn"/><mdProjectedItem name="FACILITY"/></mdProjectedItems></sqlQuery></source>
+			<selection><dataItem name="User ID"><expression>[SQL5].[User ID]</expression></dataItem><dataItem name="SHIFT_CODE"><expression>[SQL5].[SHIFT_CODE]</expression></dataItem><dataItem name="date and time"><expression>[SQL5].[date and time]</expression></dataItem><dataItem name="Date"><expression>[SQL5].[Date]</expression></dataItem><dataItem name="Time"><expression>[SQL5].[Time]</expression></dataItem><dataItem name="LPN" sort="descending" aggregate="countDistinct"><expression>[SQL5].[LPN]</expression></dataItem><dataItem name="To Locn"><expression>[SQL5].[To Locn]</expression></dataItem><dataItem name="FACILITY"><expression>[SQL5].[FACILITY]</expression></dataItem><dataItemEdgeSummary solveOrder="1" refDataItem="User ID" aggregateMethod="total" name="Total(User ID)" label="Total"/><dataItemEdgeSummary solveOrder="1" refDataItem="FACILITY" aggregateMethod="total" name="Total(FACILITY)" label="Total"/></selection>
 		</query><query name="pUTAWAY">
 			<source>
 				
 			<sqlQuery name="SQL6" dataSource="WMOS">
 			<sqlText>SELECT 
     ptt.user_id AS "User ID",
+        s.SHIFT_CODE,
     TO_CHAR(ptt.END_DATE + INTERVAL '3' HOUR) AS "date and time",
     TO_CHAR(ptt.END_DATE + INTERVAL '3' HOUR, 'DD-MON-YYYY') AS "Date",
     TO_CHAR(ptt.END_DATE + INTERVAL '3' HOUR, 'HH24:MI:SS') AS "Time",
@@ -725,11 +852,28 @@ WHERE ptt.MENU_OPTN_NAME IN ('Sort iLPN', 'Sort iLPN Rtn', 'Sort iLPN RtnC', 'So
 FROM PROD_TRKG_TRAN ptt
 INNER JOIN locn_hdr lh ON ptt.TO_LOCN = lh.locn_id
 INNER JOIN locn_hdr lhh ON ptt.FROM_Locn = lhh.locn_id
+LEFT OUTER JOIN (
+    SELECT 
+        uu.user_name, 
+        ed.emp_id, 
+        s.shift_code, 
+        ed.shift_id, 
+        SUBSTR(s.shift_code, 0, 1) AS Shift 
+    FROM 
+        (SELECT emp_id, shift_id, RANK() OVER (PARTITION BY emp_id ORDER BY MAX(eff_date_time) DESC) AS rnk 
+         FROM wm.e_emp_dtl 
+         WHERE eff_date_time &lt;= TRUNC(SYSDATE) 
+         GROUP BY emp_id, shift_id) ed
+    INNER JOIN wm.ucl_user uu ON ed.emp_id = uu.ucl_user_id
+    INNER JOIN wm.e_shift s ON ed.shift_id = s.shift_id
+    WHERE rnk = 1
+) s ON ptt.user_id = s.user_name
   where TRAN_TYPE = '200'
   and TRAN_CODE = '001'
   AND (lhh.dsp_locn IN ('PUT-LA-NE-002') OR lhh.dsp_locn IN ('PUT-LA-NE-005'))
   AND lh.work_grp IN ('MRAK','CRAK','PRAK','MPDK')
   AND lh.dsp_locn NOT LIKE 'PUT%'
+    and s.SHIFT_CODE in (#Promptmany('pShift')#)
   AND CAST(ptt.END_DATE + INTERVAL '3' HOUR AS timestamp) &gt;= CAST(TO_DATE(SUBSTR(#Prompt('pStartDateTime')#, 0, 19), 'YYYY-MM-DD"T"HH24:mi:ss') AS timestamp)
   AND CAST(ptt.END_DATE + INTERVAL '3' HOUR AS timestamp) &lt;= CAST(TO_DATE(SUBSTR(#Prompt('pEndDateTime')#, 0, 19), 'YYYY-MM-DD"T"HH24:mi:ss') AS timestamp)
   AND CASE 
@@ -737,6 +881,26 @@ INNER JOIN locn_hdr lhh ON ptt.FROM_Locn = lhh.locn_id
           WHEN lhh.dsp_locn = 'PUT-LA-NE-005' THEN 'Milton'
           ELSE 'Other'
     END IN (#Promptmany('pTote', 'string', '''Milton'', ''Mississauga''')#)</sqlText>
-		<mdProjectedItems><mdProjectedItem name="User ID"/><mdProjectedItem name="date and time"/><mdProjectedItem name="Date"/><mdProjectedItem name="Time"/><mdProjectedItem name="LPN"/><mdProjectedItem name="From Locn"/><mdProjectedItem name="To Locn"/><mdProjectedItem name="FACILITY"/></mdProjectedItems></sqlQuery></source>
-			<selection><dataItem name="User ID"><expression>[SQL6].[User ID]</expression></dataItem><dataItem name="date and time"><expression>[SQL6].[date and time]</expression></dataItem><dataItem name="Date"><expression>[SQL6].[Date]</expression></dataItem><dataItem name="Time"><expression>[SQL6].[Time]</expression></dataItem><dataItem name="LPN" aggregate="countDistinct" sort="descending"><expression>[SQL6].[LPN]</expression></dataItem><dataItem name="From Locn"><expression>[SQL6].[From Locn]</expression></dataItem><dataItem name="To Locn"><expression>[SQL6].[To Locn]</expression></dataItem><dataItem name="FACILITY"><expression>[SQL6].[FACILITY]</expression></dataItem><dataItemEdgeSummary solveOrder="1" refDataItem="User ID" aggregateMethod="total" name="Total(User ID)" label="Total"/></selection>
+		<mdProjectedItems><mdProjectedItem name="User ID"/><mdProjectedItem name="SHIFT_CODE"/><mdProjectedItem name="date and time"/><mdProjectedItem name="Date"/><mdProjectedItem name="Time"/><mdProjectedItem name="LPN"/><mdProjectedItem name="From Locn"/><mdProjectedItem name="To Locn"/><mdProjectedItem name="FACILITY"/></mdProjectedItems></sqlQuery></source>
+			<selection><dataItem name="User ID"><expression>[SQL6].[User ID]</expression></dataItem><dataItem name="SHIFT_CODE"><expression>[SQL6].[SHIFT_CODE]</expression></dataItem><dataItem name="date and time"><expression>[SQL6].[date and time]</expression></dataItem><dataItem name="Date"><expression>[SQL6].[Date]</expression></dataItem><dataItem name="Time"><expression>[SQL6].[Time]</expression></dataItem><dataItem name="LPN" aggregate="countDistinct" sort="descending"><expression>[SQL6].[LPN]</expression></dataItem><dataItem name="From Locn"><expression>[SQL6].[From Locn]</expression></dataItem><dataItem name="To Locn"><expression>[SQL6].[To Locn]</expression></dataItem><dataItem name="FACILITY"><expression>[SQL6].[FACILITY]</expression></dataItem><dataItemEdgeSummary solveOrder="1" refDataItem="User ID" aggregateMethod="total" name="Total(User ID)" label="Total"/></selection>
+		</query><query name="shift">
+			<source>
+				
+			<sqlQuery name="SQL7" dataSource="WMOS">
+			<sqlText>select case when rownum = 1 then '1A'
+	when rownum = 2 then '1B'
+	when rownum = 3 then '1C'
+	when rownum = 4 then '1M'
+	when rownum = 5 then '2A'
+	when rownum = 6 then '2B'
+	when rownum = 7 then '2C'
+	when rownum = 8 then '2M'
+	when rownum = 9 then '3A'
+	when rownum = 10 then '3B'
+	when rownum = 11 then '3C'
+	when rownum = 12 then '3M'
+	end FACILITY
+from dual connect by rownum &lt;= 12</sqlText>
+		<mdProjectedItems><mdProjectedItem name="FACILITY"/></mdProjectedItems></sqlQuery></source>
+			<selection><dataItem name="FACILITY"><expression>[SQL7].[FACILITY]</expression></dataItem></selection>
 		</query></queries><reportName>INBOUND USER DASHBOARD</reportName></report>
