@@ -118,7 +118,7 @@
 					<defaultStyle refStyle="xt"/>
 				</defaultStyles>
 			</style>
-		<crosstabFactCell><contents><textItem><dataSource><cellValue/></dataSource></textItem></contents><style><defaultStyles><defaultStyle refStyle="mv"/></defaultStyles></style></crosstabFactCell><crosstabCorner><contents><textItem><dataSource><dataItemLabel refDataItem="LPN"/></dataSource></textItem></contents><style><defaultStyles><defaultStyle refStyle="xm"/></defaultStyles></style></crosstabCorner><crosstabRows><crosstabNode><crosstabNodeMembers><crosstabNodeMember refDataItem="User ID" edgeLocation="e1"><style><defaultStyles><defaultStyle refStyle="ml"/></defaultStyles></style><contents><textItem><dataSource><memberCaption/></dataSource></textItem></contents></crosstabNodeMember></crosstabNodeMembers></crosstabNode><crosstabNode><crosstabNodeMembers><crosstabNodeMember refDataItem="Total(User ID)" edgeLocation="e3"><style><defaultStyles><defaultStyle refStyle="ol"/></defaultStyles></style><contents><textItem><dataSource><dataItemLabel refDataItem="Total(User ID)"/></dataSource></textItem></contents><factCell><style><defaultStyles><defaultStyle refStyle="ov"/></defaultStyles></style></factCell></crosstabNodeMember></crosstabNodeMembers></crosstabNode></crosstabRows><defaultMeasure refDataItem="LPN"/><crosstabColumns><crosstabNode><crosstabNestedNodes><crosstabNode><crosstabNodeMembers><crosstabNodeMember refDataItem="LPN" edgeLocation="e2"><style><defaultStyles><defaultStyle refStyle="ml"/></defaultStyles></style><contents><textItem><dataSource><memberCaption/></dataSource></textItem></contents></crosstabNodeMember></crosstabNodeMembers></crosstabNode></crosstabNestedNodes><crosstabNodeMembers><crosstabNodeMember refDataItem="Facility" edgeLocation="e4"><style><defaultStyles><defaultStyle refStyle="ml"/></defaultStyles></style><contents><textItem><dataSource><memberCaption/></dataSource></textItem></contents></crosstabNodeMember></crosstabNodeMembers></crosstabNode></crosstabColumns></crosstab></contents><style><CSS value="padding-top:80px;padding-right:400px"/></style></tableCell></tableCells></tableRow></tableRows></table><block>
+		<crosstabFactCell><contents><textItem><dataSource><cellValue/></dataSource></textItem></contents><style><defaultStyles><defaultStyle refStyle="mv"/></defaultStyles></style></crosstabFactCell><crosstabCorner><contents><textItem><dataSource><dataItemLabel refDataItem="LPN"/></dataSource></textItem></contents><style><defaultStyles><defaultStyle refStyle="xm"/></defaultStyles></style></crosstabCorner><crosstabRows><crosstabNode><crosstabNodeMembers><crosstabNodeMember refDataItem="User ID" edgeLocation="e1"><style><defaultStyles><defaultStyle refStyle="ml"/></defaultStyles></style><contents><textItem><dataSource><memberCaption/></dataSource><reportDrills><reportDrill name="Drill-Through Definition1"><drillLabel><dataSource><staticValue/></dataSource></drillLabel><drillTarget method="execute" showInNewWindow="true"><reportPath path="/content/folder[@name='lululemon reports']/folder[@name='LMS']/report[@name='Research - Employee Event Details']"><XMLAttributes><XMLAttribute name="ReportName" value="Research - Employee Event Details" output="no"/><XMLAttribute name="class" value="report" output="no"/></XMLAttributes></reportPath><drillLinks><drillLink><drillTargetContext><parameterContext parameter="pUser"/></drillTargetContext><drillSourceContext><dataItemContext refDataItem="User ID"/></drillSourceContext></drillLink><drillLink><drillTargetContext><parameterContext parameter="pDate"/></drillTargetContext><drillSourceContext><parameterContext parameter="pStartDateTime"/></drillSourceContext></drillLink><drillLink><drillTargetContext><parameterContext parameter="pEndDate"/></drillTargetContext><drillSourceContext><parameterContext parameter="pEndDateTime"/></drillSourceContext></drillLink></drillLinks></drillTarget></reportDrill></reportDrills><style><defaultStyles><defaultStyle refStyle="hy"/></defaultStyles></style></textItem></contents></crosstabNodeMember></crosstabNodeMembers></crosstabNode><crosstabNode><crosstabNodeMembers><crosstabNodeMember refDataItem="Total(User ID)" edgeLocation="e3"><style><defaultStyles><defaultStyle refStyle="ol"/></defaultStyles></style><contents><textItem><dataSource><dataItemLabel refDataItem="Total(User ID)"/></dataSource></textItem></contents><factCell><style><defaultStyles><defaultStyle refStyle="ov"/></defaultStyles></style></factCell></crosstabNodeMember></crosstabNodeMembers></crosstabNode></crosstabRows><defaultMeasure refDataItem="LPN"/><crosstabColumns><crosstabNode><crosstabNestedNodes><crosstabNode><crosstabNodeMembers><crosstabNodeMember refDataItem="LPN" edgeLocation="e2"><style><defaultStyles><defaultStyle refStyle="ml"/></defaultStyles></style><contents><textItem><dataSource><memberCaption/></dataSource></textItem></contents></crosstabNodeMember></crosstabNodeMembers></crosstabNode></crosstabNestedNodes><crosstabNodeMembers><crosstabNodeMember refDataItem="Facility" edgeLocation="e4"><style><defaultStyles><defaultStyle refStyle="ml"/></defaultStyles></style><contents><textItem><dataSource><memberCaption/></dataSource></textItem></contents></crosstabNodeMember></crosstabNodeMembers></crosstabNode></crosstabColumns></crosstab></contents><style><CSS value="padding-top:80px;padding-right:400px"/></style></tableCell></tableCells></tableRow></tableRows></table><block>
 			<contents><textItem><dataSource><staticValue>FILL ACTV</staticValue></dataSource></textItem></contents>
 		<style><CSS value="background-color:black;text-align:center;color:white;font-weight:bold;font-size:16pt;margin-top:40px"/><defaultStyles><defaultStyle refStyle="sh"/></defaultStyles></style></block><table><style><defaultStyles><defaultStyle refStyle="tb"/></defaultStyles><CSS value="border-collapse:collapse;width:100%"/></style><tableRows><tableRow><tableCells><tableCell><contents><combinationChart showTooltips="true" maxHotspots="10000" refQuery="Fill Actv" name="Combination Chart2">
 														<legend>
@@ -221,7 +221,116 @@
 					<defaultStyle refStyle="xt"/>
 				</defaultStyles>
 			</style>
-		<crosstabFactCell><contents><textItem><dataSource><cellValue/></dataSource></textItem></contents><style><defaultStyles><defaultStyle refStyle="mv"/></defaultStyles></style></crosstabFactCell><crosstabRows><crosstabNode><crosstabNodeMembers><crosstabNodeMember refDataItem="User ID" edgeLocation="e1"><style><defaultStyles><defaultStyle refStyle="ml"/></defaultStyles></style><contents><textItem><dataSource><memberCaption/></dataSource></textItem></contents></crosstabNodeMember></crosstabNodeMembers></crosstabNode><crosstabNode><crosstabNodeMembers><crosstabNodeMember refDataItem="Total(User ID)" edgeLocation="e4"><style><defaultStyles><defaultStyle refStyle="ol"/></defaultStyles></style><contents><textItem><dataSource><dataItemLabel refDataItem="Total(User ID)"/></dataSource></textItem></contents><factCell><style><defaultStyles><defaultStyle refStyle="ov"/></defaultStyles></style></factCell></crosstabNodeMember></crosstabNodeMembers></crosstabNode></crosstabRows><crosstabColumns><crosstabNode><crosstabNestedNodes><crosstabNode><crosstabNodeMembers><crosstabNodeMember refDataItem="LPN" edgeLocation="e2"><style><defaultStyles><defaultStyle refStyle="ml"/></defaultStyles></style><contents><textItem><dataSource><memberCaption/></dataSource></textItem></contents></crosstabNodeMember></crosstabNodeMembers></crosstabNode></crosstabNestedNodes><crosstabNodeMembers><crosstabNodeMember refDataItem="FACILITY" edgeLocation="e3"><style><defaultStyles><defaultStyle refStyle="ml"/></defaultStyles></style><contents><textItem><dataSource><memberCaption/></dataSource></textItem></contents></crosstabNodeMember></crosstabNodeMembers></crosstabNode></crosstabColumns><crosstabIntersections><crosstabIntersection row="e1" column="e2"><style><CSS value="text-align:center"/></style></crosstabIntersection><crosstabIntersection row="e4" column="e2"><style><CSS value="text-align:center"/></style></crosstabIntersection></crosstabIntersections><defaultMeasure refDataItem="LPN"/></crosstab></contents><style><CSS value="padding-right:400px"/></style></tableCell></tableCells></tableRow></tableRows></table><block>
+		<crosstabFactCell><contents><textItem><dataSource><cellValue/></dataSource></textItem></contents><style><defaultStyles><defaultStyle refStyle="mv"/></defaultStyles></style></crosstabFactCell><crosstabRows><crosstabNode><crosstabNodeMembers><crosstabNodeMember refDataItem="User ID" edgeLocation="e1"><style><defaultStyles><defaultStyle refStyle="ml"/></defaultStyles></style><contents><textItem><dataSource><memberCaption/></dataSource><reportDrills><reportDrill name="Drill-Through Definition1"><drillLabel><dataSource><staticValue/></dataSource></drillLabel><drillTarget method="execute" showInNewWindow="true"><reportPath path="/content/folder[@name='lululemon reports']/folder[@name='LMS']/report[@name='Research - Employee Event Details']"><XMLAttributes><XMLAttribute name="ReportName" value="Research - Employee Event Details" output="no"/><XMLAttribute name="class" value="report" output="no"/></XMLAttributes></reportPath><drillLinks><drillLink><drillTargetContext><parameterContext parameter="pDate"/></drillTargetContext><drillSourceContext><parameterContext parameter="pStartDateTime"/></drillSourceContext></drillLink><drillLink><drillTargetContext><parameterContext parameter="pEndDate"/></drillTargetContext><drillSourceContext><parameterContext parameter="pEndDateTime"/></drillSourceContext></drillLink><drillLink><drillTargetContext><parameterContext parameter="pUser"/></drillTargetContext><drillSourceContext><dataItemContext refDataItem="User ID"/></drillSourceContext></drillLink></drillLinks></drillTarget></reportDrill></reportDrills><style><defaultStyles><defaultStyle refStyle="hy"/></defaultStyles></style></textItem></contents></crosstabNodeMember></crosstabNodeMembers></crosstabNode><crosstabNode><crosstabNodeMembers><crosstabNodeMember refDataItem="Total(User ID)" edgeLocation="e4"><style><defaultStyles><defaultStyle refStyle="ol"/></defaultStyles></style><contents><textItem><dataSource><dataItemLabel refDataItem="Total(User ID)"/></dataSource></textItem></contents><factCell><style><defaultStyles><defaultStyle refStyle="ov"/></defaultStyles></style></factCell></crosstabNodeMember></crosstabNodeMembers></crosstabNode></crosstabRows><crosstabColumns><crosstabNode><crosstabNestedNodes><crosstabNode><crosstabNodeMembers><crosstabNodeMember refDataItem="LPN" edgeLocation="e2"><style><defaultStyles><defaultStyle refStyle="ml"/></defaultStyles></style><contents><textItem><dataSource><memberCaption/></dataSource></textItem></contents></crosstabNodeMember></crosstabNodeMembers></crosstabNode></crosstabNestedNodes><crosstabNodeMembers><crosstabNodeMember refDataItem="FACILITY" edgeLocation="e3"><style><defaultStyles><defaultStyle refStyle="ml"/></defaultStyles></style><contents><textItem><dataSource><memberCaption/></dataSource></textItem></contents></crosstabNodeMember></crosstabNodeMembers></crosstabNode></crosstabColumns><crosstabIntersections><crosstabIntersection row="e1" column="e2"><style><CSS value="text-align:center"/></style></crosstabIntersection><crosstabIntersection row="e4" column="e2"><style><CSS value="text-align:center"/></style></crosstabIntersection></crosstabIntersections><defaultMeasure refDataItem="LPN"/></crosstab></contents><style><CSS value="padding-right:400px"/></style></tableCell></tableCells></tableRow></tableRows></table><block>
+			<contents><textItem><dataSource><staticValue>FILL ACTV USER DIR</staticValue></dataSource><style><CSS value="font-size:16pt;color:white"/></style></textItem></contents>
+		<style><CSS value="text-align:center;margin-top:40px;background-color:black"/><defaultStyles><defaultStyle refStyle="sh"/></defaultStyles></style></block><table><style><defaultStyles><defaultStyle refStyle="tb"/></defaultStyles><CSS value="border-collapse:collapse;width:100%"/></style><tableRows><tableRow><tableCells><tableCell><contents><combinationChart showTooltips="true" maxHotspots="10000" refQuery="Fill Actv User Dir" name="Combination Chart6">
+														<legend>
+															<legendPosition>
+																<relativePosition/>
+															</legendPosition>
+															<legendTitle refQuery="Fill Actv User Dir">
+																<style>
+																	<defaultStyles>
+																		<defaultStyle refStyle="lx"/>
+																	</defaultStyles>
+																</style>
+															</legendTitle>
+															<style>
+																<defaultStyles>
+																	<defaultStyle refStyle="lg"/>
+																</defaultStyles>
+															</style>
+														</legend>
+														<ordinalAxis>
+															<axisTitle refQuery="Fill Actv User Dir">
+																<style>
+																	<defaultStyles>
+																		<defaultStyle refStyle="at"/>
+																	</defaultStyles>
+																</style>
+															</axisTitle>
+															<axisLine color="black"/>
+															<style>
+																<defaultStyles>
+																	<defaultStyle refStyle="al"/>
+																</defaultStyles>
+															</style>
+														</ordinalAxis>
+														<numericalAxisY1>
+															<axisTitle refQuery="Fill Actv User Dir">
+																<style>
+																	<defaultStyles>
+																		<defaultStyle refStyle="at"/>
+																	</defaultStyles>
+																</style>
+															</axisTitle>
+															<gridlines color="#cccccc"/>
+															<axisLine color="black"/>
+															<style>
+																<defaultStyles>
+																	<defaultStyle refStyle="al"/>
+																</defaultStyles>
+															</style>
+														</numericalAxisY1>
+														<combinationChartTypes>
+															<bar valueType="stacked"><chartNodes><chartNode><chartNodeMembers><chartNodeMember refDataItem="LPN"><chartContents><chartTextItem><dataSource><memberCaption/></dataSource></chartTextItem></chartContents></chartNodeMember></chartNodeMembers></chartNode></chartNodes></bar>
+														</combinationChartTypes>
+														<style>
+															<defaultStyles>
+																<defaultStyle refStyle="ch"/>
+															</defaultStyles>
+															<CSS value="width:1600px;height:700px"/></style>
+														<commonClusters><chartNodes><chartNode><chartNodeMembers><chartNodeMember refDataItem="User ID"><chartContents><chartTextItem><dataSource><memberCaption/></dataSource></chartTextItem></chartContents></chartNodeMember></chartNodeMembers></chartNode></chartNodes></commonClusters><chartPalette>
+															<chartGradient direction="down" fromColor="#134bea" toColor="#0b2982"/>
+															<chartGradient direction="down" fromColor="#50cb1c" toColor="#42982f"/>
+															<chartGradient direction="down" fromColor="#f2cd00" toColor="#f9be09"/>
+															<chartGradient direction="down" fromColor="#ff8a00" toColor="#de4f01"/>
+															<chartGradient direction="down" fromColor="#e01b1b" toColor="#ab0909"/>
+															<chartGradient direction="down" fromColor="#3d3d3d" toColor="#0a0a0a"/>
+															<chartGradient direction="down" fromColor="#bf38e1" toColor="#8a1dde"/>
+															<chartGradient direction="down" fromColor="#8514c7" toColor="#2e0072"/>
+															<chartGradient direction="down" fromColor="#0f8b03" toColor="#044a01"/>
+															<chartGradient direction="down" fromColor="#95bf14" toColor="#828c0b"/>
+															<chartGradient direction="down" fromColor="#4791da" toColor="#2060b7"/>
+															<chartGradient direction="down" fromColor="#76dde6" toColor="#2cb6c7"/>
+															<chartGradient direction="down" fromColor="#060d95" toColor="#06034f"/>
+															<chartGradient direction="down" fromColor="#c3550b" toColor="#a33a00"/>
+														</chartPalette>
+													</combinationChart>
+												</contents></tableCell><tableCell><contents><crosstab horizontalPagination="true" name="Crosstab6" refQuery="Fill Actv User Dir">
+			<crosstabCorner>
+				<contents><textItem><dataSource><dataItemLabel refDataItem="LPN"/></dataSource></textItem></contents>
+				<style>
+					<defaultStyles>
+						<defaultStyle refStyle="xm"/>
+					</defaultStyles>
+				</style>
+			</crosstabCorner>
+			
+			
+			<noDataHandler>
+				<contents>
+					<block>
+						<contents>
+							<textItem>
+								<dataSource>
+									<staticValue>No Data Available</staticValue>
+								</dataSource>
+								<style>
+									<CSS value="padding:10px 18px;"/>
+								</style>
+							</textItem>
+						</contents>
+					</block>
+				</contents>
+			</noDataHandler>
+			<style>
+				<CSS value="border-collapse:collapse;width:300px;height:150px;text-align:center"/>
+				<defaultStyles>
+					<defaultStyle refStyle="xt"/>
+				</defaultStyles>
+			</style>
+		<crosstabFactCell><contents><textItem><dataSource><cellValue/></dataSource></textItem></contents><style><defaultStyles><defaultStyle refStyle="mv"/></defaultStyles></style></crosstabFactCell><crosstabRows><crosstabNode><crosstabNodeMembers><crosstabNodeMember refDataItem="User ID" edgeLocation="e1"><style><defaultStyles><defaultStyle refStyle="ml"/></defaultStyles></style><contents><textItem><dataSource><memberCaption/></dataSource><reportDrills><reportDrill name="Drill-Through Definition1"><drillLabel><dataSource><staticValue/></dataSource></drillLabel><drillTarget method="execute" showInNewWindow="true"><reportPath path="/content/folder[@name='lululemon reports']/folder[@name='LMS']/report[@name='Research - Employee Event Details']"><XMLAttributes><XMLAttribute name="ReportName" value="Research - Employee Event Details" output="no"/><XMLAttribute name="class" value="report" output="no"/></XMLAttributes></reportPath><drillLinks><drillLink><drillTargetContext><parameterContext parameter="pUser"/></drillTargetContext><drillSourceContext><dataItemContext refDataItem="User ID"/></drillSourceContext></drillLink><drillLink><drillTargetContext><parameterContext parameter="pDate"/></drillTargetContext><drillSourceContext><parameterContext parameter="pStartDateTime"/></drillSourceContext></drillLink><drillLink><drillTargetContext><parameterContext parameter="pEndDate"/></drillTargetContext><drillSourceContext><parameterContext parameter="pEndDateTime"/></drillSourceContext></drillLink></drillLinks></drillTarget></reportDrill></reportDrills><style><defaultStyles><defaultStyle refStyle="hy"/></defaultStyles></style></textItem></contents></crosstabNodeMember></crosstabNodeMembers></crosstabNode><crosstabNode><crosstabNodeMembers><crosstabNodeMember refDataItem="Total(User ID)" edgeLocation="e3"><style><defaultStyles><defaultStyle refStyle="ol"/></defaultStyles></style><contents><textItem><dataSource><dataItemLabel refDataItem="Total(User ID)"/></dataSource></textItem></contents><factCell><style><defaultStyles><defaultStyle refStyle="ov"/></defaultStyles></style></factCell></crosstabNodeMember></crosstabNodeMembers></crosstabNode></crosstabRows><crosstabColumns><crosstabNode><crosstabNestedNodes><crosstabNode><crosstabNodeMembers><crosstabNodeMember refDataItem="LPN" edgeLocation="e2"><style><defaultStyles><defaultStyle refStyle="ml"/></defaultStyles></style><contents><textItem><dataSource><memberCaption/></dataSource></textItem></contents></crosstabNodeMember></crosstabNodeMembers></crosstabNode></crosstabNestedNodes><crosstabNodeMembers><crosstabNodeMember refDataItem="FACILITY" edgeLocation="e4"><style><defaultStyles><defaultStyle refStyle="ml"/></defaultStyles></style><contents><textItem><dataSource><memberCaption/></dataSource></textItem></contents></crosstabNodeMember></crosstabNodeMembers></crosstabNode></crosstabColumns><crosstabIntersections><crosstabIntersection row="e1" column="e2"><style><CSS value="text-align:center"/></style></crosstabIntersection><crosstabIntersection row="e3" column="e2"><style><CSS value="text-align:center"/></style></crosstabIntersection></crosstabIntersections><defaultMeasure refDataItem="LPN"/></crosstab></contents><style><CSS value="padding-right:400px"/></style></tableCell></tableCells></tableRow></tableRows></table><block>
 			<contents><textItem><dataSource><staticValue>PUTAWAY</staticValue></dataSource><style><CSS value="color:white;font-weight:bold;font-size:16pt"/></style></textItem></contents>
 		<style><defaultStyles><defaultStyle refStyle="sh"/></defaultStyles><CSS value="background-color:black;text-align:center;margin-top:40px"/></style></block><table><style><defaultStyles><defaultStyle refStyle="tb"/></defaultStyles><CSS value="border-collapse:collapse;width:100%"/></style><tableRows><tableRow><tableCells><tableCell><contents><combinationChart showTooltips="true" maxHotspots="10000" refQuery="pUTAWAY" name="Combination Chart3">
 														<legend>
@@ -326,7 +435,7 @@
 					<defaultStyle refStyle="xt"/>
 				</defaultStyles>
 			</style>
-		<crosstabFactCell><contents><textItem><dataSource><cellValue/></dataSource></textItem></contents><style><defaultStyles><defaultStyle refStyle="mv"/></defaultStyles></style></crosstabFactCell><crosstabRows><crosstabNode><crosstabNodeMembers><crosstabNodeMember refDataItem="User ID" edgeLocation="e1"><style><defaultStyles><defaultStyle refStyle="ml"/></defaultStyles><CSS value="text-align:center"/></style><contents><textItem><dataSource><memberCaption/></dataSource></textItem></contents></crosstabNodeMember></crosstabNodeMembers></crosstabNode><crosstabNode><crosstabNodeMembers><crosstabNodeMember refDataItem="Total(User ID)" edgeLocation="e3"><style><defaultStyles><defaultStyle refStyle="ol"/></defaultStyles><CSS value="text-align:center"/></style><contents><textItem><dataSource><dataItemLabel refDataItem="Total(User ID)"/></dataSource></textItem></contents><factCell><style><defaultStyles><defaultStyle refStyle="ov"/></defaultStyles></style></factCell></crosstabNodeMember></crosstabNodeMembers></crosstabNode></crosstabRows><crosstabColumns><crosstabNode><crosstabNestedNodes><crosstabNode><crosstabNodeMembers><crosstabNodeMember refDataItem="LPN" edgeLocation="e2"><style><defaultStyles><defaultStyle refStyle="ml"/></defaultStyles><CSS value="text-align:center"/></style><contents><textItem><dataSource><memberCaption/></dataSource></textItem></contents></crosstabNodeMember></crosstabNodeMembers></crosstabNode></crosstabNestedNodes><crosstabNodeMembers><crosstabNodeMember refDataItem="FACILITY" edgeLocation="e4"><style><defaultStyles><defaultStyle refStyle="ml"/></defaultStyles></style><contents><textItem><dataSource><memberCaption/></dataSource></textItem></contents></crosstabNodeMember></crosstabNodeMembers></crosstabNode></crosstabColumns><crosstabIntersections><crosstabIntersection row="e1" column="e2"><style><CSS value="text-align:center"/></style></crosstabIntersection><crosstabIntersection row="e3" column="e2"><style><CSS value="text-align:center"/></style></crosstabIntersection></crosstabIntersections><defaultMeasure refDataItem="LPN"/></crosstab></contents><style><CSS value="padding-right:400px"/></style></tableCell></tableCells></tableRow></tableRows></table><block>
+		<crosstabFactCell><contents><textItem><dataSource><cellValue/></dataSource></textItem></contents><style><defaultStyles><defaultStyle refStyle="mv"/></defaultStyles></style></crosstabFactCell><crosstabRows><crosstabNode><crosstabNodeMembers><crosstabNodeMember refDataItem="User ID" edgeLocation="e1"><style><defaultStyles><defaultStyle refStyle="ml"/></defaultStyles><CSS value="text-align:center"/></style><contents><textItem><dataSource><memberCaption/></dataSource><reportDrills><reportDrill name="Drill-Through Definition1"><drillLabel><dataSource><staticValue/></dataSource></drillLabel><drillTarget method="execute" showInNewWindow="true"><reportPath path="/content/folder[@name='lululemon reports']/folder[@name='LMS']/report[@name='Research - Employee Event Details']"><XMLAttributes><XMLAttribute name="ReportName" value="Research - Employee Event Details" output="no"/><XMLAttribute name="class" value="report" output="no"/></XMLAttributes></reportPath><drillLinks><drillLink><drillTargetContext><parameterContext parameter="pUser"/></drillTargetContext><drillSourceContext><dataItemContext refDataItem="User ID"/></drillSourceContext></drillLink><drillLink><drillTargetContext><parameterContext parameter="pDate"/></drillTargetContext><drillSourceContext><parameterContext parameter="pStartDateTime"/></drillSourceContext></drillLink><drillLink><drillTargetContext><parameterContext parameter="pEndDate"/></drillTargetContext><drillSourceContext><parameterContext parameter="pEndDateTime"/></drillSourceContext></drillLink></drillLinks></drillTarget></reportDrill></reportDrills><style><defaultStyles><defaultStyle refStyle="hy"/></defaultStyles></style></textItem></contents></crosstabNodeMember></crosstabNodeMembers></crosstabNode><crosstabNode><crosstabNodeMembers><crosstabNodeMember refDataItem="Total(User ID)" edgeLocation="e3"><style><defaultStyles><defaultStyle refStyle="ol"/></defaultStyles><CSS value="text-align:center"/></style><contents><textItem><dataSource><dataItemLabel refDataItem="Total(User ID)"/></dataSource></textItem></contents><factCell><style><defaultStyles><defaultStyle refStyle="ov"/></defaultStyles></style></factCell></crosstabNodeMember></crosstabNodeMembers></crosstabNode></crosstabRows><crosstabColumns><crosstabNode><crosstabNestedNodes><crosstabNode><crosstabNodeMembers><crosstabNodeMember refDataItem="LPN" edgeLocation="e2"><style><defaultStyles><defaultStyle refStyle="ml"/></defaultStyles><CSS value="text-align:center"/></style><contents><textItem><dataSource><memberCaption/></dataSource></textItem></contents></crosstabNodeMember></crosstabNodeMembers></crosstabNode></crosstabNestedNodes><crosstabNodeMembers><crosstabNodeMember refDataItem="FACILITY" edgeLocation="e4"><style><defaultStyles><defaultStyle refStyle="ml"/></defaultStyles></style><contents><textItem><dataSource><memberCaption/></dataSource></textItem></contents></crosstabNodeMember></crosstabNodeMembers></crosstabNode></crosstabColumns><crosstabIntersections><crosstabIntersection row="e1" column="e2"><style><CSS value="text-align:center"/></style></crosstabIntersection><crosstabIntersection row="e3" column="e2"><style><CSS value="text-align:center"/></style></crosstabIntersection></crosstabIntersections><defaultMeasure refDataItem="LPN"/></crosstab></contents><style><CSS value="padding-right:400px"/></style></tableCell></tableCells></tableRow></tableRows></table><block>
 			<contents><textItem><dataSource><staticValue>RECEIVING</staticValue></dataSource><style><CSS value="font-size:16pt"/></style></textItem></contents>
 		<style><CSS value="text-align:center;color:white;font-weight:bold;background-color:black"/><defaultStyles><defaultStyle refStyle="sh"/></defaultStyles></style></block><table><style><defaultStyles><defaultStyle refStyle="tb"/></defaultStyles><CSS value="border-collapse:collapse;width:100%"/></style><tableRows><tableRow><tableCells><tableCell><contents><combinationChart showTooltips="true" maxHotspots="10000" refQuery="Recv" name="Combination Chart4">
 														<legend>
@@ -431,7 +540,7 @@
 					<defaultStyle refStyle="xt"/>
 				</defaultStyles>
 			</style>
-		<crosstabFactCell><contents><textItem><dataSource><cellValue/></dataSource></textItem></contents><style><defaultStyles><defaultStyle refStyle="mv"/></defaultStyles></style></crosstabFactCell><crosstabRows><crosstabNode><crosstabNodeMembers><crosstabNodeMember refDataItem="User ID" edgeLocation="e1"><style><defaultStyles><defaultStyle refStyle="ml"/></defaultStyles></style><contents><textItem><dataSource><memberCaption/></dataSource></textItem></contents></crosstabNodeMember></crosstabNodeMembers></crosstabNode><crosstabNode><crosstabNodeMembers><crosstabNodeMember refDataItem="Total(User ID)" edgeLocation="e4"><style><defaultStyles><defaultStyle refStyle="ol"/></defaultStyles></style><contents><textItem><dataSource><dataItemLabel refDataItem="Total(User ID)"/></dataSource></textItem></contents><factCell><style><defaultStyles><defaultStyle refStyle="ov"/></defaultStyles></style></factCell></crosstabNodeMember></crosstabNodeMembers></crosstabNode></crosstabRows><crosstabColumns><crosstabNode><crosstabNestedNodes><crosstabNode><crosstabNodeMembers><crosstabNodeMember refDataItem="LPN" edgeLocation="e2"><style><defaultStyles><defaultStyle refStyle="ml"/></defaultStyles></style><contents><textItem><dataSource><memberCaption/></dataSource></textItem></contents></crosstabNodeMember></crosstabNodeMembers></crosstabNode></crosstabNestedNodes><crosstabNodeMembers><crosstabNodeMember refDataItem="FACILITY" edgeLocation="e3"><style><defaultStyles><defaultStyle refStyle="ml"/></defaultStyles></style><contents><textItem><dataSource><memberCaption/></dataSource></textItem></contents></crosstabNodeMember></crosstabNodeMembers></crosstabNode></crosstabColumns><crosstabIntersections><crosstabIntersection row="e1" column="e2"><style><CSS value="text-align:center"/></style></crosstabIntersection><crosstabIntersection row="e4" column="e2"><style><CSS value="text-align:center"/></style></crosstabIntersection></crosstabIntersections><defaultMeasure refDataItem="LPN"/></crosstab></contents><style><CSS value="padding-right:400px"/></style></tableCell></tableCells></tableRow></tableRows></table><block>
+		<crosstabFactCell><contents><textItem><dataSource><cellValue/></dataSource></textItem></contents><style><defaultStyles><defaultStyle refStyle="mv"/></defaultStyles></style></crosstabFactCell><crosstabRows><crosstabNode><crosstabNodeMembers><crosstabNodeMember refDataItem="User ID" edgeLocation="e1"><style><defaultStyles><defaultStyle refStyle="ml"/></defaultStyles></style><contents><textItem><dataSource><memberCaption/></dataSource><reportDrills><reportDrill name="Drill-Through Definition1"><drillLabel><dataSource><staticValue/></dataSource></drillLabel><drillTarget method="execute" showInNewWindow="true"><reportPath path="/content/folder[@name='lululemon reports']/folder[@name='LMS']/report[@name='Research - Employee Event Details']"><XMLAttributes><XMLAttribute name="ReportName" value="Research - Employee Event Details" output="no"/><XMLAttribute name="class" value="report" output="no"/></XMLAttributes></reportPath><drillLinks><drillLink><drillTargetContext><parameterContext parameter="pUser"/></drillTargetContext><drillSourceContext><dataItemContext refDataItem="User ID"/></drillSourceContext></drillLink><drillLink><drillTargetContext><parameterContext parameter="pDate"/></drillTargetContext><drillSourceContext><parameterContext parameter="pStartDateTime"/></drillSourceContext></drillLink><drillLink><drillTargetContext><parameterContext parameter="pEndDate"/></drillTargetContext><drillSourceContext><parameterContext parameter="pEndDateTime"/></drillSourceContext></drillLink></drillLinks></drillTarget></reportDrill></reportDrills><style><defaultStyles><defaultStyle refStyle="hy"/></defaultStyles></style></textItem></contents></crosstabNodeMember></crosstabNodeMembers></crosstabNode><crosstabNode><crosstabNodeMembers><crosstabNodeMember refDataItem="Total(User ID)" edgeLocation="e4"><style><defaultStyles><defaultStyle refStyle="ol"/></defaultStyles></style><contents><textItem><dataSource><dataItemLabel refDataItem="Total(User ID)"/></dataSource></textItem></contents><factCell><style><defaultStyles><defaultStyle refStyle="ov"/></defaultStyles></style></factCell></crosstabNodeMember></crosstabNodeMembers></crosstabNode></crosstabRows><crosstabColumns><crosstabNode><crosstabNestedNodes><crosstabNode><crosstabNodeMembers><crosstabNodeMember refDataItem="LPN" edgeLocation="e2"><style><defaultStyles><defaultStyle refStyle="ml"/></defaultStyles></style><contents><textItem><dataSource><memberCaption/></dataSource></textItem></contents></crosstabNodeMember></crosstabNodeMembers></crosstabNode></crosstabNestedNodes><crosstabNodeMembers><crosstabNodeMember refDataItem="FACILITY" edgeLocation="e3"><style><defaultStyles><defaultStyle refStyle="ml"/></defaultStyles></style><contents><textItem><dataSource><memberCaption/></dataSource></textItem></contents></crosstabNodeMember></crosstabNodeMembers></crosstabNode></crosstabColumns><crosstabIntersections><crosstabIntersection row="e1" column="e2"><style><CSS value="text-align:center"/></style></crosstabIntersection><crosstabIntersection row="e4" column="e2"><style><CSS value="text-align:center"/></style></crosstabIntersection></crosstabIntersections><defaultMeasure refDataItem="LPN"/></crosstab></contents><style><CSS value="padding-right:400px"/></style></tableCell></tableCells></tableRow></tableRows></table><block>
 			<contents><textItem><dataSource><staticValue>SORTING</staticValue></dataSource></textItem></contents>
 		<style><CSS value="text-align:center;font-weight:bold;color:white;font-size:16pt;background-color:black"/><defaultStyles><defaultStyle refStyle="sh"/></defaultStyles></style></block><table><style><defaultStyles><defaultStyle refStyle="tb"/></defaultStyles><CSS value="border-collapse:collapse;width:100%"/></style><tableRows><tableRow><tableCells><tableCell><contents><combinationChart showTooltips="true" maxHotspots="10000" refQuery="SORT" name="Combination Chart5">
 														<legend>
@@ -524,7 +633,7 @@
 					<defaultStyle refStyle="xt"/>
 				</defaultStyles>
 			</style>
-		<crosstabFactCell><contents><textItem><dataSource><cellValue/></dataSource></textItem></contents><style><defaultStyles><defaultStyle refStyle="mv"/></defaultStyles></style></crosstabFactCell><crosstabRows><crosstabNode><crosstabNodeMembers><crosstabNodeMember refDataItem="User ID" edgeLocation="e1"><style><defaultStyles><defaultStyle refStyle="ml"/></defaultStyles></style><contents><textItem><dataSource><memberCaption/></dataSource></textItem></contents></crosstabNodeMember></crosstabNodeMembers></crosstabNode><crosstabNode><crosstabNodeMembers><crosstabNodeMember refDataItem="Total(User ID)" edgeLocation="e4"><style><defaultStyles><defaultStyle refStyle="ol"/></defaultStyles></style><contents><textItem><dataSource><dataItemLabel refDataItem="Total(User ID)"/></dataSource></textItem></contents><factCell><style><defaultStyles><defaultStyle refStyle="ov"/></defaultStyles></style></factCell></crosstabNodeMember></crosstabNodeMembers></crosstabNode></crosstabRows><crosstabColumns><crosstabNode><crosstabNestedNodes><crosstabNode><crosstabNodeMembers><crosstabNodeMember refDataItem="LPN" edgeLocation="e2"><style><defaultStyles><defaultStyle refStyle="ml"/></defaultStyles></style><contents><textItem><dataSource><memberCaption/></dataSource></textItem></contents></crosstabNodeMember></crosstabNodeMembers></crosstabNode></crosstabNestedNodes><crosstabNodeMembers><crosstabNodeMember refDataItem="FACILITY" edgeLocation="e3"><style><defaultStyles><defaultStyle refStyle="ml"/></defaultStyles></style><contents><textItem><dataSource><memberCaption/></dataSource></textItem></contents></crosstabNodeMember></crosstabNodeMembers></crosstabNode></crosstabColumns><crosstabIntersections><crosstabIntersection row="e1" column="e2"><style><CSS value="text-align:center"/></style></crosstabIntersection><crosstabIntersection row="e4" column="e2"><style><CSS value="text-align:center"/></style></crosstabIntersection></crosstabIntersections><defaultMeasure refDataItem="LPN"/></crosstab></contents><style><CSS value="padding-right:400px"/></style></tableCell></tableCells></tableRow></tableRows></table></contents>
+		<crosstabFactCell><contents><textItem><dataSource><cellValue/></dataSource></textItem></contents><style><defaultStyles><defaultStyle refStyle="mv"/></defaultStyles></style></crosstabFactCell><crosstabRows><crosstabNode><crosstabNodeMembers><crosstabNodeMember refDataItem="User ID" edgeLocation="e1"><style><defaultStyles><defaultStyle refStyle="ml"/></defaultStyles></style><contents><textItem><dataSource><memberCaption/></dataSource><reportDrills><reportDrill name="Drill-Through Definition1"><drillLabel><dataSource><staticValue/></dataSource></drillLabel><drillTarget method="execute" showInNewWindow="true"><reportPath path="/content/folder[@name='lululemon reports']/folder[@name='LMS']/report[@name='Research - Employee Event Details']"><XMLAttributes><XMLAttribute name="ReportName" value="Research - Employee Event Details" output="no"/><XMLAttribute name="class" value="report" output="no"/></XMLAttributes></reportPath><drillLinks><drillLink><drillTargetContext><parameterContext parameter="pUser"/></drillTargetContext><drillSourceContext><dataItemContext refDataItem="User ID"/></drillSourceContext></drillLink><drillLink><drillTargetContext><parameterContext parameter="pDate"/></drillTargetContext><drillSourceContext><parameterContext parameter="pStartDateTime"/></drillSourceContext></drillLink><drillLink><drillTargetContext><parameterContext parameter="pEndDate"/></drillTargetContext><drillSourceContext><parameterContext parameter="pEndDateTime"/></drillSourceContext></drillLink></drillLinks></drillTarget></reportDrill></reportDrills><style><defaultStyles><defaultStyle refStyle="hy"/></defaultStyles></style></textItem></contents></crosstabNodeMember></crosstabNodeMembers></crosstabNode><crosstabNode><crosstabNodeMembers><crosstabNodeMember refDataItem="Total(User ID)" edgeLocation="e4"><style><defaultStyles><defaultStyle refStyle="ol"/></defaultStyles></style><contents><textItem><dataSource><dataItemLabel refDataItem="Total(User ID)"/></dataSource></textItem></contents><factCell><style><defaultStyles><defaultStyle refStyle="ov"/></defaultStyles></style></factCell></crosstabNodeMember></crosstabNodeMembers></crosstabNode></crosstabRows><crosstabColumns><crosstabNode><crosstabNestedNodes><crosstabNode><crosstabNodeMembers><crosstabNodeMember refDataItem="LPN" edgeLocation="e2"><style><defaultStyles><defaultStyle refStyle="ml"/></defaultStyles></style><contents><textItem><dataSource><memberCaption/></dataSource></textItem></contents></crosstabNodeMember></crosstabNodeMembers></crosstabNode></crosstabNestedNodes><crosstabNodeMembers><crosstabNodeMember refDataItem="FACILITY" edgeLocation="e3"><style><defaultStyles><defaultStyle refStyle="ml"/></defaultStyles></style><contents><textItem><dataSource><memberCaption/></dataSource></textItem></contents></crosstabNodeMember></crosstabNodeMembers></crosstabNode></crosstabColumns><crosstabIntersections><crosstabIntersection row="e1" column="e2"><style><CSS value="text-align:center"/></style></crosstabIntersection><crosstabIntersection row="e4" column="e2"><style><CSS value="text-align:center"/></style></crosstabIntersection></crosstabIntersections><defaultMeasure refDataItem="LPN"/></crosstab></contents><style><CSS value="padding-right:400px"/></style></tableCell></tableCells></tableRow></tableRows></table></contents>
 								</pageBody>
 							<pageHeader><contents><textItem><dataSource><staticValue>INBOUND USER DASHBOARD</staticValue></dataSource></textItem><block>
 			<contents><image>
@@ -710,7 +819,8 @@ LEFT OUTER JOIN (
 ) s ON ptt.user_id = s.user_name
 WHERE TRAN_TYPE = '300'
   AND TRAN_CODE = '005'
-    and s.SHIFT_CODE in (#Promptmany('pShift')#)
+  and MENU_OPTN_NAME = 'Fill Actv - Truck'
+and s.SHIFT_CODE in (#Promptmany('pShift')#)
     AND CAST(ptt.END_DATE + INTERVAL '3' HOUR AS TIMESTAMP) &gt;= 
         CAST(TO_DATE(SUBSTR(#Prompt('pStartDateTime')#, 0, 19), 'YYYY-MM-DD"T"HH24:mi:ss') AS TIMESTAMP)
     AND CAST(ptt.END_DATE + INTERVAL '3' HOUR AS TIMESTAMP) &lt;= 
@@ -845,13 +955,13 @@ AND CAST(ptt.END_DATE + INTERVAL '3' HOUR AS timestamp) &gt;= CAST(TO_DATE(SUBST
     lhh.dsp_locn AS "From Locn", 
     lh.dsp_locn AS "To Locn",
     CASE 
-        WHEN lhh.dsp_locn = 'PUT-LA-NE-002' THEN 'Mississauga'
-        WHEN lhh.dsp_locn = 'PUT-LA-NE-005' THEN 'Milton'
+        WHEN lh.dsp_locn like 'CR%' OR  lh.dsp_locn like 'DP%' THEN 'Mississauga'
+        WHEN lh.dsp_locn like 'MC%'  THEN 'Milton'
         ELSE 'Other'
     END AS Facility
 FROM PROD_TRKG_TRAN ptt
-INNER JOIN locn_hdr lh ON ptt.TO_LOCN = lh.locn_id
-INNER JOIN locn_hdr lhh ON ptt.FROM_Locn = lhh.locn_id
+inner JOIN locn_hdr lh ON ptt.TO_LOCN = lh.locn_id
+inner JOIN locn_hdr lhh ON ptt.FROM_Locn = lhh.locn_id
 LEFT OUTER JOIN (
     SELECT 
         uu.user_name, 
@@ -870,16 +980,23 @@ LEFT OUTER JOIN (
 ) s ON ptt.user_id = s.user_name
   where TRAN_TYPE = '200'
   and TRAN_CODE = '001'
-  AND (lhh.dsp_locn IN ('PUT-LA-NE-002') OR lhh.dsp_locn IN ('PUT-LA-NE-005'))
-  AND lh.work_grp IN ('MRAK','CRAK','PRAK','MPDK')
-  AND lh.dsp_locn NOT LIKE 'PUT%'
+  --AND (lhh.dsp_locn IN ('PUT-LA-NE-002') OR lhh.dsp_locn IN ('PUT-LA-NE-005'))
+--  AND lh.work_grp IN ('MRAK','CRAK','PRAK','MPDK')
+AND (lh.dsp_locn LIKE 'CR%' 
+     OR lh.dsp_locn LIKE 'MC%' 
+     OR lh.dsp_locn LIKE 'MP%' 
+     OR lh.dsp_locn LIKE 'DP%')
+AND (lhh.dsp_locn NOT LIKE 'CR%' 
+     AND lhh.dsp_locn NOT LIKE 'MC%' 
+     AND lhh.dsp_locn NOT LIKE 'MP%' 
+     AND lhh.dsp_locn NOT LIKE 'DP%')
     and s.SHIFT_CODE in (#Promptmany('pShift')#)
   AND CAST(ptt.END_DATE + INTERVAL '3' HOUR AS timestamp) &gt;= CAST(TO_DATE(SUBSTR(#Prompt('pStartDateTime')#, 0, 19), 'YYYY-MM-DD"T"HH24:mi:ss') AS timestamp)
   AND CAST(ptt.END_DATE + INTERVAL '3' HOUR AS timestamp) &lt;= CAST(TO_DATE(SUBSTR(#Prompt('pEndDateTime')#, 0, 19), 'YYYY-MM-DD"T"HH24:mi:ss') AS timestamp)
-  AND CASE 
-          WHEN lhh.dsp_locn = 'PUT-LA-NE-002' THEN 'Mississauga'
-          WHEN lhh.dsp_locn = 'PUT-LA-NE-005' THEN 'Milton'
-          ELSE 'Other'
+  AND     CASE 
+        WHEN lh.dsp_locn like 'CR%' OR  lh.dsp_locn like 'DP%' THEN 'Mississauga'
+        WHEN lh.dsp_locn like 'MC%'  THEN 'Milton'
+        ELSE 'Other'
     END IN (#Promptmany('pTote', 'string', '''Milton'', ''Mississauga''')#)</sqlText>
 		<mdProjectedItems><mdProjectedItem name="User ID"/><mdProjectedItem name="SHIFT_CODE"/><mdProjectedItem name="date and time"/><mdProjectedItem name="Date"/><mdProjectedItem name="Time"/><mdProjectedItem name="LPN"/><mdProjectedItem name="From Locn"/><mdProjectedItem name="To Locn"/><mdProjectedItem name="FACILITY"/></mdProjectedItems></sqlQuery></source>
 			<selection><dataItem name="User ID"><expression>[SQL6].[User ID]</expression></dataItem><dataItem name="SHIFT_CODE"><expression>[SQL6].[SHIFT_CODE]</expression></dataItem><dataItem name="date and time"><expression>[SQL6].[date and time]</expression></dataItem><dataItem name="Date"><expression>[SQL6].[Date]</expression></dataItem><dataItem name="Time"><expression>[SQL6].[Time]</expression></dataItem><dataItem name="LPN" aggregate="countDistinct" sort="descending"><expression>[SQL6].[LPN]</expression></dataItem><dataItem name="From Locn"><expression>[SQL6].[From Locn]</expression></dataItem><dataItem name="To Locn"><expression>[SQL6].[To Locn]</expression></dataItem><dataItem name="FACILITY"><expression>[SQL6].[FACILITY]</expression></dataItem><dataItemEdgeSummary solveOrder="1" refDataItem="User ID" aggregateMethod="total" name="Total(User ID)" label="Total"/></selection>
@@ -903,4 +1020,56 @@ LEFT OUTER JOIN (
 from dual connect by rownum &lt;= 12</sqlText>
 		<mdProjectedItems><mdProjectedItem name="FACILITY"/></mdProjectedItems></sqlQuery></source>
 			<selection><dataItem name="FACILITY"><expression>[SQL7].[FACILITY]</expression></dataItem></selection>
+		</query><query name="Fill Actv User Dir">
+			<source>
+				
+			<sqlQuery name="User dir" dataSource="WMOS">
+			<sqlText>        SELECT 
+    ptt.user_id AS "User ID",
+        s.SHIFT_CODE,
+    TO_CHAR(ptt.END_DATE + INTERVAL '3' HOUR) AS "date and time",
+    TO_CHAR(ptt.END_DATE + INTERVAL '3' HOUR, 'DD-MON-YYYY') AS "Date",
+    TO_CHAR(ptt.END_DATE + INTERVAL '3' HOUR, 'HH24:MI:SS') AS "Time",
+    ptt.cntr_nbr AS "LPN",
+    lh.dsp_locn AS "To Locn",
+    CASE 
+        WHEN lh.dsp_locn LIKE 'M%' THEN 'Milton'
+        WHEN lh.dsp_locn LIKE 'AS%' OR lh.dsp_locn LIKE 'PA%' THEN 'Mississauga'
+        ELSE lh.work_grp
+    END AS Facility
+FROM PROD_TRKG_TRAN ptt
+left JOIN locn_hdr lh ON ptt.TO_LOCN = lh.locn_id
+LEFT OUTER JOIN (
+    SELECT 
+        uu.user_name, 
+        ed.emp_id, 
+        s.shift_code, 
+        ed.shift_id, 
+        SUBSTR(s.shift_code, 0, 1) AS Shift 
+    FROM 
+        (SELECT emp_id, shift_id, RANK() OVER (PARTITION BY emp_id ORDER BY MAX(eff_date_time) DESC) AS rnk 
+         FROM wm.e_emp_dtl 
+         WHERE eff_date_time &lt;= TRUNC(SYSDATE) 
+         GROUP BY emp_id, shift_id) ed
+    INNER JOIN wm.ucl_user uu ON ed.emp_id = uu.ucl_user_id
+    INNER JOIN wm.e_shift s ON ed.shift_id = s.shift_id
+    WHERE rnk = 1
+) s ON ptt.user_id = s.user_name
+WHERE TRAN_TYPE = '300'
+  AND TRAN_CODE = '005'
+  and MENU_OPTN_NAME = 'Fill Actv User Dir'
+and s.SHIFT_CODE in (#Promptmany('pShift')#)
+    AND CAST(ptt.END_DATE + INTERVAL '3' HOUR AS TIMESTAMP) &gt;= 
+        CAST(TO_DATE(SUBSTR(#Prompt('pStartDateTime')#, 0, 19), 'YYYY-MM-DD"T"HH24:mi:ss') AS TIMESTAMP)
+    AND CAST(ptt.END_DATE + INTERVAL '3' HOUR AS TIMESTAMP) &lt;= 
+        CAST(TO_DATE(SUBSTR(#Prompt('pEndDateTime')#, 0, 19), 'YYYY-MM-DD"T"HH24:mi:ss') AS TIMESTAMP)
+    AND (
+         CASE 
+        WHEN lh.dsp_locn LIKE 'M%' THEN 'Milton'
+        WHEN lh.dsp_locn LIKE 'AS%' OR lh.dsp_locn LIKE 'PA%' THEN 'Mississauga'
+        ELSE lh.work_grp
+        END IN (#Promptmany('pTote', 'string', '''Milton'', ''Mississauga''')#)
+    )</sqlText>
+		<mdProjectedItems><mdProjectedItem name="User ID"/><mdProjectedItem name="SHIFT_CODE"/><mdProjectedItem name="date and time"/><mdProjectedItem name="Date"/><mdProjectedItem name="Time"/><mdProjectedItem name="LPN"/><mdProjectedItem name="To Locn"/><mdProjectedItem name="FACILITY"/></mdProjectedItems></sqlQuery></source>
+			<selection><dataItem name="User ID"><expression>[User dir].[User ID]</expression></dataItem><dataItem name="SHIFT_CODE"><expression>[User dir].[SHIFT_CODE]</expression></dataItem><dataItem name="date and time"><expression>[User dir].[date and time]</expression></dataItem><dataItem name="Date"><expression>[User dir].[Date]</expression></dataItem><dataItem name="Time"><expression>[User dir].[Time]</expression></dataItem><dataItem name="LPN" aggregate="countDistinct" sort="descending"><expression>[User dir].[LPN]</expression></dataItem><dataItem name="To Locn"><expression>[User dir].[To Locn]</expression></dataItem><dataItem name="FACILITY"><expression>[User dir].[FACILITY]</expression></dataItem><dataItemEdgeSummary solveOrder="1" refDataItem="User ID" aggregateMethod="total" name="Total(User ID)" label="Total"/></selection>
 		</query></queries><reportName>INBOUND_USER_DASHBOARD</reportName></report>
