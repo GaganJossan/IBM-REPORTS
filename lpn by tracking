@@ -1,0 +1,155 @@
+<report xmlns="http://developer.cognos.com/schemas/report/8.0/" useStyleVersion="10" expressionLocale="en-us">
+				<modelPath>/content/folder[@name='lululemon packages']/package[@name='WMOS']/model[@name='2015-01-29T21:59:28.146Z']</modelPath>
+				<drillBehavior modelBasedDrillThru="true"/>
+				<layouts>
+					<layout>
+						<reportPages>
+							<page name="Page1">
+								<style>
+									<defaultStyles>
+										<defaultStyle refStyle="pg"/>
+									</defaultStyles>
+								</style>
+								<pageBody>
+									<style>
+										<defaultStyles>
+											<defaultStyle refStyle="pb"/>
+										</defaultStyles>
+									</style>
+									<contents><list horizontalPagination="true" refQuery="Query1" name="List1">
+			
+			
+			
+			<noDataHandler>
+				<contents>
+					<block>
+						<contents>
+							<textItem>
+								<dataSource>
+									<staticValue>No Data Available</staticValue>
+								</dataSource>
+								<style>
+									<CSS value="padding:10px 18px;"/>
+								</style>
+							</textItem>
+						</contents>
+					</block>
+				</contents>
+			</noDataHandler>
+			<style>
+				<CSS value="border-collapse:collapse;font-weight:normal"/>
+				<defaultStyles>
+					<defaultStyle refStyle="ls"/>
+				</defaultStyles>
+			</style>
+		<listColumns><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles></style><contents><textItem><dataSource><dataItemLabel refDataItem="TC_LPN_ID"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles></style><contents><textItem><dataSource><dataItemValue refDataItem="TC_LPN_ID"/></dataSource></textItem></contents></listColumnBody></listColumn><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles></style><contents><textItem><dataSource><dataItemLabel refDataItem="LPN_FACILITY_STATUS"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles></style><contents><textItem><dataSource><dataItemValue refDataItem="LPN_FACILITY_STATUS"/></dataSource></textItem></contents></listColumnBody></listColumn><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles></style><contents><textItem><dataSource><dataItemLabel refDataItem="STATUS_DESCRIPTION"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles></style><contents><textItem><dataSource><dataItemValue refDataItem="STATUS_DESCRIPTION"/></dataSource></textItem></contents></listColumnBody></listColumn></listColumns><sortList><sortItem refDataItem="STATUS_DESCRIPTION" sortOrder="ascending"/></sortList></list></contents>
+								</pageBody>
+							</page>
+						</reportPages>
+					<promptPages><page name="Prompt Page1">
+			<pageHeader>
+				<contents>
+					<block>
+						<contents>
+							<textItem>
+								<dataSource>
+									<staticValue/>
+								</dataSource>
+								<style>
+									<defaultStyles>
+										<defaultStyle refStyle="tt"/>
+									</defaultStyles>
+								</style>
+							</textItem>
+						</contents>
+						<style>
+							<defaultStyles>
+								<defaultStyle refStyle="ta"/>
+							</defaultStyles>
+						</style>
+					</block>
+				</contents>
+				<style>
+					<defaultStyles>
+						<defaultStyle refStyle="hp"/>
+					</defaultStyles>
+				</style>
+			</pageHeader>
+			<pageBody>
+				<contents><textBox parameter="pTote" numbersOnly="false" multiSelect="true" range="false" required="true" multiLine="true"/></contents>
+				<style>
+					<defaultStyles>
+						<defaultStyle refStyle="py"/>
+					</defaultStyles>
+				</style>
+			</pageBody>
+			<pageFooter>
+				<contents>
+					<promptButton type="cancel">
+						<contents/>
+						<style>
+							<defaultStyles>
+								<defaultStyle refStyle="bp"/>
+							</defaultStyles>
+						</style>
+					</promptButton>
+					<promptButton type="back">
+						<contents/>
+						<style>
+							<defaultStyles>
+								<defaultStyle refStyle="bp"/>
+							</defaultStyles>
+						</style>
+					</promptButton>
+					<promptButton type="next">
+						<contents/>
+						<style>
+							<defaultStyles>
+								<defaultStyle refStyle="bp"/>
+							</defaultStyles>
+						</style>
+					</promptButton>
+					<promptButton type="finish">
+						<contents/>
+						<style>
+							<defaultStyles>
+								<defaultStyle refStyle="bp"/>
+							</defaultStyles>
+						</style>
+					</promptButton>
+				</contents>
+				<style>
+					<defaultStyles>
+						<defaultStyle refStyle="fp"/>
+					</defaultStyles>
+				</style>
+			</pageFooter>
+			<style>
+				<defaultStyles>
+					<defaultStyle refStyle="pp"/>
+				</defaultStyles>
+			</style>
+		</page></promptPages></layout>
+				</layouts>
+			<XMLAttributes><XMLAttribute name="RS_CreateExtendedDataItems" value="true" output="no"/><XMLAttribute name="listSeparator" value="," output="no"/><XMLAttribute name="RS_modelModificationTime" value="2015-01-29T21:59:28.244Z" output="no"/></XMLAttributes><queries><query name="Query1">
+			<source>
+				
+			<sqlQuery name="SQL1" dataSource="WMOS">
+			<sqlText>SELECT 
+    TC_LPN_ID,
+    LPN_FACILITY_STATUS,
+    CASE 
+        WHEN LPN_FACILITY_STATUS = 20 THEN 'Packed'
+        WHEN LPN_FACILITY_STATUS = 30 THEN 'Weighed'
+        WHEN LPN_FACILITY_STATUS = 40 THEN 'Manifested'
+        WHEN LPN_FACILITY_STATUS = 50 THEN 'Loaded on truck'
+        WHEN LPN_FACILITY_STATUS = 89 THEN 'Completed VAS'
+        WHEN LPN_FACILITY_STATUS = 90 THEN 'Shipped'
+        WHEN LPN_FACILITY_STATUS = 99 THEN 'Cancelled'
+        ELSE 'Unknown Status'
+    END AS Status_Description
+FROM wm.lpn
+WHERE ALT_TRACKING_NBR IN (#Promptmany('pTote')#)</sqlText>
+		<mdProjectedItems><mdProjectedItem name="TC_LPN_ID"/><mdProjectedItem name="LPN_FACILITY_STATUS"/><mdProjectedItem name="STATUS_DESCRIPTION"/></mdProjectedItems></sqlQuery></source>
+			<selection><dataItem name="TC_LPN_ID"><expression>[SQL1].[TC_LPN_ID]</expression></dataItem><dataItem name="LPN_FACILITY_STATUS"><expression>[SQL1].[LPN_FACILITY_STATUS]</expression></dataItem><dataItem name="STATUS_DESCRIPTION"><expression>[SQL1].[STATUS_DESCRIPTION]</expression></dataItem></selection>
+		</query></queries><reportName>LPN BY TRACKING</reportName></report>
