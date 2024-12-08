@@ -1,0 +1,308 @@
+<report xmlns="http://developer.cognos.com/schemas/report/8.0/" useStyleVersion="10" expressionLocale="en-us">
+				<drillBehavior modelBasedDrillThru="true"/>
+				<layouts>
+					<layout>
+						<reportPages>
+							<page name="Page1">
+								<style>
+									<defaultStyles>
+										<defaultStyle refStyle="pg"/>
+									</defaultStyles>
+									<CSS value="border-collapse: collapse;"/>
+								</style>
+								<pageHeader>
+									<style>
+										<defaultStyles>
+											<defaultStyle refStyle="ph"/>
+										</defaultStyles>
+										<CSS value="padding-bottom:10px;"/>
+									</style>
+									<contents>
+										<block name="RTTitleBlock"><style><defaultStyles><defaultStyle refStyle="ta"/></defaultStyles><CSS value="font-size:22pt;text-align:left"/></style>
+											<contents>
+												
+											<table><style><defaultStyles><defaultStyle refStyle="tb"/></defaultStyles><CSS value="border-collapse:collapse;width:100%"/></style><tableRows><tableRow><tableCells><tableCell><contents><table><style><defaultStyles><defaultStyle refStyle="tb"/></defaultStyles><CSS value="border-collapse:collapse;width:100%"/></style><tableRows><tableRow><tableCells><tableCell><contents><textItem><dataSource><staticValue>STAGE BY ORDER</staticValue></dataSource><style><CSS value="font-weight:bold;color:red;font-size:22pt;text-decoration:underline"/></style></textItem></contents></tableCell></tableCells></tableRow><tableRow><tableCells><tableCell><contents/></tableCell></tableCells></tableRow></tableRows></table></contents></tableCell><tableCell><contents><table><style><defaultStyles><defaultStyle refStyle="tb"/></defaultStyles><CSS value="border-collapse:collapse;width:100%;border:1pt solid black"/></style><tableRows><tableRow><tableCells><tableCell><contents><textItem><dataSource><staticValue>Facility</staticValue></dataSource></textItem></contents></tableCell><tableCell><contents><singleton refQuery="Facilitity" name="Singleton2">
+			<contents><textItem><dataSource><dataItemValue refDataItem="Facility_Name"/></dataSource></textItem></contents>
+		</singleton></contents></tableCell></tableCells></tableRow><tableRow><tableCells><tableCell><contents><textItem><dataSource><staticValue>Owner</staticValue></dataSource></textItem></contents></tableCell><tableCell><contents><textItem><dataSource><staticValue>ENGINEERING</staticValue></dataSource></textItem></contents></tableCell></tableCells></tableRow><tableRow><tableCells><tableCell><contents><textItem><dataSource><staticValue>User ID</staticValue></dataSource></textItem></contents></tableCell><tableCell><contents><singleton name="Singleton1" refQuery="User">
+			<contents><textItem><dataSource><dataItemValue refDataItem="User"/></dataSource></textItem></contents>
+		</singleton></contents></tableCell></tableCells></tableRow></tableRows></table></contents></tableCell><tableCell><contents><image>
+			<dataSource>
+				<staticValue>https://1000logos.net/wp-content/uploads/2017/08/Lululemon-Logo.png</staticValue>
+			</dataSource>
+		<style><CSS value="height:80px"/></style></image></contents><style><CSS value="text-align:right"/></style></tableCell></tableCells></tableRow></tableRows></table></contents>
+										</block>
+										
+										
+									<table><style><defaultStyles><defaultStyle refStyle="tb"/></defaultStyles><CSS value="border-collapse:collapse;width:100%"/></style><tableRows><tableRow><tableCells><tableCell><contents><textItem><dataSource><staticValue>Ready to invoice is based on last updated cutoff time for canada 24hrs and US 48 hrs.</staticValue></dataSource></textItem></contents></tableCell><tableCell><contents/><style><CSS value="width:240px"/></style></tableCell></tableCells></tableRow></tableRows></table></contents>
+								</pageHeader>
+								<pageBody><style><defaultStyles><defaultStyle refStyle="pb"/></defaultStyles></style>
+									<contents><list horizontalPagination="true" refQuery="Query1" name="List1">
+			
+			
+			
+			<noDataHandler>
+				<contents>
+					<block>
+						<contents>
+							<textItem>
+								<dataSource>
+									<staticValue>No Data Available</staticValue>
+								</dataSource>
+								<style>
+									<CSS value="padding:10px 18px;"/>
+								</style>
+							</textItem>
+						</contents>
+					</block>
+				</contents>
+			</noDataHandler>
+			<style>
+				<CSS value="border-collapse:collapse;text-align:center"/>
+				<defaultStyles>
+					<defaultStyle refStyle="ls"/>
+				</defaultStyles>
+			</style>
+		<listColumns><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles><CSS value="text-align:center;font-weight:bold;font-size:12pt;background-color:#99CCFF;border:1pt solid black"/></style><contents><textItem><dataSource><dataItemLabel refDataItem="TC_ORDER_ID"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles><CSS value="text-align:center;font-size:10pt;vertical-align:middle"/></style><contents><textItem><dataSource><dataItemValue refDataItem="TC_ORDER_ID"/></dataSource></textItem></contents><listColumnRowSpan refDataItem="TC_ORDER_ID"/></listColumnBody></listColumn><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles><CSS value="text-align:center;font-weight:bold;font-size:12pt;background-color:#99CCFF;border:1pt solid black"/></style><contents><textItem><dataSource><dataItemLabel refDataItem="ORDER_STATUS"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles><CSS value="text-align:center;font-size:10pt;vertical-align:middle"/></style><contents><textItem><dataSource><dataItemValue refDataItem="ORDER_STATUS"/></dataSource></textItem></contents><listColumnRowSpan refDataItem="TC_ORDER_ID"/></listColumnBody></listColumn><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles><CSS value="text-align:center;font-weight:bold;font-size:12pt;background-color:#99CCFF;border:1pt solid black"/></style><contents><textItem><dataSource><dataItemLabel refDataItem="DO_QTY"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles><CSS value="text-align:center;font-size:10pt;vertical-align:middle"/></style><contents><textItem><dataSource><dataItemValue refDataItem="DO_QTY"/></dataSource></textItem></contents><listColumnRowSpan refDataItem="TC_ORDER_ID"/></listColumnBody></listColumn><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles><CSS value="text-align:center;font-weight:bold;font-size:12pt;background-color:#99CCFF;border:1pt solid black"/></style><contents><textItem><dataSource><dataItemLabel refDataItem="TC_LPN_ID"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles><CSS value="text-align:center;font-size:10pt;vertical-align:middle"/></style><contents><textItem><dataSource><dataItemValue refDataItem="TC_LPN_ID"/></dataSource></textItem></contents></listColumnBody></listColumn><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles><CSS value="text-align:center;font-weight:bold;font-size:12pt;background-color:#99CCFF;border:1pt solid black"/></style><contents><textItem><dataSource><dataItemLabel refDataItem="OLPN_STATUS"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles><CSS value="text-align:center;font-size:10pt;vertical-align:middle"/></style><contents><textItem><dataSource><dataItemValue refDataItem="OLPN_STATUS"/></dataSource></textItem></contents></listColumnBody></listColumn><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles><CSS value="text-align:center;font-weight:bold;font-size:12pt;background-color:#99CCFF;border:1pt solid black"/></style><contents><textItem><dataSource><dataItemLabel refDataItem="TOTAL_LPN_QTY"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles><CSS value="text-align:center;font-size:10pt;vertical-align:middle"/></style><contents><textItem><dataSource><dataItemValue refDataItem="TOTAL_LPN_QTY"/></dataSource></textItem></contents></listColumnBody></listColumn><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles><CSS value="text-align:center;font-weight:bold;font-size:12pt;background-color:#99CCFF;border:1pt solid black"/></style><contents><textItem><dataSource><dataItemLabel refDataItem="LANE_NAME"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles><CSS value="text-align:center;font-size:10pt;vertical-align:middle"/></style><contents><textItem><dataSource><dataItemValue refDataItem="LANE_NAME"/></dataSource></textItem></contents><listColumnRowSpan refDataItem="TC_ORDER_ID"/></listColumnBody></listColumn><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles><CSS value="text-align:center;font-weight:bold;font-size:12pt;background-color:#99CCFF;border:1pt solid black"/></style><contents><textItem><dataSource><dataItemLabel refDataItem="TRACKING_NBR"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles><CSS value="text-align:center;font-size:10pt;vertical-align:middle"/></style><contents><textItem><dataSource><dataItemValue refDataItem="TRACKING_NBR"/></dataSource></textItem></contents></listColumnBody></listColumn><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles><CSS value="text-align:center;font-weight:bold;font-size:12pt;background-color:#99CCFF;border:1pt solid black"/></style><contents><textItem><dataSource><dataItemLabel refDataItem="PALLET_ID"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles><CSS value="text-align:center;font-size:10pt;vertical-align:middle"/></style><contents><textItem><dataSource><dataItemValue refDataItem="PALLET_ID"/></dataSource></textItem></contents></listColumnBody></listColumn><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles><CSS value="text-align:center;font-weight:bold;font-size:12pt;background-color:#99CCFF;border:1pt solid black"/></style><contents><textItem><dataSource><dataItemLabel refDataItem="SHIPMENT_ID"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles><CSS value="text-align:center;font-size:10pt;vertical-align:middle"/></style><contents><textItem><dataSource><dataItemValue refDataItem="SHIPMENT_ID"/></dataSource></textItem></contents></listColumnBody></listColumn><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles><CSS value="text-align:center;font-weight:bold;font-size:12pt;background-color:#99CCFF;border:1pt solid black"/></style><contents><textItem><dataSource><dataItemLabel refDataItem="CURRENT_LOCN"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles><CSS value="text-align:center;font-size:10pt;vertical-align:middle"/></style><contents><textItem><dataSource><dataItemValue refDataItem="CURRENT_LOCN"/></dataSource></textItem></contents></listColumnBody></listColumn><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles><CSS value="text-align:center;font-weight:bold;font-size:12pt;background-color:#99CCFF;border:1pt solid black"/></style><contents><textItem><dataSource><dataItemLabel refDataItem="LAST_UPDATED_DTTM_ADJUSTED"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles><CSS value="text-align:center;font-size:10pt;vertical-align:middle"/></style><contents><textItem><dataSource><dataItemValue refDataItem="LAST_UPDATED_DTTM_ADJUSTED"/></dataSource></textItem></contents></listColumnBody></listColumn><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles><CSS value="text-align:center;font-weight:bold;font-size:12pt;background-color:#99CCFF;border:1pt solid black"/></style><contents><textItem><dataSource><dataItemLabel refDataItem="D_COUNTRY_CODE"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles><CSS value="text-align:center;font-size:10pt;vertical-align:middle"/></style><contents><textItem><dataSource><dataItemValue refDataItem="D_COUNTRY_CODE"/></dataSource></textItem></contents><listColumnRowSpan refDataItem="TC_ORDER_ID"/></listColumnBody></listColumn><listColumn><listColumnTitle><style><defaultStyles><defaultStyle refStyle="lt"/></defaultStyles><CSS value="text-align:center;font-weight:bold;font-size:12pt;background-color:#99CCFF;border:1pt solid black"/></style><contents><textItem><dataSource><dataItemLabel refDataItem="READY_TO_INVOICE"/></dataSource></textItem></contents></listColumnTitle><listColumnBody><style><defaultStyles><defaultStyle refStyle="lm"/></defaultStyles><CSS value="text-align:center;font-size:10pt;vertical-align:middle"/></style><contents><textItem><dataSource><dataItemValue refDataItem="READY_TO_INVOICE"/></dataSource></textItem></contents><conditionalStyleRefs><conditionalStyleRef refConditionalStyle="Conditional Style 1"/></conditionalStyleRefs></listColumnBody></listColumn></listColumns><listGroups><listGroup refDataItem="TC_ORDER_ID"><sortList><sortItem refDataItem="TC_ORDER_ID" sortOrder="ascending"/></sortList></listGroup></listGroups></list></contents>
+								</pageBody>
+								<pageFooter>
+									<contents>
+										<table>
+											<tableRows>
+												<tableRow>
+													<tableCells>
+														<tableCell>
+															<contents>
+																<date>
+																	<style>
+																		<dataFormat>
+																			<dateFormat/>
+																		</dataFormat>
+																	</style>
+																</date>
+															</contents>
+															<style>
+																<CSS value="vertical-align:top;text-align:left;width:25%;"/>
+															</style>
+														</tableCell>
+														<tableCell>
+															<contents>
+																<pageNumber/>
+															</contents>
+															<style>
+																<CSS value="vertical-align:top;text-align:center;width:50%;"/>
+															</style>
+														</tableCell>
+														<tableCell>
+															<contents>
+																<time>
+																	<style>
+																		<dataFormat>
+																			<timeFormat/>
+																		</dataFormat>
+																	</style>
+																</time>
+															</contents>
+															<style>
+																<CSS value="vertical-align:top;text-align:right;width:25%;"/>
+															</style>
+														</tableCell>
+													</tableCells>
+												</tableRow>
+											</tableRows>
+											<style>
+												<defaultStyles>
+													<defaultStyle refStyle="tb"/>
+												</defaultStyles>
+												<CSS value="border-collapse:collapse;width:100%;"/>
+											</style>
+										</table>
+									<table><style><defaultStyles><defaultStyle refStyle="tb"/></defaultStyles><CSS value="border-collapse:collapse;width:100%"/></style><tableRows><tableRow><tableCells><tableCell><contents><textItem name="RTTitle1"><style><defaultStyles><defaultStyle refStyle="tt"/></defaultStyles></style>
+													<dataSource>
+														
+													<reportExpression>substring(ReportPath (),
+   position('=''', ReportPath ())+2,
+   position(''']', ReportPath ()) -  position('=''', ReportPath ())-2)
+ 
++ '\' +
+ 
+substring(substring(ReportPath (), position(''']', ReportPath ())+2 ,-1),
+   position('=''', substring(ReportPath (), position(''']', ReportPath ()) ,-1)),
+   position(''']', substring(ReportPath (), position(''']', ReportPath ()) +2,-1)) -  position('=''', substring(ReportPath (), position(''']', ReportPath ()) ,-1)))
+ 
++ '\' +
+ 
+substring(substring(substring(ReportPath (), position(''']', ReportPath ())+2 ,-1), position(''']', substring(ReportPath (), position(''']', ReportPath ())+2 ,-1))+2,-1),
+   position('=''',substring(substring(ReportPath (), position(''']', ReportPath ())+2 ,-1), position(''']', substring(ReportPath (), position(''']', ReportPath ())+2 ,-1)),-1)),
+   position(''']',substring(substring(ReportPath (), position(''']', ReportPath ())+2 ,-1), position(''']', substring(ReportPath (), position(''']', ReportPath ())+2 ,-1))+2,-1)) - position('=''',substring(substring(ReportPath (), position(''']', ReportPath ())+2 ,-1), position(''']', substring(ReportPath (), position(''']', ReportPath ())+2 ,-1)),-1)))
+ 
++'\'+ReportName ()
+</reportExpression></dataSource>
+												</textItem></contents></tableCell></tableCells></tableRow></tableRows></table></contents>
+									<style>
+										<defaultStyles>
+											<defaultStyle refStyle="pf"/>
+										</defaultStyles>
+										<CSS value="padding-top:10px;"/>
+									</style>
+								</pageFooter>
+							</page>
+						</reportPages>
+					<pageSetup orientation="landscape"/><promptPages><page name="Prompt Page1">
+			<pageHeader>
+				<contents>
+					<block>
+						<contents>
+							<textItem>
+								<dataSource>
+									<staticValue>STAGE BY ORDER</staticValue>
+								</dataSource>
+								<style>
+									<defaultStyles>
+										<defaultStyle refStyle="tt"/>
+									</defaultStyles>
+								<CSS value="color:red;font-weight:bold;font-size:18pt"/></style>
+							</textItem>
+						</contents>
+						<style>
+							<defaultStyles>
+								<defaultStyle refStyle="ta"/>
+							</defaultStyles>
+						<CSS value="margin-bottom:50px"/></style>
+					</block>
+				</contents>
+				<style>
+					<defaultStyles>
+						<defaultStyle refStyle="hp"/>
+					</defaultStyles>
+				</style>
+			</pageHeader>
+			<pageBody>
+				<contents><textBox parameter="pTote" numbersOnly="false" multiSelect="true" range="false" required="true" multiLine="true"/></contents>
+				<style>
+					<defaultStyles>
+						<defaultStyle refStyle="py"/>
+					</defaultStyles>
+				</style>
+			</pageBody>
+			<pageFooter>
+				<contents>
+					<promptButton type="cancel">
+						<contents/>
+						<style>
+							<defaultStyles>
+								<defaultStyle refStyle="bp"/>
+							</defaultStyles>
+						</style>
+					</promptButton>
+					<promptButton type="back">
+						<contents/>
+						<style>
+							<defaultStyles>
+								<defaultStyle refStyle="bp"/>
+							</defaultStyles>
+						</style>
+					</promptButton>
+					<promptButton type="next">
+						<contents/>
+						<style>
+							<defaultStyles>
+								<defaultStyle refStyle="bp"/>
+							</defaultStyles>
+						</style>
+					</promptButton>
+					<promptButton type="finish">
+						<contents/>
+						<style>
+							<defaultStyles>
+								<defaultStyle refStyle="bp"/>
+							</defaultStyles>
+						</style>
+					</promptButton>
+				</contents>
+				<style>
+					<defaultStyles>
+						<defaultStyle refStyle="fp"/>
+					</defaultStyles>
+				</style>
+			</pageFooter>
+			<style>
+				<defaultStyles>
+					<defaultStyle refStyle="pp"/>
+				</defaultStyles>
+			</style>
+		</page></promptPages></layout>
+				</layouts>
+			<XMLAttributes><XMLAttribute name="RS_CreateExtendedDataItems" value="true" output="no"/><XMLAttribute name="RS_modelModificationTime" value="2015-01-29T21:59:28.244Z" output="no"/><XMLAttribute name="listSeparator" value="," output="no"/></XMLAttributes><reportName>Stage by Order</reportName><modelPath>/content/folder[@name='lululemon packages']/package[@name='WMOS']/model[@name='2015-01-29T21:59:28.146Z']</modelPath><queries><query name="User"><source><model/></source><selection><dataItem name="User"><expression>#sq($account.defaultName)#</expression></dataItem></selection></query><query name="Facilitity">
+			<source>
+				
+			<sqlQuery name="SQL15" dataSource="WMOS">
+			<sqlText>--Facility ID Query
+Select
+CASE WHEN "Facility_Name" = 'COL' THEN 'Columbus DC'
+WHEN "Facility_Name" = 'SUM' THEN 'Sumner DC'
+WHEN "Facility_Name" = 'DEL' THEN 'Delta DC'
+WHEN "Facility_Name" = 'TOR' THEN 'Toronto DC'
+WHEN "Facility_Name" = 'AUS' THEN 'Australia DC'
+ELSE "Facility_Name" END as "Facility_Name"
+FROM(SELECT distinct upper(substr(o_facility_name,1,3)) as "Facility_Name" from wm.orders where rownum =1)
+</sqlText>
+		<mdProjectedItems><mdProjectedItem name="Facility_Name"/></mdProjectedItems></sqlQuery></source>
+			<selection><dataItem name="Facility_Name"><expression>[SQL15].[Facility_Name]</expression></dataItem></selection>
+		</query><query name="Query1">
+			<source>
+				
+			<sqlQuery name="SQL1" dataSource="WMOS">
+			<sqlText>SELECT 
+    wm.lpn.tc_order_id AS tc_order_id,
+    CASE 
+        WHEN wm.orders.do_status = 130 THEN 'DC Allocated'
+        WHEN wm.orders.do_status = 140 THEN 'In Packing'
+        WHEN wm.orders.do_status = 150 THEN 'Packed'
+        WHEN wm.orders.do_status = 160 THEN 'Weighed'
+        WHEN wm.orders.do_status = 170 THEN 'Manifested'
+        WHEN wm.orders.do_status = 180 THEN 'Loaded'
+        WHEN wm.orders.do_status = 190 THEN 'Shipped'
+        WHEN wm.orders.do_status = 200 THEN 'Cancelled'
+        WHEN wm.orders.do_status = 185 THEN 'Partially Shipped'
+        WHEN wm.orders.do_status = 165 THEN 'Staged'
+        ELSE 'Unknown'
+    END AS Order_Status,
+    wm.orders.TOTAL_NBR_OF_UNITS as DO_Qty,
+    wm.lpn.tc_lpn_id,
+    CASE 
+        WHEN wm.lpn.lpn_facility_status = 10 THEN 'Printed'
+        WHEN wm.lpn.lpn_facility_status = 12 THEN 'Released'
+        WHEN wm.lpn.lpn_facility_status = 15 THEN 'In Packing'
+        WHEN wm.lpn.lpn_facility_status = 20 THEN 'Packed'
+        WHEN wm.lpn.lpn_facility_status = 30 THEN 'Weighed'
+        WHEN wm.lpn.lpn_facility_status = 40 THEN 'Manifested'
+        WHEN wm.lpn.lpn_facility_status = 50 THEN 'Loaded on truck'
+        WHEN wm.lpn.lpn_facility_status = 89 THEN 'Completed VAS'
+        WHEN wm.lpn.lpn_facility_status = 90 THEN 'Shipped'
+        WHEN wm.lpn.lpn_facility_status = 99 THEN 'Cancelled'
+        ELSE 'Unknown'
+    END AS Olpn_Status,
+    wm.lpn.TOTAL_LPN_QTY,
+    wm.orders.lane_name,
+    wm.lpn.tracking_nbr,
+    wm.lpn.tc_parent_lpn_id AS Pallet_ID,
+        wm.lpn.TC_SHIPMENT_ID as SHIPMENT_ID,
+            wm.locn_hdr.dsp_locn AS CURRENT_LOCN,
+    WM.LPN.LAST_UPDATED_DTTM + INTERVAL '3' HOUR AS LAST_UPDATED_DTTM_ADJUSTED,
+    wm.orders.D_COUNTRY_CODE,
+    CASE 
+        WHEN wm.orders.D_COUNTRY_CODE = 'CA' AND WM.LPN.LAST_UPDATED_DTTM + INTERVAL '3' HOUR &lt;= SYSTIMESTAMP - INTERVAL '24' HOUR THEN 'YES'
+        WHEN wm.orders.D_COUNTRY_CODE = 'US' AND WM.LPN.LAST_UPDATED_DTTM + INTERVAL '3' HOUR &lt;= SYSTIMESTAMP - INTERVAL '48' HOUR THEN 'YES'
+        ELSE 'NO'
+    END AS Ready_to_invoice
+FROM 
+    wm.lpn 
+    LEFT JOIN wm.locn_hdr ON wm.lpn.CURR_SUB_LOCN_ID = wm.locn_hdr.locn_id
+    JOIN wm.orders ON wm.lpn.tc_order_id = wm.orders.tc_order_id
+WHERE 
+    wm.lpn.tc_order_id IN (#Promptmany('pTote')#) -- Replace these with actual tc_order_id values
+    AND wm.lpn.lpn_facility_status in ('30','50','90')
+ORDER BY wm.orders.tc_order_id</sqlText>
+		<mdProjectedItems><mdProjectedItem name="TC_ORDER_ID"/><mdProjectedItem name="ORDER_STATUS"/><mdProjectedItem name="DO_QTY"/><mdProjectedItem name="TC_LPN_ID"/><mdProjectedItem name="OLPN_STATUS"/><mdProjectedItem name="TOTAL_LPN_QTY"/><mdProjectedItem name="LANE_NAME"/><mdProjectedItem name="TRACKING_NBR"/><mdProjectedItem name="PALLET_ID"/><mdProjectedItem name="SHIPMENT_ID"/><mdProjectedItem name="CURRENT_LOCN"/><mdProjectedItem name="LAST_UPDATED_DTTM_ADJUSTED"/><mdProjectedItem name="D_COUNTRY_CODE"/><mdProjectedItem name="READY_TO_INVOICE"/></mdProjectedItems></sqlQuery></source>
+			<selection><dataItem name="TC_ORDER_ID"><expression>[SQL1].[TC_ORDER_ID]</expression></dataItem><dataItem name="ORDER_STATUS"><expression>[SQL1].[ORDER_STATUS]</expression></dataItem><dataItem name="DO_QTY"><expression>[SQL1].[DO_QTY]</expression></dataItem><dataItem name="TC_LPN_ID"><expression>[SQL1].[TC_LPN_ID]</expression></dataItem><dataItem name="OLPN_STATUS"><expression>[SQL1].[OLPN_STATUS]</expression></dataItem><dataItem name="TOTAL_LPN_QTY"><expression>[SQL1].[TOTAL_LPN_QTY]</expression></dataItem><dataItem name="LANE_NAME"><expression>[SQL1].[LANE_NAME]</expression></dataItem><dataItem name="TRACKING_NBR"><expression>[SQL1].[TRACKING_NBR]</expression></dataItem><dataItem name="PALLET_ID"><expression>[SQL1].[PALLET_ID]</expression></dataItem><dataItem name="SHIPMENT_ID"><expression>[SQL1].[SHIPMENT_ID]</expression></dataItem><dataItem name="CURRENT_LOCN"><expression>[SQL1].[CURRENT_LOCN]</expression></dataItem><dataItem name="LAST_UPDATED_DTTM_ADJUSTED"><expression>[SQL1].[LAST_UPDATED_DTTM_ADJUSTED]</expression></dataItem><dataItem name="D_COUNTRY_CODE"><expression>[SQL1].[D_COUNTRY_CODE]</expression></dataItem><dataItem name="READY_TO_INVOICE"><expression>[SQL1].[READY_TO_INVOICE]</expression></dataItem></selection>
+		</query></queries><classStyles><classStyle name="cls1" label="Section Header"><CSS value="background-color:#333333;color:white;font-size:12pt;font-weight:bold;font-family:Arial;text-align:center"/></classStyle><classStyle name="cls2" label="General Header"><CSS value="font-weight:bold"/></classStyle></classStyles><namedConditionalStyles><stringsConditionalStyle name="Conditional Style 1"><conditionalDataItem refQuery="Query1" refDataItem="READY_TO_INVOICE"/><stringConditions><stringValueList selectedValues="false"><style><defaultStyles><defaultStyle refStyle="pd_5"/></defaultStyles></style><styleValues><styleValue>NO</styleValue></styleValues></stringValueList><stringValueList selectedValues="false"><style><defaultStyles><defaultStyle refStyle="pd_1"/></defaultStyles></style><styleValues><styleValue>YES</styleValue></styleValues></stringValueList></stringConditions><styleDefault/></stringsConditionalStyle></namedConditionalStyles></report>
