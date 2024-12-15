@@ -1,0 +1,550 @@
+<report xmlns="http://developer.cognos.com/schemas/report/8.0/" useStyleVersion="10" expressionLocale="en-us">
+	<drillBehavior modelBasedDrillThru="true"/>
+	<layouts>
+		<layout>
+			<reportPages>
+				<page name="Page1">
+					<style>
+						<defaultStyles>
+							<defaultStyle refStyle="pg"/>
+						</defaultStyles>
+						<CSS value="border-collapse: collapse;"/>
+					</style>
+					<pageHeader>
+						<style>
+							<defaultStyles>
+								<defaultStyle refStyle="ph"/>
+							</defaultStyles>
+							<CSS value="padding-bottom:15px"/>
+						</style>
+						<contents>
+							<table><style><defaultStyles><defaultStyle refStyle="tb"/></defaultStyles><CSS value="border-collapse:collapse;width:100%"/></style><tableRows><tableRow><tableCells><tableCell><contents><table><style><defaultStyles><defaultStyle refStyle="tb"/></defaultStyles><CSS value="border-collapse:collapse"/></style><tableRows><tableRow><tableCells><tableCell><contents><textItem name="RTTitle3"><style><defaultStyles><defaultStyle refStyle="tt"/></defaultStyles><CSS value="font-weight:bold;font-size:20pt;color:#C00720"/></style>
+																				<dataSource>
+																					<reportExpression>reportname()</reportExpression></dataSource>
+																			</textItem></contents></tableCell></tableCells></tableRow><tableRow><tableCells><tableCell><contents/></tableCell></tableCells></tableRow></tableRows></table></contents><style><CSS value="text-align:left;vertical-align:top;width:20%"/></style></tableCell><tableCell><contents/><style><CSS value="text-align:center;vertical-align:top;font-weight:bold;font-size:14pt"/></style></tableCell><tableCell><contents><table><style><defaultStyles><defaultStyle refStyle="tb"/></defaultStyles><CSS value="border-collapse:collapse"/></style><tableRows><tableRow><tableCells><tableCell><contents/><style><CSS value="padding-right:6px;padding-left:6px"/></style></tableCell><tableCell><contents><table><style><defaultStyles><defaultStyle refStyle="tb"/></defaultStyles><CSS value="border-collapse:collapse;width:100%;border:1pt solid black"/></style><tableRows><tableRow><tableCells><tableCell><contents><textItem><dataSource><staticValue>Facility</staticValue></dataSource></textItem></contents><style><CSS value="padding:1px 4px 1px 4px;background-color:#EEEEEE;border-right:1pt dotted gray"/></style></tableCell><tableCell><contents><singleton refQuery="Facilitity" name="Singleton3">
+																										<contents/>
+																									</singleton></contents><style><CSS value="padding:1px 4px 1px 4px"/></style></tableCell></tableCells></tableRow><tableRow><tableCells><tableCell><contents><textItem><dataSource><staticValue>Owner</staticValue></dataSource></textItem></contents><style><CSS value="padding:1px 4px 1px 4px;background-color:#EEEEEE;border-top:1pt dotted gray;border-bottom:1pt dotted gray"/></style></tableCell><tableCell><contents><textItem><dataSource><staticValue>ENGINEERING</staticValue></dataSource></textItem></contents><style><CSS value="padding:1px 4px 1px 4px;border-top:1pt dotted gray;border-bottom:1pt dotted gray;border-left:1pt dotted gray"/></style></tableCell></tableCells></tableRow><tableRow><tableCells><tableCell><contents><textItem><dataSource><staticValue>User ID</staticValue></dataSource></textItem></contents><style><CSS value="padding:1px 4px 1px 4px;background-color:#EEEEEE;border-bottom:1pt dotted gray"/></style></tableCell><tableCell><contents><singleton name="Singleton4" refQuery="User">
+																										<contents><textItem><dataSource><dataItemValue refDataItem="User"/></dataSource></textItem></contents>
+																									</singleton></contents><style><CSS value="padding:1px 4px 1px 4px;border-bottom:1pt dotted gray;border-left:1pt dotted gray"/></style></tableCell></tableCells></tableRow><tableRow><tableCells><tableCell><contents><textItem><dataSource><staticValue>Date</staticValue></dataSource></textItem></contents><style><CSS value="padding:1px 4px 1px 4px;background-color:#EEEEEE;border-right:1pt dotted gray"/></style></tableCell><tableCell><contents><date>
+																										<style><dataFormat><dateFormat pattern="MM/dd/yyyy"/></dataFormat></style></date></contents><style><CSS value="padding:1px 4px 1px 4px"/></style></tableCell></tableCells></tableRow></tableRows></table></contents><style><CSS value="text-align:center;vertical-align:middle;padding-right:25px;width:210px"/></style></tableCell><tableCell><contents><image>
+																				<dataSource>
+																					<staticValue>https://1000logos.net/wp-content/uploads/2017/08/Lululemon-Logo.png</staticValue>
+																				</dataSource>
+																				<style><CSS value="height:80px"/></style></image></contents></tableCell></tableCells></tableRow></tableRows></table></contents><style><CSS value="text-align:right;vertical-align:top;width:20%"/></style></tableCell></tableCells></tableRow></tableRows></table></contents>
+					</pageHeader>
+					<pageBody><style><defaultStyles><defaultStyle refStyle="pb"/></defaultStyles></style>
+						<contents><table><style><defaultStyles><defaultStyle refStyle="tb"/></defaultStyles><CSS value="border-collapse:collapse;width:100%"/></style><tableRows><tableRow><tableCells><tableCell><contents><combinationChart depth="50" showTooltips="true" maxHotspots="10000" refQuery="Query2" name="Combination Chart2">
+														<legend>
+															<legendPosition>
+																<relativePosition/>
+															</legendPosition>
+															<legendTitle refQuery="Query2">
+																<style>
+																	<defaultStyles>
+																		<defaultStyle refStyle="lx"/>
+																	</defaultStyles>
+																</style>
+															</legendTitle>
+															<style>
+																<defaultStyles>
+																	<defaultStyle refStyle="lg"/>
+																</defaultStyles>
+															</style>
+														</legend>
+														<ordinalAxis>
+															<axisTitle refQuery="Query2">
+																<style>
+																	<defaultStyles>
+																		<defaultStyle refStyle="at"/>
+																	</defaultStyles>
+																</style>
+															</axisTitle>
+															<axisLine color="black"/>
+															<style>
+																<defaultStyles>
+																	<defaultStyle refStyle="al"/>
+																</defaultStyles>
+															</style>
+														</ordinalAxis>
+														<numericalAxisY1>
+															<axisTitle refQuery="Query2">
+																<style>
+																	<defaultStyles>
+																		<defaultStyle refStyle="at"/>
+																	</defaultStyles>
+																</style>
+															</axisTitle>
+															<gridlines color="#cccccc"/>
+															<axisLine color="black"/>
+															<style>
+																<defaultStyles>
+																	<defaultStyle refStyle="al"/>
+																</defaultStyles>
+															</style>
+														</numericalAxisY1>
+														<combinationChartTypes>
+															<bar valueType="stacked"><chartNodes><chartNode><chartNodeMembers><chartNodeMember refDataItem="BUILDING"><chartContents><chartTextItem><dataSource><memberCaption/></dataSource></chartTextItem></chartContents></chartNodeMember></chartNodeMembers></chartNode></chartNodes></bar>
+														</combinationChartTypes>
+														<style>
+															<defaultStyles>
+																<defaultStyle refStyle="ch"/>
+															</defaultStyles>
+														</style>
+														<commonClusters><chartNodes><chartNode><chartNodeMembers><chartNodeMember refDataItem="Level"><chartContents><chartTextItem><dataSource><memberCaption/></dataSource></chartTextItem></chartContents><sortList><sortItem refDataItem="Qty Short" sortOrder="descending"/></sortList></chartNodeMember></chartNodeMembers></chartNode></chartNodes></commonClusters><defaultChartMeasure refDataItem="Qty Short"/><chartTitle refQuery="Query2"><style><defaultStyles><defaultStyle refStyle="ct"/></defaultStyles></style><chartContents><chartTextItem><dataSource><staticValue>Qty Short by Level</staticValue></dataSource></chartTextItem></chartContents></chartTitle><chartPalette><chartColor value="#6633CC"/><chartColor value="#339966"/><chartColor value="#333399"/><chartColor value="#66CC00"/><chartColor value="#CC9933"/><chartColor value="#993333"/><chartColor value="#CCCC00"/><chartColor value="#336633"/><chartColor value="#6699CC"/><chartColor value="#FF0033"/><chartColor value="#FF6633"/><chartColor value="#CC0099"/><chartColor value="#0033FF"/><chartColor value="#6666FF"/><chartColor value="#9900FF"/><chartColor value="#FFCC00"/><chartColor value="#999999"/></chartPalette></combinationChart>
+												</contents><style><CSS value="text-align:left"/></style></tableCell><tableCell><contents><combinationChart depth="50" showTooltips="true" maxHotspots="10000" refQuery="Query1" name="Combination Chart1">
+														<legend>
+															<legendPosition>
+																<relativePosition/>
+															</legendPosition>
+															<legendTitle refQuery="Query1">
+																<style>
+																	<defaultStyles>
+																		<defaultStyle refStyle="lx"/>
+																	</defaultStyles>
+																</style>
+															</legendTitle>
+															<style>
+																<defaultStyles>
+																	<defaultStyle refStyle="lg"/>
+																</defaultStyles>
+															</style>
+														</legend>
+														<ordinalAxis>
+															<axisTitle refQuery="Query1">
+																<style>
+																	<defaultStyles>
+																		<defaultStyle refStyle="at"/>
+																	</defaultStyles>
+																</style>
+															</axisTitle>
+															<axisLine color="black"/>
+															<style>
+																<defaultStyles>
+																	<defaultStyle refStyle="al"/>
+																</defaultStyles>
+															</style>
+														</ordinalAxis>
+														<numericalAxisY1>
+															<axisTitle refQuery="Query1">
+																<style>
+																	<defaultStyles>
+																		<defaultStyle refStyle="at"/>
+																	</defaultStyles>
+																</style>
+															</axisTitle>
+															<gridlines color="#cccccc"/>
+															<axisLine color="black"/>
+															<style>
+																<defaultStyles>
+																	<defaultStyle refStyle="al"/>
+																</defaultStyles>
+															</style>
+														</numericalAxisY1>
+														<combinationChartTypes>
+															<bar valueType="stacked"><chartNodes><chartNode><chartNodeMembers><chartNodeMember refDataItem="BUILDING"><chartContents><chartTextItem><dataSource><memberCaption/></dataSource></chartTextItem></chartContents></chartNodeMember></chartNodeMembers></chartNode></chartNodes></bar>
+														</combinationChartTypes>
+														<style>
+															<defaultStyles>
+																<defaultStyle refStyle="ch"/>
+															</defaultStyles>
+														</style>
+														<commonClusters><chartNodes><chartNode><chartNodeMembers><chartNodeMember refDataItem="Transaction"><chartContents><chartTextItem><dataSource><memberCaption/></dataSource></chartTextItem></chartContents><sortList><sortItem refDataItem="Transaction" sortOrder="descending"/></sortList></chartNodeMember></chartNodeMembers></chartNode></chartNodes></commonClusters><defaultChartMeasure refDataItem="Qty Short"/><chartPalette>
+															<chartGradient direction="down" fromColor="#134bea" toColor="#0b2982"/>
+															<chartGradient direction="down" fromColor="#50cb1c" toColor="#42982f"/>
+															<chartGradient direction="down" fromColor="#f2cd00" toColor="#f9be09"/>
+															<chartGradient direction="down" fromColor="#ff8a00" toColor="#de4f01"/>
+															<chartGradient direction="down" fromColor="#e01b1b" toColor="#ab0909"/>
+															<chartGradient direction="down" fromColor="#3d3d3d" toColor="#0a0a0a"/>
+															<chartGradient direction="down" fromColor="#bf38e1" toColor="#8a1dde"/>
+															<chartGradient direction="down" fromColor="#8514c7" toColor="#2e0072"/>
+															<chartGradient direction="down" fromColor="#0f8b03" toColor="#044a01"/>
+															<chartGradient direction="down" fromColor="#95bf14" toColor="#828c0b"/>
+															<chartGradient direction="down" fromColor="#4791da" toColor="#2060b7"/>
+															<chartGradient direction="down" fromColor="#76dde6" toColor="#2cb6c7"/>
+															<chartGradient direction="down" fromColor="#060d95" toColor="#06034f"/>
+															<chartGradient direction="down" fromColor="#c3550b" toColor="#a33a00"/>
+														</chartPalette>
+													<chartTitle refQuery="Query1"><style><defaultStyles><defaultStyle refStyle="ct"/></defaultStyles></style><chartContents><chartTextItem><dataSource><staticValue>Qty Short by Transaction</staticValue></dataSource></chartTextItem></chartContents></chartTitle></combinationChart></contents><style><CSS value="text-align:left"/></style></tableCell><tableCell><contents><combinationChart depth="50" showTooltips="true" maxHotspots="10000" refQuery="Query2" name="Combination Chart3">
+														<legend>
+															<legendPosition>
+																<relativePosition/>
+															</legendPosition>
+															<legendTitle refQuery="Query2">
+																<style>
+																	<defaultStyles>
+																		<defaultStyle refStyle="lx"/>
+																	</defaultStyles>
+																</style>
+															</legendTitle>
+															<style>
+																<defaultStyles>
+																	<defaultStyle refStyle="lg"/>
+																</defaultStyles>
+															</style>
+														</legend>
+														<ordinalAxis>
+															<axisTitle refQuery="Query2">
+																<style>
+																	<defaultStyles>
+																		<defaultStyle refStyle="at"/>
+																	</defaultStyles>
+																</style>
+															</axisTitle>
+															<axisLine color="black"/>
+															<style>
+																<defaultStyles>
+																	<defaultStyle refStyle="al"/>
+																</defaultStyles>
+															</style>
+														</ordinalAxis>
+														<numericalAxisY1>
+															<axisTitle refQuery="Query2">
+																<style>
+																	<defaultStyles>
+																		<defaultStyle refStyle="at"/>
+																	</defaultStyles>
+																</style>
+															</axisTitle>
+															<gridlines color="#cccccc"/>
+															<axisLine color="black"/>
+															<style>
+																<defaultStyles>
+																	<defaultStyle refStyle="al"/>
+																</defaultStyles>
+															</style>
+														</numericalAxisY1>
+														<combinationChartTypes>
+															<bar valueType="stacked"><chartNodes><chartNode><chartNodeMembers><chartNodeMember refDataItem="BUILDING"><chartContents><chartTextItem><dataSource><memberCaption/></dataSource></chartTextItem></chartContents></chartNodeMember></chartNodeMembers></chartNode></chartNodes></bar>
+														</combinationChartTypes>
+														<style>
+															<defaultStyles>
+																<defaultStyle refStyle="ch"/>
+															</defaultStyles>
+														</style>
+														<commonClusters><chartNodes><chartNode><chartNodeMembers><chartNodeMember refDataItem="Zone"><chartContents><chartTextItem><dataSource><memberCaption/></dataSource></chartTextItem></chartContents><sortList><sortItem refDataItem="Qty Short" sortOrder="descending"/></sortList></chartNodeMember></chartNodeMembers></chartNode></chartNodes></commonClusters><defaultChartMeasure refDataItem="Qty Short"/><chartTitle refQuery="Query2"><style><defaultStyles><defaultStyle refStyle="ct"/></defaultStyles></style><chartContents><chartTextItem><dataSource><staticValue>Qty Short by Zone</staticValue></dataSource></chartTextItem></chartContents></chartTitle></combinationChart>
+												</contents><style><CSS value="text-align:left"/></style></tableCell></tableCells></tableRow></tableRows></table><table><style><defaultStyles><defaultStyle refStyle="tb"/></defaultStyles><CSS value="border-collapse:collapse;width:100%"/></style><tableRows><tableRow><tableCells><tableCell><contents><textItem><dataSource><staticValue>Qty Short by User</staticValue></dataSource><style><CSS value="font-weight:bold;text-decoration:underline;color:red;height:5px;margin-bottom:5px"/></style></textItem><crosstab horizontalPagination="true" name="Crosstab1" refQuery="Query1" rowsPerPage="1000">
+			<crosstabCorner>
+				<contents><textItem><dataSource><staticValue>User - ID</staticValue></dataSource></textItem></contents>
+				<style>
+					
+				<CSS value="background-image:none;text-align:center;vertical-align:middle;font-weight:bold;font-size:9pt"/><defaultStyles><defaultStyle refStyle="ml"/></defaultStyles></style>
+			</crosstabCorner>
+			
+			
+			<noDataHandler>
+				<contents>
+					<block>
+						<contents>
+							<textItem>
+								<dataSource>
+									<staticValue>No Data Available</staticValue>
+								</dataSource>
+								<style>
+									<CSS value="padding:10px 18px;"/>
+								</style>
+							</textItem>
+						</contents>
+					</block>
+				</contents>
+			</noDataHandler>
+			<style>
+				<CSS value="border-collapse:collapse"/>
+				<defaultStyles>
+					<defaultStyle refStyle="xt"/>
+				</defaultStyles>
+			</style>
+		<crosstabFactCell><contents><textItem><dataSource><cellValue/></dataSource></textItem></contents><style><defaultStyles><defaultStyle refStyle="mv"/></defaultStyles></style></crosstabFactCell><crosstabRows><crosstabNode><crosstabNodeMembers><crosstabNodeMember refDataItem="Total(Picker User ID)" edgeLocation="e5"><style><defaultStyles><defaultStyle refStyle="ol"/></defaultStyles><CSS value="background-image:none;font-size:10pt;text-align:center;border:1pt solid black"/></style><contents><textItem><dataSource><dataItemLabel refDataItem="Total(Picker User ID)"/></dataSource></textItem></contents><factCell><style><defaultStyles><defaultStyle refStyle="ov"/></defaultStyles></style></factCell></crosstabNodeMember></crosstabNodeMembers></crosstabNode><crosstabNode><crosstabNodeMembers><crosstabNodeMember refDataItem="Picker User ID" edgeLocation="e1"><style><defaultStyles><defaultStyle refStyle="ml"/></defaultStyles><CSS value="background-image:none;font-weight:bold;font-size:9pt;text-align:center;border:1pt solid black"/></style><contents><textItem><dataSource><memberCaption/></dataSource></textItem></contents><sortList><sortItem refDataItem="Qty Short" sortOrder="descending"/></sortList></crosstabNodeMember></crosstabNodeMembers></crosstabNode></crosstabRows><crosstabColumns><crosstabNode><crosstabNestedNodes><crosstabNode><crosstabNodeMembers><crosstabNodeMember refDataItem="Date Shorted" edgeLocation="e3"><style><defaultStyles><defaultStyle refStyle="ml"/></defaultStyles><CSS value="background-image:none;font-weight:bold;font-size:9pt;text-align:center"/></style><contents><textItem><dataSource><memberCaption/></dataSource></textItem></contents></crosstabNodeMember></crosstabNodeMembers></crosstabNode></crosstabNestedNodes><crosstabNodeMembers><crosstabNodeMember refDataItem="BUILDING" edgeLocation="e2"><style><defaultStyles><defaultStyle refStyle="ml"/></defaultStyles><CSS value="background-image:none;font-weight:bold;font-size:9pt;text-align:center"/></style><contents><textItem><dataSource><memberCaption/></dataSource></textItem></contents></crosstabNodeMember></crosstabNodeMembers></crosstabNode><crosstabNode><crosstabNodeMembers><crosstabNodeMember refDataItem="Total(BUILDING)" edgeLocation="e8"><style><defaultStyles><defaultStyle refStyle="ol"/></defaultStyles><CSS value="background-image:none"/></style><contents><textItem><dataSource><dataItemLabel refDataItem="Total(BUILDING)"/></dataSource></textItem></contents><factCell><style><defaultStyles><defaultStyle refStyle="ov"/></defaultStyles></style></factCell></crosstabNodeMember></crosstabNodeMembers></crosstabNode></crosstabColumns><crosstabIntersections><crosstabIntersection row="e1" column="e8"><style><CSS value="font-weight:bold;border:1pt solid black"/></style></crosstabIntersection><crosstabIntersection row="e5" column="e8"><style><CSS value="border:1pt solid black"/></style></crosstabIntersection><crosstabIntersection row="e5" column="e3"><style><CSS value="border:1pt solid black"/></style></crosstabIntersection><crosstabIntersection row="e1" column="e3"><style><CSS value="border:1pt solid black"/></style></crosstabIntersection></crosstabIntersections><defaultMeasure refDataItem="Qty Short"/></crosstab></contents><style><CSS value="text-align:left;padding-top:20px;vertical-align:top"/></style></tableCell><tableCell><contents><textItem><dataSource><staticValue>Qty Short by Product Class</staticValue></dataSource><style><CSS value="font-weight:bold;color:red;text-decoration:underline;height:5px;margin-bottom:5px"/></style></textItem><crosstab horizontalPagination="true" name="Crosstab2" refQuery="Query1" rowsPerPage="1000">
+			<crosstabCorner>
+				<contents><textItem><dataSource><staticValue>Product class</staticValue></dataSource></textItem></contents>
+				
+			<style><defaultStyles><defaultStyle refStyle="ml"/></defaultStyles><CSS value="text-align:center;vertical-align:middle;font-size:9pt;font-weight:bold"/></style></crosstabCorner>
+			
+			
+			<noDataHandler>
+				<contents>
+					<block>
+						<contents>
+							<textItem>
+								<dataSource>
+									<staticValue>No Data Available</staticValue>
+								</dataSource>
+								<style>
+									<CSS value="padding:10px 18px;"/>
+								</style>
+							</textItem>
+						</contents>
+					</block>
+				</contents>
+			</noDataHandler>
+			<style>
+				<CSS value="border-collapse:collapse"/>
+				<defaultStyles>
+					<defaultStyle refStyle="xt"/>
+				</defaultStyles>
+			</style>
+		<defaultMeasure refDataItem="Qty Short"/><crosstabFactCell><contents><textItem><dataSource><cellValue/></dataSource></textItem></contents><style><defaultStyles><defaultStyle refStyle="mv"/></defaultStyles></style></crosstabFactCell><crosstabRows><crosstabNode><crosstabNodeMembers><crosstabNodeMember refDataItem="Total(PRODUCT_CLASS)" edgeLocation="e6"><style><defaultStyles><defaultStyle refStyle="ol"/></defaultStyles><CSS value="text-align:center;font-size:9pt;border:1pt solid black"/></style><contents><textItem><dataSource><dataItemLabel refDataItem="Total(PRODUCT_CLASS)"/></dataSource></textItem></contents><factCell><style><defaultStyles><defaultStyle refStyle="ov"/></defaultStyles></style></factCell></crosstabNodeMember></crosstabNodeMembers></crosstabNode><crosstabNode><crosstabNestedNodes><crosstabNode><crosstabNodeMembers><crosstabNodeMember refDataItem="DESCRIPTION" edgeLocation="e2"><style><defaultStyles><defaultStyle refStyle="ml"/></defaultStyles><CSS value="font-size:9pt;text-align:center;vertical-align:middle;font-weight:bold;border:1pt solid black"/></style><contents><textItem><dataSource><memberCaption/></dataSource></textItem></contents></crosstabNodeMember></crosstabNodeMembers></crosstabNode></crosstabNestedNodes><crosstabNodeMembers><crosstabNodeMember refDataItem="PRODUCT_CLASS" edgeLocation="e1"><style><defaultStyles><defaultStyle refStyle="ml"/></defaultStyles><CSS value="font-size:9pt;font-weight:bold;text-align:center;vertical-align:middle;border:1pt solid black"/></style><contents><textItem><dataSource><memberCaption/></dataSource></textItem></contents><sortList><sortItem refDataItem="Qty Short" sortOrder="descending"/></sortList></crosstabNodeMember></crosstabNodeMembers></crosstabNode></crosstabRows><crosstabColumns><crosstabNode><crosstabNestedNodes><crosstabNode><crosstabNodeMembers><crosstabNodeMember refDataItem="Date Shorted" edgeLocation="e4"><style><defaultStyles><defaultStyle refStyle="ml"/></defaultStyles><CSS value="font-size:9pt;font-weight:bold;text-align:center"/></style><contents><textItem><dataSource><memberCaption/></dataSource></textItem></contents></crosstabNodeMember></crosstabNodeMembers></crosstabNode></crosstabNestedNodes><crosstabNodeMembers><crosstabNodeMember refDataItem="BUILDING" edgeLocation="e3"><style><defaultStyles><defaultStyle refStyle="ml"/></defaultStyles><CSS value="font-size:9pt;font-weight:bold;text-align:center"/></style><contents><textItem><dataSource><memberCaption/></dataSource></textItem></contents></crosstabNodeMember></crosstabNodeMembers></crosstabNode><crosstabNode><crosstabNodeMembers><crosstabNodeMember refDataItem="Total(BUILDING)1" edgeLocation="e8"><style><defaultStyles><defaultStyle refStyle="ol"/></defaultStyles></style><contents><textItem><dataSource><dataItemLabel refDataItem="Total(BUILDING)1"/></dataSource></textItem></contents><factCell><style><defaultStyles><defaultStyle refStyle="ov"/></defaultStyles></style></factCell></crosstabNodeMember></crosstabNodeMembers></crosstabNode></crosstabColumns><crosstabIntersections><crosstabIntersection row="e2" column="e4"><style><CSS value="border:1pt solid black"/></style></crosstabIntersection><crosstabIntersection row="e2" column="e8"><style><CSS value="border:1pt solid black"/></style></crosstabIntersection><crosstabIntersection row="e6" column="e4"><style><CSS value="font-size:10pt;border:1pt solid black"/></style></crosstabIntersection><crosstabIntersection row="e6" column="e8"><style><CSS value="border:1pt solid black"/></style></crosstabIntersection></crosstabIntersections></crosstab></contents><style><CSS value="text-align:left;padding-top:20px;vertical-align:top"/></style></tableCell><tableCell><contents><textItem><dataSource><staticValue>Qty Short by Location</staticValue></dataSource><style><CSS value="font-weight:bold;color:red;text-decoration:underline;margin-bottom:5px;height:5px"/></style></textItem><crosstab horizontalPagination="true" name="Crosstab3" refQuery="Query1" rowsPerPage="1000">
+			<crosstabCorner>
+				<contents><textItem><dataSource><staticValue>Location</staticValue></dataSource></textItem></contents>
+				
+			<style><defaultStyles><defaultStyle refStyle="ml"/></defaultStyles><CSS value="text-align:center;vertical-align:middle;font-size:9pt;font-weight:bold"/></style></crosstabCorner>
+			
+			
+			<noDataHandler>
+				<contents>
+					<block>
+						<contents>
+							<textItem>
+								<dataSource>
+									<staticValue>No Data Available</staticValue>
+								</dataSource>
+								<style>
+									<CSS value="padding:10px 18px;"/>
+								</style>
+							</textItem>
+						</contents>
+					</block>
+				</contents>
+			</noDataHandler>
+			<style>
+				<CSS value="border-collapse:collapse"/>
+				<defaultStyles>
+					<defaultStyle refStyle="xt"/>
+				</defaultStyles>
+			</style>
+		<crosstabFactCell><contents><textItem><dataSource><cellValue/></dataSource></textItem></contents><style><defaultStyles><defaultStyle refStyle="mv"/></defaultStyles></style></crosstabFactCell><crosstabRows><crosstabNode><crosstabNodeMembers><crosstabNodeMember refDataItem="Total(Display Locn)" edgeLocation="e4"><style><defaultStyles><defaultStyle refStyle="ol"/></defaultStyles><CSS value="text-align:center;font-size:9pt;border:1pt solid black"/></style><contents><textItem><dataSource><dataItemLabel refDataItem="Total(Display Locn)"/></dataSource></textItem></contents><factCell><style><defaultStyles><defaultStyle refStyle="ov"/></defaultStyles></style></factCell></crosstabNodeMember></crosstabNodeMembers></crosstabNode><crosstabNode><crosstabNodeMembers><crosstabNodeMember refDataItem="Display Locn" edgeLocation="e1"><style><defaultStyles><defaultStyle refStyle="ml"/></defaultStyles><CSS value="font-weight:bold;font-size:9pt;text-align:center;border:1pt solid black"/></style><contents><textItem><dataSource><memberCaption/></dataSource></textItem></contents><sortList><sortItem refDataItem="Qty Short" sortOrder="descending"/></sortList></crosstabNodeMember></crosstabNodeMembers></crosstabNode></crosstabRows><defaultMeasure refDataItem="Qty Short"/><crosstabColumns><crosstabNode><crosstabNestedNodes><crosstabNode><crosstabNodeMembers><crosstabNodeMember refDataItem="Date Shorted" edgeLocation="e3"><style><defaultStyles><defaultStyle refStyle="ml"/></defaultStyles><CSS value="font-size:9pt;font-weight:bold;text-align:center"/></style><contents><textItem><dataSource><memberCaption/></dataSource></textItem></contents></crosstabNodeMember></crosstabNodeMembers></crosstabNode></crosstabNestedNodes><crosstabNodeMembers><crosstabNodeMember refDataItem="BUILDING" edgeLocation="e2"><style><defaultStyles><defaultStyle refStyle="ml"/></defaultStyles><CSS value="font-size:9pt;text-align:center;font-weight:bold"/></style><contents><textItem><dataSource><memberCaption/></dataSource></textItem></contents></crosstabNodeMember></crosstabNodeMembers></crosstabNode><crosstabNode><crosstabNodeMembers><crosstabNodeMember refDataItem="Total(BUILDING)2" edgeLocation="e6"><style><defaultStyles><defaultStyle refStyle="ol"/></defaultStyles></style><contents><textItem><dataSource><dataItemLabel refDataItem="Total(BUILDING)2"/></dataSource></textItem></contents><factCell><style><defaultStyles><defaultStyle refStyle="ov"/></defaultStyles></style></factCell></crosstabNodeMember></crosstabNodeMembers></crosstabNode></crosstabColumns><crosstabIntersections><crosstabIntersection row="e1" column="e3"><style><CSS value="border:1pt solid black"/></style></crosstabIntersection><crosstabIntersection row="e1" column="e6"><style><CSS value="border:1pt solid black"/></style></crosstabIntersection><crosstabIntersection row="e4" column="e3"><style><CSS value="border:1pt solid black"/></style></crosstabIntersection><crosstabIntersection row="e4" column="e6"><style><CSS value="border:1pt solid black"/></style></crosstabIntersection></crosstabIntersections></crosstab></contents><style><CSS value="text-align:left;padding-top:20px;vertical-align:top"/></style></tableCell></tableCells></tableRow></tableRows></table></contents>
+					</pageBody>
+				</page>
+			</reportPages>
+			<pageSetup orientation="landscape"/><promptPages><page name="Prompt Page1">
+					<pageHeader>
+						<contents>
+							<block>
+								<contents>
+									<textItem>
+										<dataSource>
+											<staticValue>Select Dates</staticValue>
+										</dataSource>
+										<style>
+											<defaultStyles>
+												<defaultStyle refStyle="tt"/>
+											</defaultStyles>
+										</style>
+									</textItem>
+								</contents>
+								<style>
+									<defaultStyles>
+										<defaultStyle refStyle="ta"/>
+									</defaultStyles>
+								</style>
+							</block>
+						</contents>
+						<style>
+							<defaultStyles>
+								<defaultStyle refStyle="hp"/>
+							</defaultStyles>
+						</style>
+					</pageHeader>
+					<pageBody>
+						<contents><table><style><defaultStyles><defaultStyle refStyle="tb"/></defaultStyles><CSS value="border-collapse:collapse"/></style><tableRows><tableRow><tableCells><tableCell><contents><textItem><dataSource><staticValue>Start Date:</staticValue></dataSource></textItem></contents></tableCell><tableCell><contents><textItem><dataSource><staticValue>End Date:</staticValue></dataSource></textItem></contents></tableCell><tableCell><contents/></tableCell></tableCells></tableRow><tableRow><tableCells><tableCell><contents><selectDateTime parameter="pStartDateTime" multiSelect="false" range="false" required="true"/></contents></tableCell><tableCell><contents><selectDateTime parameter="pEndDateTime" multiSelect="false" range="false" required="true"/></contents></tableCell><tableCell><contents/><style><CSS value="vertical-align:top;text-align:left"/></style></tableCell></tableCells></tableRow><tableRow><tableCells><tableCell><contents><textItem><dataSource><staticValue>Select Value</staticValue></dataSource></textItem></contents></tableCell><tableCell><contents/></tableCell><tableCell><contents/></tableCell></tableCells></tableRow><tableRow><tableCells><tableCell><contents><selectValue parameter="pFacility" multiSelect="true" range="false" required="false" refQuery="Facilitity" selectValueUI="checkboxGroup"><useItem refDataItem="FACILITY"><displayItem refDataItem="FACILITY"/></useItem></selectValue></contents></tableCell><tableCell><contents/></tableCell><tableCell><contents/></tableCell></tableCells></tableRow><tableRow><tableCells><tableCell><contents/></tableCell><tableCell><contents/></tableCell><tableCell><contents/></tableCell></tableCells></tableRow><tableRow><tableCells><tableCell><contents/></tableCell><tableCell><contents/></tableCell><tableCell><contents/></tableCell></tableCells></tableRow></tableRows></table></contents>
+						<style>
+							<defaultStyles>
+								<defaultStyle refStyle="py"/>
+							</defaultStyles>
+						</style>
+					</pageBody>
+					<pageFooter>
+						<contents>
+							<promptButton type="cancel">
+								<contents/>
+								<style>
+									<defaultStyles>
+										<defaultStyle refStyle="bp"/>
+									</defaultStyles>
+								</style>
+							</promptButton>
+							<promptButton type="back">
+								<contents/>
+								<style>
+									<defaultStyles>
+										<defaultStyle refStyle="bp"/>
+									</defaultStyles>
+								</style>
+							</promptButton>
+							<promptButton type="next">
+								<contents/>
+								<style>
+									<defaultStyles>
+										<defaultStyle refStyle="bp"/>
+									</defaultStyles>
+								</style>
+							</promptButton>
+							<promptButton type="finish">
+								<contents/>
+								<style>
+									<defaultStyles>
+										<defaultStyle refStyle="bp"/>
+									</defaultStyles>
+								</style>
+							</promptButton>
+						</contents>
+						<style>
+							<defaultStyles>
+								<defaultStyle refStyle="fp"/>
+							</defaultStyles>
+						</style>
+					</pageFooter>
+					<style>
+						<defaultStyles>
+							<defaultStyle refStyle="pp"/>
+						</defaultStyles>
+					</style>
+				</page></promptPages></layout>
+	</layouts>
+	<XMLAttributes><XMLAttribute name="RS_CreateExtendedDataItems" value="true" output="no"/><XMLAttribute name="RS_modelModificationTime" value="2015-01-29T21:59:28.244Z" output="no"/><XMLAttribute name="listSeparator" value="," output="no"/></XMLAttributes><reportName>Qty Short by User V2</reportName><modelPath>/content/folder[@name='lululemon packages']/package[@name='WMOS']/model[@name='2015-01-29T21:59:28.146Z']</modelPath><queries><query name="User"><source><model/></source><selection><dataItem name="User"><expression>#sq($account.defaultName)#</expression></dataItem></selection></query><query name="Facilitity">
+			<source>
+				<sqlQuery name="SQL15" dataSource="WMOS">
+					<sqlText>select case when rownum = 1 then 'MILTON'
+	when rownum = 2 then 'MISSISAUGA'
+	end FACILITY
+from dual connect by rownum &lt;= 2</sqlText>
+					<mdProjectedItems><mdProjectedItem name="FACILITY"/></mdProjectedItems></sqlQuery></source>
+			<selection><dataItem name="FACILITY"><expression>[SQL15].[FACILITY]</expression></dataItem></selection>
+		</query><query name="Query1">
+			<source>
+				
+			<sqlQuery name="SQL1" dataSource="WMOS">
+			<sqlText>SELECT
+    psi.created_source AS "Picker User ID",
+    psi.tc_order_id,
+    psi.short_qty AS "Qty Short",
+    lh.dsp_locn AS "Display Locn",
+    lh.lvl AS "Level",
+    ic.item_name AS "SKU",
+    ic.description AS "SKU Desc",
+    pc.product_class,
+    pc.description,
+    CASE 
+        WHEN o.order_type = 'ECOMM' THEN 'Ecom' 
+        ELSE 'Retail' 
+    END AS "Order Type",
+    CASE 
+        WHEN alloc.ref_field_3 IS NOT NULL AND TO_NUMBER(alloc.ref_field_3) &lt; 50 THEN 'MISSISAUGA'
+        WHEN alloc.ref_field_3 IS NOT NULL AND TO_NUMBER(alloc.ref_field_3) &gt;= 50 THEN 'MILTON'
+        WHEN lh.dsp_locn LIKE 'AS%'  OR lh.dsp_locn LIKE 'PA%' THEN 'MISSISAUGA'
+        ELSE 'MILTON'
+    END AS "BUILDING",
+    TO_CHAR(psi.created_dttm + wh.TIME_ZONE, 'MM/DD/YYYY') AS "Date Shorted",
+    alloc.tc_lpn_id AS "LPN ID",
+    alloc.ref_field_3 AS "Wall",
+    CASE
+        WHEN psi.created_source = 'WMADMIN' THEN 'Packing'
+        ELSE 'Picking'
+    END AS "Transaction"
+FROM
+    wm.picking_short_item psi
+    LEFT OUTER JOIN wm.locn_hdr lh ON lh.locn_id = psi.locn_id
+    INNER JOIN wm.item_cbo ic ON ic.item_id = psi.item_id
+    INNER JOIN wm.orders o ON o.tc_order_id = psi.tc_order_id
+    LEFT OUTER JOIN wm.product_class pc ON pc.product_class_id = ic.product_class_id
+    LEFT OUTER JOIN (
+        SELECT
+            a.tc_order_id,
+            a.invn_need_type,
+            MAX(a.mod_date_time) AS latest_mod_date_time,
+            MAX(l.tc_lpn_id) AS tc_lpn_id,
+            MAX(l.ref_field_3) AS ref_field_3 
+        FROM
+            wm.alloc_invn_dtl a
+        LEFT OUTER JOIN wm.lpn l ON a.task_cmpl_ref_nbr = l.tc_lpn_id
+        WHERE
+            a.invn_need_type = '52'
+            AND a.stat_code = '99'
+        GROUP BY
+            a.tc_order_id, a.invn_need_type) alloc ON psi.tc_order_id = alloc.tc_order_id,
+    (SELECT
+            SUM(CASE WHEN pay_scale = 'UTC_ADJ' THEN TO_NUMBER(pay_scale_desc) / 24 END) AS UTC_ADJ,
+            SUM(CASE WHEN pay_scale = 'TIME_ZONE' THEN TO_NUMBER(pay_scale_desc) / 24 END) AS TIME_ZONE,
+            SUM(CASE WHEN pay_scale = 'SHIFT_ADJ' THEN TO_NUMBER(pay_scale_desc) / 24 END) AS SHIFT_ADJ
+        FROM
+            wm.e_pay_scale
+        WHERE
+            pay_scale IN ('UTC_ADJ', 'TIME_ZONE', 'SHIFT_ADJ')) wh
+ where cast(psi.created_dttm+wh.TIME_ZONE as timestamp) &gt;= cast(to_date(substr(#Prompt('pStartDateTime')#,0,19),'YYYY-MM-DD"T"HH24:mi:ss') as timestamp)
+	and cast(psi.created_dttm+wh.TIME_ZONE as timestamp) &lt;= cast(to_date(substr(#Prompt('pEndDateTime')#,0,19),'YYYY-MM-DD"T"HH24:mi:ss') as timestamp)
+--WHERE
+  --psi.tc_order_id = 'c173386857509672_202412121742434600003002'
+ORDER BY
+    psi.created_dttm DESC</sqlText>
+		<mdProjectedItems><mdProjectedItem name="Picker User ID"/><mdProjectedItem name="TC_ORDER_ID"/><mdProjectedItem name="Qty Short"/><mdProjectedItem name="Display Locn"/><mdProjectedItem name="Level"/><mdProjectedItem name="SKU"/><mdProjectedItem name="SKU Desc"/><mdProjectedItem name="PRODUCT_CLASS"/><mdProjectedItem name="DESCRIPTION"/><mdProjectedItem name="Order Type"/><mdProjectedItem name="BUILDING"/><mdProjectedItem name="Date Shorted"/><mdProjectedItem name="LPN ID"/><mdProjectedItem name="Wall"/><mdProjectedItem name="Transaction"/></mdProjectedItems></sqlQuery></source>
+			<selection><dataItem name="Picker User ID"><expression>[SQL1].[Picker User ID]</expression></dataItem><dataItem name="TC_ORDER_ID"><expression>[SQL1].[TC_ORDER_ID]</expression></dataItem><dataItem name="Qty Short" aggregate="total" sort="descending"><expression>[SQL1].[Qty Short]</expression></dataItem><dataItem name="Display Locn"><expression>[SQL1].[Display Locn]</expression></dataItem><dataItem name="Level"><expression>[SQL1].[Level]</expression></dataItem><dataItem name="SKU"><expression>[SQL1].[SKU]</expression></dataItem><dataItem name="SKU Desc"><expression>[SQL1].[SKU Desc]</expression></dataItem><dataItem name="PRODUCT_CLASS"><expression>[SQL1].[PRODUCT_CLASS]</expression></dataItem><dataItem name="DESCRIPTION"><expression>[SQL1].[DESCRIPTION]</expression></dataItem><dataItem name="Order Type"><expression>[SQL1].[Order Type]</expression></dataItem><dataItem name="BUILDING"><expression>[SQL1].[BUILDING]</expression></dataItem><dataItem name="Date Shorted"><expression>[SQL1].[Date Shorted]</expression></dataItem><dataItem name="LPN ID"><expression>[SQL1].[LPN ID]</expression></dataItem><dataItem name="Wall"><expression>[SQL1].[Wall]</expression></dataItem><dataItem name="Transaction"><expression>[SQL1].[Transaction]</expression></dataItem><dataItemEdgeSummary solveOrder="1" refDataItem="Picker User ID" aggregateMethod="total" name="Total(Picker User ID)" label="Total"/><dataItemEdgeSummary solveOrder="1" refDataItem="Level" aggregateMethod="total" name="Total(Level)" label="Total"/><dataItemEdgeSummary solveOrder="1" refDataItem="Date Shorted" aggregateMethod="total" name="Total(Date Shorted)" label="Total"/><dataItemEdgeSummary solveOrder="1" refDataItem="BUILDING" aggregateMethod="total" name="Total(BUILDING)" label="Total"/><dataItemEdgeSummary solveOrder="1" refDataItem="DESCRIPTION" aggregateMethod="total" name="Total(DESCRIPTION)" label="Total"/><dataItemEdgeSummary solveOrder="1" refDataItem="PRODUCT_CLASS" aggregateMethod="total" name="Total(PRODUCT_CLASS)" label="Total"/><dataItemEdgeSummary solveOrder="1" refDataItem="Date Shorted" aggregateMethod="total" name="Total(Date Shorted)1" label="Total"/><dataItemEdgeSummary solveOrder="1" refDataItem="BUILDING" aggregateMethod="total" name="Total(BUILDING)1" label="Total"/><dataItemEdgeSummary solveOrder="1" refDataItem="Display Locn" aggregateMethod="total" name="Total(Display Locn)" label="Total"/><dataItemEdgeSummary solveOrder="1" refDataItem="Date Shorted" aggregateMethod="total" name="Total(Date Shorted)2" label="Total"/><dataItemEdgeSummary solveOrder="1" refDataItem="BUILDING" aggregateMethod="total" name="Total(BUILDING)2" label="Total"/></selection>
+		<detailFilters><detailFilter use="optional"><filterExpression>[SQL1].[BUILDING] in ?pFacility?</filterExpression></detailFilter></detailFilters></query><query name="Query2">
+			<source>
+				
+			<sqlQuery name="SQL2" dataSource="WMOS">
+			<sqlText>SELECT
+    psi.created_source AS "Picker User ID",
+    psi.tc_order_id,
+    psi.short_qty AS "Qty Short",
+    lh.dsp_locn AS "Display Locn",
+    SUBSTR(lh.dsp_locn, 1, 3) AS "Zone",
+    lh.lvl AS "Level",
+    ic.item_name AS "SKU",
+    ic.description AS "SKU Desc",
+    pc.product_class,
+    pc.description,
+    CASE 
+        WHEN o.order_type = 'ECOMM' THEN 'Ecom' 
+        ELSE 'Retail' 
+    END AS "Order Type",
+    CASE 
+        WHEN alloc.ref_field_3 IS NOT NULL AND TO_NUMBER(alloc.ref_field_3) &lt; 50 THEN 'MISSISAUGA'
+        WHEN alloc.ref_field_3 IS NOT NULL AND TO_NUMBER(alloc.ref_field_3) &gt;= 50 THEN 'MILTON'
+        WHEN lh.dsp_locn LIKE 'AS%'  OR lh.dsp_locn LIKE 'PA%' THEN 'MISSISAUGA'
+        ELSE 'MILTON'
+    END AS "BUILDING",
+    TO_CHAR(psi.created_dttm + wh.TIME_ZONE, 'MM/DD/YYYY') AS "Date Shorted",
+    alloc.tc_lpn_id AS "LPN ID",
+    alloc.ref_field_3 AS "Wall",
+    CASE
+        WHEN psi.created_source = 'WMADMIN' THEN 'Packing'
+        ELSE 'Picking'
+    END AS "Transaction"
+FROM
+    wm.picking_short_item psi
+    LEFT OUTER JOIN wm.locn_hdr lh ON lh.locn_id = psi.locn_id
+    INNER JOIN wm.item_cbo ic ON ic.item_id = psi.item_id
+    INNER JOIN wm.orders o ON o.tc_order_id = psi.tc_order_id
+    LEFT OUTER JOIN wm.product_class pc ON pc.product_class_id = ic.product_class_id
+    LEFT OUTER JOIN (
+        SELECT
+            a.tc_order_id,
+            a.invn_need_type,
+            MAX(a.mod_date_time) AS latest_mod_date_time,
+            MAX(l.tc_lpn_id) AS tc_lpn_id,
+            MAX(l.ref_field_3) AS ref_field_3 
+        FROM
+            wm.alloc_invn_dtl a
+        LEFT OUTER JOIN wm.lpn l ON a.task_cmpl_ref_nbr = l.tc_lpn_id
+        WHERE
+            a.invn_need_type = '52'
+            AND a.stat_code = '99'
+        GROUP BY
+            a.tc_order_id, a.invn_need_type) alloc ON psi.tc_order_id = alloc.tc_order_id,
+    (SELECT
+            SUM(CASE WHEN pay_scale = 'UTC_ADJ' THEN TO_NUMBER(pay_scale_desc) / 24 END) AS UTC_ADJ,
+            SUM(CASE WHEN pay_scale = 'TIME_ZONE' THEN TO_NUMBER(pay_scale_desc) / 24 END) AS TIME_ZONE,
+            SUM(CASE WHEN pay_scale = 'SHIFT_ADJ' THEN TO_NUMBER(pay_scale_desc) / 24 END) AS SHIFT_ADJ
+        FROM
+            wm.e_pay_scale
+        WHERE
+            pay_scale IN ('UTC_ADJ', 'TIME_ZONE', 'SHIFT_ADJ')) wh
+WHERE
+psi.created_source  NOT IN 'WMADMIN'
+AND lh.dsp_locn  NOT LIKE 'PA%'
+    AND CAST(psi.created_dttm + wh.TIME_ZONE AS TIMESTAMP) &gt;= CAST(TO_DATE(SUBSTR(#Prompt('pStartDateTime')#, 0, 19), 'YYYY-MM-DD"T"HH24:mi:ss') AS TIMESTAMP)
+    AND CAST(psi.created_dttm + wh.TIME_ZONE AS TIMESTAMP) &lt;= CAST(TO_DATE(SUBSTR(#Prompt('pEndDateTime')#, 0, 19), 'YYYY-MM-DD"T"HH24:mi:ss') AS TIMESTAMP)
+ORDER BY
+    psi.created_dttm DESC</sqlText>
+		<mdProjectedItems><mdProjectedItem name="Picker User ID"/><mdProjectedItem name="TC_ORDER_ID"/><mdProjectedItem name="Qty Short"/><mdProjectedItem name="Display Locn"/><mdProjectedItem name="Zone"/><mdProjectedItem name="Level"/><mdProjectedItem name="SKU"/><mdProjectedItem name="SKU Desc"/><mdProjectedItem name="PRODUCT_CLASS"/><mdProjectedItem name="DESCRIPTION"/><mdProjectedItem name="Order Type"/><mdProjectedItem name="BUILDING"/><mdProjectedItem name="Date Shorted"/><mdProjectedItem name="LPN ID"/><mdProjectedItem name="Wall"/><mdProjectedItem name="Transaction"/></mdProjectedItems></sqlQuery></source>
+			<selection><dataItem name="Picker User ID"><expression>[SQL2].[Picker User ID]</expression></dataItem><dataItem name="TC_ORDER_ID"><expression>[SQL2].[TC_ORDER_ID]</expression></dataItem><dataItem name="Qty Short" aggregate="total"><expression>[SQL2].[Qty Short]</expression></dataItem><dataItem name="Display Locn"><expression>[SQL2].[Display Locn]</expression></dataItem><dataItem name="Zone"><expression>[SQL2].[Zone]</expression></dataItem><dataItem name="Level"><expression>[SQL2].[Level]</expression></dataItem><dataItem name="SKU"><expression>[SQL2].[SKU]</expression></dataItem><dataItem name="SKU Desc"><expression>[SQL2].[SKU Desc]</expression></dataItem><dataItem name="PRODUCT_CLASS"><expression>[SQL2].[PRODUCT_CLASS]</expression></dataItem><dataItem name="DESCRIPTION"><expression>[SQL2].[DESCRIPTION]</expression></dataItem><dataItem name="Order Type"><expression>[SQL2].[Order Type]</expression></dataItem><dataItem name="BUILDING"><expression>[SQL2].[BUILDING]</expression></dataItem><dataItem name="Date Shorted"><expression>[SQL2].[Date Shorted]</expression></dataItem><dataItem name="LPN ID"><expression>[SQL2].[LPN ID]</expression></dataItem><dataItem name="Wall"><expression>[SQL2].[Wall]</expression></dataItem><dataItem name="Transaction"><expression>[SQL2].[Transaction]</expression></dataItem></selection>
+		<detailFilters><detailFilter><filterExpression>[BUILDING] in ?pFacility?</filterExpression></detailFilter></detailFilters></query></queries><classStyles><classStyle name="cls1" label="Section Header"><CSS value="padding:4px 6px 4px 6px;background-color:#333333;color:white;font-size:12pt;font-weight:bold;font-family:Arial;text-align:center"/></classStyle><classStyle name="cls2" label="General Header"><CSS value="font-weight:bold"/></classStyle></classStyles></report>
