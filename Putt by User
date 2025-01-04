@@ -1,0 +1,612 @@
+<report xmlns="http://developer.cognos.com/schemas/report/8.0/" useStyleVersion="10" expressionLocale="en-us">
+	<drillBehavior modelBasedDrillThru="true"/>
+	<layouts>
+		<layout>
+			<reportPages>
+				<page name="Page1">
+					<style>
+						<defaultStyles>
+							<defaultStyle refStyle="pg"/>
+						</defaultStyles>
+						<CSS value="border-collapse: collapse;"/>
+					</style>
+					<pageBody><style><defaultStyles><defaultStyle refStyle="pb"/></defaultStyles></style>
+						<contents><table><style><defaultStyles><defaultStyle refStyle="tb"/></defaultStyles><CSS value="border-collapse:collapse"/></style><tableRows><tableRow><tableCells><tableCell><contents><table><style><defaultStyles><defaultStyle refStyle="tb"/></defaultStyles><CSS value="border-collapse:collapse"/></style><tableRows><tableRow><tableCells><tableCell><contents><table><style><defaultStyles><defaultStyle refStyle="tb"/></defaultStyles><CSS value="border-collapse:collapse"/></style><tableRows><tableRow><tableCells><tableCell><contents/><style><CSS value="padding-right:5px;padding-left:5px;text-align:center"/></style></tableCell><tableCell><contents><textItem><dataSource><staticValue>Thruput Goals</staticValue></dataSource><style><CSS value="font-weight:bold;font-size:16pt"/></style></textItem></contents><style><CSS value="padding-right:5px;padding-left:5px;text-align:center"/></style></tableCell></tableCells></tableRow><tableRow><tableCells><tableCell><contents/><style><CSS value="padding-right:5px;padding-left:5px"/></style></tableCell><tableCell><contents><table><style><defaultStyles><defaultStyle refStyle="tb"/></defaultStyles><CSS value="border-collapse:collapse"/></style><tableRows><tableRow><tableCells><tableCell><contents><table><style><defaultStyles><defaultStyle refStyle="tb"/></defaultStyles><CSS value="border-collapse:collapse;width:100%"/></style><tableRows><tableRow><tableCells><tableCell><contents><textItem><dataSource><staticValue>Goal of </staticValue></dataSource></textItem><textBox parameter="pGoal"/></contents><style><CSS value="vertical-align:top"/></style></tableCell><tableCell><contents><textItem><dataSource><staticValue> units from </staticValue></dataSource></textItem><selectDateTime parameter="pStartDateTime" selectDateTimeUI="editBox"/></contents><style><CSS value="vertical-align:top"/></style></tableCell><tableCell><contents><textItem><dataSource><staticValue> to </staticValue></dataSource></textItem><selectDateTime parameter="pEndDateTime" selectDateTimeUI="editBox"/></contents><style><CSS value="vertical-align:top"/></style></tableCell><tableCell><contents><textItem><dataSource><staticValue>Facility</staticValue></dataSource></textItem><selectValue parameter="pFacility" multiSelect="true" range="false" required="false" refQuery="FacilityChoose" selectValueUI="checkboxGroup"><useItem refDataItem="FACILITY"><displayItem refDataItem="FACILITY"/></useItem><headerText><defaultText/></headerText></selectValue></contents><style><CSS value="vertical-align:top;padding-right:6px;padding-left:6px"/></style></tableCell><tableCell><contents><textItem><dataSource><staticValue>Footwear</staticValue></dataSource></textItem><selectValue parameter="pFootwearIndicator" multiSelect="true" range="false" refQuery="FootwearSelect" required="false" selectValueUI="checkboxGroup"><useItem refDataItem="FOOTWEAR_INDICATOR"><displayItem refDataItem="FOOTWEAR_INDICATOR"/></useItem></selectValue></contents></tableCell><tableCell><contents><promptButton type="finish">
+			<contents/>
+			<style>
+				<defaultStyles>
+					<defaultStyle refStyle="bp"/>
+				</defaultStyles>
+			</style>
+		</promptButton></contents><style><CSS value="vertical-align:top;padding-right:6px;padding-left:6px"/></style></tableCell></tableCells></tableRow></tableRows></table></contents><style><CSS value="padding:5px;font-weight:bold;font-size:10pt;vertical-align:middle;text-align:center"/></style></tableCell></tableCells></tableRow><tableRow><tableCells><tableCell><contents><singleton refQuery="thruput_smry" name="Singleton3">
+			<contents><textItem><dataSource><dataItemValue refDataItem="GOAL"/></dataSource><style><CSS value="font-weight:bold"/><dataFormat><numberFormat useGrouping="true"/></dataFormat></style></textItem></contents>
+		</singleton><textItem><dataSource><staticValue> units / </staticValue></dataSource><style><CSS value="text-decoration:none"/></style></textItem><singleton refQuery="thruput_smry" name="Singleton2">
+			<contents><textItem><dataSource><dataItemValue refDataItem="HRS"/></dataSource><style><CSS value="font-weight:bold"/></style></textItem></contents>
+		</singleton><textItem><dataSource><staticValue> hrs = </staticValue></dataSource></textItem><singleton refQuery="thruput_smry" name="Singleton4">
+			<contents><textItem><dataSource><dataItemValue refDataItem="HRLY_GOAL"/></dataSource><style><CSS value="font-weight:bold;text-decoration:underline"/><dataFormat><numberFormat useGrouping="true" decimalSize="0"/></dataFormat></style></textItem></contents>
+		</singleton><textItem><dataSource><staticValue> UPH.</staticValue></dataSource></textItem></contents><style><CSS value="padding:5px;font-size:10pt;text-align:center;vertical-align:middle"/></style></tableCell></tableCells></tableRow></tableRows></table></contents><style><CSS value="padding-right:5px;padding-left:5px"/></style></tableCell></tableCells></tableRow></tableRows></table></contents><style><CSS value="text-align:center;vertical-align:top;padding-bottom:8px"/></style></tableCell></tableCells></tableRow><tableRow><tableCells><tableCell><contents><table><style><defaultStyles><defaultStyle refStyle="tb"/></defaultStyles><CSS value="border-collapse:collapse"/></style><tableRows><tableRow><tableCells><tableCell><contents><table><style><defaultStyles><defaultStyle refStyle="tb"/></defaultStyles><CSS value="border-collapse:collapse"/></style><tableRows><tableRow><tableCells><tableCell><contents/><style><CSS value="text-align:left;vertical-align:top"/></style></tableCell><tableCell><contents/><style><CSS value="text-align:left;vertical-align:top"/></style></tableCell></tableCells></tableRow><tableRow><tableCells><tableCell><contents><combinationChart showTooltips="true" maxHotspots="10000" refQuery="UnitsPut" name="Combination Chart3">
+														
+														<ordinalAxis>
+															<axisTitle refQuery="UnitsPut">
+																<style>
+																	<defaultStyles>
+																		<defaultStyle refStyle="at"/>
+																	</defaultStyles>
+																</style>
+															</axisTitle>
+															<axisLine color="black"/>
+															<style>
+																<defaultStyles>
+																	<defaultStyle refStyle="al"/>
+																</defaultStyles>
+															</style>
+														</ordinalAxis>
+														<numericalAxisY1>
+															<axisTitle refQuery="UnitsPut">
+																<style>
+																	<defaultStyles>
+																		<defaultStyle refStyle="at"/>
+																	</defaultStyles>
+																</style>
+															</axisTitle>
+															<gridlines color="#cccccc"/>
+															<axisLine color="black"/>
+															<style>
+																<defaultStyles>
+																	<defaultStyle refStyle="al"/>
+																</defaultStyles>
+															</style>
+														</numericalAxisY1>
+														<combinationChartTypes>
+															<bar valueType="stacked" showValues="true" borderColor="white"><chartNodes><chartNode><chartNodeMembers><chartNodeMember refDataItem="Units Put"><chartContents><chartTextItem><dataSource><memberCaption/></dataSource></chartTextItem></chartContents></chartNodeMember></chartNodeMembers><chartNestedNodes><chartNode><chartNodeMembers><chartNodeMember refDataItem="FACILITY"><chartContents><chartTextItem><dataSource><memberCaption/></dataSource></chartTextItem></chartContents></chartNodeMember></chartNodeMembers></chartNode></chartNestedNodes></chartNode></chartNodes></bar>
+															<line valueType="stacked" useNumericalAxis="numericalAxisY2" showBorders="false" borderColor="black" showAbsoluteValues="true" showValues="true" displayDataLocation="outsideAtTop"><chartNodes><chartNode><chartNodeMembers><chartNodeMember refDataItem="Put-ers"><chartContents><chartTextItem><dataSource><memberCaption/></dataSource></chartTextItem></chartContents></chartNodeMember></chartNodeMembers></chartNode></chartNodes></line></combinationChartTypes>
+														<style>
+															<defaultStyles>
+																<defaultStyle refStyle="ch"/>
+															</defaultStyles>
+															<CSS value="width:900px;height:400px"/></style>
+														<commonClusters><chartNodes><chartNode><chartNodeMembers><chartNodeMember refDataItem="Process Date"><chartContents><chartTextItem><dataSource><memberCaption/></dataSource></chartTextItem></chartContents><sortList><sortItem refDataItem="Process Date" sortOrder="ascending"/></sortList></chartNodeMember></chartNodeMembers><chartNestedNodes><chartNode><chartNodeMembers><chartNodeMember refDataItem="Hour"><chartContents><chartTextItem><dataSource><memberCaption/></dataSource></chartTextItem></chartContents><sortList><sortItem refDataItem="Hour" sortOrder="ascending"/></sortList></chartNodeMember></chartNodeMembers></chartNode></chartNestedNodes></chartNode></chartNodes></commonClusters><defaultChartMeasure refDataItem="Put-ers"/><numericalAxisY2><gridlines lineStyle="dash" color="#99CCFF"/><axisTitle refQuery="UnitsPut"><style><defaultStyles><defaultStyle refStyle="at"/></defaultStyles></style></axisTitle><axisLine color="#99CCFF"/><style><CSS value="color:#0066CC"/><defaultStyles><defaultStyle refStyle="al"/></defaultStyles></style></numericalAxisY2><chartTitle refQuery="UnitsPut"><style><defaultStyles><defaultStyle refStyle="ct"/></defaultStyles></style><chartContents><chartTextItem><dataSource><staticValue>Units PUT by hour (with number of putters)</staticValue></dataSource></chartTextItem></chartContents></chartTitle><chartPalette><chartColor value="#CC9999"/><chartColor value="#333399"/><chartColor value="#993333"/><chartColor value="#CCCC00"/><chartColor value="#336633"/><chartColor value="#6699CC"/><chartColor value="#FF0033"/><chartColor value="#FF6633"/><chartColor value="#CC0099"/><chartColor value="#66CC00"/><chartColor value="#0033FF"/><chartColor value="#6666FF"/><chartColor value="#9900FF"/><chartColor value="#339966"/><chartColor value="#FFCC00"/><chartColor value="#6633CC"/><chartColor value="#999999"/></chartPalette></combinationChart></contents><style><CSS value="text-align:left;vertical-align:top"/></style></tableCell><tableCell><contents><table><style><defaultStyles><defaultStyle refStyle="tb"/></defaultStyles><CSS value="border-collapse:collapse"/></style><tableRows><tableRow><tableCells><tableCell><contents><crosstab horizontalPagination="true" name="Crosstab6" refQuery="UnitsPut" rowsPerPage="500">
+														<crosstabCorner>
+															<contents><textItem><dataSource><dataItemLabel refDataItem="Units Put"/></dataSource></textItem></contents>
+															<style>
+																<defaultStyles>
+																	<defaultStyle refStyle="xm"/>
+																</defaultStyles>
+															</style>
+														</crosstabCorner>
+														<noDataHandler>
+															<contents>
+																<block>
+																	<contents>
+																		<textItem>
+																			<dataSource>
+																				<staticValue>No Data Available</staticValue>
+																			</dataSource>
+																			<style>
+																				<CSS value="padding:10px 18px;"/>
+																			</style>
+																		</textItem>
+																	</contents>
+																</block>
+															</contents>
+														</noDataHandler>
+														<style>
+															<CSS value="border-collapse:collapse;font-size:7pt"/>
+															<defaultStyles>
+																<defaultStyle refStyle="xt"/>
+															</defaultStyles>
+														</style>
+														<defaultMeasure refDataItem="Units Put"/><crosstabFactCell><contents><textItem><dataSource><cellValue/></dataSource></textItem></contents><style><defaultStyles><defaultStyle refStyle="mv"/></defaultStyles></style></crosstabFactCell><crosstabColumns><crosstabNode><crosstabNodeMembers><crosstabNodeMember refDataItem="Hour" edgeLocation="e1"><style><defaultStyles><defaultStyle refStyle="ml"/></defaultStyles><CSS value="text-align:center"/></style><contents><textItem><dataSource><memberCaption/></dataSource></textItem></contents><sortList><sortItem refDataItem="Hour"/></sortList></crosstabNodeMember></crosstabNodeMembers></crosstabNode><crosstabNode><crosstabNodeMembers><crosstabNodeMember refDataItem="Total(Hour)" edgeLocation="e3"><style><defaultStyles><defaultStyle refStyle="ol"/></defaultStyles></style><contents><textItem><dataSource><dataItemLabel refDataItem="Total(Hour)"/></dataSource></textItem></contents><factCell><style><defaultStyles><defaultStyle refStyle="ov"/></defaultStyles></style></factCell></crosstabNodeMember></crosstabNodeMembers></crosstabNode></crosstabColumns><crosstabRows><crosstabNode><crosstabNodeMembers><crosstabNodeMember refDataItem="Process Date" edgeLocation="e2"><style><defaultStyles><defaultStyle refStyle="ml"/></defaultStyles><CSS value="text-align:center"/></style><contents><textItem><dataSource><memberCaption/></dataSource></textItem></contents><sortList><sortItem refDataItem="Process Date" sortOrder="ascending"/></sortList></crosstabNodeMember></crosstabNodeMembers><crosstabNestedNodes><crosstabNode><crosstabNodeMembers><crosstabNodeMember refDataItem="FACILITY" edgeLocation="e4"><style><defaultStyles><defaultStyle refStyle="ml"/></defaultStyles></style><contents><textItem><dataSource><memberCaption/></dataSource></textItem></contents><sortList><sortItem refDataItem="FACILITY" sortOrder="descending"/></sortList></crosstabNodeMember></crosstabNodeMembers></crosstabNode></crosstabNestedNodes></crosstabNode></crosstabRows></crosstab></contents><style><CSS value="padding:5px"/></style></tableCell><tableCell><contents/></tableCell></tableCells></tableRow></tableRows></table></contents><style><CSS value="text-align:left;vertical-align:top"/></style></tableCell></tableCells></tableRow><tableRow><tableCells><tableCell><contents><combinationChart depth="50" showTooltips="true" maxHotspots="10000" refQuery="UnitsPut" name="Combination Chart1">
+																																<legend>
+																																	<legendPosition>
+																																		<relativePosition/>
+																																	</legendPosition>
+																																	<legendTitle refQuery="UnitsPut">
+																																		<style>
+																																			<defaultStyles>
+																																				<defaultStyle refStyle="lx"/>
+																																			</defaultStyles>
+																																		</style>
+																																	</legendTitle>
+																																	<style>
+																																		<defaultStyles>
+																																			<defaultStyle refStyle="lg"/>
+																																		</defaultStyles>
+																																	</style>
+																																</legend>
+																																<ordinalAxis>
+																																	<axisTitle refQuery="UnitsPut">
+																																		<style>
+																																			<defaultStyles>
+																																				<defaultStyle refStyle="at"/>
+																																			</defaultStyles>
+																																		</style>
+																																	</axisTitle>
+																																	<axisLine color="black"/>
+																																	<style>
+																																		<defaultStyles>
+																																			<defaultStyle refStyle="al"/>
+																																		</defaultStyles>
+																																	</style>
+																																</ordinalAxis>
+																																<numericalAxisY1>
+																																	<axisTitle refQuery="UnitsPut">
+																																		<style>
+																																			<defaultStyles>
+																																				<defaultStyle refStyle="at"/>
+																																			</defaultStyles>
+																																		</style>
+																																	</axisTitle>
+																																	<gridlines color="#cccccc"/>
+																																	<axisLine color="black"/>
+																																	<style>
+																																		<defaultStyles>
+																																			<defaultStyle refStyle="al"/>
+																																		</defaultStyles>
+																																	</style>
+																																</numericalAxisY1>
+																																<combinationChartTypes>
+																																	<bar valueType="stacked"><chartNodes><chartNode><chartNodeMembers><chartNodeMember refDataItem="Units Put"><chartContents><chartTextItem><dataSource><memberCaption/></dataSource></chartTextItem></chartContents></chartNodeMember></chartNodeMembers></chartNode></chartNodes></bar>
+																																</combinationChartTypes>
+																																<style>
+																																	<defaultStyles>
+																																		<defaultStyle refStyle="ch"/>
+																																	</defaultStyles>
+																																<CSS value="width:900px;height:400px"/></style>
+																																<commonClusters><chartNodes><chartNode><chartNodeMembers><chartNodeMember refDataItem="LOGIN_USER_ID"><chartContents><chartTextItem><dataSource><memberCaption/></dataSource></chartTextItem></chartContents></chartNodeMember></chartNodeMembers></chartNode></chartNodes></commonClusters><chartPalette>
+																																	<chartGradient direction="down" fromColor="#134bea" toColor="#0b2982"/>
+																																	<chartGradient direction="down" fromColor="#50cb1c" toColor="#42982f"/>
+																																	<chartGradient direction="down" fromColor="#f2cd00" toColor="#f9be09"/>
+																																	<chartGradient direction="down" fromColor="#ff8a00" toColor="#de4f01"/>
+																																	<chartGradient direction="down" fromColor="#e01b1b" toColor="#ab0909"/>
+																																	<chartGradient direction="down" fromColor="#3d3d3d" toColor="#0a0a0a"/>
+																																	<chartGradient direction="down" fromColor="#bf38e1" toColor="#8a1dde"/>
+																																	<chartGradient direction="down" fromColor="#8514c7" toColor="#2e0072"/>
+																																	<chartGradient direction="down" fromColor="#0f8b03" toColor="#044a01"/>
+																																	<chartGradient direction="down" fromColor="#95bf14" toColor="#828c0b"/>
+																																	<chartGradient direction="down" fromColor="#4791da" toColor="#2060b7"/>
+																																	<chartGradient direction="down" fromColor="#76dde6" toColor="#2cb6c7"/>
+																																	<chartGradient direction="down" fromColor="#060d95" toColor="#06034f"/>
+																																	<chartGradient direction="down" fromColor="#c3550b" toColor="#a33a00"/>
+																																</chartPalette>
+																															</combinationChart></contents><style><CSS value="vertical-align:top"/></style></tableCell><tableCell><contents>
+																														<crosstab horizontalPagination="true" name="Crosstab1" refQuery="UnitsPut" rowsPerPage="1000">
+			<crosstabCorner>
+				<contents><textItem><dataSource><staticValue>USER_ID</staticValue></dataSource></textItem></contents>
+				
+			<style><defaultStyles><defaultStyle refStyle="ml"/></defaultStyles><CSS value="text-align:center;vertical-align:middle;font-weight:bold;font-size:10pt;border:1pt solid black"/></style></crosstabCorner>
+			
+			
+			<noDataHandler>
+				<contents>
+					<block>
+						<contents>
+							<textItem>
+								<dataSource>
+									<staticValue>No Data Available</staticValue>
+								</dataSource>
+								<style>
+									<CSS value="padding:10px 18px;"/>
+								</style>
+							</textItem>
+						</contents>
+					</block>
+				</contents>
+			</noDataHandler>
+			<style>
+				<CSS value="border-collapse:collapse"/>
+				<defaultStyles>
+					<defaultStyle refStyle="xt"/>
+				</defaultStyles>
+			</style>
+		<crosstabFactCell><contents><textItem><dataSource><cellValue/></dataSource></textItem></contents><style><defaultStyles><defaultStyle refStyle="mv"/></defaultStyles></style></crosstabFactCell><crosstabRows><crosstabNode><crosstabNodeMembers><crosstabNodeMember refDataItem="LOGIN_USER_ID" edgeLocation="e1"><style><defaultStyles><defaultStyle refStyle="ml"/></defaultStyles><CSS value="font-weight:bold;font-size:10pt;border:1pt solid black"/></style><contents><textItem><dataSource><memberCaption/></dataSource></textItem></contents></crosstabNodeMember></crosstabNodeMembers></crosstabNode><crosstabNode><crosstabNodeMembers><crosstabNodeMember refDataItem="Total(LOGIN_USER_ID)" edgeLocation="e4"><style><defaultStyles><defaultStyle refStyle="ol"/></defaultStyles><CSS value="text-align:center;border:1pt solid black"/></style><contents><textItem><dataSource><dataItemLabel refDataItem="Total(LOGIN_USER_ID)"/></dataSource></textItem></contents><factCell><style><defaultStyles><defaultStyle refStyle="ov"/></defaultStyles></style></factCell></crosstabNodeMember></crosstabNodeMembers></crosstabNode></crosstabRows><crosstabColumns><crosstabNode><crosstabNestedNodes><crosstabNode><crosstabNodeMembers><crosstabNodeMember refDataItem="Process Date" edgeLocation="e2"><style><defaultStyles><defaultStyle refStyle="ml"/></defaultStyles><CSS value="text-align:center;font-weight:bold;font-size:10pt;border:1pt solid black"/></style><contents><textItem><dataSource><memberCaption/></dataSource></textItem></contents></crosstabNodeMember></crosstabNodeMembers></crosstabNode></crosstabNestedNodes><crosstabNodeMembers><crosstabNodeMember refDataItem="FACILITY" edgeLocation="e3"><style><defaultStyles><defaultStyle refStyle="ml"/></defaultStyles><CSS value="text-align:center;font-weight:bold;font-size:10pt;border:1pt solid black"/></style><contents><textItem><dataSource><memberCaption/></dataSource></textItem></contents></crosstabNodeMember></crosstabNodeMembers></crosstabNode><crosstabNode><crosstabNodeMembers><crosstabNodeMember refDataItem="Total(FACILITY)1" edgeLocation="e6"><style><defaultStyles><defaultStyle refStyle="ol"/></defaultStyles><CSS value="vertical-align:middle;text-align:center"/></style><contents><textItem><dataSource><dataItemLabel refDataItem="Total(FACILITY)1"/></dataSource></textItem></contents><factCell><style><defaultStyles><defaultStyle refStyle="ov"/></defaultStyles></style></factCell></crosstabNodeMember></crosstabNodeMembers></crosstabNode></crosstabColumns><crosstabIntersections><crosstabIntersection row="e1" column="e2"><style><CSS value="text-align:center;border:1pt solid black"/></style></crosstabIntersection><crosstabIntersection row="e1" column="e6"><style><CSS value="text-align:center;border:1pt solid black"/></style></crosstabIntersection><crosstabIntersection row="e4" column="e2"><style><CSS value="text-align:center;border:1pt solid black"/></style></crosstabIntersection><crosstabIntersection row="e4" column="e6"><style><CSS value="text-align:center;border:1pt solid black"/></style></crosstabIntersection></crosstabIntersections><defaultMeasure refDataItem="Units Put"/></crosstab></contents><style><CSS value="vertical-align:middle"/></style></tableCell></tableCells></tableRow></tableRows></table></contents><style><CSS value="text-align:center;vertical-align:top"/></style></tableCell></tableCells></tableRow></tableRows></table></contents><style><CSS value="text-align:center;vertical-align:top"/></style></tableCell></tableCells></tableRow></tableRows></table></contents></tableCell><tableCell><contents/><style><CSS value="text-align:left;vertical-align:top"/></style></tableCell></tableCells></tableRow></tableRows></table></contents>
+					</pageBody>
+				</page>
+			</reportPages>
+			<pageSetup orientation="landscape"/><promptPages><page name="Prompt Page1">
+					<pageHeader>
+						<contents>
+							<block>
+								<contents>
+									<textItem>
+										<dataSource>
+											<staticValue/>
+										</dataSource>
+										<style>
+											<defaultStyles>
+												<defaultStyle refStyle="tt"/>
+											</defaultStyles>
+										</style>
+									</textItem>
+								</contents>
+								<style>
+									<defaultStyles>
+										<defaultStyle refStyle="ta"/>
+									</defaultStyles>
+								</style>
+							</block>
+						</contents>
+						<style>
+							<defaultStyles>
+								<defaultStyle refStyle="hp"/>
+							</defaultStyles>
+						</style>
+					</pageHeader>
+					<pageBody>
+						<contents><table><style><defaultStyles><defaultStyle refStyle="tb"/></defaultStyles><CSS value="border-collapse:collapse"/></style><tableRows><tableRow><tableCells><tableCell><contents><textItem><dataSource><staticValue>Start Date &amp; Time</staticValue></dataSource></textItem></contents><style><CSS value="padding:5px;vertical-align:middle;text-align:center"/></style></tableCell><tableCell><contents><textItem><dataSource><staticValue>End Date &amp; Time</staticValue></dataSource></textItem></contents><style><CSS value="padding:5px;vertical-align:middle;text-align:center"/></style></tableCell><tableCell><contents><textItem><dataSource><staticValue>Goal Units (for time period selected)</staticValue></dataSource></textItem></contents><style><CSS value="padding:5px;vertical-align:middle;text-align:center"/></style></tableCell><tableCell><contents><textItem><dataSource><staticValue>Facility (optional)</staticValue></dataSource></textItem></contents><style><CSS value="padding:5px;vertical-align:middle;text-align:center"/></style></tableCell><tableCell><contents><textItem><dataSource><staticValue>Footwear/Non-Footwear</staticValue></dataSource></textItem></contents><style><CSS value="text-align:center"/></style></tableCell><tableCell><contents/><style><CSS value="padding:5px;vertical-align:middle;text-align:center"/></style></tableCell></tableCells></tableRow><tableRow><tableCells><tableCell><contents><selectDateTime parameter="pStartDateTime" selectDateTimeUI="editBox"/></contents><style><CSS value="padding:5px;text-align:center;vertical-align:top"/></style></tableCell><tableCell><contents><selectDateTime parameter="pEndDateTime" selectDateTimeUI="editBox"/></contents><style><CSS value="padding:5px;text-align:center;vertical-align:top"/></style></tableCell><tableCell><contents><textBox parameter="pGoal"/></contents><style><CSS value="padding:5px;text-align:center;vertical-align:top"/></style></tableCell><tableCell><contents><selectValue parameter="pFacility" multiSelect="true" range="false" required="false" refQuery="FacilityChoose" selectValueUI="checkboxGroup"><useItem refDataItem="FACILITY"><displayItem refDataItem="FACILITY"/></useItem><headerText><defaultText/></headerText></selectValue></contents><style><CSS value="padding:5px;text-align:center;vertical-align:top"/></style></tableCell><tableCell><contents><selectValue parameter="pFootwearIndicator" multiSelect="true" range="false" refQuery="FootwearSelect" required="false" selectValueUI="checkboxGroup"><useItem refDataItem="FOOTWEAR_INDICATOR"><displayItem refDataItem="FOOTWEAR_INDICATOR"/></useItem></selectValue></contents></tableCell><tableCell><contents><promptButton type="finish">
+								<contents/>
+								<style>
+									<defaultStyles>
+										<defaultStyle refStyle="bp"/>
+									</defaultStyles>
+								</style>
+							</promptButton></contents><style><CSS value="padding:5px;text-align:center;vertical-align:top"/></style></tableCell></tableCells></tableRow></tableRows></table></contents>
+						<style>
+							<defaultStyles>
+								<defaultStyle refStyle="py"/>
+							</defaultStyles>
+						</style>
+					</pageBody>
+					<pageFooter>
+						<contents>
+							<promptButton type="cancel">
+								<contents/>
+								<style>
+									<defaultStyles>
+										<defaultStyle refStyle="bp"/>
+									</defaultStyles>
+								</style>
+							</promptButton>
+							<promptButton type="back">
+								<contents/>
+								<style>
+									<defaultStyles>
+										<defaultStyle refStyle="bp"/>
+									</defaultStyles>
+								</style>
+							</promptButton>
+							<promptButton type="next">
+								<contents/>
+								<style>
+									<defaultStyles>
+										<defaultStyle refStyle="bp"/>
+									</defaultStyles>
+								</style>
+							</promptButton>
+							<promptButton type="finish">
+								<contents/>
+								<style>
+									<defaultStyles>
+										<defaultStyle refStyle="bp"/>
+									</defaultStyles>
+								</style>
+							</promptButton>
+						</contents>
+						<style>
+							<defaultStyles>
+								<defaultStyle refStyle="fp"/>
+							</defaultStyles>
+						</style>
+					</pageFooter>
+					<style>
+						<defaultStyles>
+							<defaultStyle refStyle="pp"/>
+						</defaultStyles>
+					</style>
+				</page></promptPages></layout>
+	</layouts>
+	<XMLAttributes><XMLAttribute name="RS_CreateExtendedDataItems" value="true" output="no"/><XMLAttribute name="RS_modelModificationTime" value="2015-01-29T21:59:28.244Z" output="no"/><XMLAttribute name="listSeparator" value="," output="no"/></XMLAttributes><reportName>Ecom - Throughput by Put</reportName><modelPath>/content/folder[@name='lululemon packages']/package[@name='WMOS']/model[@name='2015-01-29T21:59:28.146Z']</modelPath><queries><query name="UnitsPicked">
+			<source>
+				<sqlQuery name="SQL2" dataSource="WMOS">
+					<sqlText>SELECT
+     ptt.CREATE_DATE_TIME +wh.TIME_ZONE as begin_time
+   , ptt.user_id
+   , to_number(#prompt('pGoal')#)/round((  trunc(sysdate) 
+	+ (   cast(to_date(substr(#Prompt('pEndDateTime')#,0,19),'YYYY-MM-DD"T"HH24:mi:ss') as timestamp) 
+	- cast(to_date(substr(#Prompt('pStartDateTime')#,0,19),'YYYY-MM-DD"T"HH24:mi:ss') as timestamp)    )  
+    - trunc(sysdate)  )*24,0) as Goal
+   , s.shift
+   , o.tc_order_id as Order_ID
+    , to_char(sysdate + wh.UTC_ADJ , 'MM/DD HH24:MI:SS') as sys_time,
+	to_char(ptt.CREATE_DATE_TIME +wh.TIME_ZONE , 'MM/DD/YYYY') as "Process Date",
+	to_char(ptt.CREATE_DATE_TIME +wh.TIME_ZONE  , 'HH24') as "Hour",
+   CASE WHEN nvl(lh.area||lh.zone,'') = 'AS1' THEN '1'
+             WHEN nvl(lh.area||lh.zone,'') = 'AS2' THEN '2'
+             WHEN nvl(lh.area||lh.zone,'') = 'AS3' THEN '3'
+             WHEN nvl(lh.area||lh.zone,'') = 'AS4' THEN '4'
+             WHEN nvl(lh.area||lh.zone,'') = 'AN1' THEN 'SA'
+             WHEN nvl(lh.area||lh.zone,'') = 'MA1' THEN lh.area||lh.zone
+             ELSE 'Other' END as Picked_From,
+   case when o.order_type in ('ALLOC', 'REPLEN', 'SPECIAL') then 'Retail' 
+	when o.order_type = ('ECOMM') and o.TOTAL_NBR_OF_UNITS &gt; 1 
+	then 'Ecomm - Multi' else 'Ecomm - Single' end as "Order Type",
+   sum(ptt.nbr_units) as "Units Picked"
+
+	-- Added to filter Milt vs Miss
+	, CASE
+        WHEN substr(o.o_facility_alias_id, 1, 3) = 'TOR' THEN
+            (CASE  WHEN ( nvl(lh.area || lh.zone, '') in ('MA4','MA3') AND oli.invn_type = 'E' ) THEN 'Milton Ecom'
+                    WHEN oli.invn_type = 'R' THEN 'Milton One Inv'
+                    ELSE 'Mississauga'
+                END)
+        ELSE   substr(o.o_facility_alias_id, 1, 3) END  as FACILITY
+    , case when pc.product_class in ('118','441','442','820','821','836','834','835','837') then 'Footwear' else 'Non-Footwear' end as footwear_indicator
+	
+    
+FROM
+	wm.prod_trkg_tran ptt 
+               	INNER JOIN wm.orders o on ptt.tc_order_id = o.tc_order_id 
+	inner join wm.order_line_item oli on oli.order_id = o.order_id and oli.line_item_id = ptt.line_item_id
+    inner join wm.item_cbo ic on ic.item_id = oli.item_id
+    left outer join wm.product_class pc on ic.product_class_id = pc.product_class_id
+    left outer join wm.locn_hdr lh on ptt.from_locn = lh.locn_id
+	left outer join (select uu.user_name, ed.emp_id, s.shift_code, ed.shift_id, substr(s.shift_code,0,1) as Shift from(select emp_id, shift_id, rank() over (partition by EMP_ID order by MAX(EFF_DATE_TIME) desc) as rnk from wm.e_emp_dtl where eff_date_time &lt;= trunc(sysdate) group by emp_id,shift_id) ed inner join wm.ucl_user uu on ed.emp_id = uu.ucl_user_id inner join wm.e_shift s on ed.shift_id = s.shift_id where rnk =1) s on ptt.user_id = s.user_name
+	, (  SELECT sum(case when trim(pay_scale) = 'TIME_ZONE' then to_number(pay_scale_desc)/24 end) as TIME_ZONE, sum(case when trim(pay_scale) = 'UTC_ADJ' then to_number(pay_scale_desc)/24 end) as UTC_ADJ, sum(case when trim(pay_scale) = 'SHIFT_ADJ' then to_number(pay_scale_desc)/24 end) as SHIFT_ADJ FROM wm.e_pay_scale WHERE pay_scale in ('TIME_ZONE','SHIFT_ADJ','UTC_ADJ')   )  wh
+WHERE
+	ptt.CREATE_DATE_TIME &gt;= sysdate-(49/24) 
+	and ptt.CREATE_DATE_TIME &lt;= sysdate
+
+    and ptt.CREATE_DATE_TIME &gt;= cast(to_date(substr(#Prompt('pStartDateTime')#,0,19),'YYYY-MM-DD"T"HH24:mi:ss')-wh.TIME_ZONE as timestamp)
+    and ptt.CREATE_DATE_TIME &lt;= cast(to_date(substr(#Prompt('pEndDateTime')#,0,19),'YYYY-MM-DD"T"HH24:mi:ss')-wh.TIME_ZONE as timestamp) and
+
+	o.order_type in ('ECOMM') and
+	ptt.nbr_units &gt; '0' and
+	ptt.tran_type = '500' and
+	ptt.item_id is not null and
+	ptt.menu_optn_name in (
+	'Pick to Tote SA'
+	,'Pick To Tote'
+	,'Pick to Tote Int'
+	,'Pck Pick Cart'
+	,'Pack Pick Cart Put Wall'
+	,'Pck Pick Cart Int'
+	,'Pck Cubed Dir Int'
+	,'Pick Cart Ecom'
+	,'Build Pick Cart EX16'
+	,'PC Rtl No Zone SA'
+	,'PC Rtl No Zone XFER'
+	,'Pck From Tote YOGA'
+	,'Pick Cart Ecom'
+	,'Pick to Tote'
+	,'Pick to Tote GC'
+	,'Pick to Tote Int'
+	,'Pick to Tote SA'
+	,'Resume Pick Cart EX16'
+	,'Pick to Tote ECM'
+	,'Pck Cubed Dir INT2 ECM OS'
+	,'Pck Pick Cart ECM'
+	,'PC Rtl No Zone SA'
+	,'Build Pick Cart EX16'
+	,'Resume Pick Cart EX16'
+	,'ECM Build Putwall Cart'
+	,'ECM Resume Putwall Cart'
+    -- TOR ADDITIONS FOR PICK TOWER - ADDED 9/29/2021
+    , 'ECM Resume Pick Cart EX16'
+    , 'ECM Build Pick Cart EX16'
+    , 'Pack PC No Induct'
+    , 'Make PC No Induct'
+)
+
+GROUP BY
+	ptt.CREATE_DATE_TIME ,
+	o.order_type,
+                 --oli.invn_type,
+                --o.o_facility_alias_id,
+	ptt.user_id, s.shift,  o.tc_order_id ,
+	lh.area||lh.zone, wh.TIME_ZONE, wh.UTC_ADJ
+	, o.TOTAL_NBR_OF_UNITS
+
+,CASE
+        WHEN substr(o.o_facility_alias_id, 1, 3) = 'TOR' THEN
+            (CASE  WHEN ( nvl(lh.area || lh.zone, '') in ('MA4','MA3') AND oli.invn_type = 'E' ) THEN 'Milton Ecom'
+                    WHEN oli.invn_type = 'R' THEN 'Milton One Inv'
+                    ELSE 'Mississauga'
+                END)
+        ELSE   substr(o.o_facility_alias_id, 1, 3) END 	
+    , case when pc.product_class in ('118','441','442','820','821','836','834','835','837') then 'Footwear' else 'Non-Footwear' end
+ORDER BY
+    ptt.CREATE_DATE_TIME desc</sqlText>
+					<mdProjectedItems><mdProjectedItem name="BEGIN_TIME"/><mdProjectedItem name="USER_ID"/><mdProjectedItem name="GOAL"/><mdProjectedItem name="SHIFT"/><mdProjectedItem name="ORDER_ID"/><mdProjectedItem name="SYS_TIME"/><mdProjectedItem name="Process Date"/><mdProjectedItem name="Hour"/><mdProjectedItem name="PICKED_FROM"/><mdProjectedItem name="Order Type"/><mdProjectedItem name="Units Picked"/><mdProjectedItem name="FACILITY"/><mdProjectedItem name="FOOTWEAR_INDICATOR"/></mdProjectedItems></sqlQuery></source>
+			<selection><dataItem name="FACILITY"><expression>[SQL2].[FACILITY]</expression></dataItem><dataItem name="Process Date"><expression>[SQL2].[Process Date]</expression></dataItem><dataItem name="Hour"><expression>[SQL2].[Hour]</expression></dataItem><dataItem name="Order Type"><expression>[SQL2].[Order Type]</expression></dataItem><dataItem name="Units Picked" aggregate="total"><expression>[SQL2].[Units Picked]</expression></dataItem><dataItem name="Pickers"><expression>[SQL2].[USER_ID]</expression></dataItem><dataItem name="GOAL" aggregate="maximum"><expression>[SQL2].[GOAL]</expression></dataItem><dataItemListSummary refDataItem="Units Picked" aggregateMethod="total" name="Total(Units Picked)"/><dataItem name="FOOTWEAR_INDICATOR"><expression>[SQL2].[FOOTWEAR_INDICATOR]</expression></dataItem></selection>
+			<queryHints><localCache value="false"/></queryHints><detailFilters><detailFilter use="optional" postAutoAggregation="false"><filterExpression>[SQL2].[FACILITY] in ?pFacility?</filterExpression></detailFilter><detailFilter><filterExpression>[SQL2].[FOOTWEAR_INDICATOR] in ?pFootwearIndicator?</filterExpression></detailFilter></detailFilters></query><query name="UnitsPacked">
+			<source>
+				<sqlQuery name="SQL1" dataSource="WMOS">
+					<sqlText>SELECT
+   ptt.CREATE_DATE_TIME+wh.TIME_ZONE as begin_time
+   , to_number(#prompt('pGoal')#)/round((  trunc(sysdate) 
+	+ (   cast(to_date(substr(#Prompt('pEndDateTime')#,0,19),'YYYY-MM-DD"T"HH24:mi:ss') as timestamp) 
+	- cast(to_date(substr(#Prompt('pStartDateTime')#,0,19),'YYYY-MM-DD"T"HH24:mi:ss') as timestamp)    )  
+	- trunc(sysdate)  )*24,0) as Goal
+   , ptt.user_id
+   , to_char(sysdate + wh.UTC_ADJ , 'MM/DD HH24:MI:SS') as sys_time,
+   to_char(ptt.CREATE_DATE_TIME+wh.TIME_ZONE , 'MM/DD/YYYY') as "Process Date",
+   to_char(ptt.CREATE_DATE_TIME+wh.TIME_ZONE  , 'HH24') as "Hour",
+   case when o.TOTAL_NBR_OF_UNITS = 1 then 'Ecomm - Single' else 'Ecomm - Multi' end as "Order Type",
+   sum(ptt.nbr_units) as "Units Packed"
+
+	-- Added to filter Milt vs Miss
+    
+    , CASE
+        WHEN substr(o.o_facility_alias_id, 1, 3) = 'TOR' THEN
+            (CASE  WHEN ( oli.invn_type = 'E' and wp.day_of_week = 6 )THEN 'Milton Ecom'
+                    WHEN oli.invn_type = 'R' THEN 'Milton One Inv'
+                    ELSE 'Mississauga'
+                END)
+        ELSE   substr(o.o_facility_alias_id, 1, 3) END  as FACILITY        
+    , case when pc.product_class in ('118','441','442','820','821','836','834','835','837') then 'Footwear' else 'Non-Footwear' end as footwear_indicator
+
+FROM
+    wm.prod_trkg_tran ptt
+    inner join wm.lpn l on ptt.cntr_nbr = l.tc_lpn_id
+    inner join wm.orders o on ptt.tc_order_id = o.tc_order_id 
+    LEFT OUTER JOIN wm.locn_hdr lh ON ptt.from_locn = lh.locn_id
+
+-- Added for Milt/Miss split
+    left outer join (
+        select distinct order_id, invn_type
+--        , item_id
+        from order_line_item
+        ) oli on o.order_id = oli.order_id
+    left outer join item_cbo ic on ic.item_id = ptt.item_id
+    left outer join product_class pc on ic.product_class_id = pc.product_class_id
+    left outer join wm.wave_parm wp on l.wave_nbr = wp.wave_nbr
+     , (  SELECT sum(case when trim(pay_scale) = 'TIME_ZONE' then to_number(pay_scale_desc)/24 end) as TIME_ZONE, sum(case when trim(pay_scale) = 'UTC_ADJ' then to_number(pay_scale_desc)/24 end) as UTC_ADJ, sum(case when trim(pay_scale) = 'SHIFT_ADJ' then to_number(pay_scale_desc)/24 end) as SHIFT_ADJ FROM wm.e_pay_scale WHERE pay_scale in ('TIME_ZONE','SHIFT_ADJ','UTC_ADJ')  )  wh
+WHERE
+	ptt.CREATE_DATE_TIME &gt;= sysdate-(49/24) 
+	and ptt.CREATE_DATE_TIME &lt;= sysdate
+
+    and ptt.CREATE_DATE_TIME &gt;= cast(to_date(substr(#Prompt('pStartDateTime')#,0,19),'YYYY-MM-DD"T"HH24:mi:ss')-wh.TIME_ZONE as timestamp)
+    and ptt.CREATE_DATE_TIME &lt;= cast(to_date(substr(#Prompt('pEndDateTime')#,0,19),'YYYY-MM-DD"T"HH24:mi:ss')-wh.TIME_ZONE as timestamp) and
+    
+--    and ptt.CREATE_DATE_TIME &gt;= cast(to_date(substr('2023-01-17T00:00:00',0,19),'YYYY-MM-DD"T"HH24:mi:ss')-wh.TIME_ZONE as timestamp)
+--    and ptt.CREATE_DATE_TIME &lt;= cast(to_date(substr('2023-01-18T00:00:00',0,19),'YYYY-MM-DD"T"HH24:mi:ss')-wh.TIME_ZONE as timestamp) and
+    
+	ptt.nbr_units &gt; '0' and
+	ptt.menu_optn_name in ('Weigh and Manifest oLPN') and 
+	o.order_type = 'ECOMM'
+
+GROUP BY
+	ptt.CREATE_DATE_TIME,
+	o.TOTAL_NBR_OF_UNITS,
+	ptt.user_id,
+	wh.TIME_ZONE,
+	wh.UTC_ADJ
+
+	-- Added to filter Milt vs Miss
+	 ,CASE
+        WHEN substr(o.o_facility_alias_id, 1, 3) = 'TOR' THEN
+            (CASE  WHEN ( oli.invn_type = 'E' and wp.day_of_week = 6 )THEN 'Milton Ecom'
+                    WHEN oli.invn_type = 'R' THEN 'Milton One Inv'
+                    ELSE 'Mississauga'
+                END)
+        ELSE   substr(o.o_facility_alias_id, 1, 3) END
+    , case when pc.product_class in ('118','441','442','820','821','836','834','835','837') then 'Footwear' else 'Non-Footwear' end
+
+ORDER BY
+    ptt.CREATE_DATE_TIME desc</sqlText>
+					<mdProjectedItems><mdProjectedItem name="BEGIN_TIME"/><mdProjectedItem name="GOAL"/><mdProjectedItem name="USER_ID"/><mdProjectedItem name="SYS_TIME"/><mdProjectedItem name="Process Date"/><mdProjectedItem name="Hour"/><mdProjectedItem name="Order Type"/><mdProjectedItem name="Units Packed"/><mdProjectedItem name="FACILITY"/><mdProjectedItem name="FOOTWEAR_INDICATOR"/></mdProjectedItems></sqlQuery></source>
+			<selection><dataItem name="Process Date"><expression>[SQL1].[Process Date]</expression></dataItem><dataItem name="FACILITY"><expression>[SQL1].[FACILITY]</expression></dataItem><dataItem name="Hour"><expression>[SQL1].[Hour]</expression></dataItem><dataItem name="Order Type"><expression>[SQL1].[Order Type]</expression></dataItem><dataItem name="Units Packed" aggregate="total"><expression>[SQL1].[Units Packed]</expression></dataItem><dataItem name="Packers"><expression>[SQL1].[USER_ID]</expression></dataItem><dataItem name="GOAL" aggregate="maximum"><expression>[SQL1].[GOAL]</expression></dataItem><dataItem name="FOOTWEAR_INDICATOR"><expression>[SQL1].[FOOTWEAR_INDICATOR]</expression></dataItem></selection>
+			<queryHints><localCache value="false"/></queryHints><detailFilters><detailFilter use="optional" postAutoAggregation="false"><filterExpression>[SQL1].[FACILITY] in ?pFacility?</filterExpression></detailFilter><detailFilter><filterExpression>[SQL1].[FOOTWEAR_INDICATOR] in ?pFootwearIndicator?</filterExpression></detailFilter></detailFilters></query><query name="UnitsPut">
+			<source>
+				<sqlQuery name="SQL3" dataSource="WMOS">
+					<sqlText>select
+   lm.sched_start_time+wh.TIME_ZONE  as begin_time
+   , lm.login_user_id
+   , to_char(sysdate+wh.UTC_ADJ  , 'MM/DD HH24:MI:SS') as sys_time,
+   to_char(lm.sched_start_time+wh.TIME_ZONE , 'MM/DD/YYYY') as "Process Date",
+   to_char(lm.sched_start_time+wh.TIME_ZONE  , 'HH24') as "Hour",
+   sum(lmd.qty) as "Units Put"
+   , case when usr.shift_code like '%M' then 'Milton One Inv' else 'Mississauga' end as FACILITY
+   , case when pc.product_class in ('118','441','442','820','821','836','834','835','837') then 'Footwear' else 'Non-Footwear' end as footwear_indicator
+
+from   
+    wm.labor_msg lm 
+    inner join wm.labor_msg_dtl lmd on lm.labor_msg_id = lmd.labor_msg_id
+    left outer join wm.item_cbo ic on ic.item_name = lmd.item_name
+    left outer join wm.product_class pc on ic.product_class_id = pc.product_class_id
+    
+
+left outer join (
+    select uu.user_name, ed.emp_id
+        , max(d.shift_code) shift_code
+        --, ed.shift_id, substr(s.shift_code,0,1) as Shift 
+        --, uu.is_active
+        , max(ed.eff_date_time) eff_date_time
+    from(
+        select emp_id, shift_id, rank() over (partition by EMP_ID order by MAX(EFF_DATE_TIME) desc) as rnk 		
+            , eff_date_time
+        from wm.e_emp_dtl 
+        where eff_date_time &lt;= trunc(sysdate) 
+            -- TESTING 
+            --and emp_id = '15677'
+        group by emp_id, shift_id
+            , eff_date_time
+        ) ed 
+    inner join wm.ucl_user uu on ed.emp_id = uu.ucl_user_id 
+    inner join wm.e_shift d on ed.shift_id = d.shift_id 
+    where --rnk =1
+        -- TESTING
+        d.shift_code like '%M'
+    group by uu.user_name, ed.emp_id
+    ) usr on lm.login_user_id = usr.user_name
+
+, (  SELECT sum(case when trim(pay_scale) = 'TIME_ZONE' then to_number(pay_scale_desc)/24 end) as TIME_ZONE, sum(case when trim(pay_scale) = 'UTC_ADJ' then to_number(pay_scale_desc)/24 end) as UTC_ADJ, sum(case when trim(pay_scale) = 'SHIFT_ADJ' then to_number(pay_scale_desc)/24 end) as SHIFT_ADJ FROM wm.e_pay_scale WHERE pay_scale in ('TIME_ZONE','SHIFT_ADJ','UTC_ADJ')  )  wh
+where
+   lmd.qty &gt;0
+   and lm.act_name in ('02-0422','02-0322','02-0320')
+   and cast(lm.sched_start_time+wh.TIME_ZONE as timestamp)  &gt;= cast(to_date(substr(#Prompt('pStartDateTime')#,0,19),'YYYY-MM-DD"T"HH24:mi:ss') as timestamp)
+   and cast(lm.sched_start_time+wh.TIME_ZONE as timestamp)  &lt;= cast(to_date(substr(#Prompt('pEndDateTime')#,0,19),'YYYY-MM-DD"T"HH24:mi:ss') as timestamp)
+
+group by
+   	lm.sched_start_time,
+   	lm.login_user_id,
+	wh.TIME_ZONE,
+	wh.UTC_ADJ
+    , case when usr.shift_code like '%M' then 'Milton One Inv' else 'Mississauga' end
+    , case when pc.product_class in ('118','441','442','820','821','836','834','835','837') then 'Footwear' else 'Non-Footwear' end
+
+order by
+  lm.SCHED_START_TIME desc</sqlText>
+					<mdProjectedItems><mdProjectedItem name="BEGIN_TIME"/><mdProjectedItem name="LOGIN_USER_ID"/><mdProjectedItem name="SYS_TIME"/><mdProjectedItem name="Process Date"/><mdProjectedItem name="Hour"/><mdProjectedItem name="Units Put"/><mdProjectedItem name="FACILITY"/><mdProjectedItem name="FOOTWEAR_INDICATOR"/></mdProjectedItems></sqlQuery></source>
+			<selection><dataItem name="Process Date" rollupAggregate="none"><expression>[SQL3].[Process Date]</expression></dataItem><dataItem name="FACILITY"><expression>[SQL3].[FACILITY]</expression></dataItem><dataItem name="Hour" rollupAggregate="none"><expression>[SQL3].[Hour]</expression></dataItem><dataItem name="Units Put" aggregate="total" sort="descending"><expression>[SQL3].[Units Put]</expression></dataItem><dataItem name="Put-ers" aggregate="countDistinct"><expression>[SQL3].[LOGIN_USER_ID]</expression></dataItem><dataItemEdgeSummary solveOrder="1" refDataItem="Process Date" aggregateMethod="total" name="Total(Process Date)" label="Total"/><dataItemEdgeSummary solveOrder="1" refDataItem="FACILITY" aggregateMethod="total" name="Total(FACILITY)" label="Total"/><dataItemEdgeSummary solveOrder="1" refDataItem="Hour" aggregateMethod="total" name="Total(Hour)" label="Total"/><dataItem name="FOOTWEAR_INDICATOR"><expression>[SQL3].[FOOTWEAR_INDICATOR]</expression></dataItem><dataItem name="LOGIN_USER_ID"><expression>[SQL3].[LOGIN_USER_ID]</expression></dataItem><dataItemEdgeSummary solveOrder="1" refDataItem="LOGIN_USER_ID" aggregateMethod="total" name="Total(LOGIN_USER_ID)" label="Total"/><dataItemEdgeSummary solveOrder="1" refDataItem="Process Date" aggregateMethod="total" name="Total(Process Date)1" label="Total"/><dataItemEdgeSummary solveOrder="1" refDataItem="FACILITY" aggregateMethod="total" name="Total(FACILITY)1" label="Total"/></selection>
+			<detailFilters><detailFilter use="optional" postAutoAggregation="false"><filterExpression>[SQL3].[FACILITY] in ?pFacility?</filterExpression></detailFilter><detailFilter><filterExpression>[SQL3].[FOOTWEAR_INDICATOR] in ?pFootwearIndicator?</filterExpression></detailFilter></detailFilters></query><query name="thruput_smry">
+			<source>
+				
+			<sqlQuery name="SQL6" dataSource="WMOS">
+			<sqlText>select
+   to_number(#prompt('pGoal')#) as goal
+   , round((  trunc(sysdate) 
+	+ (   cast(to_date(substr(#Prompt('pEndDateTime')#,0,19),'YYYY-MM-DD"T"HH24:mi:ss') as timestamp) 
+	- cast(to_date(substr(#Prompt('pStartDateTime')#,0,19),'YYYY-MM-DD"T"HH24:mi:ss') as timestamp)    )  
+	- trunc(sysdate)  )*24,0) as hrs
+   , CASE WHEN cast(to_date(substr(#Prompt('pEndDateTime')#,0,19),'YYYY-MM-DD"T"HH24:mi:ss') as timestamp) &lt; cast(sysdate+wh.UTC_ADJ  as timestamp) 
+	THEN round((  trunc(sysdate) 
+	+ (   cast(to_date(substr(#Prompt('pEndDateTime')#,0,19),'YYYY-MM-DD"T"HH24:mi:ss') as timestamp) 
+	- cast(to_date(substr(#Prompt('pStartDateTime')#,0,19),'YYYY-MM-DD"T"HH24:mi:ss') as timestamp)    )  
+	- trunc(sysdate)  )*24,0) ELSE round((  trunc(sysdate) + (   cast(sysdate+wh.UTC_ADJ  as timestamp) 
+	- cast(to_date(substr(#Prompt('pStartDateTime')#,0,19),'YYYY-MM-DD"T"HH24:mi:ss') as timestamp)    )  
+	- trunc(sysdate)  )*24,0)  END as Completed_Hrs
+   , to_number(#prompt('pGoal')#) / round((  trunc(sysdate) 
+	+ (   cast(to_date(substr(#Prompt('pEndDateTime')#,0,19),'YYYY-MM-DD"T"HH24:mi:ss') as timestamp) 
+	- cast(to_date(substr(#Prompt('pStartDateTime')#,0,19),'YYYY-MM-DD"T"HH24:mi:ss') as timestamp)    )  
+	- trunc(sysdate)  )*24,0) as HRLY_GOAL
+from dual
+, (  SELECT sum(case when trim(pay_scale) = 'TIME_ZONE' then to_number(pay_scale_desc)/24 end) as TIME_ZONE
+   , sum(case when trim(pay_scale) = 'UTC_ADJ' then to_number(pay_scale_desc)/24 end) as UTC_ADJ
+   , sum(case when trim(pay_scale) = 'SHIFT_ADJ' then to_number(pay_scale_desc)/24 end) as SHIFT_ADJ 
+FROM wm.e_pay_scale 
+WHERE pay_scale in ('TIME_ZONE','SHIFT_ADJ','UTC_ADJ')   ) wh</sqlText>
+		<mdProjectedItems><mdProjectedItem name="GOAL"/><mdProjectedItem name="HRS"/><mdProjectedItem name="COMPLETED_HRS"/><mdProjectedItem name="HRLY_GOAL"/></mdProjectedItems></sqlQuery></source>
+			<selection autoSummary="false"><dataItem name="GOAL"><expression>[SQL6].[GOAL]</expression></dataItem><dataItem name="HRLY_GOAL"><expression>[SQL6].[HRLY_GOAL]</expression></dataItem><dataItem name="COMPLETED_HRS"><expression>[SQL6].[COMPLETED_HRS]</expression></dataItem><dataItem name="HRS"><expression>[SQL6].[HRS]</expression></dataItem><dataItem name="PACKED"><expression> [GET_PACKED].[PACKED]</expression></dataItem><dataItem name="PACKED_ACTUAL_UPH"><expression>[PACKED] / [COMPLETED_HRS]</expression></dataItem><dataItem name="PICKED"><expression>[GET_PICKED].[PICKED]</expression></dataItem><dataItem name="PICKED_ACTUAL_UPH"><expression>[PICKED] / [COMPLETED_HRS]</expression></dataItem><dataItem name="PICKED_TO_PACKED_RATIO"><expression>[PICKED_ACTUAL_UPH] / [PACKED_ACTUAL_UPH]</expression></dataItem></selection>
+		<queryHints><localCache value="false"/><crossProductAllowed value="allow"/></queryHints></query><query name="GET_PICKED">
+			<source>
+				<model/>
+			</source>
+			<selection><dataItem name="PICKED" aggregate="maximum"><expression>total ( [UnitsPicked].[Units Picked] for report)</expression></dataItem></selection>
+		<queryHints><localCache value="false"/></queryHints></query><query name="GET_PACKED">
+			<source>
+				<model/>
+			</source>
+			<selection><dataItem name="PACKED" aggregate="maximum"><expression>total ( [UnitsPacked].[Units Packed] for report)</expression></dataItem></selection>
+		<queryHints><localCache value="false"/></queryHints></query><query name="FacilityChoose">
+			<source>
+				
+			<sqlQuery name="SQL1" dataSource="WMOS">
+			<sqlText>select case when rownum = 1 then 'Milton Ecom'
+	when rownum = 2 then 'Milton One Inv'
+	when rownum = 3 then 'Mississauga'
+	end FACILITY
+from dual connect by rownum &lt;= 3</sqlText>
+		<mdProjectedItems><mdProjectedItem name="FACILITY"/></mdProjectedItems></sqlQuery></source>
+			<selection><dataItem name="FACILITY"><expression>[SQL1].[FACILITY]</expression></dataItem></selection>
+		<queryHints><localCache value="false"/></queryHints></query><query name="FootwearSelect">
+			<source>
+				
+			<sqlQuery name="SQL5" dataSource="WMOS">
+			<sqlText>select case when rownum = 1 then 'Footwear'
+	when rownum = 2 then 'Non-Footwear'
+	end FOOTWEAR_INDICATOR
+from dual connect by rownum &lt;= 2</sqlText>
+		<mdProjectedItems><mdProjectedItem name="FOOTWEAR_INDICATOR"/></mdProjectedItems></sqlQuery></source>
+			<selection><dataItem name="FOOTWEAR_INDICATOR"><expression>[SQL5].[FOOTWEAR_INDICATOR]</expression></dataItem></selection>
+		</query></queries><namedConditionalStyles><advancedConditionalStyle name="Conditional Formatting - DO Allocated"><styleCases><styleCase><style><defaultStyles><defaultStyle refStyle="pd_4"/></defaultStyles><CSS value="background-color:yellow;color:black"/></style><reportCondition>[CombinedQry].[DO Allocated] &gt; 0</reportCondition></styleCase></styleCases><styleDefault/></advancedConditionalStyle><advancedConditionalStyle name="Conditional Formatting - Wave Status"><styleCases><styleCase><style><CSS value="background-color:yellow"/></style><reportCondition>[CombinedQry].[Wave Status] = 'Wave Open'</reportCondition></styleCase></styleCases><styleDefault/></advancedConditionalStyle><advancedConditionalStyle name="% Utilized - Formatting"><styleCases><styleCase><style><defaultStyles><defaultStyle refStyle="pd_5"/></defaultStyles></style><reportCondition>[ActiveCapacity].[% Utilized] &gt;0.95</reportCondition></styleCase><styleCase><style><CSS value="background-color:yellow;color:black"/></style><reportCondition>[ActiveCapacity].[% Utilized]&gt;.85 and [ActiveCapacity].[% Utilized]&lt;=.95</reportCondition></styleCase></styleCases><styleDefault><style><defaultStyles><defaultStyle refStyle="pd_1"/></defaultStyles></style></styleDefault></advancedConditionalStyle></namedConditionalStyles><classStyles><classStyle name="tt"><CSS value="font-family:Arial;font-size:20pt;font-weight:bold;color:#C00720"/></classStyle><classStyle name="cls1" label="SectionHeader"><CSS value="padding:4px 5px 4px 5px;background-color:#333333;color:white;font-size:10pt;font-weight:bold;vertical-align:top"/></classStyle></classStyles></report>
