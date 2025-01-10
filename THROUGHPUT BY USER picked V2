@@ -18,7 +18,7 @@
 					<defaultStyle refStyle="bp"/>
 				</defaultStyles>
 			</style>
-		</promptButton></contents><style><CSS value="padding:5px;font-weight:bold;font-size:10pt;vertical-align:middle;text-align:center"/></style></tableCell></tableCells></tableRow><tableRow><tableCells><tableCell><contents><selectValue parameter="pTote" multiSelect="true" range="false" required="false" refQuery="Query1" selectValueUI="checkboxGroup"><useItem refDataItem="FACILITY"><displayItem refDataItem="FACILITY"/></useItem></selectValue><selectValue refQuery="Shift" required="false" multiSelect="true" selectValueUI="checkboxGroup" parameter="SHIFT"><useItem refDataItem="SHIFT_CODE"><displayItem refDataItem="SHIFT_CODE"/></useItem><headerText><defaultText/></headerText><sortList><sortItem refDataItem="SHIFT"/></sortList></selectValue></contents><style><CSS value="padding:5px;font-size:10pt;text-align:center;vertical-align:middle"/></style></tableCell></tableCells></tableRow></tableRows></table></contents><style><CSS value="padding-right:5px;padding-left:5px"/></style></tableCell></tableCells></tableRow></tableRows></table></contents><style><CSS value="text-align:center;vertical-align:top;padding-bottom:8px"/></style></tableCell></tableCells></tableRow><tableRow><tableCells><tableCell><contents><combinationChart showTooltips="true" maxHotspots="10000" refQuery="UnitsPicked" name="Combination Chart1">
+		</promptButton></contents><style><CSS value="padding:5px;font-weight:bold;font-size:10pt;vertical-align:middle;text-align:center"/></style></tableCell></tableCells></tableRow><tableRow><tableCells><tableCell><contents><selectValue parameter="pTote" multiSelect="true" range="false" required="false" refQuery="Query1" selectValueUI="checkboxGroup"><useItem refDataItem="FACILITY"><displayItem refDataItem="FACILITY"/></useItem></selectValue><selectValue refQuery="Shift" required="false" multiSelect="true" selectValueUI="checkboxGroup" parameter="SHIFT"><useItem refDataItem="SHIFT_CODE"><displayItem refDataItem="SHIFT_CODE"/></useItem><headerText><defaultText/></headerText><sortList><sortItem refDataItem="SHIFT"/></sortList></selectValue></contents><style><CSS value="padding:5px;font-size:10pt;text-align:center;vertical-align:middle"/></style></tableCell></tableCells></tableRow></tableRows></table></contents><style><CSS value="padding-right:5px;padding-left:5px"/></style></tableCell></tableCells></tableRow></tableRows></table></contents><style><CSS value="text-align:center;vertical-align:top;padding-bottom:8px"/></style></tableCell></tableCells></tableRow></tableRows></table></contents></tableCell><tableCell><contents/><style><CSS value="text-align:left;vertical-align:top"/></style></tableCell></tableCells></tableRow></tableRows></table><table><style><defaultStyles><defaultStyle refStyle="tb"/></defaultStyles><CSS value="border-collapse:collapse;width:100%"/></style><tableRows><tableRow><tableCells><tableCell><contents><combinationChart showTooltips="true" maxHotspots="10000" refQuery="UnitsPicked" name="Combination Chart1">
 																				<legend>
 																					<legendPosition>
 																						<relativePosition/>
@@ -74,9 +74,53 @@
 																					<defaultStyles>
 																						<defaultStyle refStyle="ch"/>
 																					</defaultStyles>
-																				<CSS value="width:100pc;height:90pc"/></style>
-																				<commonClusters><chartNodes><chartNode><chartNodeMembers><chartNodeMember refDataItem="USER_ID"><chartContents><chartTextItem><dataSource><memberCaption/></dataSource></chartTextItem></chartContents><sortList><sortItem refDataItem="UNITS_PICKED" sortOrder="descending"/></sortList></chartNodeMember></chartNodeMembers></chartNode></chartNodes></commonClusters></combinationChart>
-																		</contents><style><CSS value="text-align:center;vertical-align:top"/></style></tableCell></tableCells></tableRow></tableRows></table></contents></tableCell><tableCell><contents/><style><CSS value="text-align:left;vertical-align:top"/></style></tableCell></tableCells></tableRow></tableRows></table></contents>
+																				<CSS value="width:100pc;height:50pc"/></style>
+																				<commonClusters><chartNodes><chartNode><chartNodeMembers><chartNodeMember refDataItem="USER_ID"><chartContents><chartTextItem><dataSource><memberCaption/></dataSource></chartTextItem></chartContents><sortList><sortItem refDataItem="UNITS_PICKED" sortOrder="descending"/></sortList></chartNodeMember></chartNodeMembers></chartNode></chartNodes></commonClusters><chartPalette>
+															<chartGradient direction="down" fromColor="#134bea" toColor="#0b2982"/>
+															<chartGradient direction="down" fromColor="#50cb1c" toColor="#42982f"/>
+															<chartGradient direction="down" fromColor="#f2cd00" toColor="#f9be09"/>
+															<chartGradient direction="down" fromColor="#ff8a00" toColor="#de4f01"/>
+															<chartGradient direction="down" fromColor="#e01b1b" toColor="#ab0909"/>
+															<chartGradient direction="down" fromColor="#3d3d3d" toColor="#0a0a0a"/>
+															<chartGradient direction="down" fromColor="#bf38e1" toColor="#8a1dde"/>
+															<chartGradient direction="down" fromColor="#8514c7" toColor="#2e0072"/>
+															<chartGradient direction="down" fromColor="#0f8b03" toColor="#044a01"/>
+															<chartGradient direction="down" fromColor="#95bf14" toColor="#828c0b"/>
+															<chartGradient direction="down" fromColor="#4791da" toColor="#2060b7"/>
+															<chartGradient direction="down" fromColor="#76dde6" toColor="#2cb6c7"/>
+															<chartGradient direction="down" fromColor="#060d95" toColor="#06034f"/>
+															<chartGradient direction="down" fromColor="#c3550b" toColor="#a33a00"/>
+														</chartPalette>
+													</combinationChart></contents></tableCell><tableCell><contents><crosstab horizontalPagination="true" name="Crosstab1" refQuery="UnitsPicked" rowsPerPage="1000">
+			<crosstabCorner>
+				<contents><textItem><dataSource><staticValue>User_ID</staticValue></dataSource></textItem></contents>
+				
+			<style><defaultStyles><defaultStyle refStyle="ml"/></defaultStyles><CSS value="text-align:center;font-weight:bold;font-size:11pt;background-color:#99CCFF;border:1pt solid black"/></style></crosstabCorner>
+			
+			
+			<noDataHandler>
+				<contents>
+					<block>
+						<contents>
+							<textItem>
+								<dataSource>
+									<staticValue>No Data Available</staticValue>
+								</dataSource>
+								<style>
+									<CSS value="padding:10px 18px;"/>
+								</style>
+							</textItem>
+						</contents>
+					</block>
+				</contents>
+			</noDataHandler>
+			<style>
+				<CSS value="border-collapse:collapse"/>
+				<defaultStyles>
+					<defaultStyle refStyle="xt"/>
+				</defaultStyles>
+			</style>
+		<crosstabFactCell><contents><textItem><dataSource><cellValue/></dataSource></textItem></contents><style><defaultStyles><defaultStyle refStyle="mv"/></defaultStyles></style></crosstabFactCell><crosstabRows><crosstabNode><crosstabNodeMembers><crosstabNodeMember refDataItem="USER_ID" edgeLocation="e1"><style><defaultStyles><defaultStyle refStyle="ml"/></defaultStyles><CSS value="text-align:center;font-size:9pt;border:1pt solid black"/></style><contents><textItem><dataSource><memberCaption/></dataSource></textItem></contents></crosstabNodeMember></crosstabNodeMembers></crosstabNode></crosstabRows><crosstabColumns><crosstabNode><crosstabNodeMembers><crosstabNodeMember refDataItem="ZONE" edgeLocation="e2"><style><defaultStyles><defaultStyle refStyle="ml"/></defaultStyles><CSS value="text-align:center;font-weight:bold;font-size:11pt;background-color:#99CCFF;border:1pt solid black"/></style><contents><textItem><dataSource><memberCaption/></dataSource></textItem></contents></crosstabNodeMember></crosstabNodeMembers></crosstabNode></crosstabColumns><crosstabIntersections><crosstabIntersection row="e1" column="e2"><style><CSS value="text-align:center;border:1pt solid black"/></style></crosstabIntersection></crosstabIntersections><defaultMeasure refDataItem="UNITS_PICKED"/></crosstab></contents><style><CSS value="text-align:left;padding-right:400px"/></style></tableCell></tableCells></tableRow></tableRows></table></contents>
 					</pageBody>
 				</page>
 			</reportPages>
@@ -282,7 +326,7 @@ ORDER BY
     user_id, "Order Type", Zone
 </sqlText>
 					<mdProjectedItems><mdProjectedItem name="USER_ID"/><mdProjectedItem name="Order Type"/><mdProjectedItem name="ZONE"/><mdProjectedItem name="ORDERS"/><mdProjectedItem name="UNITS_PICKED"/></mdProjectedItems></sqlQuery></source>
-			<selection><dataItem name="USER_ID"><expression>[SQL2].[USER_ID]</expression></dataItem><dataItem name="Order Type"><expression>[SQL2].[Order Type]</expression></dataItem><dataItem name="UNITS_PICKED" aggregate="total"><expression>[SQL2].[UNITS_PICKED]</expression></dataItem><dataItem name="ZONE"><expression>[SQL2].[ZONE]</expression></dataItem></selection>
+			<selection><dataItem name="USER_ID"><expression>[SQL2].[USER_ID]</expression></dataItem><dataItem name="Order Type"><expression>[SQL2].[Order Type]</expression></dataItem><dataItem name="UNITS_PICKED" aggregate="total" sort="descending"><expression>[SQL2].[UNITS_PICKED]</expression></dataItem><dataItem name="ZONE"><expression>[SQL2].[ZONE]</expression></dataItem></selection>
 			<queryHints><localCache value="false"/></queryHints></query><query name="Shift">
 			<source>
 				
